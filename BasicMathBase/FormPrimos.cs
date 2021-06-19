@@ -86,7 +86,7 @@ namespace BasicMathBase
 
                 if (ctr == 0 && num != 1)
                 {
-                    txtboxLista.Text += String.Format("{0," + tam + "}", num);
+                    txtboxLista.Text += String.Format("{0," + tam + "}\t", num);
                 }
                     
             }
@@ -96,6 +96,7 @@ namespace BasicMathBase
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             txtboxLista.Text = "";
+            txtbox_Eprimo.Text = "";
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument

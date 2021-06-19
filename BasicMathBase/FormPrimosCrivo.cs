@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BasicMathBase.CalcMethods;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +45,7 @@ namespace BasicMathBase
                     {
                         int num = (c[j]) + (30 * i);
                         richTextBoxLista.Text += String.Format("{0," + tam + "}\t", num);
-                        if (!IsPrime(num))
+                        if (!Primes.IsPrime(num))
                         {
                             nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
                         }
@@ -66,19 +67,6 @@ namespace BasicMathBase
                                         MessageBoxIcon.Warning);
             }
             
-        }
-
-        public bool IsPrime(int num)
-        {
-            for (int a = 2; a <= num / 2; a++)
-            {
-                if (num % a == 0)
-                {
-                    return false;
-                }
-
-            }
-            return true;
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)

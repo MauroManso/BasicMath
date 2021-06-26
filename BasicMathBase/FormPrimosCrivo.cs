@@ -25,18 +25,18 @@ namespace BasicMathBase
         }
 
 
-        private void btn_Lista_Click(object sender, EventArgs e)
+        private void btnListPrime_Click(object sender, EventArgs e)
         {
             try
             {
                 richTextBoxLista.Text = "";
-                long upToNum = Convert.ToInt64(txtBox_atePrimo.Text);
+                long upToNum = Convert.ToInt64(txtboxUpToPrime.Text);
                 int tam = (Convert.ToString(upToNum)).Length + 2;
                 long last = 0;
 
                 int[] c = new int[] { 7, 11, 13, 17, 19, 23, 29, 31 };
 
-                int upToLine = (Convert.ToInt32((upToNum - 31) / 30)) + 1;
+                int upToLine = (Convert.ToInt32((upToNum - 31) / 30)) + 2;
 
                 var nonPrimeNumTextBox = new List<int>();
                 for (int i = 0; i < upToLine; i++)
@@ -44,12 +44,15 @@ namespace BasicMathBase
                     for (int j = 0; j < 8; j++)
                     {
                         int num = (c[j]) + (30 * i);
-                        richTextBoxLista.Text += String.Format("{0," + tam + "}\t", num);
-                        if (!Primes.IsPrime(num))
+                        if(num <= upToNum)
                         {
-                            nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
+                            richTextBoxLista.Text += String.Format("{0," + tam + "}\t", num);
+                            if (!MathMethods.IsPrime(num))
+                            {
+                                nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
+                            }
+                            last = num;
                         }
-                        last = num;
                     }
                     richTextBoxLista.Text += Environment.NewLine;
                     richTextBoxLista.Text += Environment.NewLine;
@@ -69,9 +72,10 @@ namespace BasicMathBase
             
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private void btnClean_Click(object sender, EventArgs e)
         {
             richTextBoxLista.Text = "";
+            txtboxUpToPrime.Text = "";
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument
@@ -271,7 +275,7 @@ namespace BasicMathBase
             #endregion
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
             //Create an instance of our printer class
             PCPrint printer = new PCPrint();
@@ -281,16 +285,6 @@ namespace BasicMathBase
             printer.TextToPrint = richTextBoxLista.Text;
             //Issue print command
             printer.Print();
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gerandolbl_Click(object sender, EventArgs e)
-        {
 
         }
     }

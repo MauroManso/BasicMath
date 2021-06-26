@@ -23,7 +23,7 @@ namespace BasicMathBase
 
         private void customDesign()
         {
-            txtboxLista.Visible = false;
+            txtboxList.Visible = false;
         }
 
         private void lblSomaPotencia_Click(object sender, EventArgs e)
@@ -31,25 +31,37 @@ namespace BasicMathBase
 
         }
 
-        private void btn_VerificarPrimo_Click(object sender, EventArgs e)
+        private void btnVerifyPrime_Click(object sender, EventArgs e)
         {
             long num1;
             try
             {
-                num1 = Convert.ToInt64(txtbox_Eprimo.Text);
+                num1 = Convert.ToInt64(txtboxVerifyPrime.Text);
                 if (num1 == 0 || num1 == 1)
                 {
-                    lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                    //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                    MessageBox.Show("\'" + num1 + "\' É um número composto",
+                                        "É primo?",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                 }
                 else
                 {
-                    if (Primes.IsPrime(num1))
+                    if (MathMethods.IsPrime(num1))
                     {
-                        lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número primo");
+                        //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número primo");
+                        MessageBox.Show("\'" + num1 + "\' É um número primo",
+                                        "É primo?",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                     }
                     else
                     {
-                        lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                        //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                        MessageBox.Show("\'" + num1 + "\' É um número composto",
+                                        "É primo?",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                     }
                 }
             }
@@ -62,16 +74,16 @@ namespace BasicMathBase
             }
         }
 
-        private void btn_Lista_Click(object sender, EventArgs e)
+        private void btnListPrime_Click(object sender, EventArgs e)
         {
             long num, i, ctr, stno, enno;
-            stno = Convert.ToInt64(txtbox_dePrimo.Text);
-            enno = Convert.ToInt64(txtBox_atePrimo.Text);
+            stno = Convert.ToInt64(txtboxBeginPrime.Text);
+            enno = Convert.ToInt64(txtboxUpToPrime.Text);
             // int numberOfElements = 0;
             // int numberOfElementPerLine = 15;
 
             int tam = (Convert.ToString(enno)).Length + 2;
-            txtboxLista.Text = "";
+            txtboxList.Text = "";
             for (num = stno; num <= enno; num++){
                 ctr = 0;
 
@@ -86,17 +98,11 @@ namespace BasicMathBase
 
                 if (ctr == 0 && num != 1)
                 {
-                    txtboxLista.Text += String.Format("{0," + tam + "}\t", num);
+                    txtboxList.Text += String.Format("{0," + tam + "}\t", num);
                 }
                     
             }
-            txtboxLista.Visible = true;
-        }
-
-        private void btnLimpar_Click(object sender, EventArgs e)
-        {
-            txtboxLista.Text = "";
-            txtbox_Eprimo.Text = "";
+            txtboxList.Visible = true;
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument
@@ -296,22 +302,29 @@ namespace BasicMathBase
             #endregion
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
             //Create an instance of our printer class
             PCPrint printer = new PCPrint();
             //Set the font we want to use
             printer.PrinterFont = new Font("Arial", 10);
             //Set the TextToPrint property
-            printer.TextToPrint = txtboxLista.Text;
+            printer.TextToPrint = txtboxList.Text;
             //Issue print command
             printer.Print();
 
         }
 
-        private void txtboxLista_TextChanged(object sender, EventArgs e)
+        private void btnClear2_Click(object sender, EventArgs e)
         {
+            txtboxList.Text = "";
+            txtboxBeginPrime.Text = "";
+            txtboxUpToPrime.Text = "";
+        }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtboxVerifyPrime.Text = "";  
         }
     }
 }

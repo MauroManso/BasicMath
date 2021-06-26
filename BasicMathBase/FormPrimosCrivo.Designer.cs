@@ -31,12 +31,12 @@ namespace BasicMathBase
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPrimos = new System.Windows.Forms.Label();
-            this.txtBox_atePrimo = new System.Windows.Forms.TextBox();
-            this.btn_Lista = new System.Windows.Forms.Button();
+            this.txtboxUpToPrime = new System.Windows.Forms.TextBox();
+            this.btnListPrime = new System.Windows.Forms.Button();
             this.lbl_Lista = new System.Windows.Forms.Label();
             this.richTextBoxLista = new System.Windows.Forms.RichTextBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,28 +62,28 @@ namespace BasicMathBase
             this.lblPrimos.TabIndex = 2;
             this.lblPrimos.Text = "NÚMEROS PRIMOS POR CRIVO";
             // 
-            // txtBox_atePrimo
+            // txtboxUpToPrime
             // 
-            this.txtBox_atePrimo.Location = new System.Drawing.Point(441, 149);
-            this.txtBox_atePrimo.Name = "txtBox_atePrimo";
-            this.txtBox_atePrimo.Size = new System.Drawing.Size(101, 31);
-            this.txtBox_atePrimo.TabIndex = 4130;
+            this.txtboxUpToPrime.Location = new System.Drawing.Point(441, 149);
+            this.txtboxUpToPrime.Name = "txtboxUpToPrime";
+            this.txtboxUpToPrime.Size = new System.Drawing.Size(101, 31);
+            this.txtboxUpToPrime.TabIndex = 4130;
             // 
-            // btn_Lista
+            // btnListPrime
             // 
-            this.btn_Lista.FlatAppearance.BorderSize = 2;
-            this.btn_Lista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Lista.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Lista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_Lista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Lista.Location = new System.Drawing.Point(572, 140);
-            this.btn_Lista.Name = "btn_Lista";
-            this.btn_Lista.Size = new System.Drawing.Size(135, 47);
-            this.btn_Lista.TabIndex = 4133;
-            this.btn_Lista.Text = "Listar";
-            this.btn_Lista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Lista.UseVisualStyleBackColor = true;
-            this.btn_Lista.Click += new System.EventHandler(this.btn_Lista_Click);
+            this.btnListPrime.FlatAppearance.BorderSize = 2;
+            this.btnListPrime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListPrime.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnListPrime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListPrime.Location = new System.Drawing.Point(572, 140);
+            this.btnListPrime.Name = "btnListPrime";
+            this.btnListPrime.Size = new System.Drawing.Size(135, 47);
+            this.btnListPrime.TabIndex = 4133;
+            this.btnListPrime.Text = "Listar";
+            this.btnListPrime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListPrime.UseVisualStyleBackColor = true;
+            this.btnListPrime.Click += new System.EventHandler(this.btnListPrime_Click);
             // 
             // lbl_Lista
             // 
@@ -108,37 +108,37 @@ namespace BasicMathBase
             this.richTextBoxLista.TabIndex = 4134;
             this.richTextBoxLista.Text = "";
             // 
-            // btnLimpar
+            // btnClear
             // 
-            this.btnLimpar.FlatAppearance.BorderSize = 2;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(807, 187);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(135, 47);
-            this.btnLimpar.TabIndex = 4135;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            this.btnClear.FlatAppearance.BorderSize = 2;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(807, 187);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.TabIndex = 4135;
+            this.btnClear.Text = "Limpar";
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClean_Click);
             // 
-            // btnImprimir
+            // btnPrint
             // 
-            this.btnImprimir.FlatAppearance.BorderSize = 2;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(50, 187);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(135, 47);
-            this.btnImprimir.TabIndex = 4136;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            this.btnPrint.FlatAppearance.BorderSize = 2;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(50, 187);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(135, 47);
+            this.btnPrint.TabIndex = 4136;
+            this.btnPrint.Text = "Imprimir";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // FormPrimosCrivo
             // 
@@ -146,11 +146,11 @@ namespace BasicMathBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(984, 664);
-            this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.richTextBoxLista);
-            this.Controls.Add(this.txtBox_atePrimo);
-            this.Controls.Add(this.btn_Lista);
+            this.Controls.Add(this.txtboxUpToPrime);
+            this.Controls.Add(this.btnListPrime);
             this.Controls.Add(this.lbl_Lista);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -167,11 +167,11 @@ namespace BasicMathBase
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblPrimos;
-        private System.Windows.Forms.TextBox txtBox_atePrimo;
-        private System.Windows.Forms.Button btn_Lista;
+        private System.Windows.Forms.TextBox txtboxUpToPrime;
+        private System.Windows.Forms.Button btnListPrime;
         private System.Windows.Forms.Label lbl_Lista;
         private System.Windows.Forms.RichTextBox richTextBoxLista;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnPrint;
     }
 }

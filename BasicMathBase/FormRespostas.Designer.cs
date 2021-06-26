@@ -71,6 +71,7 @@ namespace BasicMathBase
             this.lblAnwser.Size = new System.Drawing.Size(207, 29);
             this.lblAnwser.TabIndex = 8;
             this.lblAnwser.Text = "O número é impar";
+            this.lblAnwser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormRespostas
             // 
@@ -81,9 +82,9 @@ namespace BasicMathBase
             this.Controls.Add(this.lblIsCorrect);
             this.Controls.Add(this.lblAnwser);
             this.Controls.Add(this.btnGetAnswer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormRespostas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRespostas";
             this.ResumeLayout(false);
             this.PerformLayout();
 

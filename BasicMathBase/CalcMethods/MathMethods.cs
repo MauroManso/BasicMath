@@ -23,8 +23,6 @@ namespace BasicMathBase.CalcMethods
         
         public static string ProductPrime(int num)
         {
-            var lista = new List<int>();
-
             string result = "";
             bool isFirst = true;
             while (num != 1)
@@ -37,7 +35,7 @@ namespace BasicMathBase.CalcMethods
                         if (num % i == 0)
                         {
                             num /= i;
-                            if(isFirst)
+                            if (isFirst)
                                 result += Convert.ToString(i);
                             else
                                 result += "." + Convert.ToString(i);
@@ -48,6 +46,59 @@ namespace BasicMathBase.CalcMethods
                     }else
                         i++;
                 }
+            }
+            return result;
+        }
+
+        public static string ProductPrimeWithPower(int num)
+        {
+            var lista = new List<int>();
+            while (num != 1)
+            {
+                int i = 2;
+                while (i <= num)
+                {
+                    if (IsPrime(i))
+                    {
+                        if (num % i == 0)
+                        {
+                            num /= i;
+                            lista.Add(i);
+                            break;
+                        }
+                        else
+                            i++;
+                    }
+                    else
+                        i++;
+                }
+            }
+
+            string result = "";
+            bool isFirst = true;
+            while (lista.Count != 0)
+            {
+                int element = lista[0];
+                if (!isFirst)
+                    result += ".";
+                isFirst = false;
+                result += element;
+
+                int numberOfElements = 0;
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    if (lista[i] == element)
+                    {
+                        numberOfElements++;
+                    }
+                }
+                if (numberOfElements > 1)
+                    result += "^" + numberOfElements;
+
+                for (int i = 0; i < numberOfElements; i++)
+                    lista.Remove(element);
+
+
             }
             return result;
         }

@@ -20,6 +20,7 @@ namespace BasicMathBase
 
         private void customizeDesign(bool isCorrect, string answer)
         {
+            richTextBoxAnswer.Visible = false;
             btnGetAnswer.Visible = false;
 
             int x1 = (952 - lblIsCorrect.Width) / 2;

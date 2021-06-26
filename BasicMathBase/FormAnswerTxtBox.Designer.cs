@@ -59,6 +59,7 @@ namespace BasicMathBase
             this.btnGetAnswer.Text = "Obter Resposta";
             this.btnGetAnswer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGetAnswer.UseVisualStyleBackColor = true;
+            this.btnGetAnswer.Click += new System.EventHandler(this.btnGetAnswer_Click);
             // 
             // richTextBoxAnswer
             // 
@@ -78,9 +79,9 @@ namespace BasicMathBase
             this.Controls.Add(this.richTextBoxAnswer);
             this.Controls.Add(this.lblIsCorrect);
             this.Controls.Add(this.btnGetAnswer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormAnswerTxtBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAnswerTxtBox";
             this.ResumeLayout(false);
             this.PerformLayout();
 

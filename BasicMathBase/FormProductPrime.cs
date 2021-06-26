@@ -20,16 +20,17 @@ namespace BasicMathBase
 
         private void btnCorrectNum_Click(object sender, EventArgs e)
         {
-            string answer = MathMethods.ProductPrime(Convert.ToInt32(txtboxNum.Text));
+            string answer1 = MathMethods.ProductPrime(Convert.ToInt32(txtboxNum.Text));
+            string answer2 = MathMethods.ProductPrimeWithPower(Convert.ToInt32(txtboxNum.Text));
 
-            if(txtboxResposta.Text == answer)
+            if (txtboxResposta.Text == answer1 || txtboxResposta.Text == answer2)
             {
-                FormRespostas openForm = new FormRespostas(true, answer);
+                FormRespostas openForm = new FormRespostas(true, (answer1 + " ou" + Environment.NewLine + answer2));
                 openForm.Show();
             }
             else
             {
-                FormRespostas openForm = new FormRespostas(false, answer);
+                FormRespostas openForm = new FormRespostas(false, (answer1 + " ou" + Environment.NewLine + answer2));
                 openForm.Show();
             }
                 

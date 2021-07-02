@@ -64,9 +64,9 @@ namespace BasicMathBase
             // richTextBoxAnswer
             // 
             this.richTextBoxAnswer.ForeColor = System.Drawing.Color.Black;
-            this.richTextBoxAnswer.Location = new System.Drawing.Point(115, 153);
+            this.richTextBoxAnswer.Location = new System.Drawing.Point(84, 153);
             this.richTextBoxAnswer.Name = "richTextBoxAnswer";
-            this.richTextBoxAnswer.Size = new System.Drawing.Size(708, 174);
+            this.richTextBoxAnswer.Size = new System.Drawing.Size(765, 174);
             this.richTextBoxAnswer.TabIndex = 11;
             this.richTextBoxAnswer.Text = "";
             // 

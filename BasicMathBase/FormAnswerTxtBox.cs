@@ -23,21 +23,19 @@ namespace BasicMathBase
             richTextBoxAnswer.Visible = false;
             btnGetAnswer.Visible = false;
 
-            int x1 = (952 - lblIsCorrect.Width) / 2;
-            lblIsCorrect.Location = new Point(x1, 100);
+            lblIsCorrect.Left = (this.ClientSize.Width - lblIsCorrect.Size.Width) / 2;
             if (isCorrect)
                 lblIsCorrect.Text = "Resposta Correta!";
             else
             {
                 lblIsCorrect.Text = "Resposta Incorreta :(";
                 btnGetAnswer.Visible = true;
+                btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
             }
 
 
             richTextBoxAnswer.Text = answer;
-            int x = (952 - richTextBoxAnswer.Width) / 2;
-            int y = ((581 - richTextBoxAnswer.Height) / 2) - 30;
-            richTextBoxAnswer.Location = new Point(x, y);
+            richTextBoxAnswer.Left = (this.ClientSize.Width - richTextBoxAnswer.Size.Width) / 2;
         }
 
         private void btnGetAnswer_Click(object sender, EventArgs e)

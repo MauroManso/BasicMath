@@ -32,6 +32,8 @@ namespace BasicMathBase
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnArithmeticsFunctions = new System.Windows.Forms.Button();
+            this.btnPix = new System.Windows.Forms.Button();
             this.btnMmcMdc = new System.Windows.Forms.Button();
             this.btnPrimePower = new System.Windows.Forms.Button();
             this.btnAjuda = new System.Windows.Forms.Button();
@@ -53,6 +55,8 @@ namespace BasicMathBase
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.panel1.Controls.Add(this.pnlNav);
+            this.panel1.Controls.Add(this.btnArithmeticsFunctions);
+            this.panel1.Controls.Add(this.btnPix);
             this.panel1.Controls.Add(this.btnMmcMdc);
             this.panel1.Controls.Add(this.btnPrimePower);
             this.panel1.Controls.Add(this.btnAjuda);
@@ -69,10 +73,46 @@ namespace BasicMathBase
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 452);
+            this.pnlNav.Location = new System.Drawing.Point(0, 322);
             this.pnlNav.Name = "pnlNav";
             this.pnlNav.Size = new System.Drawing.Size(3, 213);
-            this.pnlNav.TabIndex = 11;
+            this.pnlNav.TabIndex = 14;
+            // 
+            // btnArithmeticsFunctions
+            // 
+            this.btnArithmeticsFunctions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnArithmeticsFunctions.FlatAppearance.BorderSize = 0;
+            this.btnArithmeticsFunctions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArithmeticsFunctions.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnArithmeticsFunctions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnArithmeticsFunctions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnArithmeticsFunctions.Location = new System.Drawing.Point(0, 517);
+            this.btnArithmeticsFunctions.Name = "btnArithmeticsFunctions";
+            this.btnArithmeticsFunctions.Size = new System.Drawing.Size(289, 65);
+            this.btnArithmeticsFunctions.TabIndex = 13;
+            this.btnArithmeticsFunctions.Text = "Funções Aritiméticas";
+            this.btnArithmeticsFunctions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnArithmeticsFunctions.UseVisualStyleBackColor = true;
+            this.btnArithmeticsFunctions.Click += new System.EventHandler(this.btnArithmeticsFunctions_Click);
+            this.btnArithmeticsFunctions.Leave += new System.EventHandler(this.btnArithmeticsFunctions_Leave);
+            // 
+            // btnPix
+            // 
+            this.btnPix.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPix.FlatAppearance.BorderSize = 0;
+            this.btnPix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPix.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPix.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPix.Location = new System.Drawing.Point(0, 452);
+            this.btnPix.Name = "btnPix";
+            this.btnPix.Size = new System.Drawing.Size(289, 65);
+            this.btnPix.TabIndex = 12;
+            this.btnPix.Text = "π (x)";
+            this.btnPix.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPix.UseVisualStyleBackColor = true;
+            this.btnPix.Click += new System.EventHandler(this.btnPix_Click);
+            this.btnPix.Leave += new System.EventHandler(this.btnPix_Leave);
             // 
             // btnMmcMdc
             // 
@@ -256,9 +296,11 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnPrimos;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnMmcMdc;
         private System.Windows.Forms.Button btnPrimePower;
+        private System.Windows.Forms.Button btnPix;
+        private System.Windows.Forms.Panel pnlNav;
+        private System.Windows.Forms.Button btnArithmeticsFunctions;
     }
 }
 

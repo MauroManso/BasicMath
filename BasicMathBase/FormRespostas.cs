@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace BasicMathBase
 {
     public partial class FormRespostas : Form
     {
+        [System.Runtime.InteropServices.DllImport("MimeTex.dll")]
+        internal static extern int CreateGifFromEq(string expr, string fileName);
         public FormRespostas(bool isCorrect, string answer)
         {
             InitializeComponent();
@@ -23,21 +26,19 @@ namespace BasicMathBase
             lblAnwser.Visible = false;
             btnGetAnswer.Visible = false;
 
-            int x1 = (952 - lblIsCorrect.Width) / 2;
-            lblIsCorrect.Location = new Point(x1, 100);
+            lblIsCorrect.Left = (this.ClientSize.Width - lblIsCorrect.Size.Width) / 2;
             if (isCorrect)
                 lblIsCorrect.Text = "Resposta Correta!";
             else
             {
                 lblIsCorrect.Text = "Resposta Incorreta :(";
                 btnGetAnswer.Visible = true;
+                btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
             }
-                
 
             lblAnwser.Text = answer;
-            int x = (952 - lblAnwser.Width) / 2;
-            int y = ((581 - lblAnwser.Height) / 2) - 80;
-            lblAnwser.Location = new Point(x, y);
+            lblAnwser.Left = (this.ClientSize.Width - lblAnwser.Size.Width) / 2;
+            
         }
 
         private void btnGetAnswer_Click(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace BasicMathBase
             this.btnGetAnswer.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGetAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnGetAnswer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGetAnswer.Location = new System.Drawing.Point(337, 409);
+            this.btnGetAnswer.Location = new System.Drawing.Point(312, 419);
             this.btnGetAnswer.Name = "btnGetAnswer";
             this.btnGetAnswer.Size = new System.Drawing.Size(280, 65);
             this.btnGetAnswer.TabIndex = 6;
@@ -55,7 +55,7 @@ namespace BasicMathBase
             this.lblIsCorrect.AutoSize = true;
             this.lblIsCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblIsCorrect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblIsCorrect.Location = new System.Drawing.Point(337, 103);
+            this.lblIsCorrect.Location = new System.Drawing.Point(332, 95);
             this.lblIsCorrect.Name = "lblIsCorrect";
             this.lblIsCorrect.Size = new System.Drawing.Size(260, 32);
             this.lblIsCorrect.TabIndex = 7;

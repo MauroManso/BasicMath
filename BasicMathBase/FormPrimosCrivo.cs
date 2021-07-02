@@ -21,7 +21,8 @@ namespace BasicMathBase
 
         private void customDesign()
         {
-            
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+            lblNumberOfPrimes.Visible = false;
         }
 
 
@@ -33,6 +34,7 @@ namespace BasicMathBase
                 long upToNum = Convert.ToInt64(txtboxUpToPrime.Text);
                 int tam = (Convert.ToString(upToNum)).Length + 2;
                 long last = 0;
+                long numberOfPrimes = 0;
 
                 int[] c = new int[] { 7, 11, 13, 17, 19, 23, 29, 31 };
 
@@ -51,6 +53,10 @@ namespace BasicMathBase
                             {
                                 nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
                             }
+                            else
+                            {
+                                numberOfPrimes++;
+                            }
                             last = num;
                         }
                     }
@@ -62,6 +68,8 @@ namespace BasicMathBase
                     richTextBoxLista.Select(nonPrimePosition - 5, 5);
                     richTextBoxLista.SelectionColor = Color.Red;
                 }
+                lblNumberOfPrimes.Text = "Há " + numberOfPrimes + " números primos";
+                lblNumberOfPrimes.Visible = true;
             }
             catch{
                 MessageBox.Show("Insira um Número Inteiro Válido até " + Int64.MaxValue,

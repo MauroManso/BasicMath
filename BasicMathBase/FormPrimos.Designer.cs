@@ -29,7 +29,7 @@ namespace BasicMathBase
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPrimes = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPrimo = new System.Windows.Forms.Label();
             this.txtboxVerifyPrime = new System.Windows.Forms.TextBox();
@@ -44,26 +44,27 @@ namespace BasicMathBase
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnClear2 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.lblNumberOfPrimes = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblPrimes
+            // lblTitle
             // 
-            this.lblPrimes.AutoSize = true;
-            this.lblPrimes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblPrimes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrimes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblPrimes.Location = new System.Drawing.Point(342, 30);
-            this.lblPrimes.Name = "lblPrimes";
-            this.lblPrimes.Size = new System.Drawing.Size(325, 37);
-            this.lblPrimes.TabIndex = 2;
-            this.lblPrimes.Text = "NÚMEROS PRIMOS";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
+            this.lblTitle.Location = new System.Drawing.Point(342, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(325, 37);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "NÚMEROS PRIMOS";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.panel3.Controls.Add(this.lblPrimes);
+            this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -223,6 +224,16 @@ namespace BasicMathBase
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // lblNumberOfPrimes
+            // 
+            this.lblNumberOfPrimes.AutoSize = true;
+            this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(376, 228);
+            this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
+            this.lblNumberOfPrimes.Size = new System.Drawing.Size(102, 25);
+            this.lblNumberOfPrimes.TabIndex = 23;
+            this.lblNumberOfPrimes.Text = "quantidade";
+            // 
             // FormPrimos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -240,6 +251,7 @@ namespace BasicMathBase
             this.Controls.Add(this.lbl_Lista);
             this.Controls.Add(this.btnVerifyPrime);
             this.Controls.Add(this.txtboxVerifyPrime);
+            this.Controls.Add(this.lblNumberOfPrimes);
             this.Controls.Add(this.lblPrimo);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -256,7 +268,7 @@ namespace BasicMathBase
 
         #endregion
 
-        private System.Windows.Forms.Label lblPrimes;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblPrimo;
         private System.Windows.Forms.TextBox txtboxVerifyPrime;
@@ -271,5 +283,6 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnClear2;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblNumberOfPrimes;
     }
 }

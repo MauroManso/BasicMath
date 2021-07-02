@@ -16,6 +16,12 @@ namespace BasicMathBase
         public FormMmcMdc()
         {
             InitializeComponent();
+            customDesign();
+        }
+
+        private void customDesign() 
+        {
+            lblTitleMmcMdc.Left = (this.ClientSize.Width - lblTitleMmcMdc.Size.Width) / 2;
         }
 
         private void btnCorrectMmc_Click(object sender, EventArgs e)

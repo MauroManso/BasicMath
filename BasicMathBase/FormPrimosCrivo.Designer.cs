@@ -30,37 +30,38 @@ namespace BasicMathBase
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblPrimos = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.txtboxUpToPrime = new System.Windows.Forms.TextBox();
             this.btnListPrime = new System.Windows.Forms.Button();
             this.lbl_Lista = new System.Windows.Forms.Label();
             this.richTextBoxLista = new System.Windows.Forms.RichTextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.lblNumberOfPrimes = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.panel3.Controls.Add(this.lblPrimos);
+            this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(984, 95);
             this.panel3.TabIndex = 23;
             // 
-            // lblPrimos
+            // lblTitle
             // 
-            this.lblPrimos.AutoSize = true;
-            this.lblPrimos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblPrimos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrimos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblPrimos.Location = new System.Drawing.Point(228, 29);
-            this.lblPrimos.Name = "lblPrimos";
-            this.lblPrimos.Size = new System.Drawing.Size(521, 37);
-            this.lblPrimos.TabIndex = 2;
-            this.lblPrimos.Text = "NÚMEROS PRIMOS POR CRIVO";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
+            this.lblTitle.Location = new System.Drawing.Point(228, 29);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(521, 37);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "NÚMEROS PRIMOS POR CRIVO";
             // 
             // txtboxUpToPrime
             // 
@@ -140,12 +141,23 @@ namespace BasicMathBase
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // lblNumberOfPrimes
+            // 
+            this.lblNumberOfPrimes.AutoSize = true;
+            this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(441, 209);
+            this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
+            this.lblNumberOfPrimes.Size = new System.Drawing.Size(102, 25);
+            this.lblNumberOfPrimes.TabIndex = 4137;
+            this.lblNumberOfPrimes.Text = "quantidade";
+            // 
             // FormPrimosCrivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(984, 664);
+            this.Controls.Add(this.lblNumberOfPrimes);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.richTextBoxLista);
@@ -166,12 +178,13 @@ namespace BasicMathBase
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblPrimos;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtboxUpToPrime;
         private System.Windows.Forms.Button btnListPrime;
         private System.Windows.Forms.Label lbl_Lista;
         private System.Windows.Forms.RichTextBox richTextBoxLista;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Label lblNumberOfPrimes;
     }
 }

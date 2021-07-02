@@ -20,6 +20,8 @@ namespace BasicMathBase
 
         private void customizeDesign()
         {
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+
             tlbOrdemClase.Visible = false;
             lbl_Unidades.Visible = false;
             lbl_Milhares.Visible = false;
@@ -187,33 +189,32 @@ namespace BasicMathBase
 
             if ((Lenght(num) <= 9) && (num != -1))
             {
-                /* Caso 1: Ordem e Classe Desativado e Paridade Desativado
-                 * Caso 2: Ordem e Classe Ativado e Paridade Desativado
-                 * Caso 3: Ordem e Classe Desativado e Paridade Ativado
-                 * Caso 4: Ordem e Classe Ativado e Paridade Ativado
-                */
-                bool classeIsOn;
-                if (checkboxOrdemClasse.Checked == true)
-                    classeIsOn = true;
-                else
-                    classeIsOn = false;
 
-
-                bool paridadeIsOn;
-                if (checkboxParidade.Checked == true)
-                    paridadeIsOn = true;
-                else
-                    paridadeIsOn = false;
-
-                string result = "";
+                string answer = "";
                 bool isCorrect = false;
-                bool isPar = false;
-                bool isParidadeCorrect = false;
 
-                if (classeIsOn == false)
+                if (checkboxParidade.Checked)
                 {
-                    result = Soma_Potencia(num);
-                    string withoutSpaceResult = TrimAllWithInplaceCharArray(result);
+                    bool isPar = false;
+                    if ((num % 2) == 0)
+                        isPar = true;
+                    if (isPar && radioButtonPar.Checked)
+                        isCorrect = true;
+                    else if (!isPar && radioButtonImpar.Checked)
+                        isCorrect = true;
+                    else {
+                        answer = "O número é " ;
+                        if (isPar) answer += "par";
+                        else answer += "impar";
+                    }
+
+                    FormRespostas openForm = new FormRespostas(isCorrect, answer);
+                    openForm.Show();
+                }
+                else if (!checkboxOrdemClasse.Checked)
+                {
+                    answer = Soma_Potencia(num);
+                    string withoutSpaceResult = TrimAllWithInplaceCharArray(answer);
 
                     string userAnswer = tbResposta.Text;
                     string withoutSpaceUserAnswer = TrimAllWithInplaceCharArray(userAnswer);
@@ -222,8 +223,11 @@ namespace BasicMathBase
                         isCorrect = true;
                     else
                         isCorrect = false;
+
+                    FormRespostas openForm = new FormRespostas(isCorrect, answer);
+                    openForm.Show();
                 }
-                else if (classeIsOn == true)
+                else if (checkboxOrdemClasse.Checked)
                 {
                     string userAnswerClasse = "";
                     userAnswerClasse += tb_cMilhao.Text;
@@ -241,21 +245,13 @@ namespace BasicMathBase
                     else
                         isCorrect = false;
 
-                    result = num.ToString();
+                    answer = num.ToString();
+
+                    FormRespostaTable openForm = new FormRespostaTable(isCorrect, answer);
+                    openForm.Show();
                 }
 
-                if (paridadeIsOn)
-                {
-                    if ((num % 2) == 0)
-                        isPar = true;
-                    if (isPar == true && radioButtonPar.Checked == true)
-                        isParidadeCorrect = true;
-                    else if (isPar == false && radioButtonImpar.Checked == true)
-                        isParidadeCorrect = true;
-                }
-
-                FormPotencia10Resposta openForm = new FormPotencia10Resposta(classeIsOn, result, isCorrect, paridadeIsOn, isPar, isParidadeCorrect);
-                openForm.Show();
+                
             }
             else
             {
@@ -285,6 +281,8 @@ namespace BasicMathBase
                 tb_cMilhao.Visible = true;
                 lblResposta.Visible = false;
                 tbResposta.Visible = false;
+
+                tbResposta.Text = "";
             }
             else
             {
@@ -303,6 +301,16 @@ namespace BasicMathBase
                 tb_cMilhao.Visible = false;
                 lblResposta.Visible = true;
                 tbResposta.Visible = true;
+
+                tb_uUnidade.Text = "";
+                tb_dUnidade.Text = "";
+                tb_cUnidade.Text = "";
+                tb_uMilhar.Text = "";
+                tb_dMilhar.Text = "";
+                tb_cMilhar.Text = "";
+                tb_uMilhao.Text = "";
+                tb_dMilhao.Text = "";
+                tb_cMilhao.Text = "";
             }
         }
 
@@ -313,12 +321,25 @@ namespace BasicMathBase
                 lblParidade.Visible = true;
                 radioButtonPar.Visible = true;
                 radioButtonImpar.Visible = true;
+
+                tbResposta.Text = "";
+                checkboxOrdemClasse.Checked = false;
+                checkboxOrdemClasse.Visible = false;
+                lblResposta.Visible = false;
+                tbResposta.Visible = false;
             }
             else
             {
                 lblParidade.Visible = false;
                 radioButtonPar.Visible = false;
                 radioButtonImpar.Visible = false;
+
+                radioButtonPar.Checked = false;
+                radioButtonImpar.Checked = false;
+
+                checkboxOrdemClasse.Visible = true;
+                lblResposta.Visible = true;
+                tbResposta.Visible = true;
             }
         }
     }

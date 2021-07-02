@@ -30,31 +30,9 @@ namespace BasicMathBase
         private void InitializeComponent()
         {
             this.btn_Limpar = new System.Windows.Forms.Button();
-            this.tb_uUnidade = new System.Windows.Forms.TextBox();
-            this.tb_uMilhar = new System.Windows.Forms.TextBox();
-            this.tb_uMilhao = new System.Windows.Forms.TextBox();
-            this.tb_dUnidade = new System.Windows.Forms.TextBox();
-            this.tb_dMilhar = new System.Windows.Forms.TextBox();
-            this.tb_dMilhao = new System.Windows.Forms.TextBox();
-            this.tb_cUnidade = new System.Windows.Forms.TextBox();
-            this.tb_cMilhar = new System.Windows.Forms.TextBox();
-            this.tb_cMilhao = new System.Windows.Forms.TextBox();
             this.checkboxOrdemClasse = new System.Windows.Forms.CheckBox();
-            this.lbl_Unidades = new System.Windows.Forms.Label();
-            this.lbl_Milhares = new System.Windows.Forms.Label();
-            this.lbl_Milhões = new System.Windows.Forms.Label();
-            this.tlbOrdemClase = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblSomaPotencia = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnCorrigir = new System.Windows.Forms.Button();
             this.tbNum = new System.Windows.Forms.TextBox();
             this.tbResposta = new System.Windows.Forms.TextBox();
@@ -65,8 +43,32 @@ namespace BasicMathBase
             this.lblParidade = new System.Windows.Forms.Label();
             this.radioButtonPar = new System.Windows.Forms.RadioButton();
             this.radioButtonImpar = new System.Windows.Forms.RadioButton();
-            this.tlbOrdemClase.SuspendLayout();
+            this.panelTable = new System.Windows.Forms.Panel();
+            this.tb_uUnidade = new System.Windows.Forms.TextBox();
+            this.tb_uMilhar = new System.Windows.Forms.TextBox();
+            this.tb_uMilhao = new System.Windows.Forms.TextBox();
+            this.tb_dUnidade = new System.Windows.Forms.TextBox();
+            this.tb_dMilhar = new System.Windows.Forms.TextBox();
+            this.tb_dMilhao = new System.Windows.Forms.TextBox();
+            this.tb_cUnidade = new System.Windows.Forms.TextBox();
+            this.tb_cMilhar = new System.Windows.Forms.TextBox();
+            this.tb_cMilhao = new System.Windows.Forms.TextBox();
+            this.lbl_Unidades = new System.Windows.Forms.Label();
+            this.lbl_Milhares = new System.Windows.Forms.Label();
+            this.lbl_Milhões = new System.Windows.Forms.Label();
+            this.tlbOrdemClase = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.panelTable.SuspendLayout();
+            this.tlbOrdemClase.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Limpar
@@ -85,114 +87,6 @@ namespace BasicMathBase
             this.btn_Limpar.UseVisualStyleBackColor = true;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
-            // tb_uUnidade
-            // 
-            this.tb_uUnidade.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_uUnidade.BackColor = System.Drawing.Color.White;
-            this.tb_uUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_uUnidade.Location = new System.Drawing.Point(663, 491);
-            this.tb_uUnidade.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_uUnidade.Name = "tb_uUnidade";
-            this.tb_uUnidade.Size = new System.Drawing.Size(41, 31);
-            this.tb_uUnidade.TabIndex = 43;
-            this.tb_uUnidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_uMilhar
-            // 
-            this.tb_uMilhar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_uMilhar.BackColor = System.Drawing.Color.White;
-            this.tb_uMilhar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_uMilhar.Location = new System.Drawing.Point(499, 491);
-            this.tb_uMilhar.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_uMilhar.Name = "tb_uMilhar";
-            this.tb_uMilhar.Size = new System.Drawing.Size(41, 31);
-            this.tb_uMilhar.TabIndex = 40;
-            this.tb_uMilhar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_uMilhao
-            // 
-            this.tb_uMilhao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_uMilhao.BackColor = System.Drawing.Color.White;
-            this.tb_uMilhao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_uMilhao.Location = new System.Drawing.Point(335, 491);
-            this.tb_uMilhao.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_uMilhao.Name = "tb_uMilhao";
-            this.tb_uMilhao.Size = new System.Drawing.Size(41, 31);
-            this.tb_uMilhao.TabIndex = 37;
-            this.tb_uMilhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_dUnidade
-            // 
-            this.tb_dUnidade.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_dUnidade.BackColor = System.Drawing.Color.White;
-            this.tb_dUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_dUnidade.Location = new System.Drawing.Point(622, 491);
-            this.tb_dUnidade.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_dUnidade.Name = "tb_dUnidade";
-            this.tb_dUnidade.Size = new System.Drawing.Size(41, 31);
-            this.tb_dUnidade.TabIndex = 42;
-            this.tb_dUnidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_dMilhar
-            // 
-            this.tb_dMilhar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_dMilhar.BackColor = System.Drawing.Color.White;
-            this.tb_dMilhar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_dMilhar.Location = new System.Drawing.Point(458, 491);
-            this.tb_dMilhar.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_dMilhar.Name = "tb_dMilhar";
-            this.tb_dMilhar.Size = new System.Drawing.Size(41, 31);
-            this.tb_dMilhar.TabIndex = 39;
-            this.tb_dMilhar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_dMilhao
-            // 
-            this.tb_dMilhao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_dMilhao.BackColor = System.Drawing.Color.White;
-            this.tb_dMilhao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_dMilhao.Location = new System.Drawing.Point(294, 491);
-            this.tb_dMilhao.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_dMilhao.Name = "tb_dMilhao";
-            this.tb_dMilhao.Size = new System.Drawing.Size(41, 31);
-            this.tb_dMilhao.TabIndex = 36;
-            this.tb_dMilhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_cUnidade
-            // 
-            this.tb_cUnidade.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_cUnidade.BackColor = System.Drawing.Color.White;
-            this.tb_cUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_cUnidade.Location = new System.Drawing.Point(580, 491);
-            this.tb_cUnidade.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_cUnidade.Name = "tb_cUnidade";
-            this.tb_cUnidade.Size = new System.Drawing.Size(42, 31);
-            this.tb_cUnidade.TabIndex = 41;
-            this.tb_cUnidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_cMilhar
-            // 
-            this.tb_cMilhar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_cMilhar.BackColor = System.Drawing.Color.White;
-            this.tb_cMilhar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_cMilhar.Location = new System.Drawing.Point(416, 491);
-            this.tb_cMilhar.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_cMilhar.Name = "tb_cMilhar";
-            this.tb_cMilhar.Size = new System.Drawing.Size(42, 31);
-            this.tb_cMilhar.TabIndex = 38;
-            this.tb_cMilhar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_cMilhao
-            // 
-            this.tb_cMilhao.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_cMilhao.BackColor = System.Drawing.Color.White;
-            this.tb_cMilhao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_cMilhao.Location = new System.Drawing.Point(252, 491);
-            this.tb_cMilhao.MinimumSize = new System.Drawing.Size(2, 40);
-            this.tb_cMilhao.Name = "tb_cMilhao";
-            this.tb_cMilhao.Size = new System.Drawing.Size(42, 31);
-            this.tb_cMilhao.TabIndex = 35;
-            this.tb_cMilhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // checkboxOrdemClasse
             // 
             this.checkboxOrdemClasse.AutoSize = true;
@@ -205,187 +99,27 @@ namespace BasicMathBase
             this.checkboxOrdemClasse.UseVisualStyleBackColor = true;
             this.checkboxOrdemClasse.CheckedChanged += new System.EventHandler(this.cb_ModoOrdemClasse_CheckedChanged);
             // 
-            // lbl_Unidades
-            // 
-            this.lbl_Unidades.AutoSize = true;
-            this.lbl_Unidades.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Unidades.Location = new System.Drawing.Point(599, 410);
-            this.lbl_Unidades.Name = "lbl_Unidades";
-            this.lbl_Unidades.Size = new System.Drawing.Size(86, 25);
-            this.lbl_Unidades.TabIndex = 23;
-            this.lbl_Unidades.Text = "Unidades";
-            // 
-            // lbl_Milhares
-            // 
-            this.lbl_Milhares.AutoSize = true;
-            this.lbl_Milhares.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Milhares.Location = new System.Drawing.Point(442, 410);
-            this.lbl_Milhares.Name = "lbl_Milhares";
-            this.lbl_Milhares.Size = new System.Drawing.Size(78, 25);
-            this.lbl_Milhares.TabIndex = 24;
-            this.lbl_Milhares.Text = "Milhares";
-            // 
-            // lbl_Milhões
-            // 
-            this.lbl_Milhões.AutoSize = true;
-            this.lbl_Milhões.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Milhões.Location = new System.Drawing.Point(282, 410);
-            this.lbl_Milhões.Name = "lbl_Milhões";
-            this.lbl_Milhões.Size = new System.Drawing.Size(74, 25);
-            this.lbl_Milhões.TabIndex = 25;
-            this.lbl_Milhões.Text = "Milhões";
-            // 
-            // tlbOrdemClase
-            // 
-            this.tlbOrdemClase.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tlbOrdemClase.ColumnCount = 11;
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
-            this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
-            this.tlbOrdemClase.Controls.Add(this.label1, 10, 0);
-            this.tlbOrdemClase.Controls.Add(this.label5, 6, 0);
-            this.tlbOrdemClase.Controls.Add(this.label6, 5, 0);
-            this.tlbOrdemClase.Controls.Add(this.label7, 4, 0);
-            this.tlbOrdemClase.Controls.Add(this.label8, 2, 0);
-            this.tlbOrdemClase.Controls.Add(this.label9, 1, 0);
-            this.tlbOrdemClase.Controls.Add(this.label10, 0, 0);
-            this.tlbOrdemClase.Location = new System.Drawing.Point(253, 438);
-            this.tlbOrdemClase.Name = "tlbOrdemClase";
-            this.tlbOrdemClase.RowCount = 1;
-            this.tlbOrdemClase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tlbOrdemClase.Size = new System.Drawing.Size(451, 54);
-            this.tlbOrdemClase.TabIndex = 22;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(378, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "d";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(339, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "c";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(431, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "u";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(256, 14);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "u";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(214, 14);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "d";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(175, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 25);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "c";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(92, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(22, 25);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "u";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(50, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "d";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(11, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "c";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.panel3.Controls.Add(this.lblSomaPotencia);
+            this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(984, 95);
             this.panel3.TabIndex = 21;
             // 
-            // lblSomaPotencia
+            // lblTitle
             // 
-            this.lblSomaPotencia.AutoSize = true;
-            this.lblSomaPotencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblSomaPotencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblSomaPotencia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblSomaPotencia.Location = new System.Drawing.Point(75, 25);
-            this.lblSomaPotencia.Name = "lblSomaPotencia";
-            this.lblSomaPotencia.Size = new System.Drawing.Size(857, 37);
-            this.lblSomaPotencia.TabIndex = 2;
-            this.lblSomaPotencia.Text = "NATURAL COMO SOMA DE POTÊNCIAS DE BASE 10";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
+            this.lblTitle.Location = new System.Drawing.Point(75, 25);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(857, 37);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "NATURAL COMO SOMA DE POTÊNCIAS DE BASE 10";
             // 
             // btnCorrigir
             // 
@@ -492,30 +226,307 @@ namespace BasicMathBase
             this.radioButtonImpar.Text = "Impar";
             this.radioButtonImpar.UseVisualStyleBackColor = true;
             // 
+            // panelTable
+            // 
+            this.panelTable.Controls.Add(this.tb_uUnidade);
+            this.panelTable.Controls.Add(this.tb_uMilhar);
+            this.panelTable.Controls.Add(this.tb_uMilhao);
+            this.panelTable.Controls.Add(this.tb_dUnidade);
+            this.panelTable.Controls.Add(this.tb_dMilhar);
+            this.panelTable.Controls.Add(this.tb_dMilhao);
+            this.panelTable.Controls.Add(this.tb_cUnidade);
+            this.panelTable.Controls.Add(this.tb_cMilhar);
+            this.panelTable.Controls.Add(this.tb_cMilhao);
+            this.panelTable.Controls.Add(this.lbl_Unidades);
+            this.panelTable.Controls.Add(this.lbl_Milhares);
+            this.panelTable.Controls.Add(this.lbl_Milhões);
+            this.panelTable.Controls.Add(this.tlbOrdemClase);
+            this.panelTable.Location = new System.Drawing.Point(193, 386);
+            this.panelTable.Name = "panelTable";
+            this.panelTable.Size = new System.Drawing.Size(623, 183);
+            this.panelTable.TabIndex = 48;
+            // 
+            // tb_uUnidade
+            // 
+            this.tb_uUnidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_uUnidade.BackColor = System.Drawing.Color.White;
+            this.tb_uUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_uUnidade.Location = new System.Drawing.Point(496, 112);
+            this.tb_uUnidade.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_uUnidade.Name = "tb_uUnidade";
+            this.tb_uUnidade.Size = new System.Drawing.Size(41, 31);
+            this.tb_uUnidade.TabIndex = 56;
+            this.tb_uUnidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_uMilhar
+            // 
+            this.tb_uMilhar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_uMilhar.BackColor = System.Drawing.Color.White;
+            this.tb_uMilhar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_uMilhar.Location = new System.Drawing.Point(332, 112);
+            this.tb_uMilhar.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_uMilhar.Name = "tb_uMilhar";
+            this.tb_uMilhar.Size = new System.Drawing.Size(41, 31);
+            this.tb_uMilhar.TabIndex = 53;
+            this.tb_uMilhar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_uMilhao
+            // 
+            this.tb_uMilhao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_uMilhao.BackColor = System.Drawing.Color.White;
+            this.tb_uMilhao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_uMilhao.Location = new System.Drawing.Point(168, 112);
+            this.tb_uMilhao.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_uMilhao.Name = "tb_uMilhao";
+            this.tb_uMilhao.Size = new System.Drawing.Size(41, 31);
+            this.tb_uMilhao.TabIndex = 50;
+            this.tb_uMilhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_dUnidade
+            // 
+            this.tb_dUnidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_dUnidade.BackColor = System.Drawing.Color.White;
+            this.tb_dUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_dUnidade.Location = new System.Drawing.Point(455, 112);
+            this.tb_dUnidade.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_dUnidade.Name = "tb_dUnidade";
+            this.tb_dUnidade.Size = new System.Drawing.Size(41, 31);
+            this.tb_dUnidade.TabIndex = 55;
+            this.tb_dUnidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_dMilhar
+            // 
+            this.tb_dMilhar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_dMilhar.BackColor = System.Drawing.Color.White;
+            this.tb_dMilhar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_dMilhar.Location = new System.Drawing.Point(291, 112);
+            this.tb_dMilhar.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_dMilhar.Name = "tb_dMilhar";
+            this.tb_dMilhar.Size = new System.Drawing.Size(41, 31);
+            this.tb_dMilhar.TabIndex = 52;
+            this.tb_dMilhar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_dMilhao
+            // 
+            this.tb_dMilhao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_dMilhao.BackColor = System.Drawing.Color.White;
+            this.tb_dMilhao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_dMilhao.Location = new System.Drawing.Point(127, 112);
+            this.tb_dMilhao.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_dMilhao.Name = "tb_dMilhao";
+            this.tb_dMilhao.Size = new System.Drawing.Size(41, 31);
+            this.tb_dMilhao.TabIndex = 49;
+            this.tb_dMilhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_cUnidade
+            // 
+            this.tb_cUnidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_cUnidade.BackColor = System.Drawing.Color.White;
+            this.tb_cUnidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_cUnidade.Location = new System.Drawing.Point(413, 112);
+            this.tb_cUnidade.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_cUnidade.Name = "tb_cUnidade";
+            this.tb_cUnidade.Size = new System.Drawing.Size(42, 31);
+            this.tb_cUnidade.TabIndex = 54;
+            this.tb_cUnidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_cMilhar
+            // 
+            this.tb_cMilhar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_cMilhar.BackColor = System.Drawing.Color.White;
+            this.tb_cMilhar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_cMilhar.Location = new System.Drawing.Point(249, 112);
+            this.tb_cMilhar.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_cMilhar.Name = "tb_cMilhar";
+            this.tb_cMilhar.Size = new System.Drawing.Size(42, 31);
+            this.tb_cMilhar.TabIndex = 51;
+            this.tb_cMilhar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_cMilhao
+            // 
+            this.tb_cMilhao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_cMilhao.BackColor = System.Drawing.Color.White;
+            this.tb_cMilhao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_cMilhao.Location = new System.Drawing.Point(85, 112);
+            this.tb_cMilhao.MinimumSize = new System.Drawing.Size(2, 40);
+            this.tb_cMilhao.Name = "tb_cMilhao";
+            this.tb_cMilhao.Size = new System.Drawing.Size(42, 31);
+            this.tb_cMilhao.TabIndex = 48;
+            this.tb_cMilhao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbl_Unidades
+            // 
+            this.lbl_Unidades.AutoSize = true;
+            this.lbl_Unidades.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_Unidades.Location = new System.Drawing.Point(436, 25);
+            this.lbl_Unidades.Name = "lbl_Unidades";
+            this.lbl_Unidades.Size = new System.Drawing.Size(86, 25);
+            this.lbl_Unidades.TabIndex = 45;
+            this.lbl_Unidades.Text = "Unidades";
+            // 
+            // lbl_Milhares
+            // 
+            this.lbl_Milhares.AutoSize = true;
+            this.lbl_Milhares.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_Milhares.Location = new System.Drawing.Point(274, 25);
+            this.lbl_Milhares.Name = "lbl_Milhares";
+            this.lbl_Milhares.Size = new System.Drawing.Size(78, 25);
+            this.lbl_Milhares.TabIndex = 46;
+            this.lbl_Milhares.Text = "Milhares";
+            // 
+            // lbl_Milhões
+            // 
+            this.lbl_Milhões.AutoSize = true;
+            this.lbl_Milhões.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_Milhões.Location = new System.Drawing.Point(121, 25);
+            this.lbl_Milhões.Name = "lbl_Milhões";
+            this.lbl_Milhões.Size = new System.Drawing.Size(74, 25);
+            this.lbl_Milhões.TabIndex = 47;
+            this.lbl_Milhões.Text = "Milhões";
+            // 
+            // tlbOrdemClase
+            // 
+            this.tlbOrdemClase.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tlbOrdemClase.ColumnCount = 11;
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
+            this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
+            this.tlbOrdemClase.Controls.Add(this.label5, 6, 0);
+            this.tlbOrdemClase.Controls.Add(this.label6, 5, 0);
+            this.tlbOrdemClase.Controls.Add(this.label7, 4, 0);
+            this.tlbOrdemClase.Controls.Add(this.label8, 2, 0);
+            this.tlbOrdemClase.Controls.Add(this.label9, 1, 0);
+            this.tlbOrdemClase.Controls.Add(this.label10, 0, 0);
+            this.tlbOrdemClase.Controls.Add(this.label1, 10, 0);
+            this.tlbOrdemClase.Location = new System.Drawing.Point(86, 59);
+            this.tlbOrdemClase.Name = "tlbOrdemClase";
+            this.tlbOrdemClase.RowCount = 1;
+            this.tlbOrdemClase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tlbOrdemClase.Size = new System.Drawing.Size(451, 54);
+            this.tlbOrdemClase.TabIndex = 44;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(378, 14);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "d";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(339, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "c";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(256, 14);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "u";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(214, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(23, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "d";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(175, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 25);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "c";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(92, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(22, 25);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "u";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(50, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 25);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "d";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(11, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "c";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(414, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 52);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "u";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormPotencia10
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(984, 664);
+            this.Controls.Add(this.panelTable);
             this.Controls.Add(this.radioButtonImpar);
             this.Controls.Add(this.radioButtonPar);
             this.Controls.Add(this.checkboxParidade);
             this.Controls.Add(this.btn_Limpar);
-            this.Controls.Add(this.tb_uUnidade);
-            this.Controls.Add(this.tb_uMilhar);
-            this.Controls.Add(this.tb_uMilhao);
-            this.Controls.Add(this.tb_dUnidade);
-            this.Controls.Add(this.tb_dMilhar);
-            this.Controls.Add(this.tb_dMilhao);
-            this.Controls.Add(this.tb_cUnidade);
-            this.Controls.Add(this.tb_cMilhar);
-            this.Controls.Add(this.tb_cMilhao);
             this.Controls.Add(this.checkboxOrdemClasse);
-            this.Controls.Add(this.lbl_Unidades);
-            this.Controls.Add(this.lbl_Milhares);
-            this.Controls.Add(this.lbl_Milhões);
-            this.Controls.Add(this.tlbOrdemClase);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnCorrigir);
             this.Controls.Add(this.tbNum);
@@ -527,10 +538,12 @@ namespace BasicMathBase
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPotencia10";
             this.Text = "Form3";
-            this.tlbOrdemClase.ResumeLayout(false);
-            this.tlbOrdemClase.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelTable.ResumeLayout(false);
+            this.panelTable.PerformLayout();
+            this.tlbOrdemClase.ResumeLayout(false);
+            this.tlbOrdemClase.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,31 +552,9 @@ namespace BasicMathBase
         #endregion
 
         private System.Windows.Forms.Button btn_Limpar;
-        private System.Windows.Forms.TextBox tb_uUnidade;
-        private System.Windows.Forms.TextBox tb_uMilhar;
-        private System.Windows.Forms.TextBox tb_uMilhao;
-        private System.Windows.Forms.TextBox tb_dUnidade;
-        private System.Windows.Forms.TextBox tb_dMilhar;
-        private System.Windows.Forms.TextBox tb_dMilhao;
-        private System.Windows.Forms.TextBox tb_cUnidade;
-        private System.Windows.Forms.TextBox tb_cMilhar;
-        private System.Windows.Forms.TextBox tb_cMilhao;
         private System.Windows.Forms.CheckBox checkboxOrdemClasse;
-        private System.Windows.Forms.Label lbl_Unidades;
-        private System.Windows.Forms.Label lbl_Milhares;
-        private System.Windows.Forms.Label lbl_Milhões;
-        private System.Windows.Forms.TableLayoutPanel tlbOrdemClase;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblSomaPotencia;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCorrigir;
         private System.Windows.Forms.TextBox tbNum;
         private System.Windows.Forms.TextBox tbResposta;
@@ -574,5 +565,28 @@ namespace BasicMathBase
         private System.Windows.Forms.Label lblParidade;
         private System.Windows.Forms.RadioButton radioButtonPar;
         private System.Windows.Forms.RadioButton radioButtonImpar;
+        private System.Windows.Forms.Panel panelTable;
+        private System.Windows.Forms.TextBox tb_uUnidade;
+        private System.Windows.Forms.TextBox tb_uMilhar;
+        private System.Windows.Forms.TextBox tb_uMilhao;
+        private System.Windows.Forms.TextBox tb_dUnidade;
+        private System.Windows.Forms.TextBox tb_dMilhar;
+        private System.Windows.Forms.TextBox tb_dMilhao;
+        private System.Windows.Forms.TextBox tb_cUnidade;
+        private System.Windows.Forms.TextBox tb_cMilhar;
+        private System.Windows.Forms.TextBox tb_cMilhao;
+        private System.Windows.Forms.Label lbl_Unidades;
+        private System.Windows.Forms.Label lbl_Milhares;
+        private System.Windows.Forms.Label lbl_Milhões;
+        private System.Windows.Forms.TableLayoutPanel tlbOrdemClase;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -23,7 +23,9 @@ namespace BasicMathBase
 
         private void customDesign()
         {
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
             txtboxList.Visible = false;
+            lblNumberOfPrimes.Visible = false;
         }
 
         private void lblSomaPotencia_Click(object sender, EventArgs e)
@@ -76,33 +78,16 @@ namespace BasicMathBase
 
         private void btnListPrime_Click(object sender, EventArgs e)
         {
-            long num, i, ctr, stno, enno;
-            stno = Convert.ToInt64(txtboxBeginPrime.Text);
-            enno = Convert.ToInt64(txtboxUpToPrime.Text);
-            // int numberOfElements = 0;
-            // int numberOfElementPerLine = 15;
+            long begin = Convert.ToInt64(txtboxBeginPrime.Text);
+            long end = Convert.ToInt64(txtboxUpToPrime.Text);
 
-            int tam = (Convert.ToString(enno)).Length + 2;
-            txtboxList.Text = "";
-            for (num = stno; num <= enno; num++){
-                ctr = 0;
+            var result = MathMethods.ListPrime(begin, end);
 
-                for (i = 2; i <= num / 2; i++)
-                {
-                    if (num % i == 0)
-                    {
-                        ctr++;
-                        break;
-                    }
-                }
-
-                if (ctr == 0 && num != 1)
-                {
-                    txtboxList.Text += String.Format("{0," + tam + "}\t", num);
-                }
-                    
-            }
+            txtboxList.Text = result.primesList;
             txtboxList.Visible = true;
+            lblNumberOfPrimes.Text = "Há" + result.numberOfPrimes + " números primos";
+            lblNumberOfPrimes.Visible = true;
+
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument

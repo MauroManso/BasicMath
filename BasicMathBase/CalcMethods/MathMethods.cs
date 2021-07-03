@@ -8,6 +8,39 @@ namespace BasicMathBase.CalcMethods
 {
     public class MathMethods
     {
+        public static (string toLeft, string toRight) SumPowerBase10(long num)
+        {
+            string toLeft = "";
+            string toRight = "";
+            string number = Convert.ToString(num);
+
+            bool isFirst = true;
+            int counter = number.Length - 1;
+            for (int i = 0; i < number.Length; i++)
+            {
+                if (!isFirst)
+                    toRight += " + ";
+                isFirst = false;
+
+                toRight += number[i] + ".10^" + counter;
+                counter--;
+            }
+
+            isFirst = true;
+            counter = 0;
+            for (int i = (number.Length - 1); i >= 0; i--)
+            {
+                if (!isFirst)
+                    toLeft += " + ";
+                isFirst = false;
+
+                toLeft += number[i] + ".10^" + counter;
+                counter++;
+            }
+
+            return (toLeft, toRight);
+        }
+
         public static bool IsPrime(long num)
         {
             for (int a = 2; a <= num / 2; a++)

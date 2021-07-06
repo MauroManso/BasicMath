@@ -39,12 +39,14 @@ namespace BasicMathBase
             this.lbl_Lista = new System.Windows.Forms.Label();
             this.txtboxUpToPrime = new System.Windows.Forms.TextBox();
             this.lbl_AtePrimo = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtboxList = new System.Windows.Forms.TextBox();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnClear2 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblNumberOfPrimes = new System.Windows.Forms.Label();
+            this.lblPercentage = new System.Windows.Forms.Label();
+            this.lblTimeElapsed = new System.Windows.Forms.Label();
+            this.txtboxList = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -154,28 +156,6 @@ namespace BasicMathBase
             this.lbl_AtePrimo.TabIndex = 43;
             this.lbl_AtePrimo.Text = "Até:";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtboxList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 256);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 408);
-            this.panel1.TabIndex = 4129;
-            // 
-            // txtboxList
-            // 
-            this.txtboxList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
-            this.txtboxList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtboxList.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtboxList.Location = new System.Drawing.Point(0, 0);
-            this.txtboxList.Multiline = true;
-            this.txtboxList.Name = "txtboxList";
-            this.txtboxList.ReadOnly = true;
-            this.txtboxList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtboxList.Size = new System.Drawing.Size(984, 408);
-            this.txtboxList.TabIndex = 4130;
-            // 
             // btnPrint
             // 
             this.btnPrint.FlatAppearance.BorderSize = 2;
@@ -228,11 +208,53 @@ namespace BasicMathBase
             // 
             this.lblNumberOfPrimes.AutoSize = true;
             this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumberOfPrimes.Location = new System.Drawing.Point(376, 228);
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(224, 231);
             this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
             this.lblNumberOfPrimes.Size = new System.Drawing.Size(102, 25);
             this.lblNumberOfPrimes.TabIndex = 23;
             this.lblNumberOfPrimes.Text = "quantidade";
+            // 
+            // lblPercentage
+            // 
+            this.lblPercentage.AutoSize = true;
+            this.lblPercentage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPercentage.Location = new System.Drawing.Point(471, 248);
+            this.lblPercentage.Name = "lblPercentage";
+            this.lblPercentage.Size = new System.Drawing.Size(42, 25);
+            this.lblPercentage.TabIndex = 4138;
+            this.lblPercentage.Text = "0 %";
+            // 
+            // lblTimeElapsed
+            // 
+            this.lblTimeElapsed.AutoSize = true;
+            this.lblTimeElapsed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTimeElapsed.Location = new System.Drawing.Point(542, 231);
+            this.lblTimeElapsed.Name = "lblTimeElapsed";
+            this.lblTimeElapsed.Size = new System.Drawing.Size(181, 25);
+            this.lblTimeElapsed.TabIndex = 4139;
+            this.lblTimeElapsed.Text = "Tempo passado: 0Ms";
+            // 
+            // txtboxList
+            // 
+            this.txtboxList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
+            this.txtboxList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtboxList.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtboxList.Location = new System.Drawing.Point(0, 0);
+            this.txtboxList.Multiline = true;
+            this.txtboxList.Name = "txtboxList";
+            this.txtboxList.ReadOnly = true;
+            this.txtboxList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtboxList.Size = new System.Drawing.Size(984, 373);
+            this.txtboxList.TabIndex = 4130;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtboxList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 291);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(984, 373);
+            this.panel1.TabIndex = 4129;
             // 
             // FormPrimos
             // 
@@ -240,6 +262,8 @@ namespace BasicMathBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(984, 664);
+            this.Controls.Add(this.lblPercentage);
+            this.Controls.Add(this.lblTimeElapsed);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClear2);
             this.Controls.Add(this.btnPrint);
@@ -278,11 +302,13 @@ namespace BasicMathBase
         private System.Windows.Forms.Label lbl_Lista;
         private System.Windows.Forms.TextBox txtboxUpToPrime;
         private System.Windows.Forms.Label lbl_AtePrimo;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtboxList;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnClear2;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label lblNumberOfPrimes;
+        private System.Windows.Forms.Label lblPercentage;
+        private System.Windows.Forms.Label lblTimeElapsed;
+        private System.Windows.Forms.TextBox txtboxList;
+        private System.Windows.Forms.Panel panel1;
     }
 }

@@ -30,7 +30,8 @@ namespace BasicMathBase
 
         private async void btnListPrime_Click(object sender, EventArgs e)
         {
-            lblTimeElapsed.Visible = false;
+            customDesign();
+
             long upToNumber = 0;
             try
             {
@@ -62,6 +63,7 @@ namespace BasicMathBase
             int size = (Convert.ToString(upToNumber)).Length + 2;
             long last = 0;
             long numberOfPrimes = 0;
+            string output = "";
 
             int[] c = new int[] { 7, 11, 13, 17, 19, 23, 29, 31 };
 
@@ -75,30 +77,30 @@ namespace BasicMathBase
                     int num = (c[j]) + (30 * i);
                     if (num <= upToNumber)
                     {
-                        richTextBoxLista.Text += String.Format("{0," + size + "}\t", num);
+                        output += String.Format("{0," + size + "}\t", num);
                         bool isPrime = await Task.Run(() => MathMethods.IsPrime(num));
                         if (!isPrime)
-                        {
-                            nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
-                        }
+                            nonPrimeNumTextBox.Add(output.Length);
                         else
-                        {
                             numberOfPrimes++;
-                        }
                         last = num;
+                        lblPercentage.Text = $"{((num * 100) / upToNumber)} %";
                     }
-                    lblPercentage.Text = $"{((num * 100) / upToNumber)} %";
                 }
-                richTextBoxLista.Text += Environment.NewLine + Environment.NewLine;
+                output += Environment.NewLine + Environment.NewLine;
             }
+            richTextBoxLista.Text = output;
             foreach (var nonPrimePosition in nonPrimeNumTextBox)
             {
                 richTextBoxLista.Select(nonPrimePosition - size, size);
                 richTextBoxLista.SelectionColor = Color.Red;
             }
+            lblPercentage.Text = "100 %";
             lblNumberOfPrimes.Text = "Há " + numberOfPrimes + " números primos";
             lblNumberOfPrimes.Visible = true;
         }
+
+
 
         private void btnClean_Click(object sender, EventArgs e)
         {

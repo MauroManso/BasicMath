@@ -24,8 +24,10 @@ namespace BasicMathBase
         private void customDesign()
         {
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
-            txtboxList.Visible = false;
             lblNumberOfPrimes.Visible = false;
+            lblTimeElapsed.Visible = false;
+            lblPercentage.Visible = false;
+            txtboxList.Text = "";
         }
 
         private void lblSomaPotencia_Click(object sender, EventArgs e)
@@ -76,13 +78,15 @@ namespace BasicMathBase
             }
         }
 
-        private void btnListPrime_Click(object sender, EventArgs e)
+        private async void btnListPrime_Click(object sender, EventArgs e)
         {
+            customDesign();
+            lblPercentage.Visible = true;
+
             long begin = 0;
             long end = 0;
             try
             {
-                
                 if(txtboxBeginPrime.Text != "")
                     begin = Convert.ToInt64(txtboxBeginPrime.Text);
                 end = Convert.ToInt64(txtboxUpToPrime.Text);
@@ -94,14 +98,41 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
+            var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            var result = MathMethods.ListPrime(begin, end);
+            var result = await ListPrimeAsync(begin, end);
+
+            watch.Stop();
+            var elapsedS = watch.ElapsedMilliseconds;
+
+            lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
+            lblTimeElapsed.Visible = true;
 
             txtboxList.Text = result.primesList;
-            txtboxList.Visible = true;
-            lblNumberOfPrimes.Text = "Há" + result.numberOfPrimes + " números primos";
+
+            lblNumberOfPrimes.Text = "Há " + result.numberOfPrimes + " números primos";
             lblNumberOfPrimes.Visible = true;
 
+        }
+
+        private async Task<(string primesList, long numberOfPrimes)> ListPrimeAsync(long begin, long end)
+        {
+            string primesList = "";
+            long numberOfPrimes = 0;
+
+            int size = (Convert.ToString(begin)).Length + 2;
+            for (long number = begin; number < end; number++)
+            {
+                bool isPrime = await Task.Run(() => MathMethods.IsPrime(number));
+                if (isPrime)
+                {
+                    primesList += String.Format("{0," + size + "}\t", number);
+                    numberOfPrimes++;
+                }
+                lblPercentage.Text = $"{((number * 100) / end)} %";
+            }
+            lblPercentage.Text = $"100 %";
+            return (primesList, numberOfPrimes);
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument

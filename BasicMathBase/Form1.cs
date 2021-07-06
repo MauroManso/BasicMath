@@ -84,6 +84,15 @@ namespace BasicMathBase
             btnArithmeticsFunctions.BackColor = Color.FromArgb(46, 51, 73);
             openChildForm(new FormArithmeticsFunctions());
         }
+        private void btnIntegerNumbers_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnIntegerNumbers.Height;
+            pnlNav.Top = btnIntegerNumbers.Top;
+            pnlNav.Left = btnIntegerNumbers.Left;
+            pnlNav.Visible = true;
+            btnIntegerNumbers.BackColor = Color.FromArgb(46, 51, 73);
+            openChildForm(new FormIntegerNumbers());
+        }
 
         private void btnAjuda_Click(object sender, EventArgs e)
         {
@@ -132,6 +141,11 @@ namespace BasicMathBase
             btnArithmeticsFunctions.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+        private void btnIntegerNumbers_Leave(object sender, EventArgs e)
+        {
+            btnIntegerNumbers.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
         private void btnAjuda_Leave(object sender, EventArgs e)
         {
             btnAjuda.BackColor = Color.FromArgb(24, 30, 54);
@@ -168,6 +182,5 @@ namespace BasicMathBase
             childForm.Show();
 
         }
-
     }
 }

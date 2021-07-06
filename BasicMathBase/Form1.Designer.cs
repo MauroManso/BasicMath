@@ -31,6 +31,7 @@ namespace BasicMathBase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnIntegerNumbers = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnArithmeticsFunctions = new System.Windows.Forms.Button();
             this.btnPix = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@ namespace BasicMathBase
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.btnIntegerNumbers);
             this.panel1.Controls.Add(this.pnlNav);
             this.panel1.Controls.Add(this.btnArithmeticsFunctions);
             this.panel1.Controls.Add(this.btnPix);
@@ -69,6 +71,24 @@ namespace BasicMathBase
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(289, 720);
             this.panel1.TabIndex = 0;
+            // 
+            // btnIntegerNumbers
+            // 
+            this.btnIntegerNumbers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnIntegerNumbers.FlatAppearance.BorderSize = 0;
+            this.btnIntegerNumbers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIntegerNumbers.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnIntegerNumbers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnIntegerNumbers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIntegerNumbers.Location = new System.Drawing.Point(0, 582);
+            this.btnIntegerNumbers.Name = "btnIntegerNumbers";
+            this.btnIntegerNumbers.Size = new System.Drawing.Size(289, 65);
+            this.btnIntegerNumbers.TabIndex = 15;
+            this.btnIntegerNumbers.Text = "Números Inteiros";
+            this.btnIntegerNumbers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIntegerNumbers.UseVisualStyleBackColor = true;
+            this.btnIntegerNumbers.Click += new System.EventHandler(this.btnIntegerNumbers_Click);
+            this.btnIntegerNumbers.Leave += new System.EventHandler(this.btnIntegerNumbers_Leave);
             // 
             // pnlNav
             // 
@@ -301,6 +321,7 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnPix;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnArithmeticsFunctions;
+        private System.Windows.Forms.Button btnIntegerNumbers;
     }
 }
 

@@ -43,13 +43,13 @@ namespace BasicMathBase
             this.lblb1 = new System.Windows.Forms.Label();
             this.txtboxMdcB = new System.Windows.Forms.TextBox();
             this.txtboxMmcB = new System.Windows.Forms.TextBox();
-            this.checkboxMdc = new System.Windows.Forms.CheckBox();
-            this.checkboxMmc = new System.Windows.Forms.CheckBox();
             this.lbla2 = new System.Windows.Forms.Label();
             this.lbla1 = new System.Windows.Forms.Label();
             this.txtboxMdcA = new System.Windows.Forms.TextBox();
             this.txtboxMmcA = new System.Windows.Forms.TextBox();
             this.checkboxAlgoritmoEuclides = new System.Windows.Forms.CheckBox();
+            this.lblmmc = new System.Windows.Forms.Label();
+            this.lblMdc = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -207,28 +207,6 @@ namespace BasicMathBase
             this.txtboxMmcB.Size = new System.Drawing.Size(62, 31);
             this.txtboxMmcB.TabIndex = 4143;
             // 
-            // checkboxMdc
-            // 
-            this.checkboxMdc.AutoSize = true;
-            this.checkboxMdc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkboxMdc.Location = new System.Drawing.Point(158, 374);
-            this.checkboxMdc.Name = "checkboxMdc";
-            this.checkboxMdc.Size = new System.Drawing.Size(73, 29);
-            this.checkboxMdc.TabIndex = 4146;
-            this.checkboxMdc.Text = "mdc";
-            this.checkboxMdc.UseVisualStyleBackColor = true;
-            // 
-            // checkboxMmc
-            // 
-            this.checkboxMmc.AutoSize = true;
-            this.checkboxMmc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkboxMmc.Location = new System.Drawing.Point(158, 246);
-            this.checkboxMmc.Name = "checkboxMmc";
-            this.checkboxMmc.Size = new System.Drawing.Size(78, 29);
-            this.checkboxMmc.TabIndex = 4141;
-            this.checkboxMmc.Text = "mmc";
-            this.checkboxMmc.UseVisualStyleBackColor = true;
-            // 
             // lbla2
             // 
             this.lbla2.AutoSize = true;
@@ -274,6 +252,28 @@ namespace BasicMathBase
             this.checkboxAlgoritmoEuclides.Text = "Algoritimo de euclides";
             this.checkboxAlgoritmoEuclides.UseVisualStyleBackColor = true;
             // 
+            // lblmmc
+            // 
+            this.lblmmc.AutoSize = true;
+            this.lblmmc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblmmc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblmmc.Location = new System.Drawing.Point(173, 244);
+            this.lblmmc.Name = "lblmmc";
+            this.lblmmc.Size = new System.Drawing.Size(58, 28);
+            this.lblmmc.TabIndex = 4144;
+            this.lblmmc.Text = "mmc";
+            // 
+            // lblMdc
+            // 
+            this.lblMdc.AutoSize = true;
+            this.lblMdc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMdc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblMdc.Location = new System.Drawing.Point(173, 369);
+            this.lblMdc.Name = "lblMdc";
+            this.lblMdc.Size = new System.Drawing.Size(52, 28);
+            this.lblMdc.TabIndex = 4144;
+            this.lblMdc.Text = "mdc";
+            // 
             // FormMmcMdc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -293,9 +293,9 @@ namespace BasicMathBase
             this.Controls.Add(this.txtboxMdcB);
             this.Controls.Add(this.txtboxMmcB);
             this.Controls.Add(this.checkboxAlgoritmoEuclides);
-            this.Controls.Add(this.checkboxMdc);
-            this.Controls.Add(this.checkboxMmc);
             this.Controls.Add(this.lbla2);
+            this.Controls.Add(this.lblMdc);
+            this.Controls.Add(this.lblmmc);
             this.Controls.Add(this.lbla1);
             this.Controls.Add(this.txtboxMdcA);
             this.Controls.Add(this.txtboxMmcA);
@@ -326,12 +326,12 @@ namespace BasicMathBase
         private System.Windows.Forms.Label lblb1;
         private System.Windows.Forms.TextBox txtboxMdcB;
         private System.Windows.Forms.TextBox txtboxMmcB;
-        private System.Windows.Forms.CheckBox checkboxMdc;
-        private System.Windows.Forms.CheckBox checkboxMmc;
         private System.Windows.Forms.Label lbla2;
         private System.Windows.Forms.Label lbla1;
         private System.Windows.Forms.TextBox txtboxMdcA;
         private System.Windows.Forms.TextBox txtboxMmcA;
         private System.Windows.Forms.CheckBox checkboxAlgoritmoEuclides;
+        private System.Windows.Forms.Label lblmmc;
+        private System.Windows.Forms.Label lblMdc;
     }
 }

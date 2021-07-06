@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormPotencia10Resposta
+    partial class FormRespostaTable
     {
         /// <summary>
         /// Required designer variable.
@@ -54,7 +54,6 @@ namespace BasicMathBase
             this.lbl_Milhões = new System.Windows.Forms.Label();
             this.lbl_Milhares = new System.Windows.Forms.Label();
             this.lbl_Unidades = new System.Windows.Forms.Label();
-            this.lblParidade = new System.Windows.Forms.Label();
             this.tlbOrdemClase.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,7 +108,7 @@ namespace BasicMathBase
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
             this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
             this.tlbOrdemClase.Controls.Add(this.label1, 10, 0);
@@ -127,8 +126,8 @@ namespace BasicMathBase
             this.tlbOrdemClase.Controls.Add(this.lbl_uMilhoes, 2, 1);
             this.tlbOrdemClase.Controls.Add(this.lbl_dMilhoes, 1, 1);
             this.tlbOrdemClase.Controls.Add(this.lbl_cMilhoes, 0, 1);
-            this.tlbOrdemClase.Controls.Add(this.label8, 7, 0);
-            this.tlbOrdemClase.Location = new System.Drawing.Point(275, 303);
+            this.tlbOrdemClase.Controls.Add(this.label8, 2, 0);
+            this.tlbOrdemClase.Location = new System.Drawing.Point(254, 236);
             this.tlbOrdemClase.Name = "tlbOrdemClase";
             this.tlbOrdemClase.RowCount = 2;
             this.tlbOrdemClase.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
@@ -163,7 +162,7 @@ namespace BasicMathBase
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(424, 9);
+            this.label1.Location = new System.Drawing.Point(425, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 25);
             this.label1.TabIndex = 0;
@@ -229,7 +228,7 @@ namespace BasicMathBase
             this.lbl_uUnidades.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_uUnidades.AutoSize = true;
             this.lbl_uUnidades.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_uUnidades.Location = new System.Drawing.Point(435, 57);
+            this.lbl_uUnidades.Location = new System.Drawing.Point(436, 57);
             this.lbl_uUnidades.Name = "lbl_uUnidades";
             this.lbl_uUnidades.Size = new System.Drawing.Size(0, 25);
             this.lbl_uUnidades.TabIndex = 1;
@@ -319,7 +318,7 @@ namespace BasicMathBase
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(297, 9);
+            this.label8.Location = new System.Drawing.Point(92, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(22, 25);
             this.label8.TabIndex = 0;
@@ -329,7 +328,7 @@ namespace BasicMathBase
             // 
             this.lbl_Milhões.AutoSize = true;
             this.lbl_Milhões.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Milhões.Location = new System.Drawing.Point(304, 275);
+            this.lbl_Milhões.Location = new System.Drawing.Point(283, 208);
             this.lbl_Milhões.Name = "lbl_Milhões";
             this.lbl_Milhões.Size = new System.Drawing.Size(74, 25);
             this.lbl_Milhões.TabIndex = 7;
@@ -339,7 +338,7 @@ namespace BasicMathBase
             // 
             this.lbl_Milhares.AutoSize = true;
             this.lbl_Milhares.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Milhares.Location = new System.Drawing.Point(464, 275);
+            this.lbl_Milhares.Location = new System.Drawing.Point(443, 208);
             this.lbl_Milhares.Name = "lbl_Milhares";
             this.lbl_Milhares.Size = new System.Drawing.Size(78, 25);
             this.lbl_Milhares.TabIndex = 7;
@@ -349,24 +348,13 @@ namespace BasicMathBase
             // 
             this.lbl_Unidades.AutoSize = true;
             this.lbl_Unidades.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Unidades.Location = new System.Drawing.Point(621, 275);
+            this.lbl_Unidades.Location = new System.Drawing.Point(600, 208);
             this.lbl_Unidades.Name = "lbl_Unidades";
             this.lbl_Unidades.Size = new System.Drawing.Size(86, 25);
             this.lbl_Unidades.TabIndex = 7;
             this.lbl_Unidades.Text = "Unidades";
             // 
-            // lblParidade
-            // 
-            this.lblParidade.AutoSize = true;
-            this.lblParidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblParidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblParidade.Location = new System.Drawing.Point(387, 140);
-            this.lblParidade.Name = "lblParidade";
-            this.lblParidade.Size = new System.Drawing.Size(207, 29);
-            this.lblParidade.TabIndex = 0;
-            this.lblParidade.Text = "O número é impar";
-            // 
-            // FormPotencia10Resposta
+            // FormRespostaTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -379,10 +367,9 @@ namespace BasicMathBase
             this.Controls.Add(this.tlbOrdemClase);
             this.Controls.Add(this.btnObterResposta);
             this.Controls.Add(this.lblAcerto);
-            this.Controls.Add(this.lblParidade);
             this.Controls.Add(this.lblRespostaCorreta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FormPotencia10Resposta";
+            this.Name = "FormRespostaTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Correção";
             this.tlbOrdemClase.ResumeLayout(false);
@@ -419,6 +406,5 @@ namespace BasicMathBase
         private System.Windows.Forms.Label lbl_Milhões;
         private System.Windows.Forms.Label lbl_Milhares;
         private System.Windows.Forms.Label lbl_Unidades;
-        private System.Windows.Forms.Label lblParidade;
     }
 }

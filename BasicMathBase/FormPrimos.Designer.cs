@@ -29,42 +29,44 @@ namespace BasicMathBase
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblPrimos = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblPrimo = new System.Windows.Forms.Label();
-            this.txtbox_Eprimo = new System.Windows.Forms.TextBox();
-            this.btn_VerificarPrimo = new System.Windows.Forms.Button();
-            this.lbl_RespostaPrimo = new System.Windows.Forms.Label();
-            this.btn_Lista = new System.Windows.Forms.Button();
-            this.txtbox_dePrimo = new System.Windows.Forms.TextBox();
+            this.txtboxVerifyPrime = new System.Windows.Forms.TextBox();
+            this.btnVerifyPrime = new System.Windows.Forms.Button();
+            this.btnListPrime = new System.Windows.Forms.Button();
+            this.txtboxBeginPrime = new System.Windows.Forms.TextBox();
             this.lbl_Lista = new System.Windows.Forms.Label();
-            this.txtBox_atePrimo = new System.Windows.Forms.TextBox();
+            this.txtboxUpToPrime = new System.Windows.Forms.TextBox();
             this.lbl_AtePrimo = new System.Windows.Forms.Label();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClear2 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.lblNumberOfPrimes = new System.Windows.Forms.Label();
+            this.lblPercentage = new System.Windows.Forms.Label();
+            this.lblTimeElapsed = new System.Windows.Forms.Label();
+            this.txtboxList = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtboxLista = new System.Windows.Forms.TextBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblPrimos
+            // lblTitle
             // 
-            this.lblPrimos.AutoSize = true;
-            this.lblPrimos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblPrimos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPrimos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblPrimos.Location = new System.Drawing.Point(342, 30);
-            this.lblPrimos.Name = "lblPrimos";
-            this.lblPrimos.Size = new System.Drawing.Size(325, 37);
-            this.lblPrimos.TabIndex = 2;
-            this.lblPrimos.Text = "NÚMEROS PRIMOS";
-            this.lblPrimos.Click += new System.EventHandler(this.lblSomaPotencia_Click);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
+            this.lblTitle.Location = new System.Drawing.Point(342, 30);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(325, 37);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "NÚMEROS PRIMOS";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.panel3.Controls.Add(this.lblPrimos);
+            this.panel3.Controls.Add(this.lblTitle);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
@@ -81,60 +83,51 @@ namespace BasicMathBase
             this.lblPrimo.TabIndex = 23;
             this.lblPrimo.Text = "É primo?";
             // 
-            // txtbox_Eprimo
+            // txtboxVerifyPrime
             // 
-            this.txtbox_Eprimo.Location = new System.Drawing.Point(312, 110);
-            this.txtbox_Eprimo.Name = "txtbox_Eprimo";
-            this.txtbox_Eprimo.Size = new System.Drawing.Size(237, 31);
-            this.txtbox_Eprimo.TabIndex = 24;
+            this.txtboxVerifyPrime.Location = new System.Drawing.Point(312, 110);
+            this.txtboxVerifyPrime.Name = "txtboxVerifyPrime";
+            this.txtboxVerifyPrime.Size = new System.Drawing.Size(260, 31);
+            this.txtboxVerifyPrime.TabIndex = 24;
             // 
-            // btn_VerificarPrimo
+            // btnVerifyPrime
             // 
-            this.btn_VerificarPrimo.FlatAppearance.BorderSize = 2;
-            this.btn_VerificarPrimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_VerificarPrimo.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_VerificarPrimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_VerificarPrimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_VerificarPrimo.Location = new System.Drawing.Point(576, 100);
-            this.btn_VerificarPrimo.Name = "btn_VerificarPrimo";
-            this.btn_VerificarPrimo.Size = new System.Drawing.Size(135, 49);
-            this.btn_VerificarPrimo.TabIndex = 25;
-            this.btn_VerificarPrimo.Text = "Verificar";
-            this.btn_VerificarPrimo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_VerificarPrimo.UseVisualStyleBackColor = true;
-            this.btn_VerificarPrimo.Click += new System.EventHandler(this.btn_VerificarPrimo_Click);
+            this.btnVerifyPrime.FlatAppearance.BorderSize = 2;
+            this.btnVerifyPrime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerifyPrime.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVerifyPrime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnVerifyPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerifyPrime.Location = new System.Drawing.Point(588, 100);
+            this.btnVerifyPrime.Name = "btnVerifyPrime";
+            this.btnVerifyPrime.Size = new System.Drawing.Size(135, 49);
+            this.btnVerifyPrime.TabIndex = 25;
+            this.btnVerifyPrime.Text = "Verificar";
+            this.btnVerifyPrime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVerifyPrime.UseVisualStyleBackColor = true;
+            this.btnVerifyPrime.Click += new System.EventHandler(this.btnVerifyPrime_Click);
             // 
-            // lbl_RespostaPrimo
+            // btnListPrime
             // 
-            this.lbl_RespostaPrimo.AutoSize = true;
-            this.lbl_RespostaPrimo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_RespostaPrimo.Location = new System.Drawing.Point(735, 113);
-            this.lbl_RespostaPrimo.Name = "lbl_RespostaPrimo";
-            this.lbl_RespostaPrimo.Size = new System.Drawing.Size(0, 25);
-            this.lbl_RespostaPrimo.TabIndex = 38;
+            this.btnListPrime.FlatAppearance.BorderSize = 2;
+            this.btnListPrime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListPrime.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnListPrime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnListPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListPrime.Location = new System.Drawing.Point(588, 181);
+            this.btnListPrime.Name = "btnListPrime";
+            this.btnListPrime.Size = new System.Drawing.Size(135, 47);
+            this.btnListPrime.TabIndex = 4128;
+            this.btnListPrime.Text = "Listar";
+            this.btnListPrime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnListPrime.UseVisualStyleBackColor = true;
+            this.btnListPrime.Click += new System.EventHandler(this.btnListPrime_Click);
             // 
-            // btn_Lista
+            // txtboxBeginPrime
             // 
-            this.btn_Lista.FlatAppearance.BorderSize = 2;
-            this.btn_Lista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Lista.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btn_Lista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_Lista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Lista.Location = new System.Drawing.Point(588, 181);
-            this.btn_Lista.Name = "btn_Lista";
-            this.btn_Lista.Size = new System.Drawing.Size(135, 47);
-            this.btn_Lista.TabIndex = 4128;
-            this.btn_Lista.Text = "Listar";
-            this.btn_Lista.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Lista.UseVisualStyleBackColor = true;
-            this.btn_Lista.Click += new System.EventHandler(this.btn_Lista_Click);
-            // 
-            // txtbox_dePrimo
-            // 
-            this.txtbox_dePrimo.Location = new System.Drawing.Point(312, 190);
-            this.txtbox_dePrimo.Name = "txtbox_dePrimo";
-            this.txtbox_dePrimo.Size = new System.Drawing.Size(92, 31);
-            this.txtbox_dePrimo.TabIndex = 26;
+            this.txtboxBeginPrime.Location = new System.Drawing.Point(312, 190);
+            this.txtboxBeginPrime.Name = "txtboxBeginPrime";
+            this.txtboxBeginPrime.Size = new System.Drawing.Size(92, 31);
+            this.txtboxBeginPrime.TabIndex = 26;
             // 
             // lbl_Lista
             // 
@@ -146,12 +139,12 @@ namespace BasicMathBase
             this.lbl_Lista.TabIndex = 39;
             this.lbl_Lista.Text = "Primos de:";
             // 
-            // txtBox_atePrimo
+            // txtboxUpToPrime
             // 
-            this.txtBox_atePrimo.Location = new System.Drawing.Point(471, 190);
-            this.txtBox_atePrimo.Name = "txtBox_atePrimo";
-            this.txtBox_atePrimo.Size = new System.Drawing.Size(101, 31);
-            this.txtBox_atePrimo.TabIndex = 27;
+            this.txtboxUpToPrime.Location = new System.Drawing.Point(471, 190);
+            this.txtboxUpToPrime.Name = "txtboxUpToPrime";
+            this.txtboxUpToPrime.Size = new System.Drawing.Size(101, 31);
+            this.txtboxUpToPrime.TabIndex = 27;
             // 
             // lbl_AtePrimo
             // 
@@ -163,60 +156,105 @@ namespace BasicMathBase
             this.lbl_AtePrimo.TabIndex = 43;
             this.lbl_AtePrimo.Text = "Até:";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.FlatAppearance.BorderSize = 2;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(31, 181);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(135, 47);
+            this.btnPrint.TabIndex = 4130;
+            this.btnPrint.Text = "Imprimir";
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnClear2
+            // 
+            this.btnClear2.FlatAppearance.BorderSize = 2;
+            this.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear2.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnClear2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear2.Location = new System.Drawing.Point(786, 181);
+            this.btnClear2.Name = "btnClear2";
+            this.btnClear2.Size = new System.Drawing.Size(135, 47);
+            this.btnClear2.TabIndex = 4130;
+            this.btnClear2.Text = "Limpar";
+            this.btnClear2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear2.UseVisualStyleBackColor = true;
+            this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.FlatAppearance.BorderSize = 2;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(786, 102);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.TabIndex = 4131;
+            this.btnClear.Text = "Limpar";
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // lblNumberOfPrimes
+            // 
+            this.lblNumberOfPrimes.AutoSize = true;
+            this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(224, 231);
+            this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
+            this.lblNumberOfPrimes.Size = new System.Drawing.Size(102, 25);
+            this.lblNumberOfPrimes.TabIndex = 23;
+            this.lblNumberOfPrimes.Text = "quantidade";
+            // 
+            // lblPercentage
+            // 
+            this.lblPercentage.AutoSize = true;
+            this.lblPercentage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPercentage.Location = new System.Drawing.Point(471, 248);
+            this.lblPercentage.Name = "lblPercentage";
+            this.lblPercentage.Size = new System.Drawing.Size(42, 25);
+            this.lblPercentage.TabIndex = 4138;
+            this.lblPercentage.Text = "0 %";
+            // 
+            // lblTimeElapsed
+            // 
+            this.lblTimeElapsed.AutoSize = true;
+            this.lblTimeElapsed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTimeElapsed.Location = new System.Drawing.Point(542, 231);
+            this.lblTimeElapsed.Name = "lblTimeElapsed";
+            this.lblTimeElapsed.Size = new System.Drawing.Size(181, 25);
+            this.lblTimeElapsed.TabIndex = 4139;
+            this.lblTimeElapsed.Text = "Tempo passado: 0Ms";
+            // 
+            // txtboxList
+            // 
+            this.txtboxList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
+            this.txtboxList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtboxList.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtboxList.Location = new System.Drawing.Point(0, 0);
+            this.txtboxList.Multiline = true;
+            this.txtboxList.Name = "txtboxList";
+            this.txtboxList.ReadOnly = true;
+            this.txtboxList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtboxList.Size = new System.Drawing.Size(984, 373);
+            this.txtboxList.TabIndex = 4130;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtboxLista);
+            this.panel1.Controls.Add(this.txtboxList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 256);
+            this.panel1.Location = new System.Drawing.Point(0, 291);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 408);
+            this.panel1.Size = new System.Drawing.Size(984, 373);
             this.panel1.TabIndex = 4129;
-            // 
-            // txtboxLista
-            // 
-            this.txtboxLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
-            this.txtboxLista.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtboxLista.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtboxLista.Location = new System.Drawing.Point(0, 0);
-            this.txtboxLista.Multiline = true;
-            this.txtboxLista.Name = "txtboxLista";
-            this.txtboxLista.ReadOnly = true;
-            this.txtboxLista.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtboxLista.Size = new System.Drawing.Size(984, 408);
-            this.txtboxLista.TabIndex = 4130;
-            this.txtboxLista.TextChanged += new System.EventHandler(this.txtboxLista_TextChanged);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.FlatAppearance.BorderSize = 2;
-            this.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImprimir.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnImprimir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(23, 193);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(135, 47);
-            this.btnImprimir.TabIndex = 4130;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.FlatAppearance.BorderSize = 2;
-            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpar.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.Location = new System.Drawing.Point(786, 193);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(135, 47);
-            this.btnLimpar.TabIndex = 4130;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // FormPrimos
             // 
@@ -224,17 +262,20 @@ namespace BasicMathBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(984, 664);
-            this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnImprimir);
+            this.Controls.Add(this.lblPercentage);
+            this.Controls.Add(this.lblTimeElapsed);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnClear2);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtBox_atePrimo);
+            this.Controls.Add(this.txtboxUpToPrime);
             this.Controls.Add(this.lbl_AtePrimo);
-            this.Controls.Add(this.btn_Lista);
-            this.Controls.Add(this.txtbox_dePrimo);
+            this.Controls.Add(this.btnListPrime);
+            this.Controls.Add(this.txtboxBeginPrime);
             this.Controls.Add(this.lbl_Lista);
-            this.Controls.Add(this.lbl_RespostaPrimo);
-            this.Controls.Add(this.btn_VerificarPrimo);
-            this.Controls.Add(this.txtbox_Eprimo);
+            this.Controls.Add(this.btnVerifyPrime);
+            this.Controls.Add(this.txtboxVerifyPrime);
+            this.Controls.Add(this.lblNumberOfPrimes);
             this.Controls.Add(this.lblPrimo);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -251,20 +292,23 @@ namespace BasicMathBase
 
         #endregion
 
-        private System.Windows.Forms.Label lblPrimos;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblPrimo;
-        private System.Windows.Forms.TextBox txtbox_Eprimo;
-        private System.Windows.Forms.Button btn_VerificarPrimo;
-        private System.Windows.Forms.Label lbl_RespostaPrimo;
-        private System.Windows.Forms.Button btn_Lista;
-        private System.Windows.Forms.TextBox txtbox_dePrimo;
+        private System.Windows.Forms.TextBox txtboxVerifyPrime;
+        private System.Windows.Forms.Button btnVerifyPrime;
+        private System.Windows.Forms.Button btnListPrime;
+        private System.Windows.Forms.TextBox txtboxBeginPrime;
         private System.Windows.Forms.Label lbl_Lista;
-        private System.Windows.Forms.TextBox txtBox_atePrimo;
+        private System.Windows.Forms.TextBox txtboxUpToPrime;
         private System.Windows.Forms.Label lbl_AtePrimo;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnClear2;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label lblNumberOfPrimes;
+        private System.Windows.Forms.Label lblPercentage;
+        private System.Windows.Forms.Label lblTimeElapsed;
+        private System.Windows.Forms.TextBox txtboxList;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtboxLista;
-        private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnLimpar;
     }
 }

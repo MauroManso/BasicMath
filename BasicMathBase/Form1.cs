@@ -19,6 +19,7 @@ namespace BasicMathBase
             pnlNav.Height = btnNaturalSomaPotencia.Height;
             pnlNav.Top = btnNaturalSomaPotencia.Top;
             pnlNav.Left = btnNaturalSomaPotencia.Left;
+            pnlNav.Visible = true;
             btnNaturalSomaPotencia.BackColor = Color.FromArgb(46, 51, 73);
             openChildForm(new FormPotencia10());
 
@@ -29,6 +30,7 @@ namespace BasicMathBase
             pnlNav.Height = btnPrimos.Height;
             pnlNav.Top = btnPrimos.Top;
             pnlNav.Left = btnPrimos.Left;
+            pnlNav.Visible = true;
             btnPrimos.BackColor = Color.FromArgb(46, 51, 73);
             openChildForm(new FormPrimos());
         }
@@ -38,8 +40,58 @@ namespace BasicMathBase
             pnlNav.Height = btnSomaPrimos.Height;
             pnlNav.Top = btnSomaPrimos.Top;
             pnlNav.Left = btnSomaPrimos.Left;
+            pnlNav.Visible = true;
             btnSomaPrimos.BackColor = Color.FromArgb(46, 51, 73);
             openChildForm(new FormPrimosCrivo());
+        }
+
+        private void btnPrimePower_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnPrimePower.Height;
+            pnlNav.Top = btnPrimePower.Top;
+            pnlNav.Left = btnPrimePower.Left;
+            pnlNav.Visible = true;
+            btnPrimePower.BackColor = Color.FromArgb(46, 51, 73);
+            openChildForm(new FormProductPrime());
+        }
+
+        private void btnMmcMdc_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnMmcMdc.Height;
+            pnlNav.Top = btnMmcMdc.Top;
+            pnlNav.Left = btnMmcMdc.Left;
+            pnlNav.Visible = true;
+            btnMmcMdc.BackColor = Color.FromArgb(46, 51, 73);
+            openChildForm(new FormMmcMdc());
+        }
+
+        private void btnPix_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnPix.Height;
+            pnlNav.Top = btnPix.Top;
+            pnlNav.Left = btnPix.Left;
+            pnlNav.Visible = true;
+            btnPix.BackColor = Color.FromArgb(46, 51, 73);
+            openChildForm(new FormPix());
+        }
+
+        private void btnArithmeticsFunctions_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnArithmeticsFunctions.Height;
+            pnlNav.Top = btnArithmeticsFunctions.Top;
+            pnlNav.Left = btnArithmeticsFunctions.Left;
+            pnlNav.Visible = true;
+            btnArithmeticsFunctions.BackColor = Color.FromArgb(46, 51, 73);
+            openChildForm(new FormArithmeticsFunctions());
+        }
+        private void btnIntegerNumbers_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = btnIntegerNumbers.Height;
+            pnlNav.Top = btnIntegerNumbers.Top;
+            pnlNav.Left = btnIntegerNumbers.Left;
+            pnlNav.Visible = true;
+            btnIntegerNumbers.BackColor = Color.FromArgb(46, 51, 73);
+            openChildForm(new FormIntegerNumbers());
         }
 
         private void btnAjuda_Click(object sender, EventArgs e)
@@ -47,10 +99,10 @@ namespace BasicMathBase
             pnlNav.Height = btnAjuda.Height;
             pnlNav.Top = btnAjuda.Top;
             pnlNav.Left = btnAjuda.Left;
+            pnlNav.Visible = true;
             btnAjuda.BackColor = Color.FromArgb(46, 51, 73);
 
-            MessageBox.Show("\n     NÚMEROS NATURAIS COMO SOMA DE POTÊNCIAS DE BASE 10\n" +
-                            "\n\t  Use \"^\" para representar expoentes" +
+            MessageBox.Show("\n\t  Use \"^\" para representar expoentes" +
                             "\n\t  Use \". (Ponto)\" para operações de multiplicação");
         }
 
@@ -69,6 +121,31 @@ namespace BasicMathBase
             btnSomaPrimos.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+        private void btnPrimePower_Leave(object sender, EventArgs e)
+        {
+            btnPrimePower.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnMmcMdc_Leave(object sender, EventArgs e)
+        {
+            btnMmcMdc.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnPix_Leave(object sender, EventArgs e)
+        {
+            btnPix.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnArithmeticsFunctions_Leave(object sender, EventArgs e)
+        {
+            btnArithmeticsFunctions.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnIntegerNumbers_Leave(object sender, EventArgs e)
+        {
+            btnIntegerNumbers.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
         private void btnAjuda_Leave(object sender, EventArgs e)
         {
             btnAjuda.BackColor = Color.FromArgb(24, 30, 54);
@@ -77,6 +154,12 @@ namespace BasicMathBase
         public Form1()
         {
             InitializeComponent();
+            customDesign();
+        }
+
+        private void customDesign()
+        {
+            pnlNav.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)

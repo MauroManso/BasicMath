@@ -23,7 +23,11 @@ namespace BasicMathBase
 
         private void customDesign()
         {
-            txtboxLista.Visible = false;
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+            lblNumberOfPrimes.Visible = false;
+            lblTimeElapsed.Visible = false;
+            lblPercentage.Visible = false;
+            txtboxList.Text = "";
         }
 
         private void lblSomaPotencia_Click(object sender, EventArgs e)
@@ -31,25 +35,37 @@ namespace BasicMathBase
 
         }
 
-        private void btn_VerificarPrimo_Click(object sender, EventArgs e)
+        private void btnVerifyPrime_Click(object sender, EventArgs e)
         {
             long num1;
             try
             {
-                num1 = Convert.ToInt64(txtbox_Eprimo.Text);
+                num1 = Convert.ToInt64(txtboxVerifyPrime.Text);
                 if (num1 == 0 || num1 == 1)
                 {
-                    lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                    //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                    MessageBox.Show("\'" + num1 + "\' É um número composto",
+                                        "É primo?",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                 }
                 else
                 {
-                    if (Primes.IsPrime(num1))
+                    if (MathMethods.IsPrime(num1))
                     {
-                        lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número primo");
+                        //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número primo");
+                        MessageBox.Show("\'" + num1 + "\' É um número primo",
+                                        "É primo?",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                     }
                     else
                     {
-                        lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                        //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
+                        MessageBox.Show("\'" + num1 + "\' É um número composto",
+                                        "É primo?",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
                     }
                 }
             }
@@ -62,40 +78,61 @@ namespace BasicMathBase
             }
         }
 
-        private void btn_Lista_Click(object sender, EventArgs e)
+        private async void btnListPrime_Click(object sender, EventArgs e)
         {
-            long num, i, ctr, stno, enno;
-            stno = Convert.ToInt64(txtbox_dePrimo.Text);
-            enno = Convert.ToInt64(txtBox_atePrimo.Text);
-            // int numberOfElements = 0;
-            // int numberOfElementPerLine = 15;
+            customDesign();
+            lblPercentage.Visible = true;
 
-            int tam = (Convert.ToString(enno)).Length + 2;
-            txtboxLista.Text = "";
-            for (num = stno; num <= enno; num++){
-                ctr = 0;
-
-                for (i = 2; i <= num / 2; i++)
-                {
-                    if (num % i == 0)
-                    {
-                        ctr++;
-                        break;
-                    }
-                }
-
-                if (ctr == 0 && num != 1)
-                {
-                    txtboxLista.Text += String.Format("{0," + tam + "}", num);
-                }
-                    
+            long begin = 0;
+            long end = 0;
+            try
+            {
+                if(txtboxBeginPrime.Text != "")
+                    begin = Convert.ToInt64(txtboxBeginPrime.Text);
+                end = Convert.ToInt64(txtboxUpToPrime.Text);
             }
-            txtboxLista.Visible = true;
+            catch
+            {
+                MessageBox.Show("Insira um número válido",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+            }
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            var result = await ListPrimeAsync(begin, end);
+
+            watch.Stop();
+            var elapsedS = watch.ElapsedMilliseconds;
+
+            lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
+            lblTimeElapsed.Visible = true;
+
+            txtboxList.Text = result.primesList;
+
+            lblNumberOfPrimes.Text = "Há " + result.numberOfPrimes + " números primos";
+            lblNumberOfPrimes.Visible = true;
+
         }
 
-        private void btnLimpar_Click(object sender, EventArgs e)
+        private async Task<(string primesList, long numberOfPrimes)> ListPrimeAsync(long begin, long end)
         {
-            txtboxLista.Text = "";
+            string primesList = "";
+            long numberOfPrimes = 0;
+
+            int size = (Convert.ToString(begin)).Length + 2;
+            for (long number = begin; number < end; number++)
+            {
+                bool isPrime = await Task.Run(() => MathMethods.IsPrime(number));
+                if (isPrime)
+                {
+                    primesList += String.Format("{0," + size + "}\t", number);
+                    numberOfPrimes++;
+                }
+                lblPercentage.Text = $"{((number * 100) / end)} %";
+            }
+            lblPercentage.Text = $"100 %";
+            return (primesList, numberOfPrimes);
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument
@@ -295,22 +332,29 @@ namespace BasicMathBase
             #endregion
         }
 
-        private void btnImprimir_Click(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
             //Create an instance of our printer class
             PCPrint printer = new PCPrint();
             //Set the font we want to use
             printer.PrinterFont = new Font("Arial", 10);
             //Set the TextToPrint property
-            printer.TextToPrint = txtboxLista.Text;
+            printer.TextToPrint = txtboxList.Text;
             //Issue print command
             printer.Print();
 
         }
 
-        private void txtboxLista_TextChanged(object sender, EventArgs e)
+        private void btnClear2_Click(object sender, EventArgs e)
         {
+            txtboxList.Text = "";
+            txtboxBeginPrime.Text = "";
+            txtboxUpToPrime.Text = "";
+        }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtboxVerifyPrime.Text = "";  
         }
     }
 }

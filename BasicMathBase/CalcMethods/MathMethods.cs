@@ -158,17 +158,17 @@ namespace BasicMathBase.CalcMethods
 
         public static string ProductPrimeToString(long num)
         {
-            var lista = ProductPrimeWithPower(num);
+            var list = ProductPrimeWithPower(num);
             string result = "";
             bool isFirst = true;
-            for(int i = 0; i < lista.primes.Count; i++)
+            for(int i = 0; i < list.primes.Count; i++)
             {
                 if (!isFirst)
                     result += " . ";
                 isFirst = false;
-                result += "" + lista.primes[i];
-                if (lista.powers[i] > 1)
-                    result += "^" + lista.powers[i];
+                result += "" + list.primes[i];
+                if (list.powers[i] > 1)
+                    result += "^" + list.powers[i];
             }
             
             return result;

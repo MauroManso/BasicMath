@@ -23,53 +23,18 @@ namespace BasicMathBase
         {
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
             lblNumberOfPrimes.Visible = false;
+            lblTimeElapsed.Visible = false;
+            lblPercentage.Visible = false;
         }
 
 
-        private void btnListPrime_Click(object sender, EventArgs e)
+        private async void btnListPrime_Click(object sender, EventArgs e)
         {
+            lblTimeElapsed.Visible = false;
+            long upToNumber = 0;
             try
             {
-                richTextBoxLista.Text = "";
-                long upToNum = Convert.ToInt64(txtboxUpToPrime.Text);
-                int tam = (Convert.ToString(upToNum)).Length + 2;
-                long last = 0;
-                long numberOfPrimes = 0;
-
-                int[] c = new int[] { 7, 11, 13, 17, 19, 23, 29, 31 };
-
-                int upToLine = (Convert.ToInt32((upToNum - 31) / 30)) + 2;
-
-                var nonPrimeNumTextBox = new List<int>();
-                for (int i = 0; i < upToLine; i++)
-                {
-                    for (int j = 0; j < 8; j++)
-                    {
-                        int num = (c[j]) + (30 * i);
-                        if(num <= upToNum)
-                        {
-                            richTextBoxLista.Text += String.Format("{0," + tam + "}\t", num);
-                            if (!MathMethods.IsPrime(num))
-                            {
-                                nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
-                            }
-                            else
-                            {
-                                numberOfPrimes++;
-                            }
-                            last = num;
-                        }
-                    }
-                    richTextBoxLista.Text += Environment.NewLine;
-                    richTextBoxLista.Text += Environment.NewLine;
-                }
-                foreach (var nonPrimePosition in nonPrimeNumTextBox)
-                {
-                    richTextBoxLista.Select(nonPrimePosition - 5, 5);
-                    richTextBoxLista.SelectionColor = Color.Red;
-                }
-                lblNumberOfPrimes.Text = "Há " + numberOfPrimes + " números primos";
-                lblNumberOfPrimes.Visible = true;
+                upToNumber = Convert.ToInt64(txtboxUpToPrime.Text);
             }
             catch{
                 MessageBox.Show("Insira um Número Inteiro Válido até " + Int64.MaxValue,
@@ -77,7 +42,62 @@ namespace BasicMathBase
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
             }
-            
+
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            if(upToNumber > 0) await MakeCrivoAsync(upToNumber);
+
+            watch.Stop();
+            var elapsedS = watch.ElapsedMilliseconds;
+
+            lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
+            lblTimeElapsed.Visible = true;
+
+        }
+
+        private async Task MakeCrivoAsync(long upToNumber)
+        {
+            richTextBoxLista.Text = "";
+            lblPercentage.Visible = true;
+            int size = (Convert.ToString(upToNumber)).Length + 2;
+            long last = 0;
+            long numberOfPrimes = 0;
+
+            int[] c = new int[] { 7, 11, 13, 17, 19, 23, 29, 31 };
+
+            int upToLine = (Convert.ToInt32((upToNumber - 31) / 30)) + 2;
+
+            var nonPrimeNumTextBox = new List<int>();
+            for (int i = 0; i < upToLine; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    int num = (c[j]) + (30 * i);
+                    if (num <= upToNumber)
+                    {
+                        richTextBoxLista.Text += String.Format("{0," + size + "}\t", num);
+                        bool isPrime = await Task.Run(() => MathMethods.IsPrime(num));
+                        if (!isPrime)
+                        {
+                            nonPrimeNumTextBox.Add(richTextBoxLista.TextLength);
+                        }
+                        else
+                        {
+                            numberOfPrimes++;
+                        }
+                        last = num;
+                    }
+                    lblPercentage.Text = $"{((num * 100) / upToNumber)} %";
+                }
+                richTextBoxLista.Text += Environment.NewLine + Environment.NewLine;
+            }
+            foreach (var nonPrimePosition in nonPrimeNumTextBox)
+            {
+                richTextBoxLista.Select(nonPrimePosition - size, size);
+                richTextBoxLista.SelectionColor = Color.Red;
+            }
+            lblNumberOfPrimes.Text = "Há " + numberOfPrimes + " números primos";
+            lblNumberOfPrimes.Visible = true;
         }
 
         private void btnClean_Click(object sender, EventArgs e)

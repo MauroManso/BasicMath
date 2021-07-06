@@ -38,6 +38,8 @@ namespace BasicMathBase
             this.btnClear = new System.Windows.Forms.Button();
             this.btnPrint = new System.Windows.Forms.Button();
             this.lblNumberOfPrimes = new System.Windows.Forms.Label();
+            this.lblTimeElapsed = new System.Windows.Forms.Label();
+            this.lblPercentage = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,11 +103,11 @@ namespace BasicMathBase
             this.richTextBoxLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
             this.richTextBoxLista.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBoxLista.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBoxLista.Location = new System.Drawing.Point(0, 256);
+            this.richTextBoxLista.Location = new System.Drawing.Point(0, 283);
             this.richTextBoxLista.Name = "richTextBoxLista";
             this.richTextBoxLista.ReadOnly = true;
             this.richTextBoxLista.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxLista.Size = new System.Drawing.Size(984, 408);
+            this.richTextBoxLista.Size = new System.Drawing.Size(984, 381);
             this.richTextBoxLista.TabIndex = 4134;
             this.richTextBoxLista.Text = "";
             // 
@@ -145,11 +147,31 @@ namespace BasicMathBase
             // 
             this.lblNumberOfPrimes.AutoSize = true;
             this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumberOfPrimes.Location = new System.Drawing.Point(441, 209);
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(260, 199);
             this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
-            this.lblNumberOfPrimes.Size = new System.Drawing.Size(102, 25);
+            this.lblNumberOfPrimes.Size = new System.Drawing.Size(187, 25);
             this.lblNumberOfPrimes.TabIndex = 4137;
-            this.lblNumberOfPrimes.Text = "quantidade";
+            this.lblNumberOfPrimes.Text = "Há 0 Números Primos";
+            // 
+            // lblTimeElapsed
+            // 
+            this.lblTimeElapsed.AutoSize = true;
+            this.lblTimeElapsed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTimeElapsed.Location = new System.Drawing.Point(544, 199);
+            this.lblTimeElapsed.Name = "lblTimeElapsed";
+            this.lblTimeElapsed.Size = new System.Drawing.Size(181, 25);
+            this.lblTimeElapsed.TabIndex = 4137;
+            this.lblTimeElapsed.Text = "Tempo passado: 0Ms";
+            // 
+            // lblPercentage
+            // 
+            this.lblPercentage.AutoSize = true;
+            this.lblPercentage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPercentage.Location = new System.Drawing.Point(465, 235);
+            this.lblPercentage.Name = "lblPercentage";
+            this.lblPercentage.Size = new System.Drawing.Size(42, 25);
+            this.lblPercentage.TabIndex = 4137;
+            this.lblPercentage.Text = "0 %";
             // 
             // FormPrimosCrivo
             // 
@@ -157,6 +179,8 @@ namespace BasicMathBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(984, 664);
+            this.Controls.Add(this.lblPercentage);
+            this.Controls.Add(this.lblTimeElapsed);
             this.Controls.Add(this.lblNumberOfPrimes);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnPrint);
@@ -186,5 +210,7 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Label lblNumberOfPrimes;
+        private System.Windows.Forms.Label lblTimeElapsed;
+        private System.Windows.Forms.Label lblPercentage;
     }
 }

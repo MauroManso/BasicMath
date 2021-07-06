@@ -78,8 +78,22 @@ namespace BasicMathBase
 
         private void btnListPrime_Click(object sender, EventArgs e)
         {
-            long begin = Convert.ToInt64(txtboxBeginPrime.Text);
-            long end = Convert.ToInt64(txtboxUpToPrime.Text);
+            long begin = 0;
+            long end = 0;
+            try
+            {
+                
+                if(txtboxBeginPrime.Text != "")
+                    begin = Convert.ToInt64(txtboxBeginPrime.Text);
+                end = Convert.ToInt64(txtboxUpToPrime.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Insira um número válido",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+            }
 
             var result = MathMethods.ListPrime(begin, end);
 

@@ -83,7 +83,7 @@ namespace BasicMathBase
             customDesign();
             lblPercentage.Visible = true;
 
-            long begin = 0;
+            long begin = 2;
             long end = 0;
             try
             {
@@ -342,7 +342,6 @@ namespace BasicMathBase
             printer.TextToPrint = txtboxList.Text;
             //Issue print command
             printer.Print();
-
         }
 
         private void btnClear2_Click(object sender, EventArgs e)

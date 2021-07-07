@@ -8,6 +8,12 @@ namespace BasicMathBase.CalcMethods
 {
     public class MathMethods
     {
+        public static bool Correction(string userAnswer, string sistemAnswer)
+        {
+            if (userAnswer == sistemAnswer) return true;
+            else return false;
+        }
+
         public static (string toLeft, string toRight) SumPowerBase10(long num)
         {
             string toLeft = "";
@@ -248,7 +254,6 @@ namespace BasicMathBase.CalcMethods
 
             result = (x / Math.Log(x)) ;
 
-
             return result;
         }
 
@@ -305,9 +310,7 @@ namespace BasicMathBase.CalcMethods
                 result *= ((Convert.ToDouble(lista.primes[i]) - 1) / (Convert.ToDouble(lista.primes[i])));
             }
             
-
             return result;
         }
-
     }
 }

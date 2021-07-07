@@ -45,6 +45,7 @@ namespace BasicMathBase
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnPower = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +56,7 @@ namespace BasicMathBase
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.btnPower);
             this.panel1.Controls.Add(this.btnIntegerNumbers);
             this.panel1.Controls.Add(this.pnlNav);
             this.panel1.Controls.Add(this.btnArithmeticsFunctions);
@@ -69,7 +71,7 @@ namespace BasicMathBase
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 720);
+            this.panel1.Size = new System.Drawing.Size(289, 848);
             this.panel1.TabIndex = 0;
             // 
             // btnIntegerNumbers
@@ -164,7 +166,7 @@ namespace BasicMathBase
             this.btnPrimePower.Name = "btnPrimePower";
             this.btnPrimePower.Size = new System.Drawing.Size(289, 65);
             this.btnPrimePower.TabIndex = 4;
-            this.btnPrimePower.Text = "n = P₀.10⁰+P₁.10¹ + ... Pₖ.10ᵏ";
+            this.btnPrimePower.Text = "n = P₀⁰.P₁¹. ... Pₖᵏ";
             this.btnPrimePower.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrimePower.UseVisualStyleBackColor = true;
             this.btnPrimePower.Click += new System.EventHandler(this.btnPrimePower_Click);
@@ -178,7 +180,7 @@ namespace BasicMathBase
             this.btnAjuda.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAjuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 665);
+            this.btnAjuda.Location = new System.Drawing.Point(0, 793);
             this.btnAjuda.Name = "btnAjuda";
             this.btnAjuda.Size = new System.Drawing.Size(289, 55);
             this.btnAjuda.TabIndex = 1;
@@ -269,26 +271,44 @@ namespace BasicMathBase
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(289, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(997, 720);
+            this.panelChildForm.Size = new System.Drawing.Size(997, 848);
             this.panelChildForm.TabIndex = 1;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(325, 181);
+            this.pictureBox2.Location = new System.Drawing.Point(325, 245);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(339, 300);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // btnPower
+            // 
+            this.btnPower.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPower.FlatAppearance.BorderSize = 0;
+            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPower.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPower.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPower.Location = new System.Drawing.Point(0, 647);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.Size = new System.Drawing.Size(289, 65);
+            this.btnPower.TabIndex = 16;
+            this.btnPower.Text = "Potências";
+            this.btnPower.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
+            this.btnPower.Leave += new System.EventHandler(this.btnPower_Leave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1286, 720);
+            this.ClientSize = new System.Drawing.Size(1286, 848);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -322,6 +342,7 @@ namespace BasicMathBase
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnArithmeticsFunctions;
         private System.Windows.Forms.Button btnIntegerNumbers;
+        private System.Windows.Forms.Button btnPower;
     }
 }
 

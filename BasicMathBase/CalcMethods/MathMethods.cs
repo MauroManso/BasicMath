@@ -47,11 +47,11 @@ namespace BasicMathBase.CalcMethods
             return (toLeft, toRight);
         }
 
-        public static bool IsPrime(long num)
+        public static bool IsPrime(long number)
         {
-            for (int a = 2; a <= num / 2; a++)
+            for (int a = 2; a <= number / 2; a++)
             {
-                if (num % a == 0)
+                if (number % a == 0)
                 {
                     return false;
                 }
@@ -65,12 +65,12 @@ namespace BasicMathBase.CalcMethods
             string primesList = "";
             long numberOfPrimes = 0;
 
-            int tam = (Convert.ToString(begin)).Length + 2;
-            for (long num = begin; num < end; num++)
+            int size = (Convert.ToString(begin)).Length + 2;
+            for (long number = begin; number < end; number++)
             {
-                if (IsPrime(num))
+                if (IsPrime(number))
                 {
-                    primesList += String.Format("{0," + tam + "}\t", num);
+                    primesList += String.Format("{0," + size + "}\t", number);
                     numberOfPrimes++;
                 }
             }
@@ -136,30 +136,30 @@ namespace BasicMathBase.CalcMethods
 
         public static (List<long> primes, List<long> powers) ProductPrimeWithPower(long num)
         {
-            var lista = ProductPrime(num);
+            var list = ProductPrime(num);
             var primes = new List<long>();
-            var powers = new List<long>();
+            var expoents = new List<long>();
 
-            while (lista.Count != 0)
+            while (list.Count != 0)
             {
-                long element = lista[0];
+                long element = list[0];
                 primes.Add(element);
 
                 int numberOfElements = 0;
-                for (int i = 0; i < lista.Count; i++)
+                for (int i = 0; i < list.Count; i++)
                 {
-                    if (lista[i] == element)
+                    if (list[i] == element)
                     {
                         numberOfElements++;
                     }
                 }
-                powers.Add(numberOfElements);
+                expoents.Add(numberOfElements);
 
                 for (int i = 0; i < numberOfElements; i++)
-                    lista.Remove(element);
+                    list.Remove(element);
             }
 
-            return (primes, powers); // retorna duas listas, uma com primos e outra com a potencia desses primos
+            return (primes, expoents); // retorna duas listas, uma com primos e outra com a potencia desses primos
         }
 
         public static string ProductPrimeToString(long num)
@@ -276,12 +276,12 @@ namespace BasicMathBase.CalcMethods
         public static long TauN(long n) // 𝛕(n)  Mostra o número de divisores positivos de n.
         {
             
-            var lista = ProductPrimeWithPower(n);
-            long result = (lista.powers[0] + 1);
+            var list = ProductPrimeWithPower(n);
+            long result = (list.powers[0] + 1);
 
-            for (int i = 1; i < lista.primes.Count; i++)
+            for (int i = 1; i < list.primes.Count; i++)
             {
-                result *= (lista.powers[i] + 1);
+                result *= (list.powers[i] + 1);
             }
 
             return result;
@@ -289,13 +289,13 @@ namespace BasicMathBase.CalcMethods
 
         public static double SigmaN(long n) // σ(n) Mostra a soma dos divisores positivos de n.
         {
-            var lista = ProductPrimeWithPower(n);
-            double result = (Math.Pow(lista.primes[0], (lista.powers[0] + 1)) - 1) / (lista.primes[0] - 1);
+            var list = ProductPrimeWithPower(n);
+            double result = (Math.Pow(list.primes[0], (list.powers[0] + 1)) - 1) / (list.primes[0] - 1);
 
-            for (int i = 1; i < lista.primes.Count; i++)
+            for (int i = 1; i < list.primes.Count; i++)
             {
                 
-                result *= (Math.Pow(lista.primes[i], (lista.powers[i] + 1)) - 1) / (lista.primes[i] - 1);
+                result *= (Math.Pow(list.primes[i], (list.powers[i] + 1)) - 1) / (list.primes[i] - 1);
             }
 
             return result;
@@ -303,11 +303,11 @@ namespace BasicMathBase.CalcMethods
 
         public static double PhiN(long n) // φ(n) Mostra a quantidade de números menores que n e coprimos com n. São os números invertíveis mod(n).
         {
-            var lista = ProductPrimeWithPower(n);
+            var list = ProductPrimeWithPower(n);
             double result = n;
-            for (int i = 0; i < lista.primes.Count; i++)
+            for (int i = 0; i < list.primes.Count; i++)
             {
-                result *= ((Convert.ToDouble(lista.primes[i]) - 1) / (Convert.ToDouble(lista.primes[i])));
+                result *= ((Convert.ToDouble(list.primes[i]) - 1) / (Convert.ToDouble(list.primes[i])));
             }
             
             return result;

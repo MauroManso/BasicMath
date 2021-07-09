@@ -33,6 +33,45 @@ namespace BasicMathBase.CalcMethods
             return output;
         }
 
+        public static (string outputString, long numberResult)RussianMultiplyAlgorithm(long factor1, long factor2)
+        {
+            string output = "";
+            var oddList = new List<long>();
+
+            int size = (Convert.ToString(factor1)).Length + 2;
+            if (((Convert.ToString(factor2)).Length + 2) > size)
+                size = (Convert.ToString(factor2)).Length + 2;
+
+            while (factor1 >= 1)
+            {
+                output += String.Format("{0," + size + "}\t", factor1);
+                output += "-----\t";
+                output += String.Format("{0," + size + "}\t", factor2);
+                output += Environment.NewLine;
+                if (factor1 % 2 == 1)
+                {
+                    oddList.Add(factor2);
+                    if(factor1 != 1) factor1--;
+                }
+                factor1 /= 2;
+                factor2 *= 2;
+            }
+
+            long result = 0;
+            bool isFirst = true;
+            foreach(long odd in oddList)
+            {
+                result += odd;
+                if(!isFirst) output += " + ";
+                isFirst = false;
+                output += $"{odd}";
+            }
+
+            output += $" = {result}";
+
+            return (output, result);
+        }
+
         public static (string toLeft, string toRight) SumPowerBase10(long num)
         {
             string toLeft = "";

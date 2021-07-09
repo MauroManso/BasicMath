@@ -47,12 +47,13 @@ namespace BasicMathBase.CalcMethods
                 output += String.Format("{0," + size + "}\t", factor1);
                 output += "-----\t";
                 output += String.Format("{0," + size + "}\t", factor2);
-                output += Environment.NewLine;
                 if (factor1 % 2 == 1)
                 {
                     oddList.Add(factor2);
+                    output += "(X)";
                     if(factor1 != 1) factor1--;
                 }
+                output += Environment.NewLine;
                 factor1 /= 2;
                 factor2 *= 2;
             }

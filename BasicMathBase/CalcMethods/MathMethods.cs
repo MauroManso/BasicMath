@@ -73,6 +73,65 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
+        public static (string outputString, long numberResult) EgyptianMultiplyAlgorithm(long factor1, long factor2)
+        {
+            string output = "";
+            var binaryMultipleList = new List<long>();
+            var multipleOfFactor2List = new List<bool>();
+
+            int i = 1;
+            while(i < factor2)
+            {
+                binaryMultipleList.Add(i);
+                i *= 2;
+            }
+
+            binaryMultipleList.Reverse();
+            foreach(long binaryMultiple in binaryMultipleList)
+            {
+                if (binaryMultiple <= factor2)
+                {
+                    factor2 -= binaryMultiple;
+                    multipleOfFactor2List.Add(true);
+                }else multipleOfFactor2List.Add(false);
+            }
+
+            int size1 = (Convert.ToString(binaryMultipleList[0])).Length;
+            int size2 = (Convert.ToString((binaryMultipleList[0] * factor1))).Length;
+            binaryMultipleList.Reverse();
+            multipleOfFactor2List.Reverse();
+            var sumList = new List<long>();
+            i = 0;
+            foreach(long binaryMultiple in binaryMultipleList)
+            {
+                output += String.Format("{0," + size1 + "}\t", binaryMultiple);
+                output += "-----\t";
+                output += String.Format("{0," + size2 + "}\t", factor1);
+                if (multipleOfFactor2List[i])
+                {
+                    sumList.Add(factor1);
+                    output += "(X)";
+                }
+                output += Environment.NewLine;
+                factor1 *= 2;
+                i ++;
+            }
+
+            long result = 0;
+            bool isFirst = true;
+            foreach (long sum in sumList)
+            {
+                result += sum;
+                if (!isFirst) output += " + ";
+                isFirst = false;
+                output += $"{sum}";
+            }
+
+            output += $" = {result}";
+
+            return (output, result);
+        }
+
         public static (string toLeft, string toRight) SumPowerBase10(long num)
         {
             string toLeft = "";

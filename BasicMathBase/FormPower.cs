@@ -26,13 +26,13 @@ namespace BasicMathBase
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            long baseExpoent = 0;
-            long toPowerOf = 0;
+            long powerBase = 0;
+            long expoent = 0;
             string userAnswer = "";
             try
             {
-                baseExpoent = Convert.ToInt64(txtboxBase.Text);
-                toPowerOf = Convert.ToInt64(txtboxToPowerOf.Text);
+                powerBase = Convert.ToInt64(txtboxBase.Text);
+                expoent = Convert.ToInt64(txtboxToPowerOf.Text);
                 userAnswer = txtboxAnwser.Text;
             }
             catch
@@ -43,7 +43,7 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
             }
 
-            string sistemAnswer = ToPower(baseExpoent, toPowerOf);
+            string sistemAnswer = ToPower(powerBase, expoent);
 
             bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
@@ -51,20 +51,20 @@ namespace BasicMathBase
             openForm.Show();
         }
 
-        private string ToPower(long baseExpoent, long toPowerOf)
+        private string ToPower(long powerBase, long expoent)
         {
             string output = "";
-            if (toPowerOf == 0) return "1";
-            if (baseExpoent == 1) return "1";
-            if (toPowerOf < 0)
+            if (expoent == 0) return "1";
+            if (powerBase == 1) return "1";
+            if (expoent < 0)
             {
-                toPowerOf *= -1;
+                expoent *= -1;
                 output += "1/";
             }
 
-            long result = baseExpoent;
-            for(int i = 0; i < (toPowerOf - 1); i++)
-                result *= baseExpoent;
+            long result = powerBase;
+            for(int i = 0; i < (expoent - 1); i++)
+                result *= powerBase;
 
             output += $"{result}";
             return output;

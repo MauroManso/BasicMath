@@ -31,6 +31,7 @@ namespace BasicMathBase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPower = new System.Windows.Forms.Button();
             this.btnIntegerNumbers = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnArithmeticsFunctions = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@ namespace BasicMathBase
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnPower = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,24 @@ namespace BasicMathBase
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(289, 848);
             this.panel1.TabIndex = 0;
+            // 
+            // btnPower
+            // 
+            this.btnPower.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPower.FlatAppearance.BorderSize = 0;
+            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPower.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnPower.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPower.Location = new System.Drawing.Point(0, 647);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.Size = new System.Drawing.Size(289, 65);
+            this.btnPower.TabIndex = 16;
+            this.btnPower.Text = "Potências";
+            this.btnPower.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPower.UseVisualStyleBackColor = true;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
+            this.btnPower.Leave += new System.EventHandler(this.btnPower_Leave);
             // 
             // btnIntegerNumbers
             // 
@@ -284,24 +302,6 @@ namespace BasicMathBase
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnPower
-            // 
-            this.btnPower.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPower.FlatAppearance.BorderSize = 0;
-            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnPower.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPower.Location = new System.Drawing.Point(0, 647);
-            this.btnPower.Name = "btnPower";
-            this.btnPower.Size = new System.Drawing.Size(289, 65);
-            this.btnPower.TabIndex = 16;
-            this.btnPower.Text = "Potências";
-            this.btnPower.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPower.UseVisualStyleBackColor = true;
-            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
-            this.btnPower.Leave += new System.EventHandler(this.btnPower_Leave);
             // 
             // Form1
             // 

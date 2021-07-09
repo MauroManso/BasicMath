@@ -66,7 +66,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwser
             // 
-            this.txtboxAnwser.Location = new System.Drawing.Point(417, 281);
+            this.txtboxAnwser.Location = new System.Drawing.Point(435, 396);
             this.txtboxAnwser.Name = "txtboxAnwser";
             this.txtboxAnwser.Size = new System.Drawing.Size(126, 31);
             this.txtboxAnwser.TabIndex = 502;
@@ -75,7 +75,7 @@ namespace BasicMathBase
             // 
             this.lblAnwser.AutoSize = true;
             this.lblAnwser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwser.Location = new System.Drawing.Point(327, 284);
+            this.lblAnwser.Location = new System.Drawing.Point(345, 399);
             this.lblAnwser.Name = "lblAnwser";
             this.lblAnwser.Size = new System.Drawing.Size(84, 25);
             this.lblAnwser.TabIndex = 4163;
@@ -88,7 +88,7 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(733, 272);
+            this.btnClear.Location = new System.Drawing.Point(751, 387);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
             this.btnClear.TabIndex = 504;
@@ -98,7 +98,7 @@ namespace BasicMathBase
             // 
             // txtboxToPowerOf
             // 
-            this.txtboxToPowerOf.Location = new System.Drawing.Point(170, 262);
+            this.txtboxToPowerOf.Location = new System.Drawing.Point(188, 377);
             this.txtboxToPowerOf.Name = "txtboxToPowerOf";
             this.txtboxToPowerOf.Size = new System.Drawing.Size(122, 31);
             this.txtboxToPowerOf.TabIndex = 501;
@@ -110,7 +110,7 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(564, 272);
+            this.btnCalculate.Location = new System.Drawing.Point(582, 387);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
             this.btnCalculate.TabIndex = 503;
@@ -123,7 +123,7 @@ namespace BasicMathBase
             // 
             this.lblBase.AutoSize = true;
             this.lblBase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblBase.Location = new System.Drawing.Point(103, 302);
+            this.lblBase.Location = new System.Drawing.Point(121, 417);
             this.lblBase.Name = "lblBase";
             this.lblBase.Size = new System.Drawing.Size(48, 25);
             this.lblBase.TabIndex = 4163;
@@ -131,7 +131,7 @@ namespace BasicMathBase
             // 
             // txtboxBase
             // 
-            this.txtboxBase.Location = new System.Drawing.Point(170, 299);
+            this.txtboxBase.Location = new System.Drawing.Point(188, 414);
             this.txtboxBase.Name = "txtboxBase";
             this.txtboxBase.Size = new System.Drawing.Size(122, 31);
             this.txtboxBase.TabIndex = 500;
@@ -140,7 +140,7 @@ namespace BasicMathBase
             // 
             this.lblToPowerOf.AutoSize = true;
             this.lblToPowerOf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblToPowerOf.Location = new System.Drawing.Point(66, 265);
+            this.lblToPowerOf.Location = new System.Drawing.Point(84, 380);
             this.lblToPowerOf.Name = "lblToPowerOf";
             this.lblToPowerOf.Size = new System.Drawing.Size(85, 25);
             this.lblToPowerOf.TabIndex = 4163;

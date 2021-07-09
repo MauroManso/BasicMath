@@ -43,31 +43,12 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
             }
 
-            string sistemAnswer = ToPower(powerBase, expoent);
+            string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
 
             bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
             FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
             openForm.Show();
-        }
-
-        private string ToPower(long powerBase, long expoent)
-        {
-            string output = "";
-            if (expoent == 0) return "1";
-            if (powerBase == 1) return "1";
-            if (expoent < 0)
-            {
-                expoent *= -1;
-                output += "1/";
-            }
-
-            long result = powerBase;
-            for(int i = 0; i < (expoent - 1); i++)
-                result *= powerBase;
-
-            output += $"{result}";
-            return output;
         }
     }
 }

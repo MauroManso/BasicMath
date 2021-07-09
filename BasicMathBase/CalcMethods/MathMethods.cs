@@ -14,6 +14,25 @@ namespace BasicMathBase.CalcMethods
             else return false;
         }
 
+        public static string ToPower(long powerBase, long expoent)
+        {
+            string output = "";
+            if (expoent == 0) return "1";
+            if (powerBase == 1) return "1";
+            if (expoent < 0)
+            {
+                expoent *= -1;
+                output += "1/";
+            }
+
+            long result = powerBase;
+            for (int i = 0; i < (expoent - 1); i++)
+                result *= powerBase;
+
+            output += $"{result}";
+            return output;
+        }
+
         public static (string toLeft, string toRight) SumPowerBase10(long num)
         {
             string toLeft = "";

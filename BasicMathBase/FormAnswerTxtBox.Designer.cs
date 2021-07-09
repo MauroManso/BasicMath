@@ -52,7 +52,7 @@ namespace BasicMathBase
             this.btnGetAnswer.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGetAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnGetAnswer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGetAnswer.Location = new System.Drawing.Point(325, 383);
+            this.btnGetAnswer.Location = new System.Drawing.Point(325, 401);
             this.btnGetAnswer.Name = "btnGetAnswer";
             this.btnGetAnswer.Size = new System.Drawing.Size(280, 65);
             this.btnGetAnswer.TabIndex = 9;
@@ -66,7 +66,7 @@ namespace BasicMathBase
             this.richTextBoxAnswer.ForeColor = System.Drawing.Color.Black;
             this.richTextBoxAnswer.Location = new System.Drawing.Point(84, 153);
             this.richTextBoxAnswer.Name = "richTextBoxAnswer";
-            this.richTextBoxAnswer.Size = new System.Drawing.Size(765, 174);
+            this.richTextBoxAnswer.Size = new System.Drawing.Size(765, 219);
             this.richTextBoxAnswer.TabIndex = 11;
             this.richTextBoxAnswer.Text = "";
             // 

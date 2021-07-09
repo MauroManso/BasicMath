@@ -30,7 +30,7 @@ namespace BasicMathBase
         private void InitializeComponent()
         {
             this.lblAcerto = new System.Windows.Forms.Label();
-            this.btnObterResposta = new System.Windows.Forms.Button();
+            this.btnGetAnswer = new System.Windows.Forms.Button();
             this.lblRespostaCorreta = new System.Windows.Forms.Label();
             this.tlbOrdemClase = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
@@ -68,21 +68,21 @@ namespace BasicMathBase
             this.lblAcerto.TabIndex = 0;
             this.lblAcerto.Text = "Resposta Correta!";
             // 
-            // btnObterResposta
+            // btnGetAnswer
             // 
-            this.btnObterResposta.FlatAppearance.BorderSize = 2;
-            this.btnObterResposta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnObterResposta.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnObterResposta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnObterResposta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnObterResposta.Location = new System.Drawing.Point(351, 436);
-            this.btnObterResposta.Name = "btnObterResposta";
-            this.btnObterResposta.Size = new System.Drawing.Size(280, 65);
-            this.btnObterResposta.TabIndex = 5;
-            this.btnObterResposta.Text = "Obter Resposta";
-            this.btnObterResposta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnObterResposta.UseVisualStyleBackColor = true;
-            this.btnObterResposta.Click += new System.EventHandler(this.btnObterResposta_Click);
+            this.btnGetAnswer.FlatAppearance.BorderSize = 2;
+            this.btnGetAnswer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGetAnswer.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGetAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnGetAnswer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGetAnswer.Location = new System.Drawing.Point(344, 436);
+            this.btnGetAnswer.Name = "btnGetAnswer";
+            this.btnGetAnswer.Size = new System.Drawing.Size(280, 65);
+            this.btnGetAnswer.TabIndex = 5;
+            this.btnGetAnswer.Text = "Obter Resposta";
+            this.btnGetAnswer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGetAnswer.UseVisualStyleBackColor = true;
+            this.btnGetAnswer.Click += new System.EventHandler(this.btnGetAnswer_Click);
             // 
             // lblRespostaCorreta
             // 
@@ -108,7 +108,7 @@ namespace BasicMathBase
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
             this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
             this.tlbOrdemClase.Controls.Add(this.label1, 10, 0);
@@ -162,7 +162,7 @@ namespace BasicMathBase
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(425, 9);
+            this.label1.Location = new System.Drawing.Point(426, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 25);
             this.label1.TabIndex = 0;
@@ -228,7 +228,7 @@ namespace BasicMathBase
             this.lbl_uUnidades.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_uUnidades.AutoSize = true;
             this.lbl_uUnidades.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_uUnidades.Location = new System.Drawing.Point(436, 57);
+            this.lbl_uUnidades.Location = new System.Drawing.Point(437, 57);
             this.lbl_uUnidades.Name = "lbl_uUnidades";
             this.lbl_uUnidades.Size = new System.Drawing.Size(0, 25);
             this.lbl_uUnidades.TabIndex = 1;
@@ -354,7 +354,7 @@ namespace BasicMathBase
             this.lbl_Unidades.TabIndex = 7;
             this.lbl_Unidades.Text = "Unidades";
             // 
-            // FormRespostaTable
+            // FormTableAnswer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,11 +365,11 @@ namespace BasicMathBase
             this.Controls.Add(this.lbl_Milhares);
             this.Controls.Add(this.lbl_Milhões);
             this.Controls.Add(this.tlbOrdemClase);
-            this.Controls.Add(this.btnObterResposta);
+            this.Controls.Add(this.btnGetAnswer);
             this.Controls.Add(this.lblAcerto);
             this.Controls.Add(this.lblRespostaCorreta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FormRespostaTable";
+            this.Name = "FormTableAnswer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Correção";
             this.tlbOrdemClase.ResumeLayout(false);
@@ -382,7 +382,7 @@ namespace BasicMathBase
         #endregion
 
         private System.Windows.Forms.Label lblAcerto;
-        private System.Windows.Forms.Button btnObterResposta;
+        private System.Windows.Forms.Button btnGetAnswer;
         private System.Windows.Forms.Label lblRespostaCorreta;
         private System.Windows.Forms.TableLayoutPanel tlbOrdemClase;
         private System.Windows.Forms.Label label3;

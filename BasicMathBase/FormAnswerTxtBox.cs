@@ -25,12 +25,19 @@ namespace BasicMathBase
 
             lblIsCorrect.Left = (this.ClientSize.Width - lblIsCorrect.Size.Width) / 2;
             if (isCorrect)
+            {
                 lblIsCorrect.Text = "Resposta Correta!";
+
+                btnGetAnswer.Text = "Conferir Resolução";
+                btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
+                btnGetAnswer.Visible = true;
+            }
             else
             {
                 lblIsCorrect.Text = "Resposta Incorreta :(";
-                btnGetAnswer.Visible = true;
+
                 btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
+                btnGetAnswer.Visible = true;
             }
 
 

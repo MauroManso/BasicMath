@@ -57,8 +57,8 @@ namespace BasicMathBase
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitle.Location = new System.Drawing.Point(327, 29);
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(394, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(344, 37);
             this.lblTitle.TabIndex = 2;
@@ -71,7 +71,7 @@ namespace BasicMathBase
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 95);
+            this.panel3.Size = new System.Drawing.Size(1128, 95);
             this.panel3.TabIndex = 24;
             // 
             // btnClearTauN
@@ -81,7 +81,7 @@ namespace BasicMathBase
             this.btnClearTauN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearTauN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearTauN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearTauN.Location = new System.Drawing.Point(766, 216);
+            this.btnClearTauN.Location = new System.Drawing.Point(806, 320);
             this.btnClearTauN.Name = "btnClearTauN";
             this.btnClearTauN.Size = new System.Drawing.Size(135, 47);
             this.btnClearTauN.TabIndex = 4140;
@@ -92,7 +92,7 @@ namespace BasicMathBase
             // 
             // txtboxTauN
             // 
-            this.txtboxTauN.Location = new System.Drawing.Point(218, 225);
+            this.txtboxTauN.Location = new System.Drawing.Point(258, 329);
             this.txtboxTauN.Name = "txtboxTauN";
             this.txtboxTauN.Size = new System.Drawing.Size(101, 31);
             this.txtboxTauN.TabIndex = 4137;
@@ -102,7 +102,7 @@ namespace BasicMathBase
             this.lblTauN.AutoSize = true;
             this.lblTauN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTauN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTauN.Location = new System.Drawing.Point(168, 222);
+            this.lblTauN.Location = new System.Drawing.Point(208, 326);
             this.lblTauN.Name = "lblTauN";
             this.lblTauN.Size = new System.Drawing.Size(173, 32);
             this.lblTauN.TabIndex = 4138;
@@ -115,7 +115,7 @@ namespace BasicMathBase
             this.btnCalculateTauN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculateTauN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculateTauN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateTauN.Location = new System.Drawing.Point(603, 216);
+            this.btnCalculateTauN.Location = new System.Drawing.Point(643, 320);
             this.btnCalculateTauN.Name = "btnCalculateTauN";
             this.btnCalculateTauN.Size = new System.Drawing.Size(135, 47);
             this.btnCalculateTauN.TabIndex = 4139;
@@ -126,7 +126,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwserTauN
             // 
-            this.txtboxAnwserTauN.Location = new System.Drawing.Point(446, 225);
+            this.txtboxAnwserTauN.Location = new System.Drawing.Point(486, 329);
             this.txtboxAnwserTauN.Name = "txtboxAnwserTauN";
             this.txtboxAnwserTauN.Size = new System.Drawing.Size(115, 31);
             this.txtboxAnwserTauN.TabIndex = 4158;
@@ -135,7 +135,7 @@ namespace BasicMathBase
             // 
             this.lblAnwserTauN.AutoSize = true;
             this.lblAnwserTauN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwserTauN.Location = new System.Drawing.Point(356, 228);
+            this.lblAnwserTauN.Location = new System.Drawing.Point(396, 332);
             this.lblAnwserTauN.Name = "lblAnwserTauN";
             this.lblAnwserTauN.Size = new System.Drawing.Size(84, 25);
             this.lblAnwserTauN.TabIndex = 4157;
@@ -143,7 +143,7 @@ namespace BasicMathBase
             // 
             // txtboxAnswerSigmaN
             // 
-            this.txtboxAnswerSigmaN.Location = new System.Drawing.Point(446, 332);
+            this.txtboxAnswerSigmaN.Location = new System.Drawing.Point(486, 436);
             this.txtboxAnswerSigmaN.Name = "txtboxAnswerSigmaN";
             this.txtboxAnswerSigmaN.Size = new System.Drawing.Size(115, 31);
             this.txtboxAnswerSigmaN.TabIndex = 4164;
@@ -152,7 +152,7 @@ namespace BasicMathBase
             // 
             this.lblAnswerSigmaN.AutoSize = true;
             this.lblAnswerSigmaN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnswerSigmaN.Location = new System.Drawing.Point(356, 335);
+            this.lblAnswerSigmaN.Location = new System.Drawing.Point(396, 439);
             this.lblAnswerSigmaN.Name = "lblAnswerSigmaN";
             this.lblAnswerSigmaN.Size = new System.Drawing.Size(84, 25);
             this.lblAnswerSigmaN.TabIndex = 4163;
@@ -165,7 +165,7 @@ namespace BasicMathBase
             this.btnClearSigmaN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearSigmaN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearSigmaN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearSigmaN.Location = new System.Drawing.Point(766, 323);
+            this.btnClearSigmaN.Location = new System.Drawing.Point(806, 427);
             this.btnClearSigmaN.Name = "btnClearSigmaN";
             this.btnClearSigmaN.Size = new System.Drawing.Size(135, 47);
             this.btnClearSigmaN.TabIndex = 4162;
@@ -176,7 +176,7 @@ namespace BasicMathBase
             // 
             // txtboxSigmaN
             // 
-            this.txtboxSigmaN.Location = new System.Drawing.Point(218, 332);
+            this.txtboxSigmaN.Location = new System.Drawing.Point(258, 436);
             this.txtboxSigmaN.Name = "txtboxSigmaN";
             this.txtboxSigmaN.Size = new System.Drawing.Size(101, 31);
             this.txtboxSigmaN.TabIndex = 4159;
@@ -186,7 +186,7 @@ namespace BasicMathBase
             this.lblSigmaN.AutoSize = true;
             this.lblSigmaN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSigmaN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSigmaN.Location = new System.Drawing.Point(168, 329);
+            this.lblSigmaN.Location = new System.Drawing.Point(208, 433);
             this.lblSigmaN.Name = "lblSigmaN";
             this.lblSigmaN.Size = new System.Drawing.Size(175, 32);
             this.lblSigmaN.TabIndex = 4160;
@@ -199,7 +199,7 @@ namespace BasicMathBase
             this.btnCalculateSigmaN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculateSigmaN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculateSigmaN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateSigmaN.Location = new System.Drawing.Point(603, 323);
+            this.btnCalculateSigmaN.Location = new System.Drawing.Point(643, 427);
             this.btnCalculateSigmaN.Name = "btnCalculateSigmaN";
             this.btnCalculateSigmaN.Size = new System.Drawing.Size(135, 47);
             this.btnCalculateSigmaN.TabIndex = 4161;
@@ -210,7 +210,7 @@ namespace BasicMathBase
             // 
             // txtboxAnswerPhiN
             // 
-            this.txtboxAnswerPhiN.Location = new System.Drawing.Point(446, 434);
+            this.txtboxAnswerPhiN.Location = new System.Drawing.Point(486, 538);
             this.txtboxAnswerPhiN.Name = "txtboxAnswerPhiN";
             this.txtboxAnswerPhiN.Size = new System.Drawing.Size(115, 31);
             this.txtboxAnswerPhiN.TabIndex = 4170;
@@ -219,7 +219,7 @@ namespace BasicMathBase
             // 
             this.lblAnswerPhiN.AutoSize = true;
             this.lblAnswerPhiN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnswerPhiN.Location = new System.Drawing.Point(356, 437);
+            this.lblAnswerPhiN.Location = new System.Drawing.Point(396, 541);
             this.lblAnswerPhiN.Name = "lblAnswerPhiN";
             this.lblAnswerPhiN.Size = new System.Drawing.Size(84, 25);
             this.lblAnswerPhiN.TabIndex = 4169;
@@ -232,7 +232,7 @@ namespace BasicMathBase
             this.btnClearPhiN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearPhiN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearPhiN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearPhiN.Location = new System.Drawing.Point(766, 425);
+            this.btnClearPhiN.Location = new System.Drawing.Point(806, 529);
             this.btnClearPhiN.Name = "btnClearPhiN";
             this.btnClearPhiN.Size = new System.Drawing.Size(135, 47);
             this.btnClearPhiN.TabIndex = 4168;
@@ -243,7 +243,7 @@ namespace BasicMathBase
             // 
             // txtboxPhiN
             // 
-            this.txtboxPhiN.Location = new System.Drawing.Point(218, 434);
+            this.txtboxPhiN.Location = new System.Drawing.Point(258, 538);
             this.txtboxPhiN.Name = "txtboxPhiN";
             this.txtboxPhiN.Size = new System.Drawing.Size(101, 31);
             this.txtboxPhiN.TabIndex = 4165;
@@ -253,7 +253,7 @@ namespace BasicMathBase
             this.lblPhiN.AutoSize = true;
             this.lblPhiN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPhiN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPhiN.Location = new System.Drawing.Point(168, 431);
+            this.lblPhiN.Location = new System.Drawing.Point(208, 535);
             this.lblPhiN.Name = "lblPhiN";
             this.lblPhiN.Size = new System.Drawing.Size(178, 32);
             this.lblPhiN.TabIndex = 4166;
@@ -266,7 +266,7 @@ namespace BasicMathBase
             this.btnCalculatePhiN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculatePhiN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculatePhiN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculatePhiN.Location = new System.Drawing.Point(603, 425);
+            this.btnCalculatePhiN.Location = new System.Drawing.Point(643, 529);
             this.btnCalculatePhiN.Name = "btnCalculatePhiN";
             this.btnCalculatePhiN.Size = new System.Drawing.Size(135, 47);
             this.btnCalculatePhiN.TabIndex = 4167;
@@ -280,7 +280,7 @@ namespace BasicMathBase
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(984, 664);
+            this.ClientSize = new System.Drawing.Size(1128, 894);
             this.Controls.Add(this.txtboxAnswerPhiN);
             this.Controls.Add(this.lblAnswerPhiN);
             this.Controls.Add(this.btnClearPhiN);

@@ -78,7 +78,7 @@ namespace BasicMathBase
             this.btn_Limpar.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_Limpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btn_Limpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Limpar.Location = new System.Drawing.Point(253, 578);
+            this.btn_Limpar.Location = new System.Drawing.Point(336, 622);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(135, 65);
             this.btn_Limpar.TabIndex = 44;
@@ -91,7 +91,7 @@ namespace BasicMathBase
             // 
             this.checkboxOrdemClasse.AutoSize = true;
             this.checkboxOrdemClasse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkboxOrdemClasse.Location = new System.Drawing.Point(297, 351);
+            this.checkboxOrdemClasse.Location = new System.Drawing.Point(380, 395);
             this.checkboxOrdemClasse.Name = "checkboxOrdemClasse";
             this.checkboxOrdemClasse.Size = new System.Drawing.Size(162, 29);
             this.checkboxOrdemClasse.TabIndex = 32;
@@ -106,7 +106,7 @@ namespace BasicMathBase
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 95);
+            this.panel3.Size = new System.Drawing.Size(1128, 95);
             this.panel3.TabIndex = 21;
             // 
             // lblTitle
@@ -114,12 +114,12 @@ namespace BasicMathBase
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitle.Location = new System.Drawing.Point(75, 25);
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(184, 28);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(857, 37);
+            this.lblTitle.Size = new System.Drawing.Size(705, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "NATURAL COMO SOMA DE POTÊNCIAS DE BASE 10";
+            this.lblTitle.Text = "Natural como Soma de Potências de Base 10";
             // 
             // btnCorrigir
             // 
@@ -128,7 +128,7 @@ namespace BasicMathBase
             this.btnCorrigir.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCorrigir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCorrigir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCorrigir.Location = new System.Drawing.Point(458, 578);
+            this.btnCorrigir.Location = new System.Drawing.Point(541, 622);
             this.btnCorrigir.Name = "btnCorrigir";
             this.btnCorrigir.Size = new System.Drawing.Size(280, 65);
             this.btnCorrigir.TabIndex = 45;
@@ -139,14 +139,14 @@ namespace BasicMathBase
             // 
             // tbNum
             // 
-            this.tbNum.Location = new System.Drawing.Point(292, 171);
+            this.tbNum.Location = new System.Drawing.Point(375, 215);
             this.tbNum.Name = "tbNum";
             this.tbNum.Size = new System.Drawing.Size(203, 31);
             this.tbNum.TabIndex = 30;
             // 
             // tbResposta
             // 
-            this.tbResposta.Location = new System.Drawing.Point(292, 283);
+            this.tbResposta.Location = new System.Drawing.Point(375, 327);
             this.tbResposta.Name = "tbResposta";
             this.tbResposta.Size = new System.Drawing.Size(459, 31);
             this.tbResposta.TabIndex = 31;
@@ -155,7 +155,7 @@ namespace BasicMathBase
             // 
             this.lblErro.AutoSize = true;
             this.lblErro.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblErro.Location = new System.Drawing.Point(292, 230);
+            this.lblErro.Location = new System.Drawing.Point(375, 274);
             this.lblErro.Name = "lblErro";
             this.lblErro.Size = new System.Drawing.Size(0, 25);
             this.lblErro.TabIndex = 16;
@@ -164,7 +164,7 @@ namespace BasicMathBase
             // 
             this.lblResposta.AutoSize = true;
             this.lblResposta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblResposta.Location = new System.Drawing.Point(184, 283);
+            this.lblResposta.Location = new System.Drawing.Point(267, 327);
             this.lblResposta.Name = "lblResposta";
             this.lblResposta.Size = new System.Drawing.Size(84, 25);
             this.lblResposta.TabIndex = 17;
@@ -174,7 +174,7 @@ namespace BasicMathBase
             // 
             this.lblNum.AutoSize = true;
             this.lblNum.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNum.Location = new System.Drawing.Point(240, 171);
+            this.lblNum.Location = new System.Drawing.Point(323, 215);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(22, 25);
             this.lblNum.TabIndex = 15;
@@ -184,7 +184,7 @@ namespace BasicMathBase
             // 
             this.checkboxParidade.AutoSize = true;
             this.checkboxParidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkboxParidade.Location = new System.Drawing.Point(294, 229);
+            this.checkboxParidade.Location = new System.Drawing.Point(377, 273);
             this.checkboxParidade.Name = "checkboxParidade";
             this.checkboxParidade.Size = new System.Drawing.Size(106, 29);
             this.checkboxParidade.TabIndex = 46;
@@ -196,7 +196,7 @@ namespace BasicMathBase
             // 
             this.lblParidade.AutoSize = true;
             this.lblParidade.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblParidade.Location = new System.Drawing.Point(416, 231);
+            this.lblParidade.Location = new System.Drawing.Point(499, 275);
             this.lblParidade.Name = "lblParidade";
             this.lblParidade.Size = new System.Drawing.Size(111, 25);
             this.lblParidade.TabIndex = 15;
@@ -206,7 +206,7 @@ namespace BasicMathBase
             // 
             this.radioButtonPar.AutoSize = true;
             this.radioButtonPar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButtonPar.Location = new System.Drawing.Point(551, 229);
+            this.radioButtonPar.Location = new System.Drawing.Point(634, 273);
             this.radioButtonPar.Name = "radioButtonPar";
             this.radioButtonPar.Size = new System.Drawing.Size(61, 29);
             this.radioButtonPar.TabIndex = 47;
@@ -218,7 +218,7 @@ namespace BasicMathBase
             // 
             this.radioButtonImpar.AutoSize = true;
             this.radioButtonImpar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButtonImpar.Location = new System.Drawing.Point(633, 228);
+            this.radioButtonImpar.Location = new System.Drawing.Point(716, 272);
             this.radioButtonImpar.Name = "radioButtonImpar";
             this.radioButtonImpar.Size = new System.Drawing.Size(84, 29);
             this.radioButtonImpar.TabIndex = 47;
@@ -241,7 +241,7 @@ namespace BasicMathBase
             this.panelTable.Controls.Add(this.lbl_Milhares);
             this.panelTable.Controls.Add(this.lbl_Milhões);
             this.panelTable.Controls.Add(this.tlbOrdemClase);
-            this.panelTable.Location = new System.Drawing.Point(193, 386);
+            this.panelTable.Location = new System.Drawing.Point(276, 430);
             this.panelTable.Name = "panelTable";
             this.panelTable.Size = new System.Drawing.Size(623, 183);
             this.panelTable.TabIndex = 48;
@@ -398,7 +398,7 @@ namespace BasicMathBase
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
             this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
             this.tlbOrdemClase.Controls.Add(this.label5, 6, 0);
@@ -520,7 +520,7 @@ namespace BasicMathBase
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(984, 664);
+            this.ClientSize = new System.Drawing.Size(1128, 894);
             this.Controls.Add(this.panelTable);
             this.Controls.Add(this.radioButtonImpar);
             this.Controls.Add(this.radioButtonPar);

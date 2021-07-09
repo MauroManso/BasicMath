@@ -51,7 +51,7 @@ namespace BasicMathBase
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 95);
+            this.panel3.Size = new System.Drawing.Size(1128, 95);
             this.panel3.TabIndex = 23;
             // 
             // lblTitle
@@ -59,8 +59,8 @@ namespace BasicMathBase
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitle.Location = new System.Drawing.Point(429, 33);
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(496, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(91, 37);
             this.lblTitle.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(603, 254);
+            this.btnClear.Location = new System.Drawing.Point(723, 319);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
             this.btnClear.TabIndex = 4136;
@@ -84,7 +84,7 @@ namespace BasicMathBase
             // 
             // txtboxPix
             // 
-            this.txtboxPix.Location = new System.Drawing.Point(248, 263);
+            this.txtboxPix.Location = new System.Drawing.Point(368, 328);
             this.txtboxPix.Name = "txtboxPix";
             this.txtboxPix.Size = new System.Drawing.Size(101, 31);
             this.txtboxPix.TabIndex = 4132;
@@ -94,7 +94,7 @@ namespace BasicMathBase
             this.lblPix.AutoSize = true;
             this.lblPix.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPix.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPix.Location = new System.Drawing.Point(198, 260);
+            this.lblPix.Location = new System.Drawing.Point(318, 325);
             this.lblPix.Name = "lblPix";
             this.lblPix.Size = new System.Drawing.Size(176, 32);
             this.lblPix.TabIndex = 4134;
@@ -107,7 +107,7 @@ namespace BasicMathBase
             this.btnCalculatePix.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculatePix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculatePix.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculatePix.Location = new System.Drawing.Point(429, 254);
+            this.btnCalculatePix.Location = new System.Drawing.Point(549, 319);
             this.btnCalculatePix.Name = "btnCalculatePix";
             this.btnCalculatePix.Size = new System.Drawing.Size(135, 47);
             this.btnCalculatePix.TabIndex = 4135;
@@ -121,7 +121,7 @@ namespace BasicMathBase
             this.lblApproximatePiX.AutoSize = true;
             this.lblApproximatePiX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblApproximatePiX.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblApproximatePiX.Location = new System.Drawing.Point(47, 377);
+            this.lblApproximatePiX.Location = new System.Drawing.Point(167, 442);
             this.lblApproximatePiX.Name = "lblApproximatePiX";
             this.lblApproximatePiX.Size = new System.Drawing.Size(327, 25);
             this.lblApproximatePiX.TabIndex = 4134;
@@ -132,7 +132,7 @@ namespace BasicMathBase
             this.lblRealPiX.AutoSize = true;
             this.lblRealPiX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRealPiX.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRealPiX.Location = new System.Drawing.Point(160, 432);
+            this.lblRealPiX.Location = new System.Drawing.Point(280, 497);
             this.lblRealPiX.Name = "lblRealPiX";
             this.lblRealPiX.Size = new System.Drawing.Size(214, 25);
             this.lblRealPiX.TabIndex = 4134;
@@ -143,7 +143,7 @@ namespace BasicMathBase
             this.lblAcuratePiX.AutoSize = true;
             this.lblAcuratePiX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAcuratePiX.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAcuratePiX.Location = new System.Drawing.Point(274, 483);
+            this.lblAcuratePiX.Location = new System.Drawing.Point(394, 548);
             this.lblAcuratePiX.Name = "lblAcuratePiX";
             this.lblAcuratePiX.Size = new System.Drawing.Size(100, 25);
             this.lblAcuratePiX.TabIndex = 4134;
@@ -154,7 +154,7 @@ namespace BasicMathBase
             this.lblApproximatePiXAnswer.AutoSize = true;
             this.lblApproximatePiXAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblApproximatePiXAnswer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblApproximatePiXAnswer.Location = new System.Drawing.Point(380, 377);
+            this.lblApproximatePiXAnswer.Location = new System.Drawing.Point(500, 442);
             this.lblApproximatePiXAnswer.Name = "lblApproximatePiXAnswer";
             this.lblApproximatePiXAnswer.Size = new System.Drawing.Size(87, 25);
             this.lblApproximatePiXAnswer.TabIndex = 4134;
@@ -165,7 +165,7 @@ namespace BasicMathBase
             this.lblRealPiXAnswer.AutoSize = true;
             this.lblRealPiXAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRealPiXAnswer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRealPiXAnswer.Location = new System.Drawing.Point(380, 432);
+            this.lblRealPiXAnswer.Location = new System.Drawing.Point(500, 497);
             this.lblRealPiXAnswer.Name = "lblRealPiXAnswer";
             this.lblRealPiXAnswer.Size = new System.Drawing.Size(87, 25);
             this.lblRealPiXAnswer.TabIndex = 4134;
@@ -176,7 +176,7 @@ namespace BasicMathBase
             this.lblAcuratePiXAnswer.AutoSize = true;
             this.lblAcuratePiXAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAcuratePiXAnswer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAcuratePiXAnswer.Location = new System.Drawing.Point(380, 483);
+            this.lblAcuratePiXAnswer.Location = new System.Drawing.Point(500, 548);
             this.lblAcuratePiXAnswer.Name = "lblAcuratePiXAnswer";
             this.lblAcuratePiXAnswer.Size = new System.Drawing.Size(87, 25);
             this.lblAcuratePiXAnswer.TabIndex = 4134;
@@ -187,7 +187,7 @@ namespace BasicMathBase
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(984, 664);
+            this.ClientSize = new System.Drawing.Size(1128, 894);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtboxPix);
             this.Controls.Add(this.lblAcuratePiX);

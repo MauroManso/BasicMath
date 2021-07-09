@@ -45,12 +45,12 @@ namespace BasicMathBase
             this.lblTitlePrimePower.AutoSize = true;
             this.lblTitlePrimePower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitlePrimePower.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitlePrimePower.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitlePrimePower.Location = new System.Drawing.Point(160, 27);
+            this.lblTitlePrimePower.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitlePrimePower.Location = new System.Drawing.Point(244, 28);
             this.lblTitlePrimePower.Name = "lblTitlePrimePower";
-            this.lblTitlePrimePower.Size = new System.Drawing.Size(659, 37);
+            this.lblTitlePrimePower.Size = new System.Drawing.Size(515, 37);
             this.lblTitlePrimePower.TabIndex = 2;
-            this.lblTitlePrimePower.Text = "NATURAL COMO PRODUTO DE PRIMOS";
+            this.lblTitlePrimePower.Text = "Natural como Produto de Primos";
             // 
             // panelTitle
             // 

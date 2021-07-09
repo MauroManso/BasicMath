@@ -34,7 +34,7 @@ namespace BasicMathBase
             this.btnBModA = new System.Windows.Forms.Button();
             this.btnSubtractionAlgorithm = new System.Windows.Forms.Button();
             this.panelPowersSubMenu = new System.Windows.Forms.Panel();
-            this.btnMutiplyPowerSameBase = new System.Windows.Forms.Button();
+            this.btnMultiplyPowerSameBase = new System.Windows.Forms.Button();
             this.btnToPowerOf = new System.Windows.Forms.Button();
             this.btnPowers = new System.Windows.Forms.Button();
             this.btnArithmeticsFunction = new System.Windows.Forms.Button();
@@ -47,12 +47,12 @@ namespace BasicMathBase
             this.btnPrimes = new System.Windows.Forms.Button();
             this.panelMutiplyAlgorithmsSubMenu = new System.Windows.Forms.Panel();
             this.btnMmcMdc = new System.Windows.Forms.Button();
-            this.btnMutiplyEgyptianAlgorithm = new System.Windows.Forms.Button();
+            this.btnMultiplyEgyptianAlgorithm = new System.Windows.Forms.Button();
             this.btnMultiplyRussianAlgorithm = new System.Windows.Forms.Button();
-            this.btnMutiplyMatrixAlgorithm = new System.Windows.Forms.Button();
+            this.btnMultiplyMatrixAlgorithm = new System.Windows.Forms.Button();
             this.btnNaturalAsPowerSum = new System.Windows.Forms.Button();
             this.btnAjuda = new System.Windows.Forms.Button();
-            this.btnMutiplyAlgorithms = new System.Windows.Forms.Button();
+            this.btnMultiplyAlgorithms = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxMenuLogo = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
@@ -81,7 +81,7 @@ namespace BasicMathBase
             this.panelMenu.Controls.Add(this.btnPrimes);
             this.panelMenu.Controls.Add(this.panelMutiplyAlgorithmsSubMenu);
             this.panelMenu.Controls.Add(this.btnAjuda);
-            this.panelMenu.Controls.Add(this.btnMutiplyAlgorithms);
+            this.panelMenu.Controls.Add(this.btnMultiplyAlgorithms);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -134,7 +134,7 @@ namespace BasicMathBase
             // panelPowersSubMenu
             // 
             this.panelPowersSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
-            this.panelPowersSubMenu.Controls.Add(this.btnMutiplyPowerSameBase);
+            this.panelPowersSubMenu.Controls.Add(this.btnMultiplyPowerSameBase);
             this.panelPowersSubMenu.Controls.Add(this.btnToPowerOf);
             this.panelPowersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPowersSubMenu.Location = new System.Drawing.Point(0, 1018);
@@ -142,26 +142,26 @@ namespace BasicMathBase
             this.panelPowersSubMenu.Size = new System.Drawing.Size(324, 166);
             this.panelPowersSubMenu.TabIndex = 7;
             // 
-            // btnMutiplyPowerSameBase
+            // btnMultiplyPowerSameBase
             // 
-            this.btnMutiplyPowerSameBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnMutiplyPowerSameBase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMutiplyPowerSameBase.FlatAppearance.BorderSize = 0;
-            this.btnMutiplyPowerSameBase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
-            this.btnMutiplyPowerSameBase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.btnMutiplyPowerSameBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMutiplyPowerSameBase.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMutiplyPowerSameBase.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMutiplyPowerSameBase.Location = new System.Drawing.Point(0, 60);
-            this.btnMutiplyPowerSameBase.Name = "btnMutiplyPowerSameBase";
-            this.btnMutiplyPowerSameBase.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMutiplyPowerSameBase.Size = new System.Drawing.Size(324, 90);
-            this.btnMutiplyPowerSameBase.TabIndex = 26;
-            this.btnMutiplyPowerSameBase.Text = "Multiplicação de Potências de Mesma Base";
-            this.btnMutiplyPowerSameBase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMutiplyPowerSameBase.UseVisualStyleBackColor = false;
-            this.btnMutiplyPowerSameBase.Click += new System.EventHandler(this.btnMutiplyPowerSameBase_Click);
-            this.btnMutiplyPowerSameBase.Leave += new System.EventHandler(this.btnMutiplyPowerSameBase_Leave);
+            this.btnMultiplyPowerSameBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnMultiplyPowerSameBase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMultiplyPowerSameBase.FlatAppearance.BorderSize = 0;
+            this.btnMultiplyPowerSameBase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnMultiplyPowerSameBase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnMultiplyPowerSameBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiplyPowerSameBase.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMultiplyPowerSameBase.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMultiplyPowerSameBase.Location = new System.Drawing.Point(0, 60);
+            this.btnMultiplyPowerSameBase.Name = "btnMultiplyPowerSameBase";
+            this.btnMultiplyPowerSameBase.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnMultiplyPowerSameBase.Size = new System.Drawing.Size(324, 90);
+            this.btnMultiplyPowerSameBase.TabIndex = 26;
+            this.btnMultiplyPowerSameBase.Text = "Multiplicação de Potências de Mesma Base";
+            this.btnMultiplyPowerSameBase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultiplyPowerSameBase.UseVisualStyleBackColor = false;
+            this.btnMultiplyPowerSameBase.Click += new System.EventHandler(this.btnMutiplyPowerSameBase_Click);
+            this.btnMultiplyPowerSameBase.Leave += new System.EventHandler(this.btnMutiplyPowerSameBase_Leave);
             // 
             // btnToPowerOf
             // 
@@ -368,9 +368,9 @@ namespace BasicMathBase
             // 
             this.panelMutiplyAlgorithmsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
             this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMmcMdc);
-            this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMutiplyEgyptianAlgorithm);
+            this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMultiplyEgyptianAlgorithm);
             this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMultiplyRussianAlgorithm);
-            this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMutiplyMatrixAlgorithm);
+            this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMultiplyMatrixAlgorithm);
             this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnNaturalAsPowerSum);
             this.panelMutiplyAlgorithmsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMutiplyAlgorithmsSubMenu.Location = new System.Drawing.Point(0, 192);
@@ -399,26 +399,26 @@ namespace BasicMathBase
             this.btnMmcMdc.Click += new System.EventHandler(this.btnMmcMdc_Click);
             this.btnMmcMdc.Leave += new System.EventHandler(this.btnMmcMdc_Leave);
             // 
-            // btnMutiplyEgyptianAlgorithm
+            // btnMultiplyEgyptianAlgorithm
             // 
-            this.btnMutiplyEgyptianAlgorithm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnMutiplyEgyptianAlgorithm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMutiplyEgyptianAlgorithm.FlatAppearance.BorderSize = 0;
-            this.btnMutiplyEgyptianAlgorithm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
-            this.btnMutiplyEgyptianAlgorithm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.btnMutiplyEgyptianAlgorithm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMutiplyEgyptianAlgorithm.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMutiplyEgyptianAlgorithm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMutiplyEgyptianAlgorithm.Location = new System.Drawing.Point(0, 180);
-            this.btnMutiplyEgyptianAlgorithm.Name = "btnMutiplyEgyptianAlgorithm";
-            this.btnMutiplyEgyptianAlgorithm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMutiplyEgyptianAlgorithm.Size = new System.Drawing.Size(324, 60);
-            this.btnMutiplyEgyptianAlgorithm.TabIndex = 28;
-            this.btnMutiplyEgyptianAlgorithm.Text = "Algoritimo Egípico";
-            this.btnMutiplyEgyptianAlgorithm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMutiplyEgyptianAlgorithm.UseVisualStyleBackColor = false;
-            this.btnMutiplyEgyptianAlgorithm.Click += new System.EventHandler(this.btnMutiplyEgyptianAlgorithm_Click);
-            this.btnMutiplyEgyptianAlgorithm.Leave += new System.EventHandler(this.btnMutiplyEgyptianAlgorithm_Leave);
+            this.btnMultiplyEgyptianAlgorithm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnMultiplyEgyptianAlgorithm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMultiplyEgyptianAlgorithm.FlatAppearance.BorderSize = 0;
+            this.btnMultiplyEgyptianAlgorithm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnMultiplyEgyptianAlgorithm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnMultiplyEgyptianAlgorithm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiplyEgyptianAlgorithm.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMultiplyEgyptianAlgorithm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMultiplyEgyptianAlgorithm.Location = new System.Drawing.Point(0, 180);
+            this.btnMultiplyEgyptianAlgorithm.Name = "btnMultiplyEgyptianAlgorithm";
+            this.btnMultiplyEgyptianAlgorithm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnMultiplyEgyptianAlgorithm.Size = new System.Drawing.Size(324, 60);
+            this.btnMultiplyEgyptianAlgorithm.TabIndex = 28;
+            this.btnMultiplyEgyptianAlgorithm.Text = "Algoritimo Egípico";
+            this.btnMultiplyEgyptianAlgorithm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultiplyEgyptianAlgorithm.UseVisualStyleBackColor = false;
+            this.btnMultiplyEgyptianAlgorithm.Click += new System.EventHandler(this.btnMutiplyEgyptianAlgorithm_Click);
+            this.btnMultiplyEgyptianAlgorithm.Leave += new System.EventHandler(this.btnMutiplyEgyptianAlgorithm_Leave);
             // 
             // btnMultiplyRussianAlgorithm
             // 
@@ -441,26 +441,26 @@ namespace BasicMathBase
             this.btnMultiplyRussianAlgorithm.Click += new System.EventHandler(this.btnMultiplyRussianAlgorithm_Click);
             this.btnMultiplyRussianAlgorithm.Leave += new System.EventHandler(this.btnMultiplyRussianAlgorithm_Leave);
             // 
-            // btnMutiplyMatrixAlgorithm
+            // btnMultiplyMatrixAlgorithm
             // 
-            this.btnMutiplyMatrixAlgorithm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnMutiplyMatrixAlgorithm.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMutiplyMatrixAlgorithm.FlatAppearance.BorderSize = 0;
-            this.btnMutiplyMatrixAlgorithm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
-            this.btnMutiplyMatrixAlgorithm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.btnMutiplyMatrixAlgorithm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMutiplyMatrixAlgorithm.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMutiplyMatrixAlgorithm.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMutiplyMatrixAlgorithm.Location = new System.Drawing.Point(0, 60);
-            this.btnMutiplyMatrixAlgorithm.Name = "btnMutiplyMatrixAlgorithm";
-            this.btnMutiplyMatrixAlgorithm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnMutiplyMatrixAlgorithm.Size = new System.Drawing.Size(324, 60);
-            this.btnMutiplyMatrixAlgorithm.TabIndex = 26;
-            this.btnMutiplyMatrixAlgorithm.Text = "Algoritimo por matriz";
-            this.btnMutiplyMatrixAlgorithm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMutiplyMatrixAlgorithm.UseVisualStyleBackColor = false;
-            this.btnMutiplyMatrixAlgorithm.Click += new System.EventHandler(this.btnMutiplyMatrixAlgorithm_Click);
-            this.btnMutiplyMatrixAlgorithm.Leave += new System.EventHandler(this.btnMutiplyMatrixAlgorithm_Leave);
+            this.btnMultiplyMatrixAlgorithm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnMultiplyMatrixAlgorithm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMultiplyMatrixAlgorithm.FlatAppearance.BorderSize = 0;
+            this.btnMultiplyMatrixAlgorithm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnMultiplyMatrixAlgorithm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnMultiplyMatrixAlgorithm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiplyMatrixAlgorithm.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnMultiplyMatrixAlgorithm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMultiplyMatrixAlgorithm.Location = new System.Drawing.Point(0, 60);
+            this.btnMultiplyMatrixAlgorithm.Name = "btnMultiplyMatrixAlgorithm";
+            this.btnMultiplyMatrixAlgorithm.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnMultiplyMatrixAlgorithm.Size = new System.Drawing.Size(324, 60);
+            this.btnMultiplyMatrixAlgorithm.TabIndex = 26;
+            this.btnMultiplyMatrixAlgorithm.Text = "Algoritimo por matriz";
+            this.btnMultiplyMatrixAlgorithm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultiplyMatrixAlgorithm.UseVisualStyleBackColor = false;
+            this.btnMultiplyMatrixAlgorithm.Click += new System.EventHandler(this.btnMutiplyMatrixAlgorithm_Click);
+            this.btnMultiplyMatrixAlgorithm.Leave += new System.EventHandler(this.btnMutiplyMatrixAlgorithm_Leave);
             // 
             // btnNaturalAsPowerSum
             // 
@@ -499,25 +499,25 @@ namespace BasicMathBase
             this.btnAjuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAjuda.UseVisualStyleBackColor = true;
             // 
-            // btnMutiplyAlgorithms
+            // btnMultiplyAlgorithms
             // 
-            this.btnMutiplyAlgorithms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnMutiplyAlgorithms.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMutiplyAlgorithms.FlatAppearance.BorderSize = 0;
-            this.btnMutiplyAlgorithms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMutiplyAlgorithms.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMutiplyAlgorithms.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMutiplyAlgorithms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMutiplyAlgorithms.Location = new System.Drawing.Point(0, 127);
-            this.btnMutiplyAlgorithms.Name = "btnMutiplyAlgorithms";
-            this.btnMutiplyAlgorithms.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnMutiplyAlgorithms.Size = new System.Drawing.Size(324, 65);
-            this.btnMutiplyAlgorithms.TabIndex = 1;
-            this.btnMutiplyAlgorithms.Text = "Algoritmos de Multiplicação";
-            this.btnMutiplyAlgorithms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMutiplyAlgorithms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMutiplyAlgorithms.UseVisualStyleBackColor = false;
-            this.btnMutiplyAlgorithms.Click += new System.EventHandler(this.btnMutiplyAlgorithms_Click);
+            this.btnMultiplyAlgorithms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnMultiplyAlgorithms.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMultiplyAlgorithms.FlatAppearance.BorderSize = 0;
+            this.btnMultiplyAlgorithms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiplyAlgorithms.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMultiplyAlgorithms.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMultiplyAlgorithms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultiplyAlgorithms.Location = new System.Drawing.Point(0, 127);
+            this.btnMultiplyAlgorithms.Name = "btnMultiplyAlgorithms";
+            this.btnMultiplyAlgorithms.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMultiplyAlgorithms.Size = new System.Drawing.Size(324, 65);
+            this.btnMultiplyAlgorithms.TabIndex = 1;
+            this.btnMultiplyAlgorithms.Text = "Algoritmos de Multiplicação";
+            this.btnMultiplyAlgorithms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultiplyAlgorithms.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMultiplyAlgorithms.UseVisualStyleBackColor = false;
+            this.btnMultiplyAlgorithms.Click += new System.EventHandler(this.btnMutiplyAlgorithms_Click);
             // 
             // panel2
             // 
@@ -588,7 +588,7 @@ namespace BasicMathBase
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBoxMenuLogo;
-        private System.Windows.Forms.Button btnMutiplyAlgorithms;
+        private System.Windows.Forms.Button btnMultiplyAlgorithms;
         private System.Windows.Forms.Button btnAjuda;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
@@ -600,13 +600,13 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnPrimesList;
         private System.Windows.Forms.Button btnIsPrime;
         private System.Windows.Forms.Button btnPrimes;
-        private System.Windows.Forms.Button btnMutiplyEgyptianAlgorithm;
+        private System.Windows.Forms.Button btnMultiplyEgyptianAlgorithm;
         private System.Windows.Forms.Button btnMultiplyRussianAlgorithm;
-        private System.Windows.Forms.Button btnMutiplyMatrixAlgorithm;
+        private System.Windows.Forms.Button btnMultiplyMatrixAlgorithm;
         private System.Windows.Forms.Button btnBModA;
         private System.Windows.Forms.Button btnSubtractionAlgorithm;
         private System.Windows.Forms.Panel panelPowersSubMenu;
-        private System.Windows.Forms.Button btnMutiplyPowerSameBase;
+        private System.Windows.Forms.Button btnMultiplyPowerSameBase;
         private System.Windows.Forms.Button btnToPowerOf;
         private System.Windows.Forms.Button btnPowers;
         private System.Windows.Forms.Button btnArithmeticsFunction;

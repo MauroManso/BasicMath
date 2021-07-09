@@ -58,12 +58,12 @@ namespace BasicMathBase
             this.lblTitleMmcMdc.AutoSize = true;
             this.lblTitleMmcMdc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitleMmcMdc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitleMmcMdc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitleMmcMdc.Location = new System.Drawing.Point(155, 27);
+            this.lblTitleMmcMdc.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitleMmcMdc.Location = new System.Drawing.Point(382, 29);
             this.lblTitleMmcMdc.Name = "lblTitleMmcMdc";
-            this.lblTitleMmcMdc.Size = new System.Drawing.Size(659, 37);
+            this.lblTitleMmcMdc.Size = new System.Drawing.Size(208, 37);
             this.lblTitleMmcMdc.TabIndex = 2;
-            this.lblTitleMmcMdc.Text = "NATURAL COMO PRODUTO DE PRIMOS";
+            this.lblTitleMmcMdc.Text = "MMC e MDC";
             // 
             // panelTitle
             // 

@@ -33,7 +33,7 @@ namespace BasicMathBase
             if (panelMutiplyAlgorithmsSubMenu.Visible == true)
             {
                 panelMutiplyAlgorithmsSubMenu.Visible = false;
-                btnMutiplyAlgorithms.BackColor = Color.FromArgb(24, 30, 54);
+                btnMultiplyAlgorithms.BackColor = Color.FromArgb(24, 30, 54);
             }
             if (panelPrimesSubMenu.Visible == true)
             {
@@ -77,7 +77,7 @@ namespace BasicMathBase
 
         private void btnMutiplyAlgorithms_Click(object sender, EventArgs e)
         {
-            btnMutiplyAlgorithms.BackColor = Color.FromArgb(0, 60, 97);
+            btnMultiplyAlgorithms.BackColor = Color.FromArgb(0, 60, 97);
             showSubMenu(panelMutiplyAlgorithmsSubMenu);
         }
 
@@ -101,20 +101,20 @@ namespace BasicMathBase
 
         private void btnMutiplyMatrixAlgorithm_Click(object sender, EventArgs e)
         {
-            btnMutiplyMatrixAlgorithm.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormNaturalAsPowerSum());
+            btnMultiplyMatrixAlgorithm.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormMultiplyMatrixAlgorithm());
         }
 
         private void btnMultiplyRussianAlgorithm_Click(object sender, EventArgs e)
         {
             btnMultiplyRussianAlgorithm.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormNaturalAsPowerSum());
+            openChildForm(new FormMultiplyRussianAlgorithm());
         }
 
         private void btnMutiplyEgyptianAlgorithm_Click(object sender, EventArgs e)
         {
-            btnMutiplyEgyptianAlgorithm.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormNaturalAsPowerSum());
+            btnMultiplyEgyptianAlgorithm.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormMultiplyEgyptianAlgorithm());
         }
 
         private void btnMmcMdc_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace BasicMathBase
         private void btnPrimesList_Click(object sender, EventArgs e)
         {
             btnPrimesList.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormIsPrime());
+            openChildForm(new FormPrimesList());
         }
 
         private void btnPrimeSieve_Click(object sender, EventArgs e)
@@ -169,22 +169,22 @@ namespace BasicMathBase
 
         private void btnMutiplyPowerSameBase_Click(object sender, EventArgs e)
         {
-            btnMutiplyPowerSameBase.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormPower());
+            btnMultiplyPowerSameBase.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormMultiplyPowerSameBase());
         }
 
         private void btnSubtractionAlgorithm_Click(object sender, EventArgs e)
         {
             btnSubtractionAlgorithm.BackColor = Color.FromArgb(0, 60, 97);
             hideSubMenu();
-            openChildForm(new FormPower());
+            openChildForm(new FormSubtractionAlgorithm());
         }
 
         private void btnBModA_Click(object sender, EventArgs e)
         {
             btnBModA.BackColor = Color.FromArgb(0, 60, 97);
             hideSubMenu();
-            openChildForm(new FormPower());
+            openChildForm(new FormBModA());
         }
 
 
@@ -196,7 +196,7 @@ namespace BasicMathBase
 
         private void btnMutiplyMatrixAlgorithm_Leave(object sender, EventArgs e)
         {
-            btnMutiplyMatrixAlgorithm.BackColor = Color.FromArgb(37, 35, 43);
+            btnMultiplyMatrixAlgorithm.BackColor = Color.FromArgb(37, 35, 43);
         }
 
         private void btnMultiplyRussianAlgorithm_Leave(object sender, EventArgs e)
@@ -206,7 +206,7 @@ namespace BasicMathBase
 
         private void btnMutiplyEgyptianAlgorithm_Leave(object sender, EventArgs e)
         {
-            btnMutiplyEgyptianAlgorithm.BackColor = Color.FromArgb(37, 35, 43);
+            btnMultiplyEgyptianAlgorithm.BackColor = Color.FromArgb(37, 35, 43);
         }
 
         private void btnMmcMdc_Leave(object sender, EventArgs e)
@@ -251,7 +251,7 @@ namespace BasicMathBase
 
         private void btnMutiplyPowerSameBase_Leave(object sender, EventArgs e)
         {
-            btnMutiplyPowerSameBase.BackColor = Color.FromArgb(37, 35, 43);
+            btnMultiplyPowerSameBase.BackColor = Color.FromArgb(37, 35, 43);
         }
 
         private void btnSubtractionAlgorithm_Leave(object sender, EventArgs e)

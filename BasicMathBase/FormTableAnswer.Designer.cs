@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormRespostaTable
+    partial class FormTableAnswer
     {
         /// <summary>
         /// Required designer variable.

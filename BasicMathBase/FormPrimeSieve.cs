@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace BasicMathBase
 {
-    public partial class FormPrimosCrivo : Form
+    public partial class FormPrimeSieve : Form
     {
-        public FormPrimosCrivo()
+        public FormPrimeSieve()
         {
             InitializeComponent();
             customDesign();

@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormPrimos
+    partial class FormIsPrime
     {
         /// <summary>
         /// Required designer variable.

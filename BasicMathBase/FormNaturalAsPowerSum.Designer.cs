@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormPotencia10
+    partial class FormNaturalAsPowerSum
     {
         /// <summary>
         /// Required designer variable.
@@ -398,7 +398,7 @@ namespace BasicMathBase
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
             this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
             this.tlbOrdemClase.Controls.Add(this.label5, 6, 0);
@@ -515,7 +515,7 @@ namespace BasicMathBase
             this.label1.Text = "u";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FormPotencia10
+            // FormNaturalAsPowerSum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -536,7 +536,7 @@ namespace BasicMathBase
             this.Controls.Add(this.lblParidade);
             this.Controls.Add(this.lblNum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormPotencia10";
+            this.Name = "FormNaturalAsPowerSum";
             this.Text = "Form3";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

@@ -13,9 +13,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPrimos : Form
+    public partial class FormIsPrime : Form
     {
-        public FormPrimos()
+        public FormIsPrime()
         {
             InitializeComponent();
             customDesign();

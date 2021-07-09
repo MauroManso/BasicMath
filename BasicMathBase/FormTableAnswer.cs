@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BasicMathBase
 {
-    public partial class FormRespostaTable : Form
+    public partial class FormTableAnswer : Form
     {
-        public FormRespostaTable(bool isCorrect, string answer)
+        public FormTableAnswer(bool isCorrect, string answer)
         {
             InitializeComponent();
             customizeDesign(isCorrect, answer);

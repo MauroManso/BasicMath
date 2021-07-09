@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace BasicMathBase
 {
-    public partial class FormRespostas : Form
+    public partial class FormAnswers : Form
     {
         [System.Runtime.InteropServices.DllImport("MimeTex.dll")]
         internal static extern int CreateGifFromEq(string expr, string fileName);
-        public FormRespostas(bool isCorrect, string answer)
+        public FormAnswers(bool isCorrect, string answer)
         {
             InitializeComponent();
             customizeDesign(isCorrect, answer);

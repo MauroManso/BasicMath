@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPix : Form
+    public partial class FormPiX : Form
     {
-        public FormPix()
+        public FormPiX()
         {
             InitializeComponent();
             customDesign();

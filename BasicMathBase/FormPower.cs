@@ -47,7 +47,7 @@ namespace BasicMathBase
 
             bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
-            FormRespostas openForm = new FormRespostas(isCorrect, sistemAnswer);
+            FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
             openForm.Show();
         }
 

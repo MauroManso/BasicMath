@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormPix
+    partial class FormPiX
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@ namespace BasicMathBase
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtboxPix = new System.Windows.Forms.TextBox();
             this.lblPix = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@ namespace BasicMathBase
             this.lblApproximatePiXAnswer = new System.Windows.Forms.Label();
             this.lblRealPiXAnswer = new System.Windows.Forms.Label();
             this.lblAcuratePiXAnswer = new System.Windows.Forms.Label();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +53,18 @@ namespace BasicMathBase
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(984, 95);
             this.panel3.TabIndex = 23;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
+            this.lblTitle.Location = new System.Drawing.Point(429, 33);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(91, 37);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "π (x)";
             // 
             // btnClear
             // 
@@ -170,19 +182,7 @@ namespace BasicMathBase
             this.lblAcuratePiXAnswer.TabIndex = 4134;
             this.lblAcuratePiXAnswer.Text = "resposta";
             // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitle.Location = new System.Drawing.Point(429, 33);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(91, 37);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "π (x)";
-            // 
-            // FormPix
+            // FormPiX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +200,7 @@ namespace BasicMathBase
             this.Controls.Add(this.btnCalculatePix);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormPix";
+            this.Name = "FormPiX";
             this.Text = "FormPix";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

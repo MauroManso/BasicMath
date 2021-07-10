@@ -282,7 +282,7 @@ namespace BasicMathBase.CalcMethods
             long numberOfPrimes = 0;
 
             int size = (Convert.ToString(begin)).Length + 2;
-            for (long number = begin; number < end; number++)
+            for (long number = begin; number <= end; number++)
             {
                 if (IsPrime(number))
                 {

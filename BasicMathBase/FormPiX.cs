@@ -33,17 +33,31 @@ namespace BasicMathBase
 
         private void btnCalculatePix_Click(object sender, EventArgs e)
         {
-            long x = Convert.ToInt64(txtboxPix.Text);
-            lblApproximatePiXAnswer.Text = "" + MathMethods.ApproximatePiX(x);
-            lblRealPiXAnswer.Text = "" + MathMethods.RealPiX(x);
-            lblAcuratePiXAnswer.Text = "" + MathMethods.AcuratePiX(x) + "%";
+            long x = 0;
+            try
+            {
+                x = Convert.ToInt64(txtboxPix.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Insira um número natural de até 9 digitos",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+            }
+            if (x != 0)
+            {
+                lblApproximatePiXAnswer.Text = "" + MathMethods.ApproximatePiX(x);
+                lblRealPiXAnswer.Text = "" + MathMethods.RealPiX(x);
+                lblAcuratePiXAnswer.Text = "" + MathMethods.AcuratePiX(x) + "%";
 
-            lblApproximatePiX.Visible = true;
-            lblRealPiX.Visible = true;
-            lblAcuratePiX.Visible = true;
-            lblApproximatePiXAnswer.Visible = true;
-            lblRealPiXAnswer.Visible = true;
-            lblAcuratePiXAnswer.Visible = true;
+                lblApproximatePiX.Visible = true;
+                lblRealPiX.Visible = true;
+                lblAcuratePiX.Visible = true;
+                lblApproximatePiXAnswer.Visible = true;
+                lblRealPiXAnswer.Visible = true;
+                lblAcuratePiXAnswer.Visible = true;
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

@@ -224,7 +224,7 @@ namespace BasicMathBase.CalcMethods
                 output += Environment.NewLine;
             }
             output += "\t----------" + Environment.NewLine;
-            output += "\t  " + result;
+            output += "\t " + result;
 
 
             return (output, result);

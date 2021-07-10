@@ -42,13 +42,22 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
+            if(Convert.ToString(factor1).Length != 3 || Convert.ToString(factor2).Length != 3)
+            {
+                MessageBox.Show("Insira um número válido",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+            }
+            else if(factor1 > 0 && factor2 > 0)
+            {
+                var sistemAnswer = MathMethods.MatrixMultiplyAlgorithm(factor1, factor2);
 
-            var sistemAnswer = MathMethods.MatrixMultiplyAlgorithm(factor1, factor2);
+                bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
 
-            bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
-
-            FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, sistemAnswer.outputString);
-            openForm.Show();
+                FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, sistemAnswer.outputString);
+                openForm.Show();
+            }  
         }
 
         private void btnClear_Click(object sender, EventArgs e)

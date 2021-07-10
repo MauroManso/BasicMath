@@ -73,6 +73,15 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
+        public static (string outputString, long numberResult) SubtractionAlgorithm(long minuend, long subtrahend)
+        {
+            string output = "";
+            long result = 0;
+ 
+
+            return (output, result);
+        }
+
         public static (string outputString, long numberResult) EgyptianMultiplyAlgorithm(long factor1, long factor2)
         {
             string output = "";

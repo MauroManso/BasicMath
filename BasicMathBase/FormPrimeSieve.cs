@@ -43,17 +43,18 @@ namespace BasicMathBase
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);
             }
+            if(upToNumber > 0)
+            {
+                var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+                if (upToNumber > 0) await MakeCrivoAsync(upToNumber);
 
-            if(upToNumber > 0) await MakeCrivoAsync(upToNumber);
+                watch.Stop();
+                var elapsedS = watch.ElapsedMilliseconds;
 
-            watch.Stop();
-            var elapsedS = watch.ElapsedMilliseconds;
-
-            lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
-            lblTimeElapsed.Visible = true;
-
+                lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
+                lblTimeElapsed.Visible = true;
+            }
         }
 
         private async Task MakeCrivoAsync(long upToNumber)
@@ -77,19 +78,19 @@ namespace BasicMathBase
                     int num = (c[j]) + (30 * i);
                     if (num <= upToNumber)
                     {
-                        output += String.Format("{0," + size + "}\t", num);
+                        richTextBoxLista.Text += String.Format("{0," + size + "}\t", num);
                         bool isPrime = await Task.Run(() => MathMethods.IsPrime(num));
                         if (!isPrime)
-                            nonPrimeNumTextBox.Add(output.Length);
+                            nonPrimeNumTextBox.Add(richTextBoxLista.Text.Length);
                         else
                             numberOfPrimes++;
                         last = num;
                         lblPercentage.Text = $"{((num * 100) / upToNumber)} %";
                     }
                 }
-                output += Environment.NewLine + Environment.NewLine;
+                richTextBoxLista.Text += Environment.NewLine + Environment.NewLine;
             }
-            richTextBoxLista.Text = output;
+            //richTextBoxLista.Text = output;
             foreach (var nonPrimePosition in nonPrimeNumTextBox)
             {
                 richTextBoxLista.Select(nonPrimePosition - size, size);
@@ -106,6 +107,9 @@ namespace BasicMathBase
         {
             richTextBoxLista.Text = "";
             txtboxUpToPrime.Text = "";
+            lblNumberOfPrimes.Visible = false;
+            lblTimeElapsed.Visible = false;
+            lblPercentage.Visible = false;
         }
 
         public class PCPrint : System.Drawing.Printing.PrintDocument

@@ -15,6 +15,24 @@ namespace BasicMathBase
         public FormSubtractionAlgorithm()
         {
             InitializeComponent();
+            customDesign();
+        }
+
+        private void customDesign()
+        {
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtboxAnwser.Text = "";
+            txtboxMinuend.Text = "";
+            txtboxSubtrahend.Text = "";
         }
     }
 }

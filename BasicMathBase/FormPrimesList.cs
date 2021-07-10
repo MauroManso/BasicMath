@@ -48,21 +48,23 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            if(end > 0)
+            {
+                var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            var result = await ListPrimeAsync(begin, end);
+                var result = await ListPrimeAsync(begin, end);
 
-            watch.Stop();
-            var elapsedS = watch.ElapsedMilliseconds;
+                watch.Stop();
+                var elapsedS = watch.ElapsedMilliseconds;
 
-            lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
-            lblTimeElapsed.Visible = true;
+                lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
+                lblTimeElapsed.Visible = true;
 
-            txtboxList.Text = result.primesList;
+                txtboxList.Text = result.primesList;
 
-            lblNumberOfPrimes.Text = "Há " + result.numberOfPrimes + " números primos";
-            lblNumberOfPrimes.Visible = true;
-
+                lblNumberOfPrimes.Text = "Há " + result.numberOfPrimes + " números primos";
+                lblNumberOfPrimes.Visible = true;
+            }
         }
 
         private async Task<(string primesList, long numberOfPrimes)> ListPrimeAsync(long begin, long end)
@@ -299,6 +301,9 @@ namespace BasicMathBase
             txtboxList.Text = "";
             txtboxBeginPrime.Text = "";
             txtboxUpToPrime.Text = "";
+            lblTimeElapsed.Visible = false;
+            lblNumberOfPrimes.Visible = false;
+            lblPercentage.Visible = false;
         }
     }
 }

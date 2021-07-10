@@ -42,13 +42,15 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
+            if (factor1 > 0 && factor2 > 0)
+            {
+                var sistemAnswer = MathMethods.EgyptianMultiplyAlgorithm(factor1, factor2);
 
-            var sistemAnswer = MathMethods.EgyptianMultiplyAlgorithm(factor1, factor2);
+                bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
 
-            bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
-
-            FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, sistemAnswer.outputString);
-            openForm.Show();
+                FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, sistemAnswer.outputString);
+                openForm.Show();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

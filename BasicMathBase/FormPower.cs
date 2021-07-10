@@ -29,6 +29,7 @@ namespace BasicMathBase
             long powerBase = 0;
             long expoent = 0;
             string userAnswer = "";
+            bool run = true;
             try
             {
                 powerBase = Convert.ToInt64(txtboxBase.Text);
@@ -41,14 +42,18 @@ namespace BasicMathBase
                             "Erro",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
+                run = false;
             }
+            if(run)
+            {
+                string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
 
-            string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
+                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
-            bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
-
-            FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
-            openForm.Show();
+                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
+                openForm.Show();
+            }
+            
         }
     }
 }

@@ -30,6 +30,7 @@ namespace BasicMathBase
             long expoent1 = 0;
             long expoent2 = 0;
             string userAnswer = "";
+            bool run = true;
             try
             {
                 powerBase = Convert.ToInt64(txtboxBase.Text);
@@ -43,14 +44,18 @@ namespace BasicMathBase
                             "Erro",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
+                run = false;
             }
 
-            string sistemAnswer = $"{powerBase} ^ {(expoent1 + expoent2)} = " + MathMethods.ToPower(powerBase, (expoent1 + expoent2));
+            if (run) 
+            {
+                string sistemAnswer = $"{powerBase} ^ {(expoent1 + expoent2)} = " + MathMethods.ToPower(powerBase, (expoent1 + expoent2));
 
-            bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
+                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
-            FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
-            openForm.Show();
+                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
+                openForm.Show();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

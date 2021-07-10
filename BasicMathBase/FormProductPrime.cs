@@ -26,20 +26,33 @@ namespace BasicMathBase
 
         private void btnCorrectNum_Click(object sender, EventArgs e)
         {
-            string answer = MathMethods.ProductPrimeToString(Convert.ToInt64(txtboxNum.Text));
-
-            if (txtboxResposta.Text == answer)
+            long num = 0;
+            try
             {
-                FormAnswers openForm = new FormAnswers(true, (answer));
-                openForm.Show();
+                num = Convert.ToInt64(txtboxNum.Text);
             }
-            else
+            catch
             {
-                FormAnswers openForm = new FormAnswers(false, (answer));
-                openForm.Show();
+                MessageBox.Show("Insira um número válido",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
             }
-                
+            if(num > 0)
+            {
+                string answer = MathMethods.ProductPrimeToString(num);
 
+                if ((txtboxResposta.Text.Replace(" ", "")) == (answer.Replace(" ", "")))
+                {
+                    FormAnswers openForm = new FormAnswers(true, (answer));
+                    openForm.Show();
+                }
+                else
+                {
+                    FormAnswers openForm = new FormAnswers(false, (answer));
+                    openForm.Show();
+                }
+            }
         }
 
         private void btnClearNum_Click(object sender, EventArgs e)

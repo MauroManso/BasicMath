@@ -64,7 +64,7 @@ namespace BasicMathBase
             // 
             // txtboxNum
             // 
-            this.txtboxNum.Location = new System.Drawing.Point(340, 146);
+            this.txtboxNum.Location = new System.Drawing.Point(314, 236);
             this.txtboxNum.Name = "txtboxNum";
             this.txtboxNum.Size = new System.Drawing.Size(203, 31);
             this.txtboxNum.TabIndex = 32;
@@ -73,7 +73,7 @@ namespace BasicMathBase
             // 
             this.lblNum.AutoSize = true;
             this.lblNum.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNum.Location = new System.Drawing.Point(288, 146);
+            this.lblNum.Location = new System.Drawing.Point(262, 236);
             this.lblNum.Name = "lblNum";
             this.lblNum.Size = new System.Drawing.Size(22, 25);
             this.lblNum.TabIndex = 31;
@@ -86,7 +86,7 @@ namespace BasicMathBase
             this.btnCorrectNum.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCorrectNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCorrectNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCorrectNum.Location = new System.Drawing.Point(325, 318);
+            this.btnCorrectNum.Location = new System.Drawing.Point(299, 408);
             this.btnCorrectNum.Name = "btnCorrectNum";
             this.btnCorrectNum.Size = new System.Drawing.Size(108, 43);
             this.btnCorrectNum.TabIndex = 4141;
@@ -102,7 +102,7 @@ namespace BasicMathBase
             this.btnClearNum.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearNum.Location = new System.Drawing.Point(569, 318);
+            this.btnClearNum.Location = new System.Drawing.Point(543, 408);
             this.btnClearNum.Name = "btnClearNum";
             this.btnClearNum.Size = new System.Drawing.Size(108, 43);
             this.btnClearNum.TabIndex = 4140;
@@ -113,7 +113,7 @@ namespace BasicMathBase
             // 
             // txtboxResposta
             // 
-            this.txtboxResposta.Location = new System.Drawing.Point(340, 223);
+            this.txtboxResposta.Location = new System.Drawing.Point(314, 313);
             this.txtboxResposta.Name = "txtboxResposta";
             this.txtboxResposta.Size = new System.Drawing.Size(459, 31);
             this.txtboxResposta.TabIndex = 4143;
@@ -122,7 +122,7 @@ namespace BasicMathBase
             // 
             this.lblResposta.AutoSize = true;
             this.lblResposta.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblResposta.Location = new System.Drawing.Point(232, 223);
+            this.lblResposta.Location = new System.Drawing.Point(206, 313);
             this.lblResposta.Name = "lblResposta";
             this.lblResposta.Size = new System.Drawing.Size(84, 25);
             this.lblResposta.TabIndex = 4142;

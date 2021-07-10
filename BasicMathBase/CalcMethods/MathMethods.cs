@@ -132,6 +132,104 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
+        public static List<int> GetIntArray(int num)
+        {
+            List<int> listOfInts = new List<int>();
+            while (num > 0)
+            {
+                listOfInts.Add(num % 10);
+                num = num / 10;
+            }
+            listOfInts.Reverse();
+            return listOfInts;
+        }
+
+        public static (string outputString, long numberResult) MatrixMultiplyAlgorithm(int factor1, int factor2)
+        {
+            string output = "";
+            var factor1List = GetIntArray(factor1);
+            var factor2List = GetIntArray(factor2);
+            var matrix = new List<List<int>>();
+            var matrixSumList = new List<List<int>>();
+            
+
+            output += String.Format("  \t");
+            foreach (int num1 in factor1List)
+                output += String.Format("{0,2}\t", num1);
+
+            output += Environment.NewLine + Environment.NewLine;
+
+            foreach (int num2 in factor2List)
+            {
+                output += String.Format("{0,2}\t", num2);
+                var matrixLine = new List<int>();
+                foreach(int num1 in factor1List)
+                {
+                    matrixLine.Add(num2 * num1);
+                    if ((num2 * num1) < 10)
+                        output += "0";
+                    output += String.Format("{0}\t", (num2 * num1));
+                }
+                matrix.Add(matrixLine);
+                output += Environment.NewLine;
+            }
+
+            output += Environment.NewLine;
+
+            var tempLine = new List<int>();
+            tempLine.Add(matrix[0][0]);
+            tempLine.Add(matrix[1][1]);
+            tempLine.Add(matrix[2][2]);
+            matrixSumList.Add(tempLine);
+
+            tempLine = new List<int>();
+            tempLine.Add(matrix[1][0]);
+            tempLine.Add(matrix[2][1]);
+            matrixSumList.Add(tempLine);
+
+            tempLine = new List<int>();
+            tempLine.Add(matrix[0][1]);
+            tempLine.Add(matrix[1][2]);
+            matrixSumList.Add(tempLine);
+
+            tempLine = new List<int>();
+            tempLine.Add(matrix[2][0]);
+            matrixSumList.Add(tempLine);
+
+            tempLine = new List<int>();
+            tempLine.Add(matrix[0][2]);
+            matrixSumList.Add(tempLine);
+
+            long result = 0;
+            int lineCount = 0;
+            foreach (List<int>line in matrixSumList)
+            {
+                string matrixSumLine = "";
+                bool isFirst = true;
+                output += "\t";
+                foreach (int num in line)
+                {
+                    if (lineCount >= 1 && isFirst) output += "  ";
+                    if (lineCount >= 3 && isFirst) output += "  ";
+                    if (num < 10)
+                        output += "0";
+                    output += "" + num;
+                    matrixSumLine += "" + num;
+                    if (lineCount >= 1 && !isFirst) matrixSumLine += "0";
+                    if (lineCount >= 3) matrixSumLine += "00";
+                    isFirst = false;
+                }
+                result += Convert.ToInt64(matrixSumLine);
+                lineCount++;
+                output += Environment.NewLine;
+            }
+            output += "\t----------" + Environment.NewLine;
+            output += "\t  " + result;
+
+
+            return (output, result);
+        }
+
         public static (string toLeft, string toRight) SumPowerBase10(long num)
         {
             string toLeft = "";

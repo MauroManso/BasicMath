@@ -438,6 +438,45 @@ namespace BasicMathBase.CalcMethods
             return num1;
         }
 
+        public static string InversoBmodA(int a, int b)
+        {
+            var va = new List<int>();
+            var k = new List<int>();
+            int i = 0;
+            va.Add(0);
+            k.Add(a);
+            k.Add(b);
+
+            while (k[i+1] != 0)
+            {
+                va.Add(k[i] / k[i + 1]);
+                k.Add(k[i] - (k[i + 1] * va[i + 1]));
+                i++;
+            }
+
+            int d = k[i];
+            if (d != 1)
+                return "Não existe inverso de b em (mod a)";
+
+            int n = 1;
+
+            while (((k[n] * k[n + 2] - 1) % k[n + 1]) != 0)
+            {
+                n += 2;
+            }
+
+            int alpha = k[n + 2];
+
+            while (n >= 1)
+            {
+                alpha = ((alpha * k[n - 1] - va[n]) / (k[n + 1]));
+                n -= 2;
+            }
+
+            return "b⁻¹ mod a = " + alpha;
+
+        }
+
         public static string resultStringEuclides { get; set; }
         public static long euclides_r(long m, long n, long counter)
         {

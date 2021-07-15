@@ -187,6 +187,18 @@ namespace BasicMathBase
             openChildForm(new FormBModA());
         }
 
+        private void btnDivisibility_Click(object sender, EventArgs e)
+        {
+            btnDivisibility.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormBModA());
+        }
+
+        private void btnFractions_Click(object sender, EventArgs e)
+        {
+            btnFractions.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormBModA());
+        }
+
 
 
         private void btnNaturalAsPowerSum_Leave(object sender, EventArgs e)
@@ -262,6 +274,16 @@ namespace BasicMathBase
         private void btnBModA_Leave(object sender, EventArgs e)
         {
             btnBModA.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnDivisibility_Leave(object sender, EventArgs e)
+        {
+            btnDivisibility.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnFractions_Leave(object sender, EventArgs e)
+        {
+            btnFractions.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }

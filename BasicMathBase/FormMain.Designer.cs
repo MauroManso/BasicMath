@@ -51,12 +51,13 @@ namespace BasicMathBase
             this.btnMultiplyRussianAlgorithm = new System.Windows.Forms.Button();
             this.btnMultiplyMatrixAlgorithm = new System.Windows.Forms.Button();
             this.btnNaturalAsPowerSum = new System.Windows.Forms.Button();
-            this.btnAjuda = new System.Windows.Forms.Button();
             this.btnMultiplyAlgorithms = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxMenuLogo = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.btnDivisibility = new System.Windows.Forms.Button();
+            this.btnFractions = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPowersSubMenu.SuspendLayout();
             this.panelPrimesSubMenu.SuspendLayout();
@@ -72,6 +73,8 @@ namespace BasicMathBase
             this.panelMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelMenu.Controls.Add(this.btnFractions);
+            this.panelMenu.Controls.Add(this.btnDivisibility);
             this.panelMenu.Controls.Add(this.btnBModA);
             this.panelMenu.Controls.Add(this.btnSubtractionAlgorithm);
             this.panelMenu.Controls.Add(this.panelPowersSubMenu);
@@ -80,7 +83,6 @@ namespace BasicMathBase
             this.panelMenu.Controls.Add(this.panelPrimesSubMenu);
             this.panelMenu.Controls.Add(this.btnPrimes);
             this.panelMenu.Controls.Add(this.panelMutiplyAlgorithmsSubMenu);
-            this.panelMenu.Controls.Add(this.btnAjuda);
             this.panelMenu.Controls.Add(this.btnMultiplyAlgorithms);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -483,22 +485,6 @@ namespace BasicMathBase
             this.btnNaturalAsPowerSum.Click += new System.EventHandler(this.btnNaturalAsPowerSum_Click);
             this.btnNaturalAsPowerSum.Leave += new System.EventHandler(this.btnNaturalAsPowerSum_Leave);
             // 
-            // btnAjuda
-            // 
-            this.btnAjuda.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAjuda.FlatAppearance.BorderSize = 0;
-            this.btnAjuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAjuda.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAjuda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAjuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjuda.Location = new System.Drawing.Point(0, 1314);
-            this.btnAjuda.Name = "btnAjuda";
-            this.btnAjuda.Size = new System.Drawing.Size(324, 55);
-            this.btnAjuda.TabIndex = 1;
-            this.btnAjuda.Text = "Ajuda";
-            this.btnAjuda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAjuda.UseVisualStyleBackColor = true;
-            // 
             // btnMultiplyAlgorithms
             // 
             this.btnMultiplyAlgorithms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -559,6 +545,48 @@ namespace BasicMathBase
             this.pictureBoxLogo.TabIndex = 1;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // btnDivisibility
+            // 
+            this.btnDivisibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnDivisibility.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDivisibility.FlatAppearance.BorderSize = 0;
+            this.btnDivisibility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDivisibility.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDivisibility.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDivisibility.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDivisibility.Location = new System.Drawing.Point(0, 1314);
+            this.btnDivisibility.Name = "btnDivisibility";
+            this.btnDivisibility.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDivisibility.Size = new System.Drawing.Size(324, 65);
+            this.btnDivisibility.TabIndex = 10;
+            this.btnDivisibility.Text = "Divisibilidade";
+            this.btnDivisibility.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDivisibility.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDivisibility.UseVisualStyleBackColor = false;
+            this.btnDivisibility.Click += new System.EventHandler(this.btnDivisibility_Click);
+            this.btnDivisibility.Leave += new System.EventHandler(this.btnDivisibility_Leave);
+            // 
+            // btnFractions
+            // 
+            this.btnFractions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnFractions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractions.FlatAppearance.BorderSize = 0;
+            this.btnFractions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractions.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFractions.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractions.Location = new System.Drawing.Point(0, 1379);
+            this.btnFractions.Name = "btnFractions";
+            this.btnFractions.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnFractions.Size = new System.Drawing.Size(324, 65);
+            this.btnFractions.TabIndex = 11;
+            this.btnFractions.Text = "Frações Próprias";
+            this.btnFractions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFractions.UseVisualStyleBackColor = false;
+            this.btnFractions.Click += new System.EventHandler(this.btnFractions_Click);
+            this.btnFractions.Leave += new System.EventHandler(this.btnFractions_Leave);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -589,7 +617,6 @@ namespace BasicMathBase
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBoxMenuLogo;
         private System.Windows.Forms.Button btnMultiplyAlgorithms;
-        private System.Windows.Forms.Button btnAjuda;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Panel panelMutiplyAlgorithmsSubMenu;
@@ -612,6 +639,8 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnArithmeticsFunction;
         private System.Windows.Forms.Button btnPiX;
         private System.Windows.Forms.Button btnMmcMdc;
+        private System.Windows.Forms.Button btnDivisibility;
+        private System.Windows.Forms.Button btnFractions;
     }
 }
 

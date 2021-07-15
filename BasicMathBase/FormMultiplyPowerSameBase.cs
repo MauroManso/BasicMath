@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPower : Form
+    public partial class FormMultiplyPowerSameBase : Form
     {
-        public FormPower()
+        public FormMultiplyPowerSameBase()
         {
             InitializeComponent();
             customDesign();
@@ -27,13 +27,15 @@ namespace BasicMathBase
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             long powerBase = 0;
-            long expoent = 0;
+            long expoent1 = 0;
+            long expoent2 = 0;
             string userAnswer = "";
             bool run = true;
             try
             {
                 powerBase = Convert.ToInt64(txtboxBase.Text);
-                expoent = Convert.ToInt64(txtboxToPowerOf.Text);
+                expoent1 = Convert.ToInt64(txtboxExpoent1.Text);
+                expoent2 = Convert.ToInt64(txtboxExpoent2.Text);
                 userAnswer = txtboxAnwser.Text;
             }
             catch
@@ -44,16 +46,24 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
                 run = false;
             }
-            if(run)
+
+            if (run) 
             {
-                string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
+                string sistemAnswer = $"{powerBase} ^ {(expoent1 + expoent2)} = " + MathMethods.ToPower(powerBase, (expoent1 + expoent2));
 
                 bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
                 FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
                 openForm.Show();
             }
-            
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtboxAnwser.Text = "";
+            txtboxBase.Text = "";
+            txtboxExpoent1.Text = "";
+            txtboxExpoent2.Text = "";
         }
     }
 }

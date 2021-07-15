@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormPrimosCrivo
+    partial class FormPrimeSieve
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@ namespace BasicMathBase
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 95);
+            this.panel3.Size = new System.Drawing.Size(1128, 95);
             this.panel3.TabIndex = 23;
             // 
             // lblTitle
@@ -58,16 +58,16 @@ namespace BasicMathBase
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitle.Location = new System.Drawing.Point(228, 29);
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(326, 30);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(521, 37);
+            this.lblTitle.Size = new System.Drawing.Size(420, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "NÚMEROS PRIMOS POR CRIVO";
+            this.lblTitle.Text = "Números Primos por Crivo";
             // 
             // txtboxUpToPrime
             // 
-            this.txtboxUpToPrime.Location = new System.Drawing.Point(441, 149);
+            this.txtboxUpToPrime.Location = new System.Drawing.Point(494, 147);
             this.txtboxUpToPrime.Name = "txtboxUpToPrime";
             this.txtboxUpToPrime.Size = new System.Drawing.Size(101, 31);
             this.txtboxUpToPrime.TabIndex = 4130;
@@ -79,7 +79,7 @@ namespace BasicMathBase
             this.btnListPrime.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnListPrime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnListPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListPrime.Location = new System.Drawing.Point(572, 140);
+            this.btnListPrime.Location = new System.Drawing.Point(625, 138);
             this.btnListPrime.Name = "btnListPrime";
             this.btnListPrime.Size = new System.Drawing.Size(135, 47);
             this.btnListPrime.TabIndex = 4133;
@@ -92,7 +92,7 @@ namespace BasicMathBase
             // 
             this.lbl_Lista.AutoSize = true;
             this.lbl_Lista.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Lista.Location = new System.Drawing.Point(316, 152);
+            this.lbl_Lista.Location = new System.Drawing.Point(369, 150);
             this.lbl_Lista.Name = "lbl_Lista";
             this.lbl_Lista.Size = new System.Drawing.Size(100, 25);
             this.lbl_Lista.TabIndex = 4131;
@@ -103,11 +103,11 @@ namespace BasicMathBase
             this.richTextBoxLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
             this.richTextBoxLista.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.richTextBoxLista.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.richTextBoxLista.Location = new System.Drawing.Point(0, 283);
+            this.richTextBoxLista.Location = new System.Drawing.Point(0, 301);
             this.richTextBoxLista.Name = "richTextBoxLista";
             this.richTextBoxLista.ReadOnly = true;
             this.richTextBoxLista.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.richTextBoxLista.Size = new System.Drawing.Size(984, 381);
+            this.richTextBoxLista.Size = new System.Drawing.Size(1128, 593);
             this.richTextBoxLista.TabIndex = 4134;
             this.richTextBoxLista.Text = "";
             // 
@@ -118,7 +118,7 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(807, 187);
+            this.btnClear.Location = new System.Drawing.Point(860, 185);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
             this.btnClear.TabIndex = 4135;
@@ -134,7 +134,7 @@ namespace BasicMathBase
             this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(50, 187);
+            this.btnPrint.Location = new System.Drawing.Point(103, 185);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(135, 47);
             this.btnPrint.TabIndex = 4136;
@@ -147,7 +147,7 @@ namespace BasicMathBase
             // 
             this.lblNumberOfPrimes.AutoSize = true;
             this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumberOfPrimes.Location = new System.Drawing.Point(260, 199);
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(313, 197);
             this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
             this.lblNumberOfPrimes.Size = new System.Drawing.Size(187, 25);
             this.lblNumberOfPrimes.TabIndex = 4137;
@@ -157,7 +157,7 @@ namespace BasicMathBase
             // 
             this.lblTimeElapsed.AutoSize = true;
             this.lblTimeElapsed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTimeElapsed.Location = new System.Drawing.Point(544, 199);
+            this.lblTimeElapsed.Location = new System.Drawing.Point(597, 197);
             this.lblTimeElapsed.Name = "lblTimeElapsed";
             this.lblTimeElapsed.Size = new System.Drawing.Size(181, 25);
             this.lblTimeElapsed.TabIndex = 4137;
@@ -167,18 +167,18 @@ namespace BasicMathBase
             // 
             this.lblPercentage.AutoSize = true;
             this.lblPercentage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPercentage.Location = new System.Drawing.Point(465, 235);
+            this.lblPercentage.Location = new System.Drawing.Point(518, 233);
             this.lblPercentage.Name = "lblPercentage";
             this.lblPercentage.Size = new System.Drawing.Size(42, 25);
             this.lblPercentage.TabIndex = 4137;
             this.lblPercentage.Text = "0 %";
             // 
-            // FormPrimosCrivo
+            // FormPrimeSieve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(984, 664);
+            this.ClientSize = new System.Drawing.Size(1128, 894);
             this.Controls.Add(this.lblPercentage);
             this.Controls.Add(this.lblTimeElapsed);
             this.Controls.Add(this.lblNumberOfPrimes);
@@ -190,7 +190,7 @@ namespace BasicMathBase
             this.Controls.Add(this.lbl_Lista);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormPrimosCrivo";
+            this.Name = "FormPrimeSieve";
             this.Text = "FormPrimosCrivo";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

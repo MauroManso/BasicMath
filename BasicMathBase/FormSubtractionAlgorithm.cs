@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPower : Form
+    public partial class FormSubtractionAlgorithm : Form
     {
-        public FormPower()
+        public FormSubtractionAlgorithm()
         {
             InitializeComponent();
             customDesign();
@@ -26,14 +26,14 @@ namespace BasicMathBase
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            long powerBase = 0;
-            long expoent = 0;
+            long minuend = 0;
+            long subtrahend = 0;
             string userAnswer = "";
             bool run = true;
             try
             {
-                powerBase = Convert.ToInt64(txtboxBase.Text);
-                expoent = Convert.ToInt64(txtboxToPowerOf.Text);
+                minuend = Convert.ToInt64(txtboxMinuend.Text);
+                subtrahend = Convert.ToInt64(txtboxSubtrahend.Text);
                 userAnswer = txtboxAnwser.Text;
             }
             catch
@@ -44,16 +44,22 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
                 run = false;
             }
-            if(run)
+            if (run)
             {
-                string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
+                var sistemAnswer = MathMethods.SubtractionAlgorithm(minuend, subtrahend);
 
-                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
+                bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
 
-                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
+                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer.outputString);
                 openForm.Show();
             }
-            
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtboxAnwser.Text = "";
+            txtboxMinuend.Text = "";
+            txtboxSubtrahend.Text = "";
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormPower
+    partial class FormDivisibility
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,16 @@ namespace BasicMathBase
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtboxAnwser = new System.Windows.Forms.TextBox();
-            this.lblAnwser = new System.Windows.Forms.Label();
+            this.txtboxQuotient = new System.Windows.Forms.TextBox();
+            this.lblDividend = new System.Windows.Forms.Label();
+            this.lblQuotient = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
-            this.txtboxToPowerOf = new System.Windows.Forms.TextBox();
+            this.txtboxDividend = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
-            this.lblBase = new System.Windows.Forms.Label();
-            this.txtboxBase = new System.Windows.Forms.TextBox();
-            this.lblToPowerOf = new System.Windows.Forms.Label();
+            this.lblDivisor = new System.Windows.Forms.Label();
+            this.txtboxDivisor = new System.Windows.Forms.TextBox();
+            this.lblRest = new System.Windows.Forms.Label();
+            this.txtboxRest = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,11 +50,11 @@ namespace BasicMathBase
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblTitle.Location = new System.Drawing.Point(478, 28);
+            this.lblTitle.Location = new System.Drawing.Point(185, 27);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(149, 37);
+            this.lblTitle.Size = new System.Drawing.Size(756, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Potência";
+            this.lblTitle.Text = "Regra Geral de Divisibilidade/ Divisão Euclidiana";
             // 
             // panel3
             // 
@@ -62,24 +64,34 @@ namespace BasicMathBase
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1128, 95);
-            this.panel3.TabIndex = 24;
+            this.panel3.TabIndex = 26;
             // 
-            // txtboxAnwser
+            // txtboxQuotient
             // 
-            this.txtboxAnwser.Location = new System.Drawing.Point(501, 388);
-            this.txtboxAnwser.Name = "txtboxAnwser";
-            this.txtboxAnwser.Size = new System.Drawing.Size(126, 31);
-            this.txtboxAnwser.TabIndex = 502;
+            this.txtboxQuotient.Location = new System.Drawing.Point(533, 458);
+            this.txtboxQuotient.Name = "txtboxQuotient";
+            this.txtboxQuotient.Size = new System.Drawing.Size(126, 31);
+            this.txtboxQuotient.TabIndex = 4173;
             // 
-            // lblAnwser
+            // lblDividend
             // 
-            this.lblAnwser.AutoSize = true;
-            this.lblAnwser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwser.Location = new System.Drawing.Point(411, 391);
-            this.lblAnwser.Name = "lblAnwser";
-            this.lblAnwser.Size = new System.Drawing.Size(84, 25);
-            this.lblAnwser.TabIndex = 4163;
-            this.lblAnwser.Text = "Resposta";
+            this.lblDividend.AutoSize = true;
+            this.lblDividend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDividend.Location = new System.Drawing.Point(170, 461);
+            this.lblDividend.Name = "lblDividend";
+            this.lblDividend.Size = new System.Drawing.Size(94, 25);
+            this.lblDividend.TabIndex = 4176;
+            this.lblDividend.Text = "Dividendo";
+            // 
+            // lblQuotient
+            // 
+            this.lblQuotient.AutoSize = true;
+            this.lblQuotient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblQuotient.Location = new System.Drawing.Point(434, 461);
+            this.lblQuotient.Name = "lblQuotient";
+            this.lblQuotient.Size = new System.Drawing.Size(93, 25);
+            this.lblQuotient.TabIndex = 4177;
+            this.lblQuotient.Text = "Quociente";
             // 
             // btnClear
             // 
@@ -88,20 +100,21 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(817, 379);
+            this.btnClear.Location = new System.Drawing.Point(849, 449);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
-            this.btnClear.TabIndex = 504;
+            this.btnClear.TabIndex = 4175;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // txtboxToPowerOf
+            // txtboxDividend
             // 
-            this.txtboxToPowerOf.Location = new System.Drawing.Point(254, 369);
-            this.txtboxToPowerOf.Name = "txtboxToPowerOf";
-            this.txtboxToPowerOf.Size = new System.Drawing.Size(122, 31);
-            this.txtboxToPowerOf.TabIndex = 501;
+            this.txtboxDividend.Location = new System.Drawing.Point(285, 458);
+            this.txtboxDividend.Name = "txtboxDividend";
+            this.txtboxDividend.Size = new System.Drawing.Size(122, 31);
+            this.txtboxDividend.TabIndex = 4172;
             // 
             // btnCalculate
             // 
@@ -110,60 +123,69 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(648, 379);
+            this.btnCalculate.Location = new System.Drawing.Point(680, 449);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
-            this.btnCalculate.TabIndex = 503;
+            this.btnCalculate.TabIndex = 4174;
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
-            // lblBase
+            // lblDivisor
             // 
-            this.lblBase.AutoSize = true;
-            this.lblBase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblBase.Location = new System.Drawing.Point(187, 409);
-            this.lblBase.Name = "lblBase";
-            this.lblBase.Size = new System.Drawing.Size(48, 25);
-            this.lblBase.TabIndex = 4163;
-            this.lblBase.Text = "Base";
+            this.lblDivisor.AutoSize = true;
+            this.lblDivisor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDivisor.Location = new System.Drawing.Point(197, 509);
+            this.lblDivisor.Name = "lblDivisor";
+            this.lblDivisor.Size = new System.Drawing.Size(67, 25);
+            this.lblDivisor.TabIndex = 4179;
+            this.lblDivisor.Text = "Divisor";
             // 
-            // txtboxBase
+            // txtboxDivisor
             // 
-            this.txtboxBase.Location = new System.Drawing.Point(254, 406);
-            this.txtboxBase.Name = "txtboxBase";
-            this.txtboxBase.Size = new System.Drawing.Size(122, 31);
-            this.txtboxBase.TabIndex = 500;
+            this.txtboxDivisor.Location = new System.Drawing.Point(285, 506);
+            this.txtboxDivisor.Name = "txtboxDivisor";
+            this.txtboxDivisor.Size = new System.Drawing.Size(122, 31);
+            this.txtboxDivisor.TabIndex = 4178;
             // 
-            // lblToPowerOf
+            // lblRest
             // 
-            this.lblToPowerOf.AutoSize = true;
-            this.lblToPowerOf.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblToPowerOf.Location = new System.Drawing.Point(150, 372);
-            this.lblToPowerOf.Name = "lblToPowerOf";
-            this.lblToPowerOf.Size = new System.Drawing.Size(85, 25);
-            this.lblToPowerOf.TabIndex = 4163;
-            this.lblToPowerOf.Text = "Expoente";
+            this.lblRest.AutoSize = true;
+            this.lblRest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRest.Location = new System.Drawing.Point(208, 561);
+            this.lblRest.Name = "lblRest";
+            this.lblRest.Size = new System.Drawing.Size(56, 25);
+            this.lblRest.TabIndex = 4181;
+            this.lblRest.Text = "Resto";
             // 
-            // FormPower
+            // txtboxRest
+            // 
+            this.txtboxRest.Location = new System.Drawing.Point(285, 558);
+            this.txtboxRest.Name = "txtboxRest";
+            this.txtboxRest.Size = new System.Drawing.Size(122, 31);
+            this.txtboxRest.TabIndex = 4180;
+            // 
+            // FormDivisibility
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 944);
-            this.Controls.Add(this.txtboxAnwser);
-            this.Controls.Add(this.lblToPowerOf);
-            this.Controls.Add(this.lblBase);
-            this.Controls.Add(this.lblAnwser);
+            this.Controls.Add(this.lblRest);
+            this.Controls.Add(this.txtboxRest);
+            this.Controls.Add(this.lblDivisor);
+            this.Controls.Add(this.txtboxDivisor);
+            this.Controls.Add(this.txtboxQuotient);
+            this.Controls.Add(this.lblDividend);
+            this.Controls.Add(this.lblQuotient);
             this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.txtboxBase);
-            this.Controls.Add(this.txtboxToPowerOf);
+            this.Controls.Add(this.txtboxDividend);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormPower";
-            this.Text = "FormPower";
+            this.Name = "FormDivisibility";
+            this.Text = "FormDivisibility";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -175,13 +197,15 @@ namespace BasicMathBase
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtboxAnwser;
-        private System.Windows.Forms.Label lblAnwser;
+        private System.Windows.Forms.TextBox txtboxQuotient;
+        private System.Windows.Forms.Label lblDividend;
+        private System.Windows.Forms.Label lblQuotient;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.TextBox txtboxToPowerOf;
+        private System.Windows.Forms.TextBox txtboxDividend;
         private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Label lblBase;
-        private System.Windows.Forms.TextBox txtboxBase;
-        private System.Windows.Forms.Label lblToPowerOf;
+        private System.Windows.Forms.Label lblDivisor;
+        private System.Windows.Forms.TextBox txtboxDivisor;
+        private System.Windows.Forms.Label lblRest;
+        private System.Windows.Forms.TextBox txtboxRest;
     }
 }

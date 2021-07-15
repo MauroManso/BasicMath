@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BasicMathBase
 {
-    public partial class FormRespostaTable : Form
+    public partial class FormTableAnswer : Form
     {
-        public FormRespostaTable(bool isCorrect, string answer)
+        public FormTableAnswer(bool isCorrect, string answer)
         {
             InitializeComponent();
             customizeDesign(isCorrect, answer);
@@ -25,13 +25,17 @@ namespace BasicMathBase
             {
                 lblAcerto.Text = "Resposta Correta!";
                 lblAcerto.Left = (this.ClientSize.Width - lblAcerto.Size.Width) / 2;
-                btnObterResposta.Visible = false;
+
+
+                btnGetAnswer.Text = "Conferir Resolução";
+                btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
+                btnGetAnswer.Visible = true;
             }
             else
             {
                 lblAcerto.Text = "Resposta Incorreta :(";
                 lblAcerto.Left = (this.ClientSize.Width - lblAcerto.Size.Width) / 2;
-                btnObterResposta.Visible = true;
+                btnGetAnswer.Visible = true;
             }
             
             tlbOrdemClase.Visible = false;
@@ -90,7 +94,7 @@ namespace BasicMathBase
             }
         }
 
-        private void btnObterResposta_Click(object sender, EventArgs e)
+        private void btnGetAnswer_Click(object sender, EventArgs e)
         {
             tlbOrdemClase.Visible = true;
             lbl_Unidades.Visible = true;

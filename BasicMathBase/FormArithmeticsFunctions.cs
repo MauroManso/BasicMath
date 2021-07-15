@@ -32,12 +32,12 @@ namespace BasicMathBase
                 string answer = "" + MathMethods.TauN(Convert.ToInt64(txtboxTauN.Text));
                 if (txtboxAnwserTauN.Text == answer)
                 {
-                    FormRespostas openForm = new FormRespostas(true, answer);
+                    FormAnswers openForm = new FormAnswers(true, answer);
                     openForm.Show();
                 }
                 else
                 {
-                    FormRespostas openForm = new FormRespostas(false, answer);
+                    FormAnswers openForm = new FormAnswers(false, answer);
                     openForm.Show();
                 }
 
@@ -58,12 +58,12 @@ namespace BasicMathBase
                 string answer = "" + MathMethods.SigmaN(Convert.ToInt64(txtboxSigmaN.Text));
                 if (txtboxAnswerSigmaN.Text == answer)
                 {
-                    FormRespostas openForm = new FormRespostas(true, answer);
+                    FormAnswers openForm = new FormAnswers(true, answer);
                     openForm.Show();
                 }
                 else
                 {
-                    FormRespostas openForm = new FormRespostas(false, answer);
+                    FormAnswers openForm = new FormAnswers(false, answer);
                     openForm.Show();
                 }
 
@@ -84,12 +84,12 @@ namespace BasicMathBase
                 string answer = "" + MathMethods.PhiN(Convert.ToInt64(txtboxPhiN.Text));
                 if (txtboxAnswerPhiN.Text == answer)
                 {
-                    FormRespostas openForm = new FormRespostas(true, answer);
+                    FormAnswers openForm = new FormAnswers(true, answer);
                     openForm.Show();
                 }
                 else
                 {
-                    FormRespostas openForm = new FormRespostas(false, answer);
+                    FormAnswers openForm = new FormAnswers(false, answer);
                     openForm.Show();
                 }
 

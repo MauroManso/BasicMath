@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormRespostas
+    partial class FormAnswers
     {
         /// <summary>
         /// Required designer variable.

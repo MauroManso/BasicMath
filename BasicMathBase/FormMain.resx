@@ -58,7 +58,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxMenuLogo.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABncAAAaeCAYAAACDF2q5AAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
         /Q14XOWd5vnv7jA7szszvZuZybRhgEAcTFsItyXxEggQXkODnFiAsEEgBA0kEDrmPbO8BWxiCC9JAyEh
@@ -2405,7 +2405,7 @@
         AAAAAAAAAMD+8vf+3v8PnA2jFFrkpR4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxLogo.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABncAAAaeCAYAAACDF2q5AAAABGdBTUEAALGPC/xhBQAA/8dJREFUeF7s
         /Ql8Jmd55vvfWntVt1pSutW0aRObkDEM/MNiCIHYJgQwTgj2sE7Yw7AMm2FstgnYECDAYJYMawhw2M6w

@@ -41,20 +41,21 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
-
-            string answer = Convert.ToString(MathMethods.Mmc(a, b));
-
-            if (txtboxAnwserMmc.Text == answer)
+            if (a > 0 && b > 0)
             {
-                FormRespostas openForm = new FormRespostas(true, answer);
-                openForm.Show();
-            }
-            else
-            {
-                FormRespostas openForm = new FormRespostas(false, answer);
-                openForm.Show();
-            }
+                string answer = Convert.ToString(MathMethods.Mmc(a, b));
 
+                if (txtboxAnwserMmc.Text == answer)
+                {
+                    FormAnswers openForm = new FormAnswers(true, answer);
+                    openForm.Show();
+                }
+                else
+                {
+                    FormAnswers openForm = new FormAnswers(false, answer);
+                    openForm.Show();
+                }
+            }
         }
 
         private void btnClearMmc_Click(object sender, EventArgs e)
@@ -80,40 +81,42 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
-            
 
-            if (checkboxAlgoritmoEuclides.Checked)
+            if (a > 0 && b > 0)
             {
-                string answer = MathMethods.MdcAlgoritmoEuclides(a, b);
-                bool isCorrect = false;
-
-                if (txtboxAnwserMdc.Text == Convert.ToString(MathMethods.Mdc(a, b)))
-                    isCorrect = true;
-
-                if (isCorrect)
+                if (checkboxAlgoritmoEuclides.Checked)
                 {
-                    FormAnswerTxtBox openForm = new FormAnswerTxtBox(true, answer);
-                    openForm.Show();
+                    string answer = MathMethods.MdcAlgoritmoEuclides(a, b);
+                    bool isCorrect = false;
+
+                    if (txtboxAnwserMdc.Text == Convert.ToString(MathMethods.Mdc(a, b)))
+                        isCorrect = true;
+
+                    if (isCorrect)
+                    {
+                        FormAnswerTxtBox openForm = new FormAnswerTxtBox(true, answer);
+                        openForm.Show();
+                    }
+                    else
+                    {
+                        FormAnswerTxtBox openForm = new FormAnswerTxtBox(false, answer);
+                        openForm.Show();
+                    }
                 }
                 else
                 {
-                    FormAnswerTxtBox openForm = new FormAnswerTxtBox(false, answer);
-                    openForm.Show();
-                }
-            }
-            else
-            {
-                string answer = Convert.ToString(MathMethods.Mdc(a, b));
+                    string answer = Convert.ToString(MathMethods.Mdc(a, b));
 
-                if (txtboxAnwserMdc.Text == answer)
-                {
-                    FormRespostas openForm = new FormRespostas(true, answer);
-                    openForm.Show();
-                }
-                else
-                {
-                    FormRespostas openForm = new FormRespostas(false, answer);
-                    openForm.Show();
+                    if (txtboxAnwserMdc.Text == answer)
+                    {
+                        FormAnswers openForm = new FormAnswers(true, answer);
+                        openForm.Show();
+                    }
+                    else
+                    {
+                        FormAnswers openForm = new FormAnswers(false, answer);
+                        openForm.Show();
+                    }
                 }
             }
         }

@@ -47,8 +47,8 @@ namespace BasicMathBase
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.lblTitle.Location = new System.Drawing.Point(336, 29);
+            this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitle.Location = new System.Drawing.Point(414, 31);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(279, 37);
             this.lblTitle.TabIndex = 2;
@@ -61,7 +61,7 @@ namespace BasicMathBase
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 95);
+            this.panel3.Size = new System.Drawing.Size(1128, 95);
             this.panel3.TabIndex = 24;
             // 
             // btnClear
@@ -71,7 +71,7 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(766, 295);
+            this.btnClear.Location = new System.Drawing.Point(835, 350);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
             this.btnClear.TabIndex = 503;
@@ -82,7 +82,7 @@ namespace BasicMathBase
             // 
             // txtboxInteger
             // 
-            this.txtboxInteger.Location = new System.Drawing.Point(185, 308);
+            this.txtboxInteger.Location = new System.Drawing.Point(254, 363);
             this.txtboxInteger.Name = "txtboxInteger";
             this.txtboxInteger.Size = new System.Drawing.Size(122, 31);
             this.txtboxInteger.TabIndex = 500;
@@ -94,7 +94,7 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(597, 292);
+            this.btnCalculate.Location = new System.Drawing.Point(666, 347);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
             this.btnCalculate.TabIndex = 502;
@@ -105,7 +105,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwser
             // 
-            this.txtboxAnwser.Location = new System.Drawing.Point(435, 304);
+            this.txtboxAnwser.Location = new System.Drawing.Point(504, 359);
             this.txtboxAnwser.Name = "txtboxAnwser";
             this.txtboxAnwser.Size = new System.Drawing.Size(126, 31);
             this.txtboxAnwser.TabIndex = 501;
@@ -114,7 +114,7 @@ namespace BasicMathBase
             // 
             this.lblAnwser.AutoSize = true;
             this.lblAnwser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwser.Location = new System.Drawing.Point(345, 304);
+            this.lblAnwser.Location = new System.Drawing.Point(414, 359);
             this.lblAnwser.Name = "lblAnwser";
             this.lblAnwser.Size = new System.Drawing.Size(84, 25);
             this.lblAnwser.TabIndex = 4157;
@@ -125,7 +125,7 @@ namespace BasicMathBase
             this.lblInteger.AutoSize = true;
             this.lblInteger.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblInteger.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblInteger.Location = new System.Drawing.Point(120, 306);
+            this.lblInteger.Location = new System.Drawing.Point(189, 361);
             this.lblInteger.Name = "lblInteger";
             this.lblInteger.Size = new System.Drawing.Size(59, 33);
             this.lblInteger.TabIndex = 4157;
@@ -135,7 +135,7 @@ namespace BasicMathBase
             // 
             this.radiobtnOposite.AutoSize = true;
             this.radiobtnOposite.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radiobtnOposite.Location = new System.Drawing.Point(188, 376);
+            this.radiobtnOposite.Location = new System.Drawing.Point(257, 431);
             this.radiobtnOposite.Name = "radiobtnOposite";
             this.radiobtnOposite.Size = new System.Drawing.Size(98, 29);
             this.radiobtnOposite.TabIndex = 510;
@@ -147,7 +147,7 @@ namespace BasicMathBase
             // 
             this.radiobtnMultipleInverse.AutoSize = true;
             this.radiobtnMultipleInverse.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radiobtnMultipleInverse.Location = new System.Drawing.Point(188, 424);
+            this.radiobtnMultipleInverse.Location = new System.Drawing.Point(257, 479);
             this.radiobtnMultipleInverse.Name = "radiobtnMultipleInverse";
             this.radiobtnMultipleInverse.Size = new System.Drawing.Size(206, 29);
             this.radiobtnMultipleInverse.TabIndex = 511;
@@ -160,7 +160,7 @@ namespace BasicMathBase
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(984, 664);
+            this.ClientSize = new System.Drawing.Size(1128, 894);
             this.Controls.Add(this.radiobtnMultipleInverse);
             this.Controls.Add(this.radiobtnOposite);
             this.Controls.Add(this.txtboxAnwser);

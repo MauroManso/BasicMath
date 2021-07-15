@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPower : Form
+    public partial class FormMultiplyRussianAlgorithm : Form
     {
-        public FormPower()
+        public FormMultiplyRussianAlgorithm()
         {
             InitializeComponent();
             customDesign();
@@ -26,14 +26,13 @@ namespace BasicMathBase
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            long powerBase = 0;
-            long expoent = 0;
+            long factor1 = 0;
+            long factor2 = 0;
             string userAnswer = "";
-            bool run = true;
             try
             {
-                powerBase = Convert.ToInt64(txtboxBase.Text);
-                expoent = Convert.ToInt64(txtboxToPowerOf.Text);
+                factor1 = Convert.ToInt64(txtboxFactor1.Text);
+                factor2 = Convert.ToInt64(txtboxFactor2.Text);
                 userAnswer = txtboxAnwser.Text;
             }
             catch
@@ -42,18 +41,23 @@ namespace BasicMathBase
                             "Erro",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
-                run = false;
             }
-            if(run)
+            if (factor1 > 0 && factor2 > 0)
             {
-                string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
+                var sistemAnswer = MathMethods.RussianMultiplyAlgorithm(factor1, factor2);
 
-                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
+                bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
 
-                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
+                FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, sistemAnswer.outputString);
                 openForm.Show();
             }
-            
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtboxAnwser.Text = "";
+            txtboxFactor1.Text = "";
+            txtboxFactor2.Text = "";
         }
     }
 }

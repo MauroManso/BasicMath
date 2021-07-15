@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace BasicMathBase
 {
-    public partial class FormRespostas : Form
+    public partial class FormAnswers : Form
     {
         [System.Runtime.InteropServices.DllImport("MimeTex.dll")]
         internal static extern int CreateGifFromEq(string expr, string fileName);
-        public FormRespostas(bool isCorrect, string answer)
+        public FormAnswers(bool isCorrect, string answer)
         {
             InitializeComponent();
             customizeDesign(isCorrect, answer);
@@ -26,14 +26,22 @@ namespace BasicMathBase
             lblAnwser.Visible = false;
             btnGetAnswer.Visible = false;
 
-            lblIsCorrect.Left = (this.ClientSize.Width - lblIsCorrect.Size.Width) / 2;
             if (isCorrect)
+            {
                 lblIsCorrect.Text = "Resposta Correta!";
+                lblIsCorrect.Left = (this.ClientSize.Width - lblIsCorrect.Size.Width) / 2;
+
+                btnGetAnswer.Text = "Conferir Resolução";
+                btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
+                btnGetAnswer.Visible = true;
+            }
             else
             {
                 lblIsCorrect.Text = "Resposta Incorreta :(";
-                btnGetAnswer.Visible = true;
+                lblIsCorrect.Left = (this.ClientSize.Width - lblIsCorrect.Size.Width) / 2;
+
                 btnGetAnswer.Left = (this.ClientSize.Width - btnGetAnswer.Size.Width) / 2;
+                btnGetAnswer.Visible = true;
             }
 
             lblAnwser.Text = answer;

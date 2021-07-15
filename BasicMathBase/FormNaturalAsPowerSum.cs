@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPotencia10 : Form
+    public partial class FormNaturalAsPowerSum : Form
     {
-        public FormPotencia10()
+        public FormNaturalAsPowerSum()
         {
             InitializeComponent();
             customizeDesign();
@@ -90,7 +90,7 @@ namespace BasicMathBase
                         else answer += "impar";
                     }
 
-                    FormRespostas openForm = new FormRespostas(isCorrect, answer);
+                    FormAnswers openForm = new FormAnswers(isCorrect, answer);
                     openForm.Show();
                 }
                 else if (!checkboxOrdemClasse.Checked)
@@ -109,12 +109,12 @@ namespace BasicMathBase
                     System.Diagnostics.Debug.WriteLine(powerSumAnswer2);
                     if ((userAnswerWithOutSpace == powerSumAnswerWithOutSpace) || (userAnswerWithOutSpace == powerSumAnswer2WithOutSpace))
                     {
-                        FormRespostas openForm = new FormRespostas(true, powerSumAnswer);
+                        FormAnswers openForm = new FormAnswers(true, powerSumAnswer);
                         openForm.Show();
                     }
                     else
                     {
-                        FormRespostas openForm = new FormRespostas(false, powerSumAnswer);
+                        FormAnswers openForm = new FormAnswers(false, powerSumAnswer);
                         openForm.Show();
                     }
                 }
@@ -138,7 +138,7 @@ namespace BasicMathBase
 
                     answer = num.ToString();
 
-                    FormRespostaTable openForm = new FormRespostaTable(isCorrect, answer);
+                    FormTableAnswer openForm = new FormTableAnswer(isCorrect, answer);
                     openForm.Show();
                 }
 

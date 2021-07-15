@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,14 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Printing;
 using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPrimos : Form
+    public partial class FormPrimesList : Form
     {
-        public FormPrimos()
+        public FormPrimesList()
         {
             InitializeComponent();
             customDesign();
@@ -30,54 +28,6 @@ namespace BasicMathBase
             txtboxList.Text = "";
         }
 
-        private void lblSomaPotencia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnVerifyPrime_Click(object sender, EventArgs e)
-        {
-            long num1;
-            try
-            {
-                num1 = Convert.ToInt64(txtboxVerifyPrime.Text);
-                if (num1 == 0 || num1 == 1)
-                {
-                    //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
-                    MessageBox.Show("\'" + num1 + "\' É um número composto",
-                                        "É primo?",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-                }
-                else
-                {
-                    if (MathMethods.IsPrime(num1))
-                    {
-                        //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número primo");
-                        MessageBox.Show("\'" + num1 + "\' É um número primo",
-                                        "É primo?",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        //lbl_RespostaPrimo.Text = ("\'" + num1 + "\' É um número composto");
-                        MessageBox.Show("\'" + num1 + "\' É um número composto",
-                                        "É primo?",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
-                    }
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Insira um Número Inteiro Válido até " + Int64.MaxValue,
-                                        "Erro",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Warning);
-            }
-        }
-
         private async void btnListPrime_Click(object sender, EventArgs e)
         {
             customDesign();
@@ -87,7 +37,7 @@ namespace BasicMathBase
             long end = 0;
             try
             {
-                if(txtboxBeginPrime.Text != "")
+                if (txtboxBeginPrime.Text != "")
                     begin = Convert.ToInt64(txtboxBeginPrime.Text);
                 end = Convert.ToInt64(txtboxUpToPrime.Text);
             }
@@ -98,21 +48,23 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            if(end > 0)
+            {
+                var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            var result = await ListPrimeAsync(begin, end);
+                var result = await ListPrimeAsync(begin, end);
 
-            watch.Stop();
-            var elapsedS = watch.ElapsedMilliseconds;
+                watch.Stop();
+                var elapsedS = watch.ElapsedMilliseconds;
 
-            lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
-            lblTimeElapsed.Visible = true;
+                lblTimeElapsed.Text = $"Tempo de execução: {elapsedS}Ms";
+                lblTimeElapsed.Visible = true;
 
-            txtboxList.Text = result.primesList;
+                txtboxList.Text = result.primesList;
 
-            lblNumberOfPrimes.Text = "Há " + result.numberOfPrimes + " números primos";
-            lblNumberOfPrimes.Visible = true;
-
+                lblNumberOfPrimes.Text = "Há " + result.numberOfPrimes + " números primos";
+                lblNumberOfPrimes.Visible = true;
+            }
         }
 
         private async Task<(string primesList, long numberOfPrimes)> ListPrimeAsync(long begin, long end)
@@ -344,16 +296,14 @@ namespace BasicMathBase
             printer.Print();
         }
 
-        private void btnClear2_Click(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             txtboxList.Text = "";
             txtboxBeginPrime.Text = "";
             txtboxUpToPrime.Text = "";
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtboxVerifyPrime.Text = "";  
+            lblTimeElapsed.Visible = false;
+            lblNumberOfPrimes.Visible = false;
+            lblPercentage.Visible = false;
         }
     }
 }

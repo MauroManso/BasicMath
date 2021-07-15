@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormPower : Form
+    public partial class FormBModA : Form
     {
-        public FormPower()
+        public FormBModA()
         {
             InitializeComponent();
             customDesign();
@@ -22,19 +22,20 @@ namespace BasicMathBase
         private void customDesign()
         {
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+            label1.Text = "";
         }
+
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            long powerBase = 0;
-            long expoent = 0;
-            string userAnswer = "";
+            int a = 0;
+            int b = 0;
             bool run = true;
             try
             {
-                powerBase = Convert.ToInt64(txtboxBase.Text);
-                expoent = Convert.ToInt64(txtboxToPowerOf.Text);
-                userAnswer = txtboxAnwser.Text;
+                a = Convert.ToInt32(txtboxA.Text);
+                b = Convert.ToInt32(txtboxB.Text);
+
             }
             catch
             {
@@ -44,16 +45,29 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
                 run = false;
             }
-            if(run)
+            if (a <= 1)
             {
-                string sistemAnswer = MathMethods.ToPower(powerBase, expoent);
-
-                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
-
-                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
-                openForm.Show();
+                MessageBox.Show("Insira um valor para 'a' > 1",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                run = false;
             }
-            
+
+            if (run)
+            {
+                string result = MathMethods.InversoBmodA(a, b);
+
+                label1.Text = result;
+            }
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            label1.Text = "";
+            txtboxA.Text = "";
+            txtboxB.Text = "";
         }
     }
 }

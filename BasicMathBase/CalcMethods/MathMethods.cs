@@ -272,6 +272,27 @@ namespace BasicMathBase.CalcMethods
             return (toLeft, toRight);
         }
 
+        public static string MultiplicationTable(long num)
+        {
+            string output = $"\tTabuada do {num}\n\n";
+            int size = (Convert.ToString(num * 9)).Length + 2;
+
+            for (int i = 1; i <= 9; i++)
+            {
+                if (i == 2 || i == 3 || i == 4 || i == 7) output += Environment.NewLine;
+                if (size >= 9)
+                    if (i == 1 || i == 2 || i == 3) for(int j = 0; j < size*2; j++) output += " ";
+                else
+                    if (i == 1 || i == 2 || i == 3) for (int j = 0; j < size; j++) output += " ";
+                if (i == 1 || i == 2 || i == 3) output += "  \t";
+                output += String.Format("{0," + size + "}\t", (num * i));
+            }
+
+
+
+            return output;
+        }
+
         public static bool IsPrime(long number)
         {
             for (int a = 2; a <= number / 2; a++)

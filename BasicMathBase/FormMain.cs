@@ -190,13 +190,13 @@ namespace BasicMathBase
         private void btnDivisibility_Click(object sender, EventArgs e)
         {
             btnDivisibility.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormBModA());
+            openChildForm(new FormDivisibility());
         }
 
         private void btnFractions_Click(object sender, EventArgs e)
         {
             btnFractions.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormBModA());
+            openChildForm(new FormFractions());
         }
 
 

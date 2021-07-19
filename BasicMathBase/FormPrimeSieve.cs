@@ -64,7 +64,6 @@ namespace BasicMathBase
             int size = (Convert.ToString(upToNumber)).Length + 2;
             long last = 0;
             long numberOfPrimes = 0;
-            string output = "";
 
             int[] c = new int[] { 7, 11, 13, 17, 19, 23, 29, 31 };
 

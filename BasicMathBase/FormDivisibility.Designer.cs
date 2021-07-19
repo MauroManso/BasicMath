@@ -41,6 +41,10 @@ namespace BasicMathBase
             this.txtboxDivisor = new System.Windows.Forms.TextBox();
             this.lblRest = new System.Windows.Forms.Label();
             this.txtboxRest = new System.Windows.Forms.TextBox();
+            this.richtxtboxMultiplicationTable = new System.Windows.Forms.RichTextBox();
+            this.btnMultiplicationTable = new System.Windows.Forms.Button();
+            this.radiobtnDivisionExact = new System.Windows.Forms.RadioButton();
+            this.radiobtnDivisionNonExact = new System.Windows.Forms.RadioButton();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,16 +72,16 @@ namespace BasicMathBase
             // 
             // txtboxQuotient
             // 
-            this.txtboxQuotient.Location = new System.Drawing.Point(533, 458);
+            this.txtboxQuotient.Location = new System.Drawing.Point(534, 224);
             this.txtboxQuotient.Name = "txtboxQuotient";
             this.txtboxQuotient.Size = new System.Drawing.Size(126, 31);
-            this.txtboxQuotient.TabIndex = 4173;
+            this.txtboxQuotient.TabIndex = 604;
             // 
             // lblDividend
             // 
             this.lblDividend.AutoSize = true;
             this.lblDividend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDividend.Location = new System.Drawing.Point(170, 461);
+            this.lblDividend.Location = new System.Drawing.Point(171, 227);
             this.lblDividend.Name = "lblDividend";
             this.lblDividend.Size = new System.Drawing.Size(94, 25);
             this.lblDividend.TabIndex = 4176;
@@ -87,7 +91,7 @@ namespace BasicMathBase
             // 
             this.lblQuotient.AutoSize = true;
             this.lblQuotient.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblQuotient.Location = new System.Drawing.Point(434, 461);
+            this.lblQuotient.Location = new System.Drawing.Point(435, 227);
             this.lblQuotient.Name = "lblQuotient";
             this.lblQuotient.Size = new System.Drawing.Size(93, 25);
             this.lblQuotient.TabIndex = 4177;
@@ -100,10 +104,10 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(849, 449);
+            this.btnClear.Location = new System.Drawing.Point(853, 224);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
-            this.btnClear.TabIndex = 4175;
+            this.btnClear.TabIndex = 613;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
@@ -111,10 +115,10 @@ namespace BasicMathBase
             // 
             // txtboxDividend
             // 
-            this.txtboxDividend.Location = new System.Drawing.Point(285, 458);
+            this.txtboxDividend.Location = new System.Drawing.Point(286, 224);
             this.txtboxDividend.Name = "txtboxDividend";
             this.txtboxDividend.Size = new System.Drawing.Size(122, 31);
-            this.txtboxDividend.TabIndex = 4172;
+            this.txtboxDividend.TabIndex = 600;
             // 
             // btnCalculate
             // 
@@ -123,10 +127,10 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(680, 449);
+            this.btnCalculate.Location = new System.Drawing.Point(688, 224);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
-            this.btnCalculate.TabIndex = 4174;
+            this.btnCalculate.TabIndex = 612;
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -136,7 +140,7 @@ namespace BasicMathBase
             // 
             this.lblDivisor.AutoSize = true;
             this.lblDivisor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDivisor.Location = new System.Drawing.Point(197, 509);
+            this.lblDivisor.Location = new System.Drawing.Point(198, 275);
             this.lblDivisor.Name = "lblDivisor";
             this.lblDivisor.Size = new System.Drawing.Size(67, 25);
             this.lblDivisor.TabIndex = 4179;
@@ -144,16 +148,16 @@ namespace BasicMathBase
             // 
             // txtboxDivisor
             // 
-            this.txtboxDivisor.Location = new System.Drawing.Point(285, 506);
+            this.txtboxDivisor.Location = new System.Drawing.Point(286, 272);
             this.txtboxDivisor.Name = "txtboxDivisor";
             this.txtboxDivisor.Size = new System.Drawing.Size(122, 31);
-            this.txtboxDivisor.TabIndex = 4178;
+            this.txtboxDivisor.TabIndex = 601;
             // 
             // lblRest
             // 
             this.lblRest.AutoSize = true;
             this.lblRest.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRest.Location = new System.Drawing.Point(208, 561);
+            this.lblRest.Location = new System.Drawing.Point(457, 275);
             this.lblRest.Name = "lblRest";
             this.lblRest.Size = new System.Drawing.Size(56, 25);
             this.lblRest.TabIndex = 4181;
@@ -161,10 +165,58 @@ namespace BasicMathBase
             // 
             // txtboxRest
             // 
-            this.txtboxRest.Location = new System.Drawing.Point(285, 558);
+            this.txtboxRest.Location = new System.Drawing.Point(534, 272);
             this.txtboxRest.Name = "txtboxRest";
-            this.txtboxRest.Size = new System.Drawing.Size(122, 31);
-            this.txtboxRest.TabIndex = 4180;
+            this.txtboxRest.Size = new System.Drawing.Size(126, 31);
+            this.txtboxRest.TabIndex = 605;
+            // 
+            // richtxtboxMultiplicationTable
+            // 
+            this.richtxtboxMultiplicationTable.Location = new System.Drawing.Point(52, 420);
+            this.richtxtboxMultiplicationTable.Name = "richtxtboxMultiplicationTable";
+            this.richtxtboxMultiplicationTable.Size = new System.Drawing.Size(608, 484);
+            this.richtxtboxMultiplicationTable.TabIndex = 4183;
+            this.richtxtboxMultiplicationTable.Text = "";
+            // 
+            // btnMultiplicationTable
+            // 
+            this.btnMultiplicationTable.FlatAppearance.BorderSize = 2;
+            this.btnMultiplicationTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMultiplicationTable.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMultiplicationTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnMultiplicationTable.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMultiplicationTable.Location = new System.Drawing.Point(198, 333);
+            this.btnMultiplicationTable.Name = "btnMultiplicationTable";
+            this.btnMultiplicationTable.Size = new System.Drawing.Size(210, 53);
+            this.btnMultiplicationTable.TabIndex = 602;
+            this.btnMultiplicationTable.Text = "Tabuada do Divisor";
+            this.btnMultiplicationTable.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMultiplicationTable.UseVisualStyleBackColor = true;
+            this.btnMultiplicationTable.Click += new System.EventHandler(this.btnMultiplicationTable_Click);
+            // 
+            // radiobtnDivisionExact
+            // 
+            this.radiobtnDivisionExact.AutoSize = true;
+            this.radiobtnDivisionExact.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnDivisionExact.Location = new System.Drawing.Point(688, 287);
+            this.radiobtnDivisionExact.Name = "radiobtnDivisionExact";
+            this.radiobtnDivisionExact.Size = new System.Drawing.Size(141, 29);
+            this.radiobtnDivisionExact.TabIndex = 610;
+            this.radiobtnDivisionExact.TabStop = true;
+            this.radiobtnDivisionExact.Text = "Divisão exata";
+            this.radiobtnDivisionExact.UseVisualStyleBackColor = true;
+            // 
+            // radiobtnDivisionNonExact
+            // 
+            this.radiobtnDivisionNonExact.AutoSize = true;
+            this.radiobtnDivisionNonExact.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnDivisionNonExact.Location = new System.Drawing.Point(689, 332);
+            this.radiobtnDivisionNonExact.Name = "radiobtnDivisionNonExact";
+            this.radiobtnDivisionNonExact.Size = new System.Drawing.Size(176, 29);
+            this.radiobtnDivisionNonExact.TabIndex = 611;
+            this.radiobtnDivisionNonExact.TabStop = true;
+            this.radiobtnDivisionNonExact.Text = "Divisão não exata";
+            this.radiobtnDivisionNonExact.UseVisualStyleBackColor = true;
             // 
             // FormDivisibility
             // 
@@ -172,6 +224,9 @@ namespace BasicMathBase
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 944);
+            this.Controls.Add(this.radiobtnDivisionNonExact);
+            this.Controls.Add(this.radiobtnDivisionExact);
+            this.Controls.Add(this.richtxtboxMultiplicationTable);
             this.Controls.Add(this.lblRest);
             this.Controls.Add(this.txtboxRest);
             this.Controls.Add(this.lblDivisor);
@@ -181,6 +236,7 @@ namespace BasicMathBase
             this.Controls.Add(this.lblQuotient);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtboxDividend);
+            this.Controls.Add(this.btnMultiplicationTable);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -207,5 +263,9 @@ namespace BasicMathBase
         private System.Windows.Forms.TextBox txtboxDivisor;
         private System.Windows.Forms.Label lblRest;
         private System.Windows.Forms.TextBox txtboxRest;
+        private System.Windows.Forms.RichTextBox richtxtboxMultiplicationTable;
+        private System.Windows.Forms.Button btnMultiplicationTable;
+        private System.Windows.Forms.RadioButton radiobtnDivisionExact;
+        private System.Windows.Forms.RadioButton radiobtnDivisionNonExact;
     }
 }

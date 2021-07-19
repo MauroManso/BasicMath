@@ -49,25 +49,25 @@ namespace BasicMathBase
 
             if (run)
             {
-                long sistemAnswerRest;
-                long sistemAnswerQuotient;
-                float sistemAnswerQuotientNonExact;
+                long systemAnswerRest;
+                long systemAnswerQuotient;
+                float systemAnswerQuotientNonExact;
                 bool isCorrect = false;
                 string sistemAnswer = "";
                 try
                 {
                     if (radiobtnDivisionExact.Checked)
                     {
-                        sistemAnswerRest = dividend % divisor;
-                        sistemAnswerQuotient = dividend / divisor;
-                        isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswerQuotient));
-                        sistemAnswer = "Quociente = " + Convert.ToString(sistemAnswerQuotient) + "\nResto =  " + Convert.ToString(sistemAnswerRest);
+                        systemAnswerRest = dividend % divisor;
+                        systemAnswerQuotient = dividend / divisor;
+                        isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(systemAnswerQuotient));
+                        sistemAnswer = "Quociente = " + Convert.ToString(systemAnswerQuotient) + "\nResto =  " + Convert.ToString(systemAnswerRest);
                     }
                     else
                     {
-                        sistemAnswerQuotientNonExact = dividend / divisor;
-                        isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswerQuotientNonExact));
-                        sistemAnswer = Convert.ToString(sistemAnswerQuotientNonExact);
+                        systemAnswerQuotientNonExact = dividend / divisor;
+                        isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(systemAnswerQuotientNonExact));
+                        sistemAnswer = Convert.ToString(systemAnswerQuotientNonExact);
                     }
                 }
                 catch { }

@@ -37,6 +37,18 @@ namespace BasicMathBase
             this.btnClear = new System.Windows.Forms.Button();
             this.txtboxDenominator = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
+            this.txtboxNumerator = new System.Windows.Forms.TextBox();
+            this.lblNumerator = new System.Windows.Forms.Label();
+            this.radiobtnRepeatingDecimalSimple = new System.Windows.Forms.RadioButton();
+            this.radiobtnExactDecimal = new System.Windows.Forms.RadioButton();
+            this.radiobtnRepeatingDecimalComposite = new System.Windows.Forms.RadioButton();
+            this.lblPeriod = new System.Windows.Forms.Label();
+            this.txtboxPeriod = new System.Windows.Forms.TextBox();
+            this.lblAntiPeriod = new System.Windows.Forms.Label();
+            this.txtboxAntiPeriod = new System.Windows.Forms.TextBox();
+            this.lblK = new System.Windows.Forms.Label();
+            this.txtboxK = new System.Windows.Forms.TextBox();
+            this.checkboxCongruentMap = new System.Windows.Forms.CheckBox();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,7 +76,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwser
             // 
-            this.txtboxAnwser.Location = new System.Drawing.Point(514, 457);
+            this.txtboxAnwser.Location = new System.Drawing.Point(560, 458);
             this.txtboxAnwser.Name = "txtboxAnwser";
             this.txtboxAnwser.Size = new System.Drawing.Size(126, 31);
             this.txtboxAnwser.TabIndex = 4166;
@@ -73,7 +85,7 @@ namespace BasicMathBase
             // 
             this.lblDenominator.AutoSize = true;
             this.lblDenominator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDenominator.Location = new System.Drawing.Point(125, 463);
+            this.lblDenominator.Location = new System.Drawing.Point(154, 461);
             this.lblDenominator.Name = "lblDenominator";
             this.lblDenominator.Size = new System.Drawing.Size(122, 25);
             this.lblDenominator.TabIndex = 4169;
@@ -83,7 +95,7 @@ namespace BasicMathBase
             // 
             this.lblAnwser.AutoSize = true;
             this.lblAnwser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwser.Location = new System.Drawing.Point(424, 460);
+            this.lblAnwser.Location = new System.Drawing.Point(470, 461);
             this.lblAnwser.Name = "lblAnwser";
             this.lblAnwser.Size = new System.Drawing.Size(84, 25);
             this.lblAnwser.TabIndex = 4171;
@@ -96,7 +108,7 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(830, 448);
+            this.btnClear.Location = new System.Drawing.Point(912, 449);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
             this.btnClear.TabIndex = 4168;
@@ -107,7 +119,7 @@ namespace BasicMathBase
             // 
             // txtboxDenominator
             // 
-            this.txtboxDenominator.Location = new System.Drawing.Point(266, 460);
+            this.txtboxDenominator.Location = new System.Drawing.Point(295, 458);
             this.txtboxDenominator.Name = "txtboxDenominator";
             this.txtboxDenominator.Size = new System.Drawing.Size(122, 31);
             this.txtboxDenominator.TabIndex = 4165;
@@ -119,7 +131,7 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(661, 448);
+            this.btnCalculate.Location = new System.Drawing.Point(743, 449);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
             this.btnCalculate.TabIndex = 4167;
@@ -128,16 +140,147 @@ namespace BasicMathBase
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
+            // txtboxNumerator
+            // 
+            this.txtboxNumerator.Location = new System.Drawing.Point(295, 412);
+            this.txtboxNumerator.Name = "txtboxNumerator";
+            this.txtboxNumerator.Size = new System.Drawing.Size(122, 31);
+            this.txtboxNumerator.TabIndex = 4165;
+            // 
+            // lblNumerator
+            // 
+            this.lblNumerator.AutoSize = true;
+            this.lblNumerator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumerator.Location = new System.Drawing.Point(173, 412);
+            this.lblNumerator.Name = "lblNumerator";
+            this.lblNumerator.Size = new System.Drawing.Size(103, 25);
+            this.lblNumerator.TabIndex = 4169;
+            this.lblNumerator.Text = "Numerador";
+            // 
+            // radiobtnRepeatingDecimalSimple
+            // 
+            this.radiobtnRepeatingDecimalSimple.AutoSize = true;
+            this.radiobtnRepeatingDecimalSimple.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnRepeatingDecimalSimple.Location = new System.Drawing.Point(155, 582);
+            this.radiobtnRepeatingDecimalSimple.Name = "radiobtnRepeatingDecimalSimple";
+            this.radiobtnRepeatingDecimalSimple.Size = new System.Drawing.Size(234, 29);
+            this.radiobtnRepeatingDecimalSimple.TabIndex = 4173;
+            this.radiobtnRepeatingDecimalSimple.TabStop = true;
+            this.radiobtnRepeatingDecimalSimple.Text = "Dízima Periódica Simples";
+            this.radiobtnRepeatingDecimalSimple.UseVisualStyleBackColor = true;
+            this.radiobtnRepeatingDecimalSimple.CheckedChanged += new System.EventHandler(this.radiobtnRepeatingDecimalSimple_CheckedChanged);
+            // 
+            // radiobtnExactDecimal
+            // 
+            this.radiobtnExactDecimal.AutoSize = true;
+            this.radiobtnExactDecimal.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnExactDecimal.Location = new System.Drawing.Point(155, 538);
+            this.radiobtnExactDecimal.Name = "radiobtnExactDecimal";
+            this.radiobtnExactDecimal.Size = new System.Drawing.Size(148, 29);
+            this.radiobtnExactDecimal.TabIndex = 4172;
+            this.radiobtnExactDecimal.TabStop = true;
+            this.radiobtnExactDecimal.Text = "Decimal Exato";
+            this.radiobtnExactDecimal.UseVisualStyleBackColor = true;
+            this.radiobtnExactDecimal.CheckedChanged += new System.EventHandler(this.radiobtnExactDecimal_CheckedChanged);
+            // 
+            // radiobtnRepeatingDecimalComposite
+            // 
+            this.radiobtnRepeatingDecimalComposite.AutoSize = true;
+            this.radiobtnRepeatingDecimalComposite.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnRepeatingDecimalComposite.Location = new System.Drawing.Point(155, 629);
+            this.radiobtnRepeatingDecimalComposite.Name = "radiobtnRepeatingDecimalComposite";
+            this.radiobtnRepeatingDecimalComposite.Size = new System.Drawing.Size(255, 29);
+            this.radiobtnRepeatingDecimalComposite.TabIndex = 4173;
+            this.radiobtnRepeatingDecimalComposite.TabStop = true;
+            this.radiobtnRepeatingDecimalComposite.Text = "Dízima Periódica Composta";
+            this.radiobtnRepeatingDecimalComposite.UseVisualStyleBackColor = true;
+            this.radiobtnRepeatingDecimalComposite.CheckedChanged += new System.EventHandler(this.radiobtnRepeatingDecimalComposite_CheckedChanged);
+            // 
+            // lblPeriod
+            // 
+            this.lblPeriod.AutoSize = true;
+            this.lblPeriod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPeriod.Location = new System.Drawing.Point(481, 584);
+            this.lblPeriod.Name = "lblPeriod";
+            this.lblPeriod.Size = new System.Drawing.Size(73, 25);
+            this.lblPeriod.TabIndex = 4171;
+            this.lblPeriod.Text = "Período";
+            // 
+            // txtboxPeriod
+            // 
+            this.txtboxPeriod.Location = new System.Drawing.Point(560, 581);
+            this.txtboxPeriod.Name = "txtboxPeriod";
+            this.txtboxPeriod.Size = new System.Drawing.Size(126, 31);
+            this.txtboxPeriod.TabIndex = 4166;
+            // 
+            // lblAntiPeriod
+            // 
+            this.lblAntiPeriod.AutoSize = true;
+            this.lblAntiPeriod.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblAntiPeriod.Location = new System.Drawing.Point(447, 631);
+            this.lblAntiPeriod.Name = "lblAntiPeriod";
+            this.lblAntiPeriod.Size = new System.Drawing.Size(107, 25);
+            this.lblAntiPeriod.TabIndex = 4171;
+            this.lblAntiPeriod.Text = "Antiperíodo";
+            this.lblAntiPeriod.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtboxAntiPeriod
+            // 
+            this.txtboxAntiPeriod.Location = new System.Drawing.Point(560, 628);
+            this.txtboxAntiPeriod.Name = "txtboxAntiPeriod";
+            this.txtboxAntiPeriod.Size = new System.Drawing.Size(126, 31);
+            this.txtboxAntiPeriod.TabIndex = 4166;
+            // 
+            // lblK
+            // 
+            this.lblK.AutoSize = true;
+            this.lblK.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblK.Location = new System.Drawing.Point(523, 539);
+            this.lblK.Name = "lblK";
+            this.lblK.Size = new System.Drawing.Size(22, 25);
+            this.lblK.TabIndex = 4171;
+            this.lblK.Text = "K";
+            // 
+            // txtboxK
+            // 
+            this.txtboxK.Location = new System.Drawing.Point(560, 536);
+            this.txtboxK.Name = "txtboxK";
+            this.txtboxK.Size = new System.Drawing.Size(126, 31);
+            this.txtboxK.TabIndex = 4166;
+            // 
+            // checkboxCongruentMap
+            // 
+            this.checkboxCongruentMap.AutoSize = true;
+            this.checkboxCongruentMap.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkboxCongruentMap.Location = new System.Drawing.Point(743, 538);
+            this.checkboxCongruentMap.Name = "checkboxCongruentMap";
+            this.checkboxCongruentMap.Size = new System.Drawing.Size(220, 29);
+            this.checkboxCongruentMap.TabIndex = 4174;
+            this.checkboxCongruentMap.Text = "Mapa de Congruencias";
+            this.checkboxCongruentMap.UseVisualStyleBackColor = true;
+            // 
             // FormFractions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 944);
+            this.Controls.Add(this.checkboxCongruentMap);
+            this.Controls.Add(this.radiobtnRepeatingDecimalComposite);
+            this.Controls.Add(this.radiobtnRepeatingDecimalSimple);
+            this.Controls.Add(this.radiobtnExactDecimal);
+            this.Controls.Add(this.txtboxAntiPeriod);
+            this.Controls.Add(this.txtboxK);
+            this.Controls.Add(this.txtboxPeriod);
             this.Controls.Add(this.txtboxAnwser);
+            this.Controls.Add(this.lblAntiPeriod);
+            this.Controls.Add(this.lblK);
+            this.Controls.Add(this.lblNumerator);
+            this.Controls.Add(this.lblPeriod);
             this.Controls.Add(this.lblDenominator);
             this.Controls.Add(this.lblAnwser);
             this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.txtboxNumerator);
             this.Controls.Add(this.txtboxDenominator);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.panel3);
@@ -161,5 +304,17 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtboxDenominator;
         private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.TextBox txtboxNumerator;
+        private System.Windows.Forms.Label lblNumerator;
+        private System.Windows.Forms.RadioButton radiobtnRepeatingDecimalSimple;
+        private System.Windows.Forms.RadioButton radiobtnExactDecimal;
+        private System.Windows.Forms.RadioButton radiobtnRepeatingDecimalComposite;
+        private System.Windows.Forms.Label lblPeriod;
+        private System.Windows.Forms.TextBox txtboxPeriod;
+        private System.Windows.Forms.Label lblAntiPeriod;
+        private System.Windows.Forms.TextBox txtboxAntiPeriod;
+        private System.Windows.Forms.Label lblK;
+        private System.Windows.Forms.TextBox txtboxK;
+        private System.Windows.Forms.CheckBox checkboxCongruentMap;
     }
 }

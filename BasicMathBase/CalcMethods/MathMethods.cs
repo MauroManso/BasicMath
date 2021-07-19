@@ -33,6 +33,28 @@ namespace BasicMathBase.CalcMethods
             return output;
         }
 
+        public static int[] Period(int numerator, int denominator)
+        {
+            if (numerator < 1 || numerator >= denominator) throw new IndexOutOfRangeException();
+            // now we know 0 < numerator < denominator
+            if (denominator % 2 == 0 || denominator % 5 == 0) throw new IndexOutOfRangeException();
+            // now we know we get a purely periodic expansion
+            int[] digits = new int[denominator];
+            int k = 0, n = numerator;
+            do
+            {
+                n *= 10;
+                digits[k++] = n / denominator;
+                n = n % denominator;
+            } while (n != numerator);
+            int[] period = new int[k];
+            for (n = 0; n < k; ++n)
+            {
+                period[n] = digits[n];
+            }
+            return period;
+        }
+
         public static (string outputString, long numberResult)RussianMultiplyAlgorithm(long factor1, long factor2)
         {
             string output = "";

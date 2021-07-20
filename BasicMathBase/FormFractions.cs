@@ -33,6 +33,8 @@ namespace BasicMathBase
             txtboxK.Visible = false;
 
             radiobtnExactDecimal.Checked = true;
+
+            checkboxCongruentMap.Visible = false;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -41,6 +43,7 @@ namespace BasicMathBase
             int numerator = 0;
             float userAnswer = 0;
             bool run = true;
+
             try
             {
                 denominator = Convert.ToInt32(txtboxDenominator.Text);
@@ -60,7 +63,14 @@ namespace BasicMathBase
             }
             catch { }
 
-            
+            if (numerator > denominator)
+            {
+                MessageBox.Show("O numerador deve ser menor que o denominador",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                run = false;
+            }
 
             if (run)
             {
@@ -93,13 +103,19 @@ namespace BasicMathBase
                     foreach (int i in systemAnswerPeriod)
                         systemAnswerPeriodString += $"{i}";
 
+                    var congruentMap = MathMethods.CongruenceMap(numerator, denominator);
+
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(k), Convert.ToString(systemAnswerPeriod.Length));
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(period), systemAnswerPeriodString);
 
-                    answer = $" Resposta: {systemAnswer} \n K: {systemAnswerPeriod.Length} \n Periodo: {systemAnswerPeriodString}";
-                    
+                    answer = $"\n\t Resposta: {systemAnswer} \n\n\t Periodo: {systemAnswerPeriodString} \n\n\t  K: {systemAnswerPeriod.Length} ";
+
+                    if (checkboxCongruentMap.Checked)
+                    {
+                        answer += $"\n\n \t\tMapa de Congruencia: \n{congruentMap.Map}";
+                    }
                 }
                 else if (radiobtnRepeatingDecimalComposite.Checked)
                 {
@@ -174,6 +190,8 @@ namespace BasicMathBase
                 lblPeriod.Visible = true;
                 txtboxPeriod.Visible = true;
 
+                checkboxCongruentMap.Visible = true;
+
                 lblAntiPeriod.Visible = false;
                 txtboxAntiPeriod.Visible = false;
                 
@@ -185,6 +203,8 @@ namespace BasicMathBase
 
                 lblPeriod.Visible = false;
                 txtboxPeriod.Visible = false;
+
+                checkboxCongruentMap.Visible = false;
 
                 lblAntiPeriod.Visible = false;
                 txtboxAntiPeriod.Visible = false;

@@ -55,6 +55,34 @@ namespace BasicMathBase.CalcMethods
             return period;
         }
 
+        public static (string Map, int k)CongruenceMap(int numerator, int denominator)
+        {
+            string output = "";
+            int k = 0;
+            bool run = true;
+            int resto;
+            int restoNegativo;
+
+            int i = 0;
+            while (run)
+            {
+                resto = numerator % denominator;
+                restoNegativo = resto - denominator;
+                if ((resto == 1) && i >= 1) 
+                {
+                    run = false;
+                    output += $" Ciclo {k}";
+                }else
+                    k++;
+                output += String.Format("\n\t10^{0,3}\t= {1,3}\t≡ {2,3}\t({3,3})\t mod {4,3}\t ", i, numerator, resto, restoNegativo, denominator);
+                numerator = resto * 10;
+                i += 1;
+                
+            }
+
+            return (output,  k);
+        }
+
         public static (string outputString, long numberResult)RussianMultiplyAlgorithm(long factor1, long factor2)
         {
             string output = "";

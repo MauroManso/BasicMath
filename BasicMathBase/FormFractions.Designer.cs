@@ -286,7 +286,7 @@ namespace BasicMathBase
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormFractions";
-            this.Text = "FormFractions";
+            this.Text = "2";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

@@ -29,6 +29,9 @@ namespace BasicMathBase
             txtboxPeriod.Visible = false;
             txtboxAntiPeriod.Visible = false;
 
+            lblDistinctPeriod.Visible = false;
+            txtboxDistinctPeriod.Visible = false;
+
             lblK.Visible = false;
             txtboxK.Visible = false;
 
@@ -129,7 +132,7 @@ namespace BasicMathBase
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(period), systemAnswerPeriodString);
 
-                    answer = $"\n\t Resposta: {systemAnswer} \n\n\t Periodo: {systemAnswerPeriodString} \n\n\t  K: {systemAnswerPeriod.Length} ";
+                    answer = $"\n\t Resposta: {systemAnswer} \n\n\t Periodo: {systemAnswerPeriodString} \n\n\t  K: {systemAnswerPeriod.Length} \n\n\t  Períodos distintos: {(denominator - 1) / systemAnswerPeriod.Length}";
 
                     if (checkboxCongruentMap.Checked)
                     {
@@ -204,11 +207,14 @@ namespace BasicMathBase
                 lblPeriod.Visible = true;
                 txtboxPeriod.Visible = true;
 
+                lblDistinctPeriod.Visible = true;
+                txtboxDistinctPeriod.Visible = true;
+
                 checkboxCongruentMap.Visible = true;
+
 
                 lblAntiPeriod.Visible = false;
                 txtboxAntiPeriod.Visible = false;
-                
             }
             else
             {
@@ -217,6 +223,9 @@ namespace BasicMathBase
 
                 lblPeriod.Visible = false;
                 txtboxPeriod.Visible = false;
+
+                lblDistinctPeriod.Visible = false;
+                txtboxDistinctPeriod.Visible = false;
 
                 checkboxCongruentMap.Visible = false;
 
@@ -235,6 +244,9 @@ namespace BasicMathBase
                 lblPeriod.Visible = true;
                 txtboxPeriod.Visible = true;
 
+                lblDistinctPeriod.Visible = true;
+                txtboxDistinctPeriod.Visible = true;
+
                 lblAntiPeriod.Visible = true;
                 txtboxAntiPeriod.Visible = true;
                 
@@ -246,6 +258,9 @@ namespace BasicMathBase
 
                 lblPeriod.Visible = false;
                 lblAntiPeriod.Visible = false;
+
+                lblDistinctPeriod.Visible = false;
+                txtboxDistinctPeriod.Visible = false;
 
                 txtboxAntiPeriod.Visible = false;
                 txtboxPeriod.Visible = false;

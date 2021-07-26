@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormFractions : Form
+    public partial class FormOwnFraction : Form
     {
-        public FormFractions()
+        public FormOwnFraction()
         {
             InitializeComponent();
             customDesign();
@@ -28,6 +28,9 @@ namespace BasicMathBase
 
             txtboxPeriod.Visible = false;
             txtboxAntiPeriod.Visible = false;
+
+            lblDistinctPeriod.Visible = false;
+            txtboxDistinctPeriod.Visible = false;
 
             lblK.Visible = false;
             txtboxK.Visible = false;
@@ -77,14 +80,33 @@ namespace BasicMathBase
                 bool isCorrect = false;
                 string answer = "";
                 double systemAnswer = Convert.ToDouble(numerator) / Convert.ToDouble(denominator);
-                bool run2 = true;
+                bool isExactDecimal = false;
+                bool isRepeatingDecimalSimple = false;
+                bool isRepeatingDecimalComposite = false;
 
-                if (radiobtnExactDecimal.Checked)
+                if (denominator % 2 == 0 || denominator % 5 == 0)
+                {
+                    for(int i = 7; i < denominator/2; i++)
+                    {
+                        if (denominator % i  == 0)
+                        {
+                            isRepeatingDecimalComposite = true;
+                            break;
+                        }
+                    }
+                    if (!isRepeatingDecimalComposite)
+                        isExactDecimal = true;
+                }
+                else
+                    isRepeatingDecimalSimple = true;
+
+
+                if (isExactDecimal)
                 {
                     isCorrect = MathMethods.Correction(Convert.ToString(userAnswer), Convert.ToString(systemAnswer));
-                    answer = $"{systemAnswer}";
+                    answer = $"\n\tResposta: {systemAnswer}";
                 }
-                else if (radiobtnRepeatingDecimalSimple.Checked)
+                else if (isRepeatingDecimalSimple)
                 {
                     int period = 0;
                     int k = 0;
@@ -110,24 +132,24 @@ namespace BasicMathBase
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(period), systemAnswerPeriodString);
 
-                    answer = $"\n\t Resposta: {systemAnswer} \n\n\t Periodo: {systemAnswerPeriodString} \n\n\t  K: {systemAnswerPeriod.Length} ";
+                    answer = $"\n\t Resposta: {systemAnswer} \n\n\t Periodo: {systemAnswerPeriodString} \n\n\t  K: {systemAnswerPeriod.Length} \n\n\t  Períodos distintos: {(denominator - 1) / systemAnswerPeriod.Length}";
 
                     if (checkboxCongruentMap.Checked)
                     {
                         answer += $"\n\n \t\tMapa de Congruencia: \n{congruentMap.Map}";
                     }
                 }
-                else if (radiobtnRepeatingDecimalComposite.Checked)
+                else if (isRepeatingDecimalComposite)
                 {
                     int period = 0;
-                    int antiPeriod = 0;
                     int k = 0;
                     try
                     {
                         period = Convert.ToInt32(txtboxPeriod.Text);
-                        antiPeriod = Convert.ToInt32(txtboxAntiPeriod.Text);
+                        k = Convert.ToInt32(txtboxK.Text);
                     }
                     catch { }
+
                     isCorrect = MathMethods.Correction(Convert.ToString(userAnswer), Convert.ToString(systemAnswer));
 
                     var systemAnswerPeriod = MathMethods.Period(numerator, denominator);
@@ -136,28 +158,23 @@ namespace BasicMathBase
                     foreach (int i in systemAnswerPeriod)
                         systemAnswerPeriodString += $"{i}";
 
+                    var congruentMap = MathMethods.CongruenceMap(numerator, denominator);
+
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(k), Convert.ToString(systemAnswerPeriod.Length));
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(period), systemAnswerPeriodString);
 
-                    answer = $" Resposta: {systemAnswer} \n K: {systemAnswerPeriod.Length} \n Periodo: {systemAnswerPeriodString} \n Antiperiodo: ";
+                    answer = $"isRepeatingDecimalComposite\n\t Resposta: {systemAnswer} \n\n\t Periodo: {systemAnswerPeriodString} \n\n\t  K: {systemAnswerPeriod.Length} ";
 
-                }
-                else
-                {
-                    run2 = false;
-                    MessageBox.Show("Marque uma opção",
-                                    "Erro",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
+                    if (checkboxCongruentMap.Checked)
+                    {
+                        answer += $"\n\n \t\tMapa de Congruencia: \n{congruentMap.Map}";
+                    }
                 }
 
-                if (run2)
-                {
-                    FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, answer);
-                    openForm.Show();
-                }
+                FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, answer);
+                openForm.Show();
 
             }
         }
@@ -190,11 +207,14 @@ namespace BasicMathBase
                 lblPeriod.Visible = true;
                 txtboxPeriod.Visible = true;
 
+                lblDistinctPeriod.Visible = true;
+                txtboxDistinctPeriod.Visible = true;
+
                 checkboxCongruentMap.Visible = true;
+
 
                 lblAntiPeriod.Visible = false;
                 txtboxAntiPeriod.Visible = false;
-                
             }
             else
             {
@@ -203,6 +223,9 @@ namespace BasicMathBase
 
                 lblPeriod.Visible = false;
                 txtboxPeriod.Visible = false;
+
+                lblDistinctPeriod.Visible = false;
+                txtboxDistinctPeriod.Visible = false;
 
                 checkboxCongruentMap.Visible = false;
 
@@ -221,6 +244,9 @@ namespace BasicMathBase
                 lblPeriod.Visible = true;
                 txtboxPeriod.Visible = true;
 
+                lblDistinctPeriod.Visible = true;
+                txtboxDistinctPeriod.Visible = true;
+
                 lblAntiPeriod.Visible = true;
                 txtboxAntiPeriod.Visible = true;
                 
@@ -232,6 +258,9 @@ namespace BasicMathBase
 
                 lblPeriod.Visible = false;
                 lblAntiPeriod.Visible = false;
+
+                lblDistinctPeriod.Visible = false;
+                txtboxDistinctPeriod.Visible = false;
 
                 txtboxAntiPeriod.Visible = false;
                 txtboxPeriod.Visible = false;

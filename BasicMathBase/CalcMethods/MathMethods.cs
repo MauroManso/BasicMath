@@ -647,5 +647,70 @@ namespace BasicMathBase.CalcMethods
             
             return result;
         }
+
+        public static (int numerator, int denominator) FractionAdd(int numerator1, int denominator1, int numerator2, int denominator2)
+        {
+            int outputNumerator;
+            int outputDenominator;
+
+            if (denominator1 == denominator2)
+            {
+                outputDenominator = denominator1;
+                outputNumerator = numerator1 + numerator2;
+            }
+            else
+            {
+                outputDenominator = Mmc(denominator1, denominator2);
+                int tempnumerator1 = (outputDenominator / denominator1) * numerator1;
+                int tempnumerator2 = (outputDenominator / denominator2) * numerator2;
+                outputNumerator = tempnumerator1 + tempnumerator2;
+            }
+
+
+            return (outputNumerator, outputDenominator);
+        }
+
+        public static (int numerator, int denominator) FractionMultiply(int numerator1, int denominator1, int numerator2, int denominator2)
+        {
+            int outputNumerator;
+            int outputDenominator;
+
+            outputNumerator = numerator1 * numerator2;
+            outputDenominator = denominator1 * denominator2;
+
+
+            return (outputNumerator, outputDenominator);
+        }
+
+        public static (int numerator, int denominator) FractionDivision(int numerator1, int denominator1, int numerator2, int denominator2)
+        {
+            int outputNumerator;
+            int outputDenominator;
+
+            outputNumerator = numerator1 * denominator2;
+            outputDenominator = denominator1 * numerator2;
+
+            return (outputNumerator, outputDenominator);
+        }
+
+        public static (int numerator, int denominator) FractionPower(int numerator1, int denominator1, int expoent)
+        {
+            int outputNumerator;
+            int outputDenominator;
+
+            if (expoent == 0) return (1,1);
+            if(expoent < 0)
+            {
+                int temp = numerator1;
+                numerator1 = denominator1;
+                denominator1 = temp;
+                expoent *= -1;
+            }
+
+            outputNumerator = Convert.ToInt32(Math.Pow(numerator1, expoent));
+            outputDenominator = Convert.ToInt32(Math.Pow(denominator1, expoent));
+
+            return (outputNumerator, outputDenominator);
+        }
     }
 }

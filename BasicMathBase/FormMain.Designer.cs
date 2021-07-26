@@ -31,6 +31,13 @@ namespace BasicMathBase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelFractionsSubmenu = new System.Windows.Forms.Panel();
+            this.btnFractionMutiply = new System.Windows.Forms.Button();
+            this.btnFractionDivision = new System.Windows.Forms.Button();
+            this.btnFractionAddSubtraction = new System.Windows.Forms.Button();
+            this.btnOwnFraction = new System.Windows.Forms.Button();
+            this.btnFractions = new System.Windows.Forms.Button();
+            this.btnDivisibility = new System.Windows.Forms.Button();
             this.btnBModA = new System.Windows.Forms.Button();
             this.btnSubtractionAlgorithm = new System.Windows.Forms.Button();
             this.panelPowersSubMenu = new System.Windows.Forms.Panel();
@@ -56,9 +63,19 @@ namespace BasicMathBase
             this.pictureBoxMenuLogo = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.btnDivisibility = new System.Windows.Forms.Button();
-            this.btnFractions = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.lblNumerator2 = new System.Windows.Forms.Label();
+            this.lblNumerator = new System.Windows.Forms.Label();
+            this.lblDenominator2 = new System.Windows.Forms.Label();
+            this.lblDenominator = new System.Windows.Forms.Label();
+            this.txtboxNumerator2 = new System.Windows.Forms.TextBox();
+            this.txtboxDenominator2 = new System.Windows.Forms.TextBox();
+            this.txtboxNumerator = new System.Windows.Forms.TextBox();
+            this.txtboxDenominator = new System.Windows.Forms.TextBox();
+            this.btnFractionPower = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelFractionsSubmenu.SuspendLayout();
             this.panelPowersSubMenu.SuspendLayout();
             this.panelPrimesSubMenu.SuspendLayout();
             this.panelMutiplyAlgorithmsSubMenu.SuspendLayout();
@@ -73,6 +90,7 @@ namespace BasicMathBase
             this.panelMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelMenu.Controls.Add(this.panelFractionsSubmenu);
             this.panelMenu.Controls.Add(this.btnFractions);
             this.panelMenu.Controls.Add(this.btnDivisibility);
             this.panelMenu.Controls.Add(this.btnBModA);
@@ -90,6 +108,146 @@ namespace BasicMathBase
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(350, 894);
             this.panelMenu.TabIndex = 0;
+            // 
+            // panelFractionsSubmenu
+            // 
+            this.panelFractionsSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.panelFractionsSubmenu.Controls.Add(this.btnFractionPower);
+            this.panelFractionsSubmenu.Controls.Add(this.btnFractionMutiply);
+            this.panelFractionsSubmenu.Controls.Add(this.btnFractionDivision);
+            this.panelFractionsSubmenu.Controls.Add(this.btnFractionAddSubtraction);
+            this.panelFractionsSubmenu.Controls.Add(this.btnOwnFraction);
+            this.panelFractionsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFractionsSubmenu.Location = new System.Drawing.Point(0, 1444);
+            this.panelFractionsSubmenu.Name = "panelFractionsSubmenu";
+            this.panelFractionsSubmenu.Size = new System.Drawing.Size(324, 322);
+            this.panelFractionsSubmenu.TabIndex = 12;
+            // 
+            // btnFractionMutiply
+            // 
+            this.btnFractionMutiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnFractionMutiply.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractionMutiply.FlatAppearance.BorderSize = 0;
+            this.btnFractionMutiply.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnFractionMutiply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnFractionMutiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractionMutiply.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFractionMutiply.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractionMutiply.Location = new System.Drawing.Point(0, 180);
+            this.btnFractionMutiply.Name = "btnFractionMutiply";
+            this.btnFractionMutiply.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFractionMutiply.Size = new System.Drawing.Size(324, 60);
+            this.btnFractionMutiply.TabIndex = 28;
+            this.btnFractionMutiply.Text = "Multiplicação de Frações";
+            this.btnFractionMutiply.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractionMutiply.UseVisualStyleBackColor = false;
+            this.btnFractionMutiply.Click += new System.EventHandler(this.btnFractionMutiply_Click);
+            this.btnFractionMutiply.Leave += new System.EventHandler(this.btnFractionMutiply_Leave);
+            // 
+            // btnFractionDivision
+            // 
+            this.btnFractionDivision.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnFractionDivision.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractionDivision.FlatAppearance.BorderSize = 0;
+            this.btnFractionDivision.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnFractionDivision.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnFractionDivision.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractionDivision.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFractionDivision.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractionDivision.Location = new System.Drawing.Point(0, 120);
+            this.btnFractionDivision.Name = "btnFractionDivision";
+            this.btnFractionDivision.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFractionDivision.Size = new System.Drawing.Size(324, 60);
+            this.btnFractionDivision.TabIndex = 27;
+            this.btnFractionDivision.Text = "Divisão de Frações";
+            this.btnFractionDivision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractionDivision.UseVisualStyleBackColor = false;
+            this.btnFractionDivision.Click += new System.EventHandler(this.btnFractionDivision_Click);
+            this.btnFractionDivision.Leave += new System.EventHandler(this.btnFractionDivision_Leave);
+            // 
+            // btnFractionAddSubtraction
+            // 
+            this.btnFractionAddSubtraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnFractionAddSubtraction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractionAddSubtraction.FlatAppearance.BorderSize = 0;
+            this.btnFractionAddSubtraction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnFractionAddSubtraction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnFractionAddSubtraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractionAddSubtraction.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFractionAddSubtraction.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractionAddSubtraction.Location = new System.Drawing.Point(0, 60);
+            this.btnFractionAddSubtraction.Name = "btnFractionAddSubtraction";
+            this.btnFractionAddSubtraction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFractionAddSubtraction.Size = new System.Drawing.Size(324, 60);
+            this.btnFractionAddSubtraction.TabIndex = 26;
+            this.btnFractionAddSubtraction.Text = "Adição/Subtração de Frações";
+            this.btnFractionAddSubtraction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractionAddSubtraction.UseVisualStyleBackColor = false;
+            this.btnFractionAddSubtraction.Click += new System.EventHandler(this.btnFractionAdd_Click);
+            this.btnFractionAddSubtraction.Leave += new System.EventHandler(this.btnFractionAdd_Leave);
+            // 
+            // btnOwnFraction
+            // 
+            this.btnOwnFraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnOwnFraction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOwnFraction.FlatAppearance.BorderSize = 0;
+            this.btnOwnFraction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnOwnFraction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnOwnFraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOwnFraction.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnOwnFraction.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnOwnFraction.Location = new System.Drawing.Point(0, 0);
+            this.btnOwnFraction.Name = "btnOwnFraction";
+            this.btnOwnFraction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnOwnFraction.Size = new System.Drawing.Size(324, 60);
+            this.btnOwnFraction.TabIndex = 25;
+            this.btnOwnFraction.Text = "Frações Próprias";
+            this.btnOwnFraction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOwnFraction.UseVisualStyleBackColor = false;
+            this.btnOwnFraction.Click += new System.EventHandler(this.btnOwnFraction_Click);
+            this.btnOwnFraction.Leave += new System.EventHandler(this.btnOwnFraction_Leave);
+            // 
+            // btnFractions
+            // 
+            this.btnFractions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnFractions.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractions.FlatAppearance.BorderSize = 0;
+            this.btnFractions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractions.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnFractions.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractions.Location = new System.Drawing.Point(0, 1379);
+            this.btnFractions.Name = "btnFractions";
+            this.btnFractions.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnFractions.Size = new System.Drawing.Size(324, 65);
+            this.btnFractions.TabIndex = 11;
+            this.btnFractions.Text = "Frações";
+            this.btnFractions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFractions.UseVisualStyleBackColor = false;
+            this.btnFractions.Click += new System.EventHandler(this.btnFractions_Click);
+            this.btnFractions.Leave += new System.EventHandler(this.btnFractions_Leave);
+            // 
+            // btnDivisibility
+            // 
+            this.btnDivisibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnDivisibility.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDivisibility.FlatAppearance.BorderSize = 0;
+            this.btnDivisibility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDivisibility.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDivisibility.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDivisibility.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDivisibility.Location = new System.Drawing.Point(0, 1314);
+            this.btnDivisibility.Name = "btnDivisibility";
+            this.btnDivisibility.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnDivisibility.Size = new System.Drawing.Size(324, 65);
+            this.btnDivisibility.TabIndex = 10;
+            this.btnDivisibility.Text = "Divisibilidade";
+            this.btnDivisibility.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDivisibility.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDivisibility.UseVisualStyleBackColor = false;
+            this.btnDivisibility.Click += new System.EventHandler(this.btnDivisibility_Click);
+            this.btnDivisibility.Leave += new System.EventHandler(this.btnDivisibility_Leave);
             // 
             // btnBModA
             // 
@@ -545,47 +703,124 @@ namespace BasicMathBase
             this.pictureBoxLogo.TabIndex = 1;
             this.pictureBoxLogo.TabStop = false;
             // 
-            // btnDivisibility
+            // btnClear
             // 
-            this.btnDivisibility.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnDivisibility.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDivisibility.FlatAppearance.BorderSize = 0;
-            this.btnDivisibility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDivisibility.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDivisibility.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnDivisibility.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDivisibility.Location = new System.Drawing.Point(0, 1314);
-            this.btnDivisibility.Name = "btnDivisibility";
-            this.btnDivisibility.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnDivisibility.Size = new System.Drawing.Size(324, 65);
-            this.btnDivisibility.TabIndex = 10;
-            this.btnDivisibility.Text = "Divisibilidade";
-            this.btnDivisibility.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDivisibility.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDivisibility.UseVisualStyleBackColor = false;
-            this.btnDivisibility.Click += new System.EventHandler(this.btnDivisibility_Click);
-            this.btnDivisibility.Leave += new System.EventHandler(this.btnDivisibility_Leave);
+            this.btnClear.FlatAppearance.BorderSize = 2;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(509, 134);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.TabIndex = 4205;
+            this.btnClear.Text = "Limpar";
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // btnFractions
+            // btnCalculate
             // 
-            this.btnFractions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.btnFractions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFractions.FlatAppearance.BorderSize = 0;
-            this.btnFractions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFractions.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnFractions.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFractions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFractions.Location = new System.Drawing.Point(0, 1379);
-            this.btnFractions.Name = "btnFractions";
-            this.btnFractions.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnFractions.Size = new System.Drawing.Size(324, 65);
-            this.btnFractions.TabIndex = 11;
-            this.btnFractions.Text = "Frações Próprias";
-            this.btnFractions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFractions.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFractions.UseVisualStyleBackColor = false;
-            this.btnFractions.Click += new System.EventHandler(this.btnFractions_Click);
-            this.btnFractions.Leave += new System.EventHandler(this.btnFractions_Leave);
+            this.btnCalculate.FlatAppearance.BorderSize = 2;
+            this.btnCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalculate.Location = new System.Drawing.Point(340, 134);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculate.TabIndex = 4204;
+            this.btnCalculate.Text = "Calcular";
+            this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            // 
+            // lblNumerator2
+            // 
+            this.lblNumerator2.AutoSize = true;
+            this.lblNumerator2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumerator2.Location = new System.Drawing.Point(32, 120);
+            this.lblNumerator2.Name = "lblNumerator2";
+            this.lblNumerator2.Size = new System.Drawing.Size(118, 25);
+            this.lblNumerator2.TabIndex = 4200;
+            this.lblNumerator2.Text = "Numerador 2";
+            // 
+            // lblNumerator
+            // 
+            this.lblNumerator.AutoSize = true;
+            this.lblNumerator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNumerator.Location = new System.Drawing.Point(-275, 123);
+            this.lblNumerator.Name = "lblNumerator";
+            this.lblNumerator.Size = new System.Drawing.Size(118, 25);
+            this.lblNumerator.TabIndex = 4201;
+            this.lblNumerator.Text = "Numerador 1";
+            // 
+            // lblDenominator2
+            // 
+            this.lblDenominator2.AutoSize = true;
+            this.lblDenominator2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDenominator2.Location = new System.Drawing.Point(13, 169);
+            this.lblDenominator2.Name = "lblDenominator2";
+            this.lblDenominator2.Size = new System.Drawing.Size(137, 25);
+            this.lblDenominator2.TabIndex = 4202;
+            this.lblDenominator2.Text = "Denominador 2";
+            // 
+            // lblDenominator
+            // 
+            this.lblDenominator.AutoSize = true;
+            this.lblDenominator.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDenominator.Location = new System.Drawing.Point(-294, 172);
+            this.lblDenominator.Name = "lblDenominator";
+            this.lblDenominator.Size = new System.Drawing.Size(137, 25);
+            this.lblDenominator.TabIndex = 4203;
+            this.lblDenominator.Text = "Denominador 1";
+            // 
+            // txtboxNumerator2
+            // 
+            this.txtboxNumerator2.Location = new System.Drawing.Point(154, 120);
+            this.txtboxNumerator2.Name = "txtboxNumerator2";
+            this.txtboxNumerator2.Size = new System.Drawing.Size(122, 31);
+            this.txtboxNumerator2.TabIndex = 4196;
+            // 
+            // txtboxDenominator2
+            // 
+            this.txtboxDenominator2.Location = new System.Drawing.Point(154, 166);
+            this.txtboxDenominator2.Name = "txtboxDenominator2";
+            this.txtboxDenominator2.Size = new System.Drawing.Size(122, 31);
+            this.txtboxDenominator2.TabIndex = 4198;
+            // 
+            // txtboxNumerator
+            // 
+            this.txtboxNumerator.Location = new System.Drawing.Point(-153, 123);
+            this.txtboxNumerator.Name = "txtboxNumerator";
+            this.txtboxNumerator.Size = new System.Drawing.Size(122, 31);
+            this.txtboxNumerator.TabIndex = 4197;
+            // 
+            // txtboxDenominator
+            // 
+            this.txtboxDenominator.Location = new System.Drawing.Point(-153, 169);
+            this.txtboxDenominator.Name = "txtboxDenominator";
+            this.txtboxDenominator.Size = new System.Drawing.Size(122, 31);
+            this.txtboxDenominator.TabIndex = 4199;
+            // 
+            // btnFractionPower
+            // 
+            this.btnFractionPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnFractionPower.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractionPower.FlatAppearance.BorderSize = 0;
+            this.btnFractionPower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnFractionPower.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnFractionPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractionPower.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFractionPower.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractionPower.Location = new System.Drawing.Point(0, 240);
+            this.btnFractionPower.Name = "btnFractionPower";
+            this.btnFractionPower.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFractionPower.Size = new System.Drawing.Size(324, 60);
+            this.btnFractionPower.TabIndex = 29;
+            this.btnFractionPower.Text = "Potenciação de Frações";
+            this.btnFractionPower.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractionPower.UseVisualStyleBackColor = false;
+            this.btnFractionPower.Click += new System.EventHandler(this.btnFractionPower_Click);
+            this.btnFractionPower.Leave += new System.EventHandler(this.btnFractionPower_Leave);
             // 
             // FormMain
             // 
@@ -600,6 +835,7 @@ namespace BasicMathBase
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basic Math";
             this.panelMenu.ResumeLayout(false);
+            this.panelFractionsSubmenu.ResumeLayout(false);
             this.panelPowersSubMenu.ResumeLayout(false);
             this.panelPrimesSubMenu.ResumeLayout(false);
             this.panelMutiplyAlgorithmsSubMenu.ResumeLayout(false);
@@ -641,6 +877,22 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnMmcMdc;
         private System.Windows.Forms.Button btnDivisibility;
         private System.Windows.Forms.Button btnFractions;
+        private System.Windows.Forms.Panel panelFractionsSubmenu;
+        private System.Windows.Forms.Button btnFractionMutiply;
+        private System.Windows.Forms.Button btnFractionDivision;
+        private System.Windows.Forms.Button btnFractionAddSubtraction;
+        private System.Windows.Forms.Button btnOwnFraction;
+        private System.Windows.Forms.Button btnFractionPower;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Label lblNumerator2;
+        private System.Windows.Forms.Label lblNumerator;
+        private System.Windows.Forms.Label lblDenominator2;
+        private System.Windows.Forms.Label lblDenominator;
+        private System.Windows.Forms.TextBox txtboxNumerator2;
+        private System.Windows.Forms.TextBox txtboxDenominator2;
+        private System.Windows.Forms.TextBox txtboxNumerator;
+        private System.Windows.Forms.TextBox txtboxDenominator;
     }
 }
 

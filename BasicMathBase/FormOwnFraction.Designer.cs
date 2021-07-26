@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormFractions
+    partial class FormOwnFraction
     {
         /// <summary>
         /// Required designer variable.

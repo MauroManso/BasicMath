@@ -25,6 +25,7 @@ namespace BasicMathBase
             panelMutiplyAlgorithmsSubMenu.Visible = false;
             panelPrimesSubMenu.Visible = false;
             panelPowersSubMenu.Visible = false;
+            panelFractionsSubmenu.Visible = false;
 
         }
 
@@ -45,7 +46,12 @@ namespace BasicMathBase
                 panelPowersSubMenu.Visible = false;
                 btnPowers.BackColor = Color.FromArgb(24, 30, 54);
             }
-                
+            if (panelFractionsSubmenu.Visible == true)
+            {
+                panelFractionsSubmenu.Visible = false;
+                btnPowers.BackColor = Color.FromArgb(24, 30, 54);
+            }
+
         }
 
         private void showSubMenu(Panel subMenu)
@@ -190,14 +196,46 @@ namespace BasicMathBase
         private void btnDivisibility_Click(object sender, EventArgs e)
         {
             btnDivisibility.BackColor = Color.FromArgb(0, 77, 123);
+            hideSubMenu();
             openChildForm(new FormDivisibility());
         }
 
         private void btnFractions_Click(object sender, EventArgs e)
         {
-            btnFractions.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormFractions());
+            btnFractions.BackColor = Color.FromArgb(0, 60, 97);
+            showSubMenu(panelFractionsSubmenu);
         }
+
+        private void btnOwnFraction_Click(object sender, EventArgs e)
+        {
+            btnOwnFraction.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormOwnFraction());
+        }
+
+        private void btnFractionAdd_Click(object sender, EventArgs e)
+        {
+            btnFractionAddSubtraction.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormFractionAddSubtraction());
+        }
+
+        private void btnFractionDivision_Click(object sender, EventArgs e)
+        {
+            btnFractionDivision.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormFractionDivisioin());
+        }
+
+        private void btnFractionMutiply_Click(object sender, EventArgs e)
+        {
+            btnFractionMutiply.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormFractionMultiply());
+        }
+
+        private void btnFractionPower_Click(object sender, EventArgs e)
+        {
+            btnFractionPower.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormFractionPower());
+        }
+
 
 
 
@@ -285,5 +323,31 @@ namespace BasicMathBase
         {
             btnFractions.BackColor = Color.FromArgb(24, 30, 54);
         }
+
+        private void btnOwnFraction_Leave(object sender, EventArgs e)
+        {
+            btnOwnFraction.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
+        private void btnFractionAdd_Leave(object sender, EventArgs e)
+        {
+            btnFractionAddSubtraction.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
+        private void btnFractionDivision_Leave(object sender, EventArgs e)
+        {
+            btnFractionDivision.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
+        private void btnFractionMutiply_Leave(object sender, EventArgs e)
+        {
+            btnFractionMutiply.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
+        private void btnFractionPower_Leave(object sender, EventArgs e)
+        {
+            btnFractionPower.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
     }
 }

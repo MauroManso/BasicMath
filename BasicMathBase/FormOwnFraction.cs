@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormFractions : Form
+    public partial class FormOwnFraction : Form
     {
-        public FormFractions()
+        public FormOwnFraction()
         {
             InitializeComponent();
             customDesign();

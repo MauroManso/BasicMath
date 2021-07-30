@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormScientificNotation : Form
+    public partial class FormPowerBase10Multiply : Form
     {
-        public FormScientificNotation()
+        public FormPowerBase10Multiply()
         {
             InitializeComponent();
             customDesign();
@@ -32,7 +32,10 @@ namespace BasicMathBase
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtboxAnwser.Text = "";
-            txtboxN.Text = "";
+            txtboxN1.Text = "";
+            txtboxN1x10ToPowerOf.Text = "";
+            txtboxN2.Text = "";
+            txtboxN2x10ToPowerOf.Text = "";
         }
     }
 }

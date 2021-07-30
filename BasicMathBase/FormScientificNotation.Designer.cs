@@ -103,6 +103,7 @@ namespace BasicMathBase
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // txtboxN
             // 
@@ -125,6 +126,7 @@ namespace BasicMathBase
             this.btnCalculate.Text = "Corrigir";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // FormScientificNotation
             // 

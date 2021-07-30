@@ -257,19 +257,19 @@ namespace BasicMathBase
         private void btnPowerBase10AddSubtraction_Click(object sender, EventArgs e)
         {
             btnOwnFraction.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormOwnFraction());
+            openChildForm(new FormPowerBase10AddSubtraction());
         }
 
         private void btnPowerBase10Division_Click(object sender, EventArgs e)
         {
             btnOwnFraction.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormOwnFraction());
+            openChildForm(new FormPowerBase10Division());
         }
 
         private void btnPowerBase10Mutiply_Click(object sender, EventArgs e)
         {
             btnOwnFraction.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormOwnFraction());
+            openChildForm(new FormPowerBase10Multiply());
         }
 
 

@@ -251,7 +251,7 @@ namespace BasicMathBase
         private void btnScientificNotation_Click(object sender, EventArgs e)
         {
             btnOwnFraction.BackColor = Color.FromArgb(0, 77, 123);
-            openChildForm(new FormOwnFraction());
+            openChildForm(new FormScientificNotation());
         }
 
         private void btnPowerBase10AddSubtraction_Click(object sender, EventArgs e)

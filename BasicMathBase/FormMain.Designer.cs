@@ -31,7 +31,14 @@ namespace BasicMathBase
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelPowerBase10SubMenu = new System.Windows.Forms.Panel();
+            this.btnPowerBase10Mutiply = new System.Windows.Forms.Button();
+            this.btnPowerBase10Division = new System.Windows.Forms.Button();
+            this.btnPowerBase10AddSubtraction = new System.Windows.Forms.Button();
+            this.btnScientificNotation = new System.Windows.Forms.Button();
+            this.btnBase10Operations = new System.Windows.Forms.Button();
             this.panelFractionsSubmenu = new System.Windows.Forms.Panel();
+            this.btnFractionPower = new System.Windows.Forms.Button();
             this.btnFractionMutiply = new System.Windows.Forms.Button();
             this.btnFractionDivision = new System.Windows.Forms.Button();
             this.btnFractionAddSubtraction = new System.Windows.Forms.Button();
@@ -73,8 +80,8 @@ namespace BasicMathBase
             this.txtboxDenominator2 = new System.Windows.Forms.TextBox();
             this.txtboxNumerator = new System.Windows.Forms.TextBox();
             this.txtboxDenominator = new System.Windows.Forms.TextBox();
-            this.btnFractionPower = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panelPowerBase10SubMenu.SuspendLayout();
             this.panelFractionsSubmenu.SuspendLayout();
             this.panelPowersSubMenu.SuspendLayout();
             this.panelPrimesSubMenu.SuspendLayout();
@@ -90,6 +97,8 @@ namespace BasicMathBase
             this.panelMenu.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panelMenu.Controls.Add(this.panelPowerBase10SubMenu);
+            this.panelMenu.Controls.Add(this.btnBase10Operations);
             this.panelMenu.Controls.Add(this.panelFractionsSubmenu);
             this.panelMenu.Controls.Add(this.btnFractions);
             this.panelMenu.Controls.Add(this.btnDivisibility);
@@ -109,6 +118,124 @@ namespace BasicMathBase
             this.panelMenu.Size = new System.Drawing.Size(350, 894);
             this.panelMenu.TabIndex = 0;
             // 
+            // panelPowerBase10SubMenu
+            // 
+            this.panelPowerBase10SubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.panelPowerBase10SubMenu.Controls.Add(this.btnPowerBase10Mutiply);
+            this.panelPowerBase10SubMenu.Controls.Add(this.btnPowerBase10Division);
+            this.panelPowerBase10SubMenu.Controls.Add(this.btnPowerBase10AddSubtraction);
+            this.panelPowerBase10SubMenu.Controls.Add(this.btnScientificNotation);
+            this.panelPowerBase10SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPowerBase10SubMenu.Location = new System.Drawing.Point(0, 1851);
+            this.panelPowerBase10SubMenu.Name = "panelPowerBase10SubMenu";
+            this.panelPowerBase10SubMenu.Size = new System.Drawing.Size(324, 312);
+            this.panelPowerBase10SubMenu.TabIndex = 14;
+            // 
+            // btnPowerBase10Mutiply
+            // 
+            this.btnPowerBase10Mutiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnPowerBase10Mutiply.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPowerBase10Mutiply.FlatAppearance.BorderSize = 0;
+            this.btnPowerBase10Mutiply.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnPowerBase10Mutiply.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnPowerBase10Mutiply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPowerBase10Mutiply.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPowerBase10Mutiply.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPowerBase10Mutiply.Location = new System.Drawing.Point(0, 205);
+            this.btnPowerBase10Mutiply.Name = "btnPowerBase10Mutiply";
+            this.btnPowerBase10Mutiply.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPowerBase10Mutiply.Size = new System.Drawing.Size(324, 85);
+            this.btnPowerBase10Mutiply.TabIndex = 28;
+            this.btnPowerBase10Mutiply.Text = "Multiplicação com Potências de base 10";
+            this.btnPowerBase10Mutiply.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPowerBase10Mutiply.UseVisualStyleBackColor = false;
+            this.btnPowerBase10Mutiply.Click += new System.EventHandler(this.btnPowerBase10Mutiply_Click);
+            this.btnPowerBase10Mutiply.Leave += new System.EventHandler(this.btnPowerBase10Mutiply_Leave);
+            // 
+            // btnPowerBase10Division
+            // 
+            this.btnPowerBase10Division.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnPowerBase10Division.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPowerBase10Division.FlatAppearance.BorderSize = 0;
+            this.btnPowerBase10Division.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnPowerBase10Division.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnPowerBase10Division.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPowerBase10Division.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPowerBase10Division.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPowerBase10Division.Location = new System.Drawing.Point(0, 145);
+            this.btnPowerBase10Division.Name = "btnPowerBase10Division";
+            this.btnPowerBase10Division.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPowerBase10Division.Size = new System.Drawing.Size(324, 60);
+            this.btnPowerBase10Division.TabIndex = 27;
+            this.btnPowerBase10Division.Text = "Divisão com Potências de base 10";
+            this.btnPowerBase10Division.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPowerBase10Division.UseVisualStyleBackColor = false;
+            this.btnPowerBase10Division.Click += new System.EventHandler(this.btnPowerBase10Division_Click);
+            this.btnPowerBase10Division.Leave += new System.EventHandler(this.btnPowerBase10Division_Leave);
+            // 
+            // btnPowerBase10AddSubtraction
+            // 
+            this.btnPowerBase10AddSubtraction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnPowerBase10AddSubtraction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPowerBase10AddSubtraction.FlatAppearance.BorderSize = 0;
+            this.btnPowerBase10AddSubtraction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnPowerBase10AddSubtraction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnPowerBase10AddSubtraction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPowerBase10AddSubtraction.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPowerBase10AddSubtraction.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPowerBase10AddSubtraction.Location = new System.Drawing.Point(0, 60);
+            this.btnPowerBase10AddSubtraction.Name = "btnPowerBase10AddSubtraction";
+            this.btnPowerBase10AddSubtraction.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnPowerBase10AddSubtraction.Size = new System.Drawing.Size(324, 85);
+            this.btnPowerBase10AddSubtraction.TabIndex = 26;
+            this.btnPowerBase10AddSubtraction.Text = "Adição/Subtração com Potências de base 10";
+            this.btnPowerBase10AddSubtraction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPowerBase10AddSubtraction.UseVisualStyleBackColor = false;
+            this.btnPowerBase10AddSubtraction.Click += new System.EventHandler(this.btnPowerBase10AddSubtraction_Click);
+            this.btnPowerBase10AddSubtraction.Leave += new System.EventHandler(this.btnPowerBase10AddSubtraction_Leave);
+            // 
+            // btnScientificNotation
+            // 
+            this.btnScientificNotation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnScientificNotation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnScientificNotation.FlatAppearance.BorderSize = 0;
+            this.btnScientificNotation.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnScientificNotation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnScientificNotation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScientificNotation.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnScientificNotation.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnScientificNotation.Location = new System.Drawing.Point(0, 0);
+            this.btnScientificNotation.Name = "btnScientificNotation";
+            this.btnScientificNotation.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnScientificNotation.Size = new System.Drawing.Size(324, 60);
+            this.btnScientificNotation.TabIndex = 25;
+            this.btnScientificNotation.Text = "Notação Ciêntífica a.10 ᵇ";
+            this.btnScientificNotation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnScientificNotation.UseVisualStyleBackColor = false;
+            this.btnScientificNotation.Click += new System.EventHandler(this.btnScientificNotation_Click);
+            this.btnScientificNotation.Leave += new System.EventHandler(this.btnScientificNotation_Leave);
+            // 
+            // btnBase10Operations
+            // 
+            this.btnBase10Operations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.btnBase10Operations.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBase10Operations.FlatAppearance.BorderSize = 0;
+            this.btnBase10Operations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBase10Operations.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBase10Operations.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBase10Operations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBase10Operations.Location = new System.Drawing.Point(0, 1766);
+            this.btnBase10Operations.Name = "btnBase10Operations";
+            this.btnBase10Operations.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnBase10Operations.Size = new System.Drawing.Size(324, 85);
+            this.btnBase10Operations.TabIndex = 13;
+            this.btnBase10Operations.Text = "Operações  com Potências de Base 10";
+            this.btnBase10Operations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBase10Operations.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBase10Operations.UseVisualStyleBackColor = false;
+            this.btnBase10Operations.Click += new System.EventHandler(this.btnBase10Operations_Click);
+            this.btnBase10Operations.Leave += new System.EventHandler(this.btnBase10Operations_Leave);
+            // 
             // panelFractionsSubmenu
             // 
             this.panelFractionsSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
@@ -122,6 +249,27 @@ namespace BasicMathBase
             this.panelFractionsSubmenu.Name = "panelFractionsSubmenu";
             this.panelFractionsSubmenu.Size = new System.Drawing.Size(324, 322);
             this.panelFractionsSubmenu.TabIndex = 12;
+            // 
+            // btnFractionPower
+            // 
+            this.btnFractionPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnFractionPower.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFractionPower.FlatAppearance.BorderSize = 0;
+            this.btnFractionPower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnFractionPower.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnFractionPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFractionPower.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFractionPower.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnFractionPower.Location = new System.Drawing.Point(0, 240);
+            this.btnFractionPower.Name = "btnFractionPower";
+            this.btnFractionPower.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnFractionPower.Size = new System.Drawing.Size(324, 60);
+            this.btnFractionPower.TabIndex = 29;
+            this.btnFractionPower.Text = "Potenciação de Frações";
+            this.btnFractionPower.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFractionPower.UseVisualStyleBackColor = false;
+            this.btnFractionPower.Click += new System.EventHandler(this.btnFractionPower_Click);
+            this.btnFractionPower.Leave += new System.EventHandler(this.btnFractionPower_Leave);
             // 
             // btnFractionMutiply
             // 
@@ -801,27 +949,6 @@ namespace BasicMathBase
             this.txtboxDenominator.Size = new System.Drawing.Size(122, 31);
             this.txtboxDenominator.TabIndex = 4199;
             // 
-            // btnFractionPower
-            // 
-            this.btnFractionPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnFractionPower.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFractionPower.FlatAppearance.BorderSize = 0;
-            this.btnFractionPower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
-            this.btnFractionPower.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.btnFractionPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFractionPower.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFractionPower.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnFractionPower.Location = new System.Drawing.Point(0, 240);
-            this.btnFractionPower.Name = "btnFractionPower";
-            this.btnFractionPower.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnFractionPower.Size = new System.Drawing.Size(324, 60);
-            this.btnFractionPower.TabIndex = 29;
-            this.btnFractionPower.Text = "Potenciação de Frações";
-            this.btnFractionPower.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFractionPower.UseVisualStyleBackColor = false;
-            this.btnFractionPower.Click += new System.EventHandler(this.btnFractionPower_Click);
-            this.btnFractionPower.Leave += new System.EventHandler(this.btnFractionPower_Leave);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -835,6 +962,7 @@ namespace BasicMathBase
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basic Math";
             this.panelMenu.ResumeLayout(false);
+            this.panelPowerBase10SubMenu.ResumeLayout(false);
             this.panelFractionsSubmenu.ResumeLayout(false);
             this.panelPowersSubMenu.ResumeLayout(false);
             this.panelPrimesSubMenu.ResumeLayout(false);
@@ -893,6 +1021,12 @@ namespace BasicMathBase
         private System.Windows.Forms.TextBox txtboxDenominator2;
         private System.Windows.Forms.TextBox txtboxNumerator;
         private System.Windows.Forms.TextBox txtboxDenominator;
+        private System.Windows.Forms.Panel panelPowerBase10SubMenu;
+        private System.Windows.Forms.Button btnPowerBase10Mutiply;
+        private System.Windows.Forms.Button btnPowerBase10Division;
+        private System.Windows.Forms.Button btnPowerBase10AddSubtraction;
+        private System.Windows.Forms.Button btnScientificNotation;
+        private System.Windows.Forms.Button btnBase10Operations;
     }
 }
 

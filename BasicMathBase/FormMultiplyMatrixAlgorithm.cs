@@ -49,14 +49,15 @@ namespace BasicMathBase
             catch { }
 
 
-            if(Convert.ToString(factor1).Length != 2 || Convert.ToString(factor2).Length != 3)
+          /*if(Convert.ToString(factor1).Length != 3 && Convert.ToString(factor2).Length != 3)
             {
                 MessageBox.Show("Insira um número válido",
                             "Erro",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
-            else if(factor1 > 0 && factor2 > 0)
+            else*/ 
+            if(factor1 > 0 && factor2 > 0)
             {
                 var sistemAnswer = MathMethods.MatrixMultiplyAlgorithm(factor1, factor2);
 

@@ -191,12 +191,12 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
-        public static List<int> GetIntArray(int num)
+        public static List<int> GetIntArray(long num)
         {
             List<int> listOfInts = new List<int>();
             while (num > 0)
             {
-                listOfInts.Add(num % 10);
+                listOfInts.Add(Convert.ToInt32(num % 10));
                 num = num / 10;
             }
             listOfInts.Reverse();
@@ -213,7 +213,6 @@ namespace BasicMathBase.CalcMethods
                 if (factor1List.Count > factor2List.Count) factor2List.Insert(0, 0);
                 if (factor2List.Count > factor1List.Count) factor1List.Insert(0, 0);
             }
-            
 
             var matrix = new List<List<int>>();
             var matrixSumList = new List<List<int>>();
@@ -240,31 +239,41 @@ namespace BasicMathBase.CalcMethods
                 output += Environment.NewLine;
             }
 
+            for (int i = 0; i < matrix.Count; i++)
+            {
+                for (int j = 0; j < matrix.Count; j++)
+                {
+                    System.Diagnostics.Debug.Write($"{matrix[i][j]} ");
+                }
+                System.Diagnostics.Debug.Write($"\n");
+            }
+
+            System.Diagnostics.Debug.Write($"\n");
+
             output += Environment.NewLine;
 
+            var diagonalsList = matrix.SelectMany((row, rowIdx) =>
+                    row.Select((x, colIdx) => new { Key = rowIdx - colIdx, Value = x }))
+                .GroupBy(x => x.Key, (key, values) => values.Select(i => i.Value).ToArray())
+                .ToArray();
+
+            var diagonalListBySize = diagonalsList.OrderByDescending(l => l.Length);
+
+
             var tempLine = new List<int>();
-            tempLine.Add(matrix[0][0]);
-            tempLine.Add(matrix[1][1]);
-            tempLine.Add(matrix[2][2]);
-            matrixSumList.Add(tempLine);
+            foreach (var itemList in diagonalListBySize)
+            {
+                tempLine = new List<int>();
+                foreach (var item in itemList)
+                {
+                    System.Diagnostics.Debug.Write($"{item} ");
+                    tempLine.Add(item);
+                }
+                System.Diagnostics.Debug.Write("\n");
+                matrixSumList.Add(tempLine);
+            }
 
-            tempLine = new List<int>();
-            tempLine.Add(matrix[1][0]);
-            tempLine.Add(matrix[2][1]);
-            matrixSumList.Add(tempLine);
-
-            tempLine = new List<int>();
-            tempLine.Add(matrix[0][1]);
-            tempLine.Add(matrix[1][2]);
-            matrixSumList.Add(tempLine);
-
-            tempLine = new List<int>();
-            tempLine.Add(matrix[2][0]);
-            matrixSumList.Add(tempLine);
-
-            tempLine = new List<int>();
-            tempLine.Add(matrix[0][2]);
-            matrixSumList.Add(tempLine);
+            var list = diagonalListBySize.Select(mList => string.Join("", mList)).ToList();
 
             long result = 0;
             int lineCount = 0;
@@ -275,21 +284,32 @@ namespace BasicMathBase.CalcMethods
                 output += "\t";
                 foreach (int num in line)
                 {
-                    if (lineCount >= 1 && isFirst) output += "  ";
-                    if (lineCount >= 3 && isFirst) output += "  ";
+                    for(int i = 0; i < ((lineCount+1)/2); i++)
+                    {
+                        if(isFirst ) output += "  ";
+                    }
                     if (num < 10)
                         output += "0";
                     output += "" + num;
                     matrixSumLine += "" + num;
-                    if (lineCount >= 1 && !isFirst) matrixSumLine += "0";
-                    if (lineCount >= 3) matrixSumLine += "00";
                     isFirst = false;
                 }
+                for(int i = 1; i <= ((lineCount + 1)/2); i++)
+                {
+                    matrixSumLine += "0";
+                }
+
                 result += Convert.ToInt64(matrixSumLine);
                 lineCount++;
                 output += Environment.NewLine;
             }
-            output += "\t----------" + Environment.NewLine;
+            output += "\t--";
+
+            for (int i = 0; i < GetIntArray(result).Count; i++)
+            {
+                output += "-";
+            }
+            output += "--" + Environment.NewLine;
             output += "\t " + result;
 
 

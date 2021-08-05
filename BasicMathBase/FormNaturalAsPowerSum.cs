@@ -54,6 +54,8 @@ namespace BasicMathBase
             tb_uMilhao.Clear();
             tb_dMilhao.Clear();
             tb_cMilhao.Clear();
+            checkboxOrdemClasse.Checked = false;
+            checkboxParidade.Checked = false;
         }
 
         private void btnCorrigir_Click(object sender, EventArgs e)

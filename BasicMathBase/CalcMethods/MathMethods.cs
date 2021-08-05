@@ -208,6 +208,13 @@ namespace BasicMathBase.CalcMethods
             string output = "";
             var factor1List = GetIntArray(factor1);
             var factor2List = GetIntArray(factor2);
+            while(factor1List.Count != factor2List.Count)
+            {
+                if (factor1List.Count > factor2List.Count) factor2List.Insert(0, 0);
+                if (factor2List.Count > factor1List.Count) factor1List.Insert(0, 0);
+            }
+            
+
             var matrix = new List<List<int>>();
             var matrixSumList = new List<List<int>>();
             

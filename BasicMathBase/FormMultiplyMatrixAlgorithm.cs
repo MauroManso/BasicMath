@@ -33,7 +33,6 @@ namespace BasicMathBase
             {
                 factor1 = Convert.ToInt32(txtboxFactor1.Text);
                 factor2 = Convert.ToInt32(txtboxFactor2.Text);
-                userAnswer = txtboxAnwser.Text;
             }
             catch
             {
@@ -42,7 +41,15 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
-            if(Convert.ToString(factor1).Length != 3 || Convert.ToString(factor2).Length != 3)
+
+            try
+            {
+                userAnswer = txtboxAnwser.Text;
+            }
+            catch { }
+
+
+            if(Convert.ToString(factor1).Length != 2 || Convert.ToString(factor2).Length != 3)
             {
                 MessageBox.Show("Insira um número válido",
                             "Erro",
@@ -62,9 +69,9 @@ namespace BasicMathBase
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtboxAnwser.Text = "";
-            txtboxFactor1.Text = "";
-            txtboxFactor2.Text = "";
+            txtboxAnwser.Clear();
+            txtboxFactor1.Clear();
+            txtboxFactor2.Clear();
         }
     }
 }

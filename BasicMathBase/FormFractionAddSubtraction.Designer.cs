@@ -43,6 +43,8 @@ namespace BasicMathBase
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.radiobtnAdd = new System.Windows.Forms.RadioButton();
+            this.radiobtnSubtraction = new System.Windows.Forms.RadioButton();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@ namespace BasicMathBase
             // 
             // txtboxNumerator
             // 
-            this.txtboxNumerator.Location = new System.Drawing.Point(141, 254);
+            this.txtboxNumerator.Location = new System.Drawing.Point(79, 254);
             this.txtboxNumerator.Name = "txtboxNumerator";
             this.txtboxNumerator.PlaceholderText = "Numerador";
             this.txtboxNumerator.Size = new System.Drawing.Size(122, 31);
@@ -78,7 +80,7 @@ namespace BasicMathBase
             // 
             // txtboxDenominator
             // 
-            this.txtboxDenominator.Location = new System.Drawing.Point(141, 300);
+            this.txtboxDenominator.Location = new System.Drawing.Point(79, 300);
             this.txtboxDenominator.Name = "txtboxDenominator";
             this.txtboxDenominator.PlaceholderText = "Denominador";
             this.txtboxDenominator.Size = new System.Drawing.Size(122, 31);
@@ -161,7 +163,7 @@ namespace BasicMathBase
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(131, 291);
+            this.panel1.Location = new System.Drawing.Point(69, 291);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(141, 3);
             this.panel1.TabIndex = 4174;
@@ -182,12 +184,40 @@ namespace BasicMathBase
             this.panel4.Size = new System.Drawing.Size(141, 3);
             this.panel4.TabIndex = 4174;
             // 
+            // radiobtnAdd
+            // 
+            this.radiobtnAdd.AutoSize = true;
+            this.radiobtnAdd.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radiobtnAdd.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnAdd.Location = new System.Drawing.Point(244, 256);
+            this.radiobtnAdd.Name = "radiobtnAdd";
+            this.radiobtnAdd.Size = new System.Drawing.Size(47, 27);
+            this.radiobtnAdd.TabIndex = 4175;
+            this.radiobtnAdd.TabStop = true;
+            this.radiobtnAdd.Text = "+";
+            this.radiobtnAdd.UseVisualStyleBackColor = true;
+            // 
+            // radiobtnSubtraction
+            // 
+            this.radiobtnSubtraction.AutoSize = true;
+            this.radiobtnSubtraction.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radiobtnSubtraction.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radiobtnSubtraction.Location = new System.Drawing.Point(244, 291);
+            this.radiobtnSubtraction.Name = "radiobtnSubtraction";
+            this.radiobtnSubtraction.Size = new System.Drawing.Size(42, 27);
+            this.radiobtnSubtraction.TabIndex = 4175;
+            this.radiobtnSubtraction.TabStop = true;
+            this.radiobtnSubtraction.Text = "-";
+            this.radiobtnSubtraction.UseVisualStyleBackColor = true;
+            // 
             // FormFractionAddSubtraction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 944);
+            this.Controls.Add(this.radiobtnSubtraction);
+            this.Controls.Add(this.radiobtnAdd);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -227,5 +257,7 @@ namespace BasicMathBase
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RadioButton radiobtnAdd;
+        private System.Windows.Forms.RadioButton radiobtnSubtraction;
     }
 }

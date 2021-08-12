@@ -50,6 +50,8 @@ namespace BasicMathBase
 
                 bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
 
+                System.Diagnostics.Debug.WriteLine(sistemAnswer.numberResult);
+
                 FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer.outputString);
                 openForm.Show();
             }

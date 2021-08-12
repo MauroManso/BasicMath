@@ -129,6 +129,8 @@ namespace BasicMathBase.CalcMethods
             long result = 0;
  
 
+
+
             return (output, result);
         }
 
@@ -570,6 +572,8 @@ namespace BasicMathBase.CalcMethods
                 alpha = ((alpha * k[n - 1] - va[n]) / (k[n + 1]));
                 n -= 2;
             }
+
+            if (alpha < 0) alpha += a;
 
             return "b⁻¹ mod a = " + alpha;
 

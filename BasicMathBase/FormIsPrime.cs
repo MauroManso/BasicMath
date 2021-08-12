@@ -39,7 +39,7 @@ namespace BasicMathBase
                     MessageBox.Show("\'" + num1 + "\' É um número composto",
                                         "É primo?",
                                         MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                                        MessageBoxIcon.None);
                 }
                 else
                 {
@@ -49,7 +49,7 @@ namespace BasicMathBase
                         MessageBox.Show("\'" + num1 + "\' É um número primo",
                                         "É primo?",
                                         MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                                        MessageBoxIcon.None);
                     }
                     else
                     {
@@ -57,7 +57,7 @@ namespace BasicMathBase
                         MessageBox.Show("\'" + num1 + "\' É um número composto",
                                         "É primo?",
                                         MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                                        MessageBoxIcon.None);
                     }
                 }
             }

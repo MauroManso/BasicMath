@@ -71,7 +71,7 @@ namespace BasicMathBase
             this.txtboxAnwser.Location = new System.Drawing.Point(358, 431);
             this.txtboxAnwser.Name = "txtboxAnwser";
             this.txtboxAnwser.Size = new System.Drawing.Size(126, 31);
-            this.txtboxAnwser.TabIndex = 4166;
+            this.txtboxAnwser.TabIndex = 1020;
             // 
             // lblToPowerOf
             // 
@@ -113,7 +113,7 @@ namespace BasicMathBase
             this.btnClear.Location = new System.Drawing.Point(674, 422);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
-            this.btnClear.TabIndex = 4168;
+            this.btnClear.TabIndex = 1040;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
@@ -124,14 +124,14 @@ namespace BasicMathBase
             this.txtboxBase.Location = new System.Drawing.Point(362, 343);
             this.txtboxBase.Name = "txtboxBase";
             this.txtboxBase.Size = new System.Drawing.Size(122, 31);
-            this.txtboxBase.TabIndex = 4164;
+            this.txtboxBase.TabIndex = 1001;
             // 
             // txtboxExpoent1
             // 
             this.txtboxExpoent1.Location = new System.Drawing.Point(362, 306);
             this.txtboxExpoent1.Name = "txtboxExpoent1";
             this.txtboxExpoent1.Size = new System.Drawing.Size(122, 31);
-            this.txtboxExpoent1.TabIndex = 4165;
+            this.txtboxExpoent1.TabIndex = 1000;
             // 
             // btnCalculate
             // 
@@ -143,7 +143,7 @@ namespace BasicMathBase
             this.btnCalculate.Location = new System.Drawing.Point(505, 422);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
-            this.btnCalculate.TabIndex = 4167;
+            this.btnCalculate.TabIndex = 1030;
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@ namespace BasicMathBase
             this.txtboxExpoent2.Location = new System.Drawing.Point(632, 306);
             this.txtboxExpoent2.Name = "txtboxExpoent2";
             this.txtboxExpoent2.Size = new System.Drawing.Size(122, 31);
-            this.txtboxExpoent2.TabIndex = 4172;
+            this.txtboxExpoent2.TabIndex = 1010;
             // 
             // FormMultiplyPowerSameBase
             // 

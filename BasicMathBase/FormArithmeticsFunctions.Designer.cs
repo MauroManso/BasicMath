@@ -81,9 +81,9 @@ namespace BasicMathBase
             this.btnClearTauN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearTauN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearTauN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearTauN.Location = new System.Drawing.Point(806, 320);
+            this.btnClearTauN.Location = new System.Drawing.Point(806, 316);
             this.btnClearTauN.Name = "btnClearTauN";
-            this.btnClearTauN.Size = new System.Drawing.Size(135, 47);
+            this.btnClearTauN.Size = new System.Drawing.Size(135, 55);
             this.btnClearTauN.TabIndex = 4140;
             this.btnClearTauN.Text = "Limpar";
             this.btnClearTauN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -92,7 +92,7 @@ namespace BasicMathBase
             // 
             // txtboxTauN
             // 
-            this.txtboxTauN.Location = new System.Drawing.Point(258, 329);
+            this.txtboxTauN.Location = new System.Drawing.Point(232, 329);
             this.txtboxTauN.Name = "txtboxTauN";
             this.txtboxTauN.Size = new System.Drawing.Size(101, 31);
             this.txtboxTauN.TabIndex = 4137;
@@ -102,11 +102,11 @@ namespace BasicMathBase
             this.lblTauN.AutoSize = true;
             this.lblTauN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblTauN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTauN.Location = new System.Drawing.Point(208, 326);
+            this.lblTauN.Location = new System.Drawing.Point(182, 326);
             this.lblTauN.Name = "lblTauN";
-            this.lblTauN.Size = new System.Drawing.Size(173, 32);
+            this.lblTauN.Size = new System.Drawing.Size(187, 32);
             this.lblTauN.TabIndex = 4138;
-            this.lblTauN.Text = "𝛕 (                  )";
+            this.lblTauN.Text = "𝛕 (                    )";
             // 
             // btnCalculateTauN
             // 
@@ -115,9 +115,9 @@ namespace BasicMathBase
             this.btnCalculateTauN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculateTauN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculateTauN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateTauN.Location = new System.Drawing.Point(643, 320);
+            this.btnCalculateTauN.Location = new System.Drawing.Point(643, 316);
             this.btnCalculateTauN.Name = "btnCalculateTauN";
-            this.btnCalculateTauN.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculateTauN.Size = new System.Drawing.Size(135, 55);
             this.btnCalculateTauN.TabIndex = 4139;
             this.btnCalculateTauN.Text = "Calcular";
             this.btnCalculateTauN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -165,9 +165,9 @@ namespace BasicMathBase
             this.btnClearSigmaN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearSigmaN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearSigmaN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearSigmaN.Location = new System.Drawing.Point(806, 427);
+            this.btnClearSigmaN.Location = new System.Drawing.Point(806, 423);
             this.btnClearSigmaN.Name = "btnClearSigmaN";
-            this.btnClearSigmaN.Size = new System.Drawing.Size(135, 47);
+            this.btnClearSigmaN.Size = new System.Drawing.Size(135, 55);
             this.btnClearSigmaN.TabIndex = 4162;
             this.btnClearSigmaN.Text = "Limpar";
             this.btnClearSigmaN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -176,7 +176,7 @@ namespace BasicMathBase
             // 
             // txtboxSigmaN
             // 
-            this.txtboxSigmaN.Location = new System.Drawing.Point(258, 436);
+            this.txtboxSigmaN.Location = new System.Drawing.Point(232, 436);
             this.txtboxSigmaN.Name = "txtboxSigmaN";
             this.txtboxSigmaN.Size = new System.Drawing.Size(101, 31);
             this.txtboxSigmaN.TabIndex = 4159;
@@ -186,11 +186,11 @@ namespace BasicMathBase
             this.lblSigmaN.AutoSize = true;
             this.lblSigmaN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblSigmaN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSigmaN.Location = new System.Drawing.Point(208, 433);
+            this.lblSigmaN.Location = new System.Drawing.Point(182, 433);
             this.lblSigmaN.Name = "lblSigmaN";
-            this.lblSigmaN.Size = new System.Drawing.Size(175, 32);
+            this.lblSigmaN.Size = new System.Drawing.Size(189, 32);
             this.lblSigmaN.TabIndex = 4160;
-            this.lblSigmaN.Text = "σ (                  )";
+            this.lblSigmaN.Text = "σ (                    )";
             // 
             // btnCalculateSigmaN
             // 
@@ -199,9 +199,9 @@ namespace BasicMathBase
             this.btnCalculateSigmaN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculateSigmaN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculateSigmaN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculateSigmaN.Location = new System.Drawing.Point(643, 427);
+            this.btnCalculateSigmaN.Location = new System.Drawing.Point(643, 423);
             this.btnCalculateSigmaN.Name = "btnCalculateSigmaN";
-            this.btnCalculateSigmaN.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculateSigmaN.Size = new System.Drawing.Size(135, 55);
             this.btnCalculateSigmaN.TabIndex = 4161;
             this.btnCalculateSigmaN.Text = "Calcular";
             this.btnCalculateSigmaN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -232,9 +232,9 @@ namespace BasicMathBase
             this.btnClearPhiN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearPhiN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearPhiN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearPhiN.Location = new System.Drawing.Point(806, 529);
+            this.btnClearPhiN.Location = new System.Drawing.Point(806, 525);
             this.btnClearPhiN.Name = "btnClearPhiN";
-            this.btnClearPhiN.Size = new System.Drawing.Size(135, 47);
+            this.btnClearPhiN.Size = new System.Drawing.Size(135, 55);
             this.btnClearPhiN.TabIndex = 4168;
             this.btnClearPhiN.Text = "Limpar";
             this.btnClearPhiN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -243,7 +243,7 @@ namespace BasicMathBase
             // 
             // txtboxPhiN
             // 
-            this.txtboxPhiN.Location = new System.Drawing.Point(258, 538);
+            this.txtboxPhiN.Location = new System.Drawing.Point(232, 538);
             this.txtboxPhiN.Name = "txtboxPhiN";
             this.txtboxPhiN.Size = new System.Drawing.Size(101, 31);
             this.txtboxPhiN.TabIndex = 4165;
@@ -253,11 +253,11 @@ namespace BasicMathBase
             this.lblPhiN.AutoSize = true;
             this.lblPhiN.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPhiN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPhiN.Location = new System.Drawing.Point(208, 535);
+            this.lblPhiN.Location = new System.Drawing.Point(182, 535);
             this.lblPhiN.Name = "lblPhiN";
-            this.lblPhiN.Size = new System.Drawing.Size(178, 32);
+            this.lblPhiN.Size = new System.Drawing.Size(192, 32);
             this.lblPhiN.TabIndex = 4166;
-            this.lblPhiN.Text = "φ (                  )";
+            this.lblPhiN.Text = "φ (                    )";
             // 
             // btnCalculatePhiN
             // 
@@ -266,9 +266,9 @@ namespace BasicMathBase
             this.btnCalculatePhiN.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculatePhiN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculatePhiN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculatePhiN.Location = new System.Drawing.Point(643, 529);
+            this.btnCalculatePhiN.Location = new System.Drawing.Point(643, 525);
             this.btnCalculatePhiN.Name = "btnCalculatePhiN";
-            this.btnCalculatePhiN.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculatePhiN.Size = new System.Drawing.Size(135, 55);
             this.btnCalculatePhiN.TabIndex = 4167;
             this.btnCalculatePhiN.Text = "Calcular";
             this.btnCalculatePhiN.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -22,6 +22,7 @@ namespace BasicMathBase
         private void customDesign()
         {
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+            radiobtnAdd.Checked = true;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -55,6 +56,8 @@ namespace BasicMathBase
                 userAnswerNumerator = Convert.ToInt64(txtboxAnswerNumerator.Text);
             }
             catch { }
+
+            if (radiobtnSubtraction.Checked) numerator2 *= -1;
 
             if (run)
             {

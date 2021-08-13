@@ -743,5 +743,57 @@ namespace BasicMathBase.CalcMethods
 
             return (outputNumerator, outputDenominator);
         }
+
+        public static string ScientficNotation(double num)
+        {
+            string scientficDoubleNotation;
+
+            scientficDoubleNotation = num.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
+
+        public static string AddScientficNotation(double num1, double num2, int expoent1, int expoent2)
+        {
+            string scientficDoubleNotation;
+            double num1Total = num1 * Math.Pow(10.0, Convert.ToDouble(expoent1));
+            double num2Total = num2 * Math.Pow(10.0, Convert.ToDouble(expoent2));
+
+            double result = num1Total + num2Total;
+
+            scientficDoubleNotation = result.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
+
+        public static string MultiplyScientficNotation(double num1, double num2, int expoent1, int expoent2)
+        {
+            string scientficDoubleNotation;
+            double num1Total = num1 * Math.Pow(10.0, Convert.ToDouble(expoent1));
+            double num2Total = num2 * Math.Pow(10.0, Convert.ToDouble(expoent2));
+
+            double result = num1Total * num2Total;
+
+            scientficDoubleNotation = result.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
+
+        public static string DivisionScientficNotation(double num1, double num2, int expoent1, int expoent2)
+        {
+            string scientficDoubleNotation;
+            double num1Total = num1 * Math.Pow(10.0, Convert.ToDouble(expoent1));
+            double num2Total = num2 * Math.Pow(10.0, Convert.ToDouble(expoent2));
+
+            double result = num1Total / num2Total;
+
+            scientficDoubleNotation = result.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
     }
 }

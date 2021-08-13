@@ -105,7 +105,7 @@ namespace BasicMathBase
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(591, 364);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
             this.btnClear.TabIndex = 4175;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -128,7 +128,7 @@ namespace BasicMathBase
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalculate.Location = new System.Drawing.Point(422, 364);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculate.Size = new System.Drawing.Size(135, 55);
             this.btnCalculate.TabIndex = 4174;
             this.btnCalculate.Text = "Corrigir";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -197,7 +197,7 @@ namespace BasicMathBase
             this.lblPlus.TabIndex = 4177;
             this.lblPlus.Text = "+";
             // 
-            // FormPowerBase10AddSubtraction1
+            // FormPowerBase10AddSubtraction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -218,7 +218,7 @@ namespace BasicMathBase
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormPowerBase10AddSubtraction1";
+            this.Name = "FormPowerBase10AddSubtraction";
             this.Text = "FormPowerBase10AddSubtraction1";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

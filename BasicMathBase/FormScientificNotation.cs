@@ -26,7 +26,32 @@ namespace BasicMathBase
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            double num = 0;
+            string userAnswer = txtboxAnwser.Text;
+            bool run = true;
+            try
+            {
+                num = Convert.ToDouble(txtboxN.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Insira um número válido",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                run = false;
+            }
 
+            if (run)
+            {
+                string sistemAnswer = MathMethods.ScientficNotation(num);
+                
+
+                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
+
+                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
+                openForm.Show();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

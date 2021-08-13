@@ -22,6 +22,7 @@ namespace BasicMathBase
         private void customDesign()
         {
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+            radiobtnAdd.Checked = true;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -56,14 +57,20 @@ namespace BasicMathBase
             }
             catch { }
 
+            if (radiobtnSubtraction.Checked) numerator2 *= -1;
+
             if (run)
             {
                 bool isCorrect = false;
                 string answer = "";
                 var systemAnswer = MathMethods.FractionAdd(numerator, denominator, numerator2, denominator2);
-                answer+= $"{systemAnswer.numerator}/{systemAnswer.denominator}";
 
-                if (userAnswerNumerator == systemAnswer.numerator && userAnswerDenominator == systemAnswer.denominator) isCorrect = true;
+                var reductionFraction = MathMethods.FractionReduction(systemAnswer.numerator, systemAnswer.denominator);
+
+                answer += $"{systemAnswer.numerator}/{systemAnswer.denominator}";
+                if(reductionFraction.numerator != 0 && reductionFraction.denominator != 0) answer += " ou " + reductionFraction.reductions;
+
+                if ((userAnswerNumerator == reductionFraction.numerator && userAnswerDenominator == reductionFraction.denominator) || (userAnswerNumerator == systemAnswer.numerator && userAnswerDenominator == systemAnswer.denominator)) isCorrect = true;
 
                 FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, answer);
                 openForm.Show();

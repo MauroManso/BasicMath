@@ -75,7 +75,7 @@ namespace BasicMathBase
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(723, 319);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
             this.btnClear.TabIndex = 4136;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -96,9 +96,9 @@ namespace BasicMathBase
             this.lblPix.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPix.Location = new System.Drawing.Point(318, 325);
             this.lblPix.Name = "lblPix";
-            this.lblPix.Size = new System.Drawing.Size(176, 32);
+            this.lblPix.Size = new System.Drawing.Size(190, 32);
             this.lblPix.TabIndex = 4134;
-            this.lblPix.Text = "π (                  )";
+            this.lblPix.Text = "π (                    )";
             // 
             // btnCalculatePix
             // 
@@ -109,7 +109,7 @@ namespace BasicMathBase
             this.btnCalculatePix.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalculatePix.Location = new System.Drawing.Point(549, 319);
             this.btnCalculatePix.Name = "btnCalculatePix";
-            this.btnCalculatePix.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculatePix.Size = new System.Drawing.Size(135, 55);
             this.btnCalculatePix.TabIndex = 4135;
             this.btnCalculatePix.Text = "Calcular";
             this.btnCalculatePix.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

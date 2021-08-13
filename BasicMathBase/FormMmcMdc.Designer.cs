@@ -77,7 +77,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwserMdc
             // 
-            this.txtboxAnwserMdc.Location = new System.Drawing.Point(596, 372);
+            this.txtboxAnwserMdc.Location = new System.Drawing.Point(543, 351);
             this.txtboxAnwserMdc.Name = "txtboxAnwserMdc";
             this.txtboxAnwserMdc.Size = new System.Drawing.Size(115, 31);
             this.txtboxAnwserMdc.TabIndex = 4158;
@@ -86,7 +86,7 @@ namespace BasicMathBase
             // 
             this.lblAnwserMdc.AutoSize = true;
             this.lblAnwserMdc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwserMdc.Location = new System.Drawing.Point(506, 372);
+            this.lblAnwserMdc.Location = new System.Drawing.Point(453, 351);
             this.lblAnwserMdc.Name = "lblAnwserMdc";
             this.lblAnwserMdc.Size = new System.Drawing.Size(84, 25);
             this.lblAnwserMdc.TabIndex = 4157;
@@ -94,7 +94,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwserMmc
             // 
-            this.txtboxAnwserMmc.Location = new System.Drawing.Point(596, 244);
+            this.txtboxAnwserMmc.Location = new System.Drawing.Point(543, 205);
             this.txtboxAnwserMmc.Name = "txtboxAnwserMmc";
             this.txtboxAnwserMmc.Size = new System.Drawing.Size(115, 31);
             this.txtboxAnwserMmc.TabIndex = 4156;
@@ -103,7 +103,7 @@ namespace BasicMathBase
             // 
             this.lblAnwserMmc.AutoSize = true;
             this.lblAnwserMmc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwserMmc.Location = new System.Drawing.Point(506, 244);
+            this.lblAnwserMmc.Location = new System.Drawing.Point(453, 205);
             this.lblAnwserMmc.Name = "lblAnwserMmc";
             this.lblAnwserMmc.Size = new System.Drawing.Size(84, 25);
             this.lblAnwserMmc.TabIndex = 4155;
@@ -116,9 +116,9 @@ namespace BasicMathBase
             this.btnCorrectMdc.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCorrectMdc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCorrectMdc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCorrectMdc.Location = new System.Drawing.Point(740, 345);
+            this.btnCorrectMdc.Location = new System.Drawing.Point(687, 312);
             this.btnCorrectMdc.Name = "btnCorrectMdc";
-            this.btnCorrectMdc.Size = new System.Drawing.Size(108, 43);
+            this.btnCorrectMdc.Size = new System.Drawing.Size(108, 55);
             this.btnCorrectMdc.TabIndex = 4154;
             this.btnCorrectMdc.Text = "Corrigir";
             this.btnCorrectMdc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -132,9 +132,9 @@ namespace BasicMathBase
             this.btnCorrectMmc.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCorrectMmc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCorrectMmc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCorrectMmc.Location = new System.Drawing.Point(740, 216);
+            this.btnCorrectMmc.Location = new System.Drawing.Point(687, 165);
             this.btnCorrectMmc.Name = "btnCorrectMmc";
-            this.btnCorrectMmc.Size = new System.Drawing.Size(108, 43);
+            this.btnCorrectMmc.Size = new System.Drawing.Size(108, 55);
             this.btnCorrectMmc.TabIndex = 4153;
             this.btnCorrectMmc.Text = "Corrigir";
             this.btnCorrectMmc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -148,9 +148,9 @@ namespace BasicMathBase
             this.btnClearMdc.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearMdc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearMdc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearMdc.Location = new System.Drawing.Point(740, 394);
+            this.btnClearMdc.Location = new System.Drawing.Point(687, 373);
             this.btnClearMdc.Name = "btnClearMdc";
-            this.btnClearMdc.Size = new System.Drawing.Size(108, 43);
+            this.btnClearMdc.Size = new System.Drawing.Size(108, 55);
             this.btnClearMdc.TabIndex = 4152;
             this.btnClearMdc.Text = "Limpar";
             this.btnClearMdc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -164,9 +164,9 @@ namespace BasicMathBase
             this.btnClearMmc.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClearMmc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClearMmc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClearMmc.Location = new System.Drawing.Point(740, 265);
+            this.btnClearMmc.Location = new System.Drawing.Point(687, 226);
             this.btnClearMmc.Name = "btnClearMmc";
-            this.btnClearMmc.Size = new System.Drawing.Size(108, 43);
+            this.btnClearMmc.Size = new System.Drawing.Size(108, 55);
             this.btnClearMmc.TabIndex = 4151;
             this.btnClearMmc.Text = "Limpar";
             this.btnClearMmc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -177,7 +177,7 @@ namespace BasicMathBase
             // 
             this.lblb2.AutoSize = true;
             this.lblb2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblb2.Location = new System.Drawing.Point(393, 372);
+            this.lblb2.Location = new System.Drawing.Point(340, 351);
             this.lblb2.Name = "lblb2";
             this.lblb2.Size = new System.Drawing.Size(27, 25);
             this.lblb2.TabIndex = 4150;
@@ -187,7 +187,7 @@ namespace BasicMathBase
             // 
             this.lblb1.AutoSize = true;
             this.lblb1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblb1.Location = new System.Drawing.Point(393, 247);
+            this.lblb1.Location = new System.Drawing.Point(340, 208);
             this.lblb1.Name = "lblb1";
             this.lblb1.Size = new System.Drawing.Size(27, 25);
             this.lblb1.TabIndex = 4149;
@@ -195,14 +195,14 @@ namespace BasicMathBase
             // 
             // txtboxMdcB
             // 
-            this.txtboxMdcB.Location = new System.Drawing.Point(424, 372);
+            this.txtboxMdcB.Location = new System.Drawing.Point(371, 351);
             this.txtboxMdcB.Name = "txtboxMdcB";
             this.txtboxMdcB.Size = new System.Drawing.Size(62, 31);
             this.txtboxMdcB.TabIndex = 4148;
             // 
             // txtboxMmcB
             // 
-            this.txtboxMmcB.Location = new System.Drawing.Point(424, 244);
+            this.txtboxMmcB.Location = new System.Drawing.Point(371, 205);
             this.txtboxMmcB.Name = "txtboxMmcB";
             this.txtboxMmcB.Size = new System.Drawing.Size(62, 31);
             this.txtboxMmcB.TabIndex = 4143;
@@ -211,7 +211,7 @@ namespace BasicMathBase
             // 
             this.lbla2.AutoSize = true;
             this.lbla2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbla2.Location = new System.Drawing.Point(271, 372);
+            this.lbla2.Location = new System.Drawing.Point(218, 351);
             this.lbla2.Name = "lbla2";
             this.lbla2.Size = new System.Drawing.Size(25, 25);
             this.lbla2.TabIndex = 4145;
@@ -221,7 +221,7 @@ namespace BasicMathBase
             // 
             this.lbla1.AutoSize = true;
             this.lbla1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbla1.Location = new System.Drawing.Point(271, 247);
+            this.lbla1.Location = new System.Drawing.Point(218, 208);
             this.lbla1.Name = "lbla1";
             this.lbla1.Size = new System.Drawing.Size(25, 25);
             this.lbla1.TabIndex = 4144;
@@ -229,14 +229,14 @@ namespace BasicMathBase
             // 
             // txtboxMdcA
             // 
-            this.txtboxMdcA.Location = new System.Drawing.Point(302, 372);
+            this.txtboxMdcA.Location = new System.Drawing.Point(249, 351);
             this.txtboxMdcA.Name = "txtboxMdcA";
             this.txtboxMdcA.Size = new System.Drawing.Size(59, 31);
             this.txtboxMdcA.TabIndex = 4147;
             // 
             // txtboxMmcA
             // 
-            this.txtboxMmcA.Location = new System.Drawing.Point(302, 244);
+            this.txtboxMmcA.Location = new System.Drawing.Point(249, 205);
             this.txtboxMmcA.Name = "txtboxMmcA";
             this.txtboxMmcA.Size = new System.Drawing.Size(59, 31);
             this.txtboxMmcA.TabIndex = 4142;
@@ -245,7 +245,7 @@ namespace BasicMathBase
             // 
             this.checkboxAlgoritmoEuclides.AutoSize = true;
             this.checkboxAlgoritmoEuclides.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkboxAlgoritmoEuclides.Location = new System.Drawing.Point(158, 443);
+            this.checkboxAlgoritmoEuclides.Location = new System.Drawing.Point(105, 422);
             this.checkboxAlgoritmoEuclides.Name = "checkboxAlgoritmoEuclides";
             this.checkboxAlgoritmoEuclides.Size = new System.Drawing.Size(216, 29);
             this.checkboxAlgoritmoEuclides.TabIndex = 4146;
@@ -257,7 +257,7 @@ namespace BasicMathBase
             this.lblmmc.AutoSize = true;
             this.lblmmc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblmmc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblmmc.Location = new System.Drawing.Point(173, 244);
+            this.lblmmc.Location = new System.Drawing.Point(120, 205);
             this.lblmmc.Name = "lblmmc";
             this.lblmmc.Size = new System.Drawing.Size(58, 28);
             this.lblmmc.TabIndex = 4144;
@@ -268,7 +268,7 @@ namespace BasicMathBase
             this.lblMdc.AutoSize = true;
             this.lblMdc.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblMdc.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMdc.Location = new System.Drawing.Point(173, 369);
+            this.lblMdc.Location = new System.Drawing.Point(120, 348);
             this.lblMdc.Name = "lblMdc";
             this.lblMdc.Size = new System.Drawing.Size(52, 28);
             this.lblMdc.TabIndex = 4144;

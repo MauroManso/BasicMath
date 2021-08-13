@@ -14,6 +14,18 @@ namespace BasicMathBase.CalcMethods
             else return false;
         }
 
+        public static List<int> GetIntArray(long num)
+        {
+            List<int> listOfInts = new List<int>();
+            while (num > 0)
+            {
+                listOfInts.Add(Convert.ToInt32(num % 10));
+                num = num / 10;
+            }
+            listOfInts.Reverse();
+            return listOfInts;
+        }
+
         public static string ToPower(long powerBase, long expoent)
         {
             string output = "";
@@ -123,13 +135,101 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
-        public static (string outputString, long numberResult) SubtractionAlgorithm(long minuend, long subtrahend)
+        public static (string outputString, long numberResult, List<int>nonPositiveLocation) SubtractionAlgorithm(long minuend, long subtrahend)
         {
             string output = "";
             long result = 0;
- 
 
-            return (output, result);
+            output += "   " + minuend + "\n";
+            output += " - " + subtrahend + "\n";
+
+            var minuedList = GetIntArray(minuend);
+            var subtrahendList = GetIntArray(subtrahend);
+
+            output += "------";
+            foreach (int num in minuedList) output += "-";
+            output +="\n";
+
+            var line1List = new List<int>();
+            var line1IsPositiveList = new List<bool>();
+            var line2List = new List<int>();
+            var line2IsPositiveList = new List<bool>();
+
+            var nonPositiveLocation = new List<int>();
+
+            for (int i = 0; i < minuedList.Count; i++)
+            {
+                line1List.Add(minuedList[i] - subtrahendList[i]);
+
+                if (minuedList[i] < subtrahendList[i]) {
+                    line1IsPositiveList.Add(false);
+                    line1List[i] *= -1;
+                }
+                else line1IsPositiveList.Add(true);
+
+                if(i == 0)
+                {
+                    line2List.Add(1);
+                    line2IsPositiveList.Add(false);
+                }
+
+                if(i < (minuedList.Count - 1))
+                {
+                    line2List.Add(9);
+                    line2IsPositiveList.Add(true);
+                }
+                else
+                {
+                    line2List.Add(10);
+                    line2IsPositiveList.Add(true);
+                }
+            }
+            output += "   ";
+            for (int i = 0; i < line1List.Count; i++)
+            {
+                output += line1List[i];
+                if (!line1IsPositiveList[i]) nonPositiveLocation.Add(output.Length);
+            }
+            output += "\n";
+
+            output += " + ";
+            for (int i = 0; i < line2List.Count; i++)
+            {
+                output += line2List[i];
+                if (!line2IsPositiveList[i]) nonPositiveLocation.Add(output.Length);
+            }
+
+            output += "\n------";
+            foreach (int num in minuedList) output += "-";
+            output += "\n";
+
+            var finalLineList = new List<int>();
+
+            for (int i = 0; i < line1List.Count; i++)
+            {
+                int tempList1Num = line1List[i];
+                int tempList2Num = line2List[i];
+                if (!line1IsPositiveList[i]) tempList1Num = line1List[i] * (-1);
+                if (!line2IsPositiveList[i]) tempList2Num = line2List[i] * (-1);
+
+                finalLineList.Add(tempList1Num + tempList2Num);
+            }
+
+            foreach (int num in finalLineList) output += num;
+
+            string tempResult = "";
+            output += "   ";
+            foreach (int a in finalLineList) tempResult += a;
+            try
+            {
+                result = Convert.ToInt64(tempResult);
+            }
+            catch
+            {
+                result = 0;
+            }
+
+            return (output, result, nonPositiveLocation);
         }
 
         public static (string outputString, long numberResult) EgyptianMultiplyAlgorithm(long factor1, long factor2)
@@ -191,17 +291,6 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
-        public static List<int> GetIntArray(int num)
-        {
-            List<int> listOfInts = new List<int>();
-            while (num > 0)
-            {
-                listOfInts.Add(num % 10);
-                num = num / 10;
-            }
-            listOfInts.Reverse();
-            return listOfInts;
-        }
 
         public static (string outputString, long numberResult) MatrixMultiplyAlgorithm(int factor1, int factor2)
         {
@@ -213,7 +302,6 @@ namespace BasicMathBase.CalcMethods
                 if (factor1List.Count > factor2List.Count) factor2List.Insert(0, 0);
                 if (factor2List.Count > factor1List.Count) factor1List.Insert(0, 0);
             }
-            
 
             var matrix = new List<List<int>>();
             var matrixSumList = new List<List<int>>();
@@ -240,31 +328,41 @@ namespace BasicMathBase.CalcMethods
                 output += Environment.NewLine;
             }
 
+            for (int i = 0; i < matrix.Count; i++)
+            {
+                for (int j = 0; j < matrix.Count; j++)
+                {
+                    System.Diagnostics.Debug.Write($"{matrix[i][j]} ");
+                }
+                System.Diagnostics.Debug.Write($"\n");
+            }
+
+            System.Diagnostics.Debug.Write($"\n");
+
             output += Environment.NewLine;
 
+            var diagonalsList = matrix.SelectMany((row, rowIdx) =>
+                    row.Select((x, colIdx) => new { Key = rowIdx - colIdx, Value = x }))
+                .GroupBy(x => x.Key, (key, values) => values.Select(i => i.Value).ToArray())
+                .ToArray();
+
+            var diagonalListBySize = diagonalsList.OrderByDescending(l => l.Length);
+
+
             var tempLine = new List<int>();
-            tempLine.Add(matrix[0][0]);
-            tempLine.Add(matrix[1][1]);
-            tempLine.Add(matrix[2][2]);
-            matrixSumList.Add(tempLine);
+            foreach (var itemList in diagonalListBySize)
+            {
+                tempLine = new List<int>();
+                foreach (var item in itemList)
+                {
+                    System.Diagnostics.Debug.Write($"{item} ");
+                    tempLine.Add(item);
+                }
+                System.Diagnostics.Debug.Write("\n");
+                matrixSumList.Add(tempLine);
+            }
 
-            tempLine = new List<int>();
-            tempLine.Add(matrix[1][0]);
-            tempLine.Add(matrix[2][1]);
-            matrixSumList.Add(tempLine);
-
-            tempLine = new List<int>();
-            tempLine.Add(matrix[0][1]);
-            tempLine.Add(matrix[1][2]);
-            matrixSumList.Add(tempLine);
-
-            tempLine = new List<int>();
-            tempLine.Add(matrix[2][0]);
-            matrixSumList.Add(tempLine);
-
-            tempLine = new List<int>();
-            tempLine.Add(matrix[0][2]);
-            matrixSumList.Add(tempLine);
+            var list = diagonalListBySize.Select(mList => string.Join("", mList)).ToList();
 
             long result = 0;
             int lineCount = 0;
@@ -275,21 +373,32 @@ namespace BasicMathBase.CalcMethods
                 output += "\t";
                 foreach (int num in line)
                 {
-                    if (lineCount >= 1 && isFirst) output += "  ";
-                    if (lineCount >= 3 && isFirst) output += "  ";
+                    for(int i = 0; i < ((lineCount+1)/2); i++)
+                    {
+                        if(isFirst ) output += "  ";
+                    }
                     if (num < 10)
                         output += "0";
                     output += "" + num;
                     matrixSumLine += "" + num;
-                    if (lineCount >= 1 && !isFirst) matrixSumLine += "0";
-                    if (lineCount >= 3) matrixSumLine += "00";
                     isFirst = false;
                 }
+                for(int i = 1; i <= ((lineCount + 1)/2); i++)
+                {
+                    matrixSumLine += "0";
+                }
+
                 result += Convert.ToInt64(matrixSumLine);
                 lineCount++;
                 output += Environment.NewLine;
             }
-            output += "\t----------" + Environment.NewLine;
+            output += "\t--";
+
+            for (int i = 0; i < GetIntArray(result).Count; i++)
+            {
+                output += "-";
+            }
+            output += "--" + Environment.NewLine;
             output += "\t " + result;
 
 
@@ -379,7 +488,6 @@ namespace BasicMathBase.CalcMethods
             }
             return (primesList, numberOfPrimes);
         }
-
 
         public static string ProductPrime(int num)
         {
@@ -551,6 +659,8 @@ namespace BasicMathBase.CalcMethods
                 n -= 2;
             }
 
+            if (alpha < 0) alpha += a;
+
             return "b⁻¹ mod a = " + alpha;
 
         }
@@ -718,6 +828,103 @@ namespace BasicMathBase.CalcMethods
             outputDenominator = Convert.ToInt32(Math.Pow(denominator1, expoent));
 
             return (outputNumerator, outputDenominator);
+        }
+
+        static int gcd(int a, int b)
+        {
+            //find the gcd using the Euclid’s algorithm
+            while (a != b)
+                if (a < b) b = b - a;
+                else a = a - b;
+            //since at this point a=b, the gcd can be either of them
+            //it is necessary to pass the gcd to the main function
+            return (a);
+        }
+
+        static int division(int a, int b)
+        {
+            int remainder = a, quotient = 0;
+            while (remainder >= b)
+            {
+                remainder = remainder - b;
+                quotient++;
+            }
+            return (quotient);
+        }
+
+        public static (string reductions, int numerator, int denominator)FractionReduction(int numerator, int denominator)
+        {
+            string output = "";
+            int reducedNumerator = 0;
+            int reducedDenominator = 0;
+
+            int divisor = gcd(numerator, denominator);
+
+            //if the divisor (gcd) = 1, the fraction can not be reduced any further
+            //as there is no number to divide the numerator and denominator by
+            if (divisor != 1)
+            {
+                //in order to reduce the fraction, it needs to be divided by its gcd
+                //in the program gcd = divisor
+                reducedNumerator = division(numerator, divisor);
+                reducedDenominator = division(denominator, divisor);
+                output += $"{reducedNumerator}/{reducedDenominator}";
+            }
+
+
+            return (output, reducedNumerator, reducedDenominator);
+        }
+
+        public static string ScientficNotation(double num)
+        {
+            string scientficDoubleNotation;
+
+            scientficDoubleNotation = num.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
+
+        public static string AddScientficNotation(double num1, double num2, int expoent1, int expoent2)
+        {
+            string scientficDoubleNotation;
+            double num1Total = num1 * Math.Pow(10.0, Convert.ToDouble(expoent1));
+            double num2Total = num2 * Math.Pow(10.0, Convert.ToDouble(expoent2));
+
+            double result = num1Total + num2Total;
+
+            scientficDoubleNotation = result.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
+
+        public static string MultiplyScientficNotation(double num1, double num2, int expoent1, int expoent2)
+        {
+            string scientficDoubleNotation;
+            double num1Total = num1 * Math.Pow(10.0, Convert.ToDouble(expoent1));
+            double num2Total = num2 * Math.Pow(10.0, Convert.ToDouble(expoent2));
+
+            double result = num1Total * num2Total;
+
+            scientficDoubleNotation = result.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
+        }
+
+        public static string DivisionScientficNotation(double num1, double num2, int expoent1, int expoent2)
+        {
+            string scientficDoubleNotation;
+            double num1Total = num1 * Math.Pow(10.0, Convert.ToDouble(expoent1));
+            double num2Total = num2 * Math.Pow(10.0, Convert.ToDouble(expoent2));
+
+            double result = num1Total / num2Total;
+
+            scientficDoubleNotation = result.ToString("0.00000E0");
+            var output = scientficDoubleNotation.Replace("E", ".10^");
+
+            return output;
         }
     }
 }

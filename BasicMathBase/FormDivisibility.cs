@@ -32,6 +32,8 @@ namespace BasicMathBase
             long divisor = 0;
             string userAnswer;
             bool run = true;
+            bool userAnsweriIsDivisionExact = false;
+
             try
             {
                 dividend = Convert.ToInt64(txtboxDividend.Text);
@@ -46,28 +48,36 @@ namespace BasicMathBase
                 run = false;
             }
             userAnswer = txtboxQuotient.Text;
+            if (radiobtnDivisionExact.Checked) userAnsweriIsDivisionExact = true;
 
             if (run)
             {
                 long systemAnswerRest;
                 long systemAnswerQuotient;
-                float systemAnswerQuotientNonExact;
                 bool isCorrect = false;
                 string sistemAnswer = "";
+
                 try
                 {
-                    if (radiobtnDivisionExact.Checked)
+                    if (dividend % divisor == 0)
                     {
-                        systemAnswerRest = dividend % divisor;
                         systemAnswerQuotient = dividend / divisor;
+
                         isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(systemAnswerQuotient));
-                        sistemAnswer = "Quociente = " + Convert.ToString(systemAnswerQuotient) + "\nResto =  " + Convert.ToString(systemAnswerRest);
+                        if (radiobtnDivisionNonExact.Checked) isCorrect = false;
+                        if (txtboxRest.Text != "") isCorrect = false;
+
+                        sistemAnswer = "Quociente = " + Convert.ToString(systemAnswerQuotient) + "\nDivisão exata";
                     }
                     else
                     {
-                        systemAnswerQuotientNonExact = dividend / divisor;
-                        isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(systemAnswerQuotientNonExact));
-                        sistemAnswer = Convert.ToString(systemAnswerQuotientNonExact);
+                        systemAnswerRest = dividend % divisor;
+                        systemAnswerQuotient = dividend / divisor;
+
+                        isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(systemAnswerQuotient));
+                        if (radiobtnDivisionExact.Checked) isCorrect = false;
+
+                        sistemAnswer = "Quociente = " + Convert.ToString(systemAnswerQuotient) + "\nResto =  " + Convert.ToString(systemAnswerRest) + "\nDivisão não exata";
                     }
                 }
                 catch { }

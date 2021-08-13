@@ -1,7 +1,7 @@
 ﻿
 namespace BasicMathBase
 {
-    partial class FormAnswerTxtBox
+    partial class FormAnswerRichTxtBox
     {
         /// <summary>
         /// Required designer variable.
@@ -39,11 +39,12 @@ namespace BasicMathBase
             this.lblIsCorrect.AutoSize = true;
             this.lblIsCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblIsCorrect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblIsCorrect.Location = new System.Drawing.Point(398, 72);
+            this.lblIsCorrect.Location = new System.Drawing.Point(388, 65);
             this.lblIsCorrect.Name = "lblIsCorrect";
             this.lblIsCorrect.Size = new System.Drawing.Size(260, 32);
-            this.lblIsCorrect.TabIndex = 10;
+            this.lblIsCorrect.TabIndex = 13;
             this.lblIsCorrect.Text = "Resposta Correta!";
+            this.lblIsCorrect.Click += new System.EventHandler(this.lblIsCorrect_Click);
             // 
             // btnGetAnswer
             // 
@@ -52,10 +53,10 @@ namespace BasicMathBase
             this.btnGetAnswer.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGetAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnGetAnswer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGetAnswer.Location = new System.Drawing.Point(398, 563);
+            this.btnGetAnswer.Location = new System.Drawing.Point(368, 542);
             this.btnGetAnswer.Name = "btnGetAnswer";
             this.btnGetAnswer.Size = new System.Drawing.Size(280, 65);
-            this.btnGetAnswer.TabIndex = 9;
+            this.btnGetAnswer.TabIndex = 12;
             this.btnGetAnswer.Text = "Obter Resposta";
             this.btnGetAnswer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGetAnswer.UseVisualStyleBackColor = true;
@@ -66,14 +67,13 @@ namespace BasicMathBase
             this.richTextBoxAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxAnswer.ForeColor = System.Drawing.Color.Black;
-            this.richTextBoxAnswer.Location = new System.Drawing.Point(84, 153);
+            this.richTextBoxAnswer.Location = new System.Drawing.Point(105, 131);
             this.richTextBoxAnswer.Name = "richTextBoxAnswer";
-            this.richTextBoxAnswer.Size = new System.Drawing.Size(908, 373);
-            this.richTextBoxAnswer.TabIndex = 11;
+            this.richTextBoxAnswer.Size = new System.Drawing.Size(861, 371);
+            this.richTextBoxAnswer.TabIndex = 14;
             this.richTextBoxAnswer.Text = "";
             // 
-            // FormAnswerTxtBox
+            // FormAnswerRichTxtBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,8 +83,8 @@ namespace BasicMathBase
             this.Controls.Add(this.lblIsCorrect);
             this.Controls.Add(this.btnGetAnswer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Name = "FormAnswerTxtBox";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Name = "FormAnswerRichTxtBox";
+            this.Text = "FormAnswerRichTxtBox";
             this.ResumeLayout(false);
             this.PerformLayout();
 

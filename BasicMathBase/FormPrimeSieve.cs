@@ -100,17 +100,6 @@ namespace BasicMathBase
             lblNumberOfPrimes.Visible = true;
         }
 
-
-
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            richTextBoxLista.Text = "";
-            txtboxUpToPrime.Text = "";
-            lblNumberOfPrimes.Visible = false;
-            lblTimeElapsed.Visible = false;
-            lblPercentage.Visible = false;
-        }
-
         public class PCPrint : System.Drawing.Printing.PrintDocument
         {
             #region  Property Variables 
@@ -319,6 +308,15 @@ namespace BasicMathBase
             //Issue print command
             printer.Print();
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            richTextBoxLista.Text = "";
+            txtboxUpToPrime.Text = "";
+            lblNumberOfPrimes.Visible = false;
+            lblTimeElapsed.Visible = false;
+            lblPercentage.Visible = false;
         }
     }
 }

@@ -51,7 +51,7 @@ namespace BasicMathBase
             {
                 string sistemAnswer = $"{powerBase} ^ {(expoent1 + expoent2)} = " + MathMethods.ToPower(powerBase, (expoent1 + expoent2));
 
-                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
+                bool isCorrect = MathMethods.Correction(userAnswer, MathMethods.ToPower(powerBase, (expoent1 + expoent2)));
 
                 FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
                 openForm.Show();

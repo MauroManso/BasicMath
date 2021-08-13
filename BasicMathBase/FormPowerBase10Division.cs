@@ -26,7 +26,39 @@ namespace BasicMathBase
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            double num1 = 0;
+            double num2 = 0;
+            int expoent1 = 0;
+            int expoent2 = 0;
 
+            string userAnswer = txtboxAnwser.Text;
+            bool run = true;
+            try
+            {
+                num1 = Convert.ToDouble(txtboxN1.Text);
+                num2 = Convert.ToDouble(txtboxN2.Text);
+                expoent1 = Convert.ToInt32(txtboxN1x10ToPowerOf.Text);
+                expoent2 = Convert.ToInt32(txtboxN2x10ToPowerOf.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Insira um número válido",
+                            "Erro",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+                run = false;
+            }
+
+            if (run)
+            {
+                string sistemAnswer = MathMethods.DivisionScientficNotation(num1, num2, expoent1, expoent2);
+
+
+                bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
+
+                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
+                openForm.Show();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)

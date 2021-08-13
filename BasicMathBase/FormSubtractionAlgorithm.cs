@@ -44,13 +44,19 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
                 run = false;
             }
+
+            if(minuend.ToString().Length != subtrahend.ToString().Length) run = false;
+
             if (run)
             {
                 var sistemAnswer = MathMethods.SubtractionAlgorithm(minuend, subtrahend);
 
                 bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
 
-                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer.outputString);
+                System.Diagnostics.Debug.WriteLine(sistemAnswer.numberResult);
+
+
+                FormAnswerRichTxtBox openForm = new FormAnswerRichTxtBox(isCorrect, sistemAnswer.outputString, sistemAnswer.nonPositiveLocation);
                 openForm.Show();
             }
         }

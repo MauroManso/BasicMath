@@ -41,9 +41,10 @@ namespace BasicMathBase
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
             }
+            string answer = $"a = {a} b = {b} \n";
             if (a > 0 && b > 0)
             {
-                string answer = Convert.ToString(MathMethods.Mmc(a, b));
+                answer = Convert.ToString(MathMethods.Mmc(a, b));
 
                 if (txtboxAnwserMmc.Text == answer)
                 {
@@ -82,11 +83,12 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
             }
 
+            string answer = $"a = {a} b = {b} \n";
             if (a > 0 && b > 0)
             {
                 if (checkboxAlgoritmoEuclides.Checked)
                 {
-                    string answer = MathMethods.MdcAlgoritmoEuclides(a, b);
+                    answer += MathMethods.MdcAlgoritmoEuclides(a, b);
                     bool isCorrect = false;
 
                     if (txtboxAnwserMdc.Text == Convert.ToString(MathMethods.Mdc(a, b)))
@@ -105,7 +107,7 @@ namespace BasicMathBase
                 }
                 else
                 {
-                    string answer = Convert.ToString(MathMethods.Mdc(a, b));
+                    answer = Convert.ToString(MathMethods.Mdc(a, b));
 
                     if (txtboxAnwserMdc.Text == answer)
                     {

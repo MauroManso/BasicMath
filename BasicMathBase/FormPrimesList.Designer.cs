@@ -31,7 +31,7 @@ namespace BasicMathBase
         {
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtboxList = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lblPercentage = new System.Windows.Forms.Label();
             this.lblTimeElapsed = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -42,11 +42,15 @@ namespace BasicMathBase
             this.txtboxBeginPrime = new System.Windows.Forms.TextBox();
             this.lbl_Lista = new System.Windows.Forms.Label();
             this.lblNumberOfPrimes = new System.Windows.Forms.Label();
+            this.txtboxList = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -67,37 +71,42 @@ namespace BasicMathBase
             this.panel3.Size = new System.Drawing.Size(1128, 95);
             this.panel3.TabIndex = 27;
             // 
-            // txtboxList
+            // panel1
             // 
-            this.txtboxList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(67)))), ((int)(((byte)(97)))));
-            this.txtboxList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtboxList.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtboxList.Location = new System.Drawing.Point(0, 330);
-            this.txtboxList.Multiline = true;
-            this.txtboxList.Name = "txtboxList";
-            this.txtboxList.ReadOnly = true;
-            this.txtboxList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtboxList.Size = new System.Drawing.Size(1128, 564);
-            this.txtboxList.TabIndex = 4151;
+            this.panel1.Controls.Add(this.lblPercentage);
+            this.panel1.Controls.Add(this.lblTimeElapsed);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.txtboxUpToPrime);
+            this.panel1.Controls.Add(this.lbl_AtePrimo);
+            this.panel1.Controls.Add(this.btnListPrime);
+            this.panel1.Controls.Add(this.txtboxBeginPrime);
+            this.panel1.Controls.Add(this.lbl_Lista);
+            this.panel1.Controls.Add(this.lblNumberOfPrimes);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1128, 245);
+            this.panel1.TabIndex = 28;
             // 
             // lblPercentage
             // 
             this.lblPercentage.AutoSize = true;
             this.lblPercentage.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPercentage.Location = new System.Drawing.Point(516, 259);
+            this.lblPercentage.Location = new System.Drawing.Point(517, 175);
             this.lblPercentage.Name = "lblPercentage";
             this.lblPercentage.Size = new System.Drawing.Size(42, 25);
-            this.lblPercentage.TabIndex = 4149;
+            this.lblPercentage.TabIndex = 4159;
             this.lblPercentage.Text = "0 %";
             // 
             // lblTimeElapsed
             // 
             this.lblTimeElapsed.AutoSize = true;
             this.lblTimeElapsed.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTimeElapsed.Location = new System.Drawing.Point(642, 231);
+            this.lblTimeElapsed.Location = new System.Drawing.Point(643, 147);
             this.lblTimeElapsed.Name = "lblTimeElapsed";
             this.lblTimeElapsed.Size = new System.Drawing.Size(181, 25);
-            this.lblTimeElapsed.TabIndex = 4150;
+            this.lblTimeElapsed.TabIndex = 4160;
             this.lblTimeElapsed.Text = "Tempo passado: 0Ms";
             // 
             // btnClear
@@ -107,10 +116,10 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(902, 152);
+            this.btnClear.Location = new System.Drawing.Point(899, 64);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
-            this.btnClear.TabIndex = 4147;
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
+            this.btnClear.TabIndex = 4157;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClear.UseVisualStyleBackColor = true;
@@ -123,10 +132,10 @@ namespace BasicMathBase
             this.btnPrint.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.Location = new System.Drawing.Point(90, 219);
+            this.btnPrint.Location = new System.Drawing.Point(73, 64);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(135, 47);
-            this.btnPrint.TabIndex = 4148;
+            this.btnPrint.Size = new System.Drawing.Size(135, 55);
+            this.btnPrint.TabIndex = 4158;
             this.btnPrint.Text = "Imprimir";
             this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -134,19 +143,19 @@ namespace BasicMathBase
             // 
             // txtboxUpToPrime
             // 
-            this.txtboxUpToPrime.Location = new System.Drawing.Point(553, 161);
+            this.txtboxUpToPrime.Location = new System.Drawing.Point(554, 77);
             this.txtboxUpToPrime.Name = "txtboxUpToPrime";
             this.txtboxUpToPrime.Size = new System.Drawing.Size(101, 31);
-            this.txtboxUpToPrime.TabIndex = 4143;
+            this.txtboxUpToPrime.TabIndex = 4153;
             // 
             // lbl_AtePrimo
             // 
             this.lbl_AtePrimo.AutoSize = true;
             this.lbl_AtePrimo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_AtePrimo.Location = new System.Drawing.Point(504, 164);
+            this.lbl_AtePrimo.Location = new System.Drawing.Point(505, 80);
             this.lbl_AtePrimo.Name = "lbl_AtePrimo";
             this.lbl_AtePrimo.Size = new System.Drawing.Size(43, 25);
-            this.lbl_AtePrimo.TabIndex = 4145;
+            this.lbl_AtePrimo.TabIndex = 4155;
             this.lbl_AtePrimo.Text = "Até:";
             // 
             // btnListPrime
@@ -156,10 +165,10 @@ namespace BasicMathBase
             this.btnListPrime.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnListPrime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnListPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListPrime.Location = new System.Drawing.Point(706, 152);
+            this.btnListPrime.Location = new System.Drawing.Point(705, 64);
             this.btnListPrime.Name = "btnListPrime";
-            this.btnListPrime.Size = new System.Drawing.Size(135, 47);
-            this.btnListPrime.TabIndex = 4146;
+            this.btnListPrime.Size = new System.Drawing.Size(135, 55);
+            this.btnListPrime.TabIndex = 4156;
             this.btnListPrime.Text = "Listar";
             this.btnListPrime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnListPrime.UseVisualStyleBackColor = true;
@@ -167,30 +176,42 @@ namespace BasicMathBase
             // 
             // txtboxBeginPrime
             // 
-            this.txtboxBeginPrime.Location = new System.Drawing.Point(394, 161);
+            this.txtboxBeginPrime.Location = new System.Drawing.Point(395, 77);
             this.txtboxBeginPrime.Name = "txtboxBeginPrime";
             this.txtboxBeginPrime.Size = new System.Drawing.Size(92, 31);
-            this.txtboxBeginPrime.TabIndex = 4142;
+            this.txtboxBeginPrime.TabIndex = 4152;
             // 
             // lbl_Lista
             // 
             this.lbl_Lista.AutoSize = true;
             this.lbl_Lista.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Lista.Location = new System.Drawing.Point(292, 164);
+            this.lbl_Lista.Location = new System.Drawing.Point(293, 80);
             this.lbl_Lista.Name = "lbl_Lista";
             this.lbl_Lista.Size = new System.Drawing.Size(96, 25);
-            this.lbl_Lista.TabIndex = 4144;
+            this.lbl_Lista.TabIndex = 4154;
             this.lbl_Lista.Text = "Primos de:";
             // 
             // lblNumberOfPrimes
             // 
             this.lblNumberOfPrimes.AutoSize = true;
             this.lblNumberOfPrimes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNumberOfPrimes.Location = new System.Drawing.Point(325, 231);
+            this.lblNumberOfPrimes.Location = new System.Drawing.Point(326, 147);
             this.lblNumberOfPrimes.Name = "lblNumberOfPrimes";
             this.lblNumberOfPrimes.Size = new System.Drawing.Size(102, 25);
-            this.lblNumberOfPrimes.TabIndex = 4141;
+            this.lblNumberOfPrimes.TabIndex = 4151;
             this.lblNumberOfPrimes.Text = "quantidade";
+            // 
+            // txtboxList
+            // 
+            this.txtboxList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxList.Location = new System.Drawing.Point(30, 346);
+            this.txtboxList.Multiline = true;
+            this.txtboxList.Name = "txtboxList";
+            this.txtboxList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtboxList.Size = new System.Drawing.Size(1069, 518);
+            this.txtboxList.TabIndex = 29;
             // 
             // FormPrimesList
             // 
@@ -199,22 +220,15 @@ namespace BasicMathBase
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 894);
             this.Controls.Add(this.txtboxList);
-            this.Controls.Add(this.lblPercentage);
-            this.Controls.Add(this.lblTimeElapsed);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.txtboxUpToPrime);
-            this.Controls.Add(this.lbl_AtePrimo);
-            this.Controls.Add(this.btnListPrime);
-            this.Controls.Add(this.txtboxBeginPrime);
-            this.Controls.Add(this.lbl_Lista);
-            this.Controls.Add(this.lblNumberOfPrimes);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrimesList";
             this.Text = "FormPrimesList";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +238,7 @@ namespace BasicMathBase
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtboxList;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPercentage;
         private System.Windows.Forms.Label lblTimeElapsed;
         private System.Windows.Forms.Button btnClear;
@@ -235,5 +249,6 @@ namespace BasicMathBase
         private System.Windows.Forms.TextBox txtboxBeginPrime;
         private System.Windows.Forms.Label lbl_Lista;
         private System.Windows.Forms.Label lblNumberOfPrimes;
+        private System.Windows.Forms.TextBox txtboxList;
     }
 }

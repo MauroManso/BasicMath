@@ -73,23 +73,34 @@ namespace BasicMathBase.CalcMethods
             int numerator = 1;
             int k = 0;
             bool run = true;
-            int resto;
-            int restoNegativo;
+            int rest;
+            int negativeRest;
+            int lastRest = 0;
+            int loopCounter = 0;
 
             int i = 0;
             while (run)
             {
-                resto = numerator % denominator;
-                restoNegativo = resto - denominator;
-                if ((resto == 1) && i >= 1) 
+                rest = numerator % denominator;
+                if (lastRest == rest) loopCounter++;
+                negativeRest = rest - denominator;
+                if ((rest == 1) && i >= 1) 
                 {
                     run = false;
                     output += $" Ciclo {k}";
                 }else
                     k++;
-                output += String.Format("\n\t10^{0,3}\t= {1,3}\t≡ {2,3}\t({3,3})\t mod {4,3}\t ", i, numerator, resto, restoNegativo, denominator);
-                numerator = resto * 10;
+                output += String.Format("\n\t10^{0,3}\t= {1,3}\t≡ {2,3}\t({3,3})\t mod {4,3}\t ", i, numerator, rest, negativeRest, denominator);
+                numerator = rest * 10;
                 i += 1;
+
+                if(loopCounter >= 2)
+                {
+                    output += $" Não Cíclico";
+                    break;
+                }
+
+                lastRest = rest;
                 
             }
 

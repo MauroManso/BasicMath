@@ -14,6 +14,18 @@ namespace BasicMathBase.CalcMethods
             else return false;
         }
 
+        public static List<int> GetIntArray(long num)
+        {
+            List<int> listOfInts = new List<int>();
+            while (num > 0)
+            {
+                listOfInts.Add(Convert.ToInt32(num % 10));
+                num = num / 10;
+            }
+            listOfInts.Reverse();
+            return listOfInts;
+        }
+
         public static string ToPower(long powerBase, long expoent)
         {
             string output = "";
@@ -123,15 +135,101 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
-        public static (string outputString, long numberResult) SubtractionAlgorithm(long minuend, long subtrahend)
+        public static (string outputString, long numberResult, List<int>nonPositiveLocation) SubtractionAlgorithm(long minuend, long subtrahend)
         {
             string output = "";
             long result = 0;
- 
 
+            output += "   " + minuend + "\n";
+            output += " - " + subtrahend + "\n";
 
+            var minuedList = GetIntArray(minuend);
+            var subtrahendList = GetIntArray(subtrahend);
 
-            return (output, result);
+            output += "------";
+            foreach (int num in minuedList) output += "-";
+            output +="\n";
+
+            var line1List = new List<int>();
+            var line1IsPositiveList = new List<bool>();
+            var line2List = new List<int>();
+            var line2IsPositiveList = new List<bool>();
+
+            var nonPositiveLocation = new List<int>();
+
+            for (int i = 0; i < minuedList.Count; i++)
+            {
+                line1List.Add(minuedList[i] - subtrahendList[i]);
+
+                if (minuedList[i] < subtrahendList[i]) {
+                    line1IsPositiveList.Add(false);
+                    line1List[i] *= -1;
+                }
+                else line1IsPositiveList.Add(true);
+
+                if(i == 0)
+                {
+                    line2List.Add(1);
+                    line2IsPositiveList.Add(false);
+                }
+
+                if(i < (minuedList.Count - 1))
+                {
+                    line2List.Add(9);
+                    line2IsPositiveList.Add(true);
+                }
+                else
+                {
+                    line2List.Add(10);
+                    line2IsPositiveList.Add(true);
+                }
+            }
+            output += "   ";
+            for (int i = 0; i < line1List.Count; i++)
+            {
+                output += line1List[i];
+                if (!line1IsPositiveList[i]) nonPositiveLocation.Add(output.Length);
+            }
+            output += "\n";
+
+            output += " + ";
+            for (int i = 0; i < line2List.Count; i++)
+            {
+                output += line2List[i];
+                if (!line2IsPositiveList[i]) nonPositiveLocation.Add(output.Length);
+            }
+
+            output += "\n------";
+            foreach (int num in minuedList) output += "-";
+            output += "\n";
+
+            var finalLineList = new List<int>();
+
+            for (int i = 0; i < line1List.Count; i++)
+            {
+                int tempList1Num = line1List[i];
+                int tempList2Num = line2List[i];
+                if (!line1IsPositiveList[i]) tempList1Num = line1List[i] * (-1);
+                if (!line2IsPositiveList[i]) tempList2Num = line2List[i] * (-1);
+
+                finalLineList.Add(tempList1Num + tempList2Num);
+            }
+
+            foreach (int num in finalLineList) output += num;
+
+            string tempResult = "";
+            output += "   ";
+            foreach (int a in finalLineList) tempResult += a;
+            try
+            {
+                result = Convert.ToInt64(tempResult);
+            }
+            catch
+            {
+                result = 0;
+            }
+
+            return (output, result, nonPositiveLocation);
         }
 
         public static (string outputString, long numberResult) EgyptianMultiplyAlgorithm(long factor1, long factor2)
@@ -193,17 +291,6 @@ namespace BasicMathBase.CalcMethods
             return (output, result);
         }
 
-        public static List<int> GetIntArray(long num)
-        {
-            List<int> listOfInts = new List<int>();
-            while (num > 0)
-            {
-                listOfInts.Add(Convert.ToInt32(num % 10));
-                num = num / 10;
-            }
-            listOfInts.Reverse();
-            return listOfInts;
-        }
 
         public static (string outputString, long numberResult) MatrixMultiplyAlgorithm(int factor1, int factor2)
         {
@@ -401,7 +488,6 @@ namespace BasicMathBase.CalcMethods
             }
             return (primesList, numberOfPrimes);
         }
-
 
         public static string ProductPrime(int num)
         {
@@ -743,7 +829,6 @@ namespace BasicMathBase.CalcMethods
 
             return (outputNumerator, outputDenominator);
         }
-
 
         static int gcd(int a, int b)
         {

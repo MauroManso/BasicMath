@@ -66,7 +66,7 @@ namespace BasicMathBase
             // 
             // txtboxAnwser
             // 
-            this.txtboxAnwser.Location = new System.Drawing.Point(499, 432);
+            this.txtboxAnwser.Location = new System.Drawing.Point(504, 283);
             this.txtboxAnwser.Name = "txtboxAnwser";
             this.txtboxAnwser.Size = new System.Drawing.Size(126, 31);
             this.txtboxAnwser.TabIndex = 4174;
@@ -75,7 +75,7 @@ namespace BasicMathBase
             // 
             this.lblMinuend.AutoSize = true;
             this.lblMinuend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblMinuend.Location = new System.Drawing.Point(153, 416);
+            this.lblMinuend.Location = new System.Drawing.Point(158, 267);
             this.lblMinuend.Name = "lblMinuend";
             this.lblMinuend.Size = new System.Drawing.Size(93, 25);
             this.lblMinuend.TabIndex = 4177;
@@ -85,7 +85,7 @@ namespace BasicMathBase
             // 
             this.lblSubtrahend.AutoSize = true;
             this.lblSubtrahend.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSubtrahend.Location = new System.Drawing.Point(141, 453);
+            this.lblSubtrahend.Location = new System.Drawing.Point(146, 304);
             this.lblSubtrahend.Name = "lblSubtrahend";
             this.lblSubtrahend.Size = new System.Drawing.Size(105, 25);
             this.lblSubtrahend.TabIndex = 4178;
@@ -95,7 +95,7 @@ namespace BasicMathBase
             // 
             this.lblAnwser.AutoSize = true;
             this.lblAnwser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAnwser.Location = new System.Drawing.Point(409, 435);
+            this.lblAnwser.Location = new System.Drawing.Point(414, 286);
             this.lblAnwser.Name = "lblAnwser";
             this.lblAnwser.Size = new System.Drawing.Size(84, 25);
             this.lblAnwser.TabIndex = 4179;
@@ -108,7 +108,7 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(815, 423);
+            this.btnClear.Location = new System.Drawing.Point(820, 274);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(135, 47);
             this.btnClear.TabIndex = 4176;
@@ -119,14 +119,14 @@ namespace BasicMathBase
             // 
             // txtboxSubtrahend
             // 
-            this.txtboxSubtrahend.Location = new System.Drawing.Point(252, 450);
+            this.txtboxSubtrahend.Location = new System.Drawing.Point(257, 301);
             this.txtboxSubtrahend.Name = "txtboxSubtrahend";
             this.txtboxSubtrahend.Size = new System.Drawing.Size(122, 31);
             this.txtboxSubtrahend.TabIndex = 4173;
             // 
             // txtboxMinuend
             // 
-            this.txtboxMinuend.Location = new System.Drawing.Point(252, 413);
+            this.txtboxMinuend.Location = new System.Drawing.Point(257, 264);
             this.txtboxMinuend.Name = "txtboxMinuend";
             this.txtboxMinuend.Size = new System.Drawing.Size(122, 31);
             this.txtboxMinuend.TabIndex = 4172;
@@ -138,7 +138,7 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(646, 423);
+            this.btnCalculate.Location = new System.Drawing.Point(651, 274);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(135, 47);
             this.btnCalculate.TabIndex = 4175;

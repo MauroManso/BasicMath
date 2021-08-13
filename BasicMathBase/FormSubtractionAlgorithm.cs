@@ -44,6 +44,9 @@ namespace BasicMathBase
                             MessageBoxIcon.Warning);
                 run = false;
             }
+
+            if(minuend.ToString().Length != subtrahend.ToString().Length) run = false;
+
             if (run)
             {
                 var sistemAnswer = MathMethods.SubtractionAlgorithm(minuend, subtrahend);
@@ -52,7 +55,8 @@ namespace BasicMathBase
 
                 System.Diagnostics.Debug.WriteLine(sistemAnswer.numberResult);
 
-                FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer.outputString);
+
+                FormAnswerRichTxtBox openForm = new FormAnswerRichTxtBox(isCorrect, sistemAnswer.outputString, sistemAnswer.nonPositiveLocation);
                 openForm.Show();
             }
         }

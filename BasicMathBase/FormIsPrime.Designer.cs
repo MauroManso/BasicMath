@@ -84,9 +84,9 @@ namespace BasicMathBase
             this.btnVerifyPrime.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnVerifyPrime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnVerifyPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerifyPrime.Location = new System.Drawing.Point(601, 352);
+            this.btnVerifyPrime.Location = new System.Drawing.Point(613, 349);
             this.btnVerifyPrime.Name = "btnVerifyPrime";
-            this.btnVerifyPrime.Size = new System.Drawing.Size(135, 49);
+            this.btnVerifyPrime.Size = new System.Drawing.Size(135, 55);
             this.btnVerifyPrime.TabIndex = 25;
             this.btnVerifyPrime.Text = "Verificar";
             this.btnVerifyPrime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -100,9 +100,9 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(799, 354);
+            this.btnClear.Location = new System.Drawing.Point(796, 349);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
             this.btnClear.TabIndex = 4131;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

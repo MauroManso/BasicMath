@@ -39,7 +39,7 @@ namespace BasicMathBase
             this.lblIsCorrect.AutoSize = true;
             this.lblIsCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblIsCorrect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblIsCorrect.Location = new System.Drawing.Point(325, 77);
+            this.lblIsCorrect.Location = new System.Drawing.Point(398, 72);
             this.lblIsCorrect.Name = "lblIsCorrect";
             this.lblIsCorrect.Size = new System.Drawing.Size(260, 32);
             this.lblIsCorrect.TabIndex = 10;
@@ -52,7 +52,7 @@ namespace BasicMathBase
             this.btnGetAnswer.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGetAnswer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnGetAnswer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGetAnswer.Location = new System.Drawing.Point(325, 401);
+            this.btnGetAnswer.Location = new System.Drawing.Point(398, 563);
             this.btnGetAnswer.Name = "btnGetAnswer";
             this.btnGetAnswer.Size = new System.Drawing.Size(280, 65);
             this.btnGetAnswer.TabIndex = 9;
@@ -63,10 +63,13 @@ namespace BasicMathBase
             // 
             // richTextBoxAnswer
             // 
+            this.richTextBoxAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxAnswer.ForeColor = System.Drawing.Color.Black;
             this.richTextBoxAnswer.Location = new System.Drawing.Point(84, 153);
             this.richTextBoxAnswer.Name = "richTextBoxAnswer";
-            this.richTextBoxAnswer.Size = new System.Drawing.Size(765, 219);
+            this.richTextBoxAnswer.Size = new System.Drawing.Size(908, 373);
             this.richTextBoxAnswer.TabIndex = 11;
             this.richTextBoxAnswer.Text = "";
             // 
@@ -75,7 +78,7 @@ namespace BasicMathBase
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(930, 525);
+            this.ClientSize = new System.Drawing.Size(1073, 679);
             this.Controls.Add(this.richTextBoxAnswer);
             this.Controls.Add(this.lblIsCorrect);
             this.Controls.Add(this.btnGetAnswer);

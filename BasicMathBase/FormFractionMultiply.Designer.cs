@@ -78,7 +78,7 @@ namespace BasicMathBase
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(477, 410);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
             this.btnClear.TabIndex = 4185;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -94,7 +94,7 @@ namespace BasicMathBase
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCalculate.Location = new System.Drawing.Point(308, 410);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculate.Size = new System.Drawing.Size(135, 55);
             this.btnCalculate.TabIndex = 4184;
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -55,5 +55,10 @@ namespace BasicMathBase
         {
             richTextBoxAnswer.Visible = true;
         }
+
+        private void lblIsCorrect_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

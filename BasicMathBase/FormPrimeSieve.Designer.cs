@@ -81,7 +81,7 @@ namespace BasicMathBase
             this.btnListPrime.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnListPrime.Location = new System.Drawing.Point(625, 138);
             this.btnListPrime.Name = "btnListPrime";
-            this.btnListPrime.Size = new System.Drawing.Size(135, 47);
+            this.btnListPrime.Size = new System.Drawing.Size(135, 55);
             this.btnListPrime.TabIndex = 4133;
             this.btnListPrime.Text = "Listar";
             this.btnListPrime.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -120,7 +120,7 @@ namespace BasicMathBase
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Location = new System.Drawing.Point(860, 185);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
             this.btnClear.TabIndex = 4135;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -136,7 +136,7 @@ namespace BasicMathBase
             this.btnPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrint.Location = new System.Drawing.Point(103, 185);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(135, 47);
+            this.btnPrint.Size = new System.Drawing.Size(135, 55);
             this.btnPrint.TabIndex = 4136;
             this.btnPrint.Text = "Imprimir";
             this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

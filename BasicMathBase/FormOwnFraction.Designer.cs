@@ -110,9 +110,9 @@ namespace BasicMathBase
             this.btnClear.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(876, 310);
+            this.btnClear.Location = new System.Drawing.Point(868, 306);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(135, 47);
+            this.btnClear.Size = new System.Drawing.Size(135, 55);
             this.btnClear.TabIndex = 4168;
             this.btnClear.Text = "Limpar";
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -133,9 +133,9 @@ namespace BasicMathBase
             this.btnCalculate.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCalculate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
             this.btnCalculate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Location = new System.Drawing.Point(707, 310);
+            this.btnCalculate.Location = new System.Drawing.Point(707, 306);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(135, 47);
+            this.btnCalculate.Size = new System.Drawing.Size(135, 55);
             this.btnCalculate.TabIndex = 4167;
             this.btnCalculate.Text = "Calcular";
             this.btnCalculate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -278,7 +278,7 @@ namespace BasicMathBase
             this.txtboxDistinctPeriod.Size = new System.Drawing.Size(126, 31);
             this.txtboxDistinctPeriod.TabIndex = 4166;
             // 
-            // FormFractions
+            // FormOwnFraction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,7 +306,7 @@ namespace BasicMathBase
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormFractions";
+            this.Name = "FormOwnFraction";
             this.Text = "2";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

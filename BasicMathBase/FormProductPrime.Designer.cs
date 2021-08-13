@@ -88,7 +88,7 @@ namespace BasicMathBase
             this.btnCorrectNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCorrectNum.Location = new System.Drawing.Point(299, 408);
             this.btnCorrectNum.Name = "btnCorrectNum";
-            this.btnCorrectNum.Size = new System.Drawing.Size(108, 43);
+            this.btnCorrectNum.Size = new System.Drawing.Size(108, 55);
             this.btnCorrectNum.TabIndex = 4141;
             this.btnCorrectNum.Text = "Corrigir";
             this.btnCorrectNum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -104,7 +104,7 @@ namespace BasicMathBase
             this.btnClearNum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClearNum.Location = new System.Drawing.Point(543, 408);
             this.btnClearNum.Name = "btnClearNum";
-            this.btnClearNum.Size = new System.Drawing.Size(108, 43);
+            this.btnClearNum.Size = new System.Drawing.Size(108, 55);
             this.btnClearNum.TabIndex = 4140;
             this.btnClearNum.Text = "Limpar";
             this.btnClearNum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

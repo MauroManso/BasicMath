@@ -67,9 +67,10 @@ namespace BasicMathBase.CalcMethods
             return period;
         }
 
-        public static (string Map, int k)CongruenceMap(int numerator, int denominator)
+        public static (string Map, int k)CongruenceMap(int denominator)
         {
             string output = "";
+            int numerator = 1;
             int k = 0;
             bool run = true;
             int resto;
@@ -290,7 +291,6 @@ namespace BasicMathBase.CalcMethods
 
             return (output, result);
         }
-
 
         public static (string outputString, long numberResult) MatrixMultiplyAlgorithm(int factor1, int factor2)
         {
@@ -666,24 +666,17 @@ namespace BasicMathBase.CalcMethods
         }
 
         public static string resultStringEuclides { get; set; }
-        public static long euclides_r(long m, long n, long counter)
+        public static int counter { get; set; }
+        public static long euclides_r(long m, long n)
         {
             if (n == 0) return m;
-            if(counter != 0)
-            {
-                resultStringEuclides += $" k{counter} = {m % n}";
-                resultStringEuclides += $"\t a{counter} = {m / n}";
-                resultStringEuclides += Environment.NewLine;
-            }
-            else
-            {
-                resultStringEuclides += $" k{counter} = {m % n}";
-                resultStringEuclides += $"\t a{counter} = {m / n}";
-                resultStringEuclides += Environment.NewLine;
-            }
+
+            resultStringEuclides += $" k{counter} = {m % n}";
+            resultStringEuclides += $"\t a{counter} = {m / n}";
+            resultStringEuclides += Environment.NewLine;
             
             counter++;
-            return euclides_r(n, m % n, counter);
+            return euclides_r(n, m % n);
         }
 
         public static string MdcAlgoritmoEuclides(int num1, int num2)
@@ -694,8 +687,9 @@ namespace BasicMathBase.CalcMethods
                 num1 = num2;
                 num2 = temp;
             }
-
-            string result = " Mdc = " + Convert.ToString(euclides_r(num1, num2, 0)) + Environment.NewLine + " Processo: " + Environment.NewLine + resultStringEuclides;
+            counter = 0;
+            resultStringEuclides = "";
+            string result = " Mdc = " + Convert.ToString(euclides_r(num1, num2)) + Environment.NewLine + " Processo: " + Environment.NewLine + resultStringEuclides;
 
             return result;
         }

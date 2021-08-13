@@ -11,9 +11,9 @@ using BasicMathBase.CalcMethods;
 
 namespace BasicMathBase
 {
-    public partial class FormSubtractionAlgorithm : Form
+    public partial class FormCongruenceMap : Form
     {
-        public FormSubtractionAlgorithm()
+        public FormCongruenceMap()
         {
             InitializeComponent();
             customDesign();
@@ -22,19 +22,16 @@ namespace BasicMathBase
         private void customDesign()
         {
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Size.Width) / 2;
+            richTextBoxMap.Visible = false;
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            long minuend = 0;
-            long subtrahend = 0;
-            string userAnswer = "";
+            int num = 0;
             bool run = true;
             try
             {
-                minuend = Convert.ToInt64(txtboxMinuend.Text);
-                subtrahend = Convert.ToInt64(txtboxSubtrahend.Text);
-                userAnswer = txtboxAnwser.Text;
+                num = Convert.ToInt32(txtboxNum.Text);
             }
             catch
             {
@@ -45,24 +42,19 @@ namespace BasicMathBase
                 run = false;
             }
 
-            if(minuend.ToString().Length != subtrahend.ToString().Length) run = false;
-
             if (run)
             {
-                var sistemAnswer = MathMethods.SubtractionAlgorithm(minuend, subtrahend);
-
-                bool isCorrect = MathMethods.Correction(userAnswer, Convert.ToString(sistemAnswer.numberResult));
-
-                FormAnswerRichTxtBox openForm = new FormAnswerRichTxtBox(isCorrect, sistemAnswer.outputString, sistemAnswer.nonPositiveLocation);
-                openForm.Show();
+                var sistemAnswer = MathMethods.CongruenceMap(num);
+                richTextBoxMap.Visible = true;
+                richTextBoxMap.Text = sistemAnswer.Map;
             }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtboxAnwser.Text = "";
-            txtboxMinuend.Text = "";
-            txtboxSubtrahend.Text = "";
+            txtboxNum.Text = "";
+            richTextBoxMap.Text = "";
+
         }
     }
 }

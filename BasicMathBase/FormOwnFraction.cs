@@ -125,7 +125,7 @@ namespace BasicMathBase
                     foreach (int i in systemAnswerPeriod)
                         systemAnswerPeriodString += $"{i}";
 
-                    var congruentMap = MathMethods.CongruenceMap(numerator, denominator);
+                    var congruentMap = MathMethods.CongruenceMap(denominator);
 
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(k), Convert.ToString(systemAnswerPeriod.Length));
@@ -158,7 +158,7 @@ namespace BasicMathBase
                     foreach (int i in systemAnswerPeriod)
                         systemAnswerPeriodString += $"{i}";
 
-                    var congruentMap = MathMethods.CongruenceMap(numerator, denominator);
+                    var congruentMap = MathMethods.CongruenceMap(denominator);
 
                     if (isCorrect)
                         isCorrect = MathMethods.Correction(Convert.ToString(k), Convert.ToString(systemAnswerPeriod.Length));

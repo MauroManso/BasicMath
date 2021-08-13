@@ -135,6 +135,12 @@ namespace BasicMathBase
             openChildForm(new FormMmcMdc());
         }
 
+        private void btnCongruenceMap_Click(object sender, EventArgs e)
+        {
+            btnCongruenceMap.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormCongruenceMap());
+        }
+
         private void btnIsPrime_Click(object sender, EventArgs e)
         {
             btnIsPrime.BackColor = Color.FromArgb(0, 77, 123);
@@ -409,6 +415,11 @@ namespace BasicMathBase
         private void btnPowerBase10Mutiply_Leave(object sender, EventArgs e)
         {
             btnPowerBase10Mutiply.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
+        private void btnCongruenceMap_Leave(object sender, EventArgs e)
+        {
+            btnCongruenceMap.BackColor = Color.FromArgb(37, 35, 43);
         }
     }
 }

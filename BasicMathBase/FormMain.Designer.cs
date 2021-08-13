@@ -80,6 +80,7 @@ namespace BasicMathBase
             this.txtboxDenominator2 = new System.Windows.Forms.TextBox();
             this.txtboxNumerator = new System.Windows.Forms.TextBox();
             this.txtboxDenominator = new System.Windows.Forms.TextBox();
+            this.btnCongruenceMap = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPowerBase10SubMenu.SuspendLayout();
             this.panelFractionsSubmenu.SuspendLayout();
@@ -126,7 +127,7 @@ namespace BasicMathBase
             this.panelPowerBase10SubMenu.Controls.Add(this.btnPowerBase10AddSubtraction);
             this.panelPowerBase10SubMenu.Controls.Add(this.btnScientificNotation);
             this.panelPowerBase10SubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPowerBase10SubMenu.Location = new System.Drawing.Point(0, 1851);
+            this.panelPowerBase10SubMenu.Location = new System.Drawing.Point(0, 1910);
             this.panelPowerBase10SubMenu.Name = "panelPowerBase10SubMenu";
             this.panelPowerBase10SubMenu.Size = new System.Drawing.Size(324, 312);
             this.panelPowerBase10SubMenu.TabIndex = 14;
@@ -224,7 +225,7 @@ namespace BasicMathBase
             this.btnBase10Operations.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBase10Operations.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBase10Operations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBase10Operations.Location = new System.Drawing.Point(0, 1766);
+            this.btnBase10Operations.Location = new System.Drawing.Point(0, 1825);
             this.btnBase10Operations.Name = "btnBase10Operations";
             this.btnBase10Operations.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnBase10Operations.Size = new System.Drawing.Size(324, 85);
@@ -245,7 +246,7 @@ namespace BasicMathBase
             this.panelFractionsSubmenu.Controls.Add(this.btnFractionAddSubtraction);
             this.panelFractionsSubmenu.Controls.Add(this.btnOwnFraction);
             this.panelFractionsSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFractionsSubmenu.Location = new System.Drawing.Point(0, 1444);
+            this.panelFractionsSubmenu.Location = new System.Drawing.Point(0, 1503);
             this.panelFractionsSubmenu.Name = "panelFractionsSubmenu";
             this.panelFractionsSubmenu.Size = new System.Drawing.Size(324, 322);
             this.panelFractionsSubmenu.TabIndex = 12;
@@ -364,7 +365,7 @@ namespace BasicMathBase
             this.btnFractions.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnFractions.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnFractions.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFractions.Location = new System.Drawing.Point(0, 1379);
+            this.btnFractions.Location = new System.Drawing.Point(0, 1438);
             this.btnFractions.Name = "btnFractions";
             this.btnFractions.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnFractions.Size = new System.Drawing.Size(324, 65);
@@ -385,7 +386,7 @@ namespace BasicMathBase
             this.btnDivisibility.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDivisibility.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnDivisibility.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDivisibility.Location = new System.Drawing.Point(0, 1314);
+            this.btnDivisibility.Location = new System.Drawing.Point(0, 1373);
             this.btnDivisibility.Name = "btnDivisibility";
             this.btnDivisibility.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnDivisibility.Size = new System.Drawing.Size(324, 65);
@@ -406,7 +407,7 @@ namespace BasicMathBase
             this.btnBModA.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBModA.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnBModA.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBModA.Location = new System.Drawing.Point(0, 1249);
+            this.btnBModA.Location = new System.Drawing.Point(0, 1308);
             this.btnBModA.Name = "btnBModA";
             this.btnBModA.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnBModA.Size = new System.Drawing.Size(324, 65);
@@ -427,7 +428,7 @@ namespace BasicMathBase
             this.btnSubtractionAlgorithm.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSubtractionAlgorithm.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnSubtractionAlgorithm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubtractionAlgorithm.Location = new System.Drawing.Point(0, 1184);
+            this.btnSubtractionAlgorithm.Location = new System.Drawing.Point(0, 1243);
             this.btnSubtractionAlgorithm.Name = "btnSubtractionAlgorithm";
             this.btnSubtractionAlgorithm.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnSubtractionAlgorithm.Size = new System.Drawing.Size(324, 65);
@@ -445,7 +446,7 @@ namespace BasicMathBase
             this.panelPowersSubMenu.Controls.Add(this.btnMultiplyPowerSameBase);
             this.panelPowersSubMenu.Controls.Add(this.btnToPowerOf);
             this.panelPowersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPowersSubMenu.Location = new System.Drawing.Point(0, 1018);
+            this.panelPowersSubMenu.Location = new System.Drawing.Point(0, 1077);
             this.panelPowersSubMenu.Name = "panelPowersSubMenu";
             this.panelPowersSubMenu.Size = new System.Drawing.Size(324, 166);
             this.panelPowersSubMenu.TabIndex = 7;
@@ -501,7 +502,7 @@ namespace BasicMathBase
             this.btnPowers.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPowers.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPowers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPowers.Location = new System.Drawing.Point(0, 953);
+            this.btnPowers.Location = new System.Drawing.Point(0, 1012);
             this.btnPowers.Name = "btnPowers";
             this.btnPowers.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnPowers.Size = new System.Drawing.Size(324, 65);
@@ -521,7 +522,7 @@ namespace BasicMathBase
             this.btnArithmeticsFunction.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnArithmeticsFunction.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnArithmeticsFunction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArithmeticsFunction.Location = new System.Drawing.Point(0, 888);
+            this.btnArithmeticsFunction.Location = new System.Drawing.Point(0, 947);
             this.btnArithmeticsFunction.Name = "btnArithmeticsFunction";
             this.btnArithmeticsFunction.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnArithmeticsFunction.Size = new System.Drawing.Size(324, 65);
@@ -542,7 +543,7 @@ namespace BasicMathBase
             this.panelPrimesSubMenu.Controls.Add(this.btnPrimesList);
             this.panelPrimesSubMenu.Controls.Add(this.btnIsPrime);
             this.panelPrimesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPrimesSubMenu.Location = new System.Drawing.Point(0, 572);
+            this.panelPrimesSubMenu.Location = new System.Drawing.Point(0, 631);
             this.panelPrimesSubMenu.Name = "panelPrimesSubMenu";
             this.panelPrimesSubMenu.Size = new System.Drawing.Size(324, 316);
             this.panelPrimesSubMenu.TabIndex = 4;
@@ -661,7 +662,7 @@ namespace BasicMathBase
             this.btnPrimes.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPrimes.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPrimes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrimes.Location = new System.Drawing.Point(0, 507);
+            this.btnPrimes.Location = new System.Drawing.Point(0, 566);
             this.btnPrimes.Name = "btnPrimes";
             this.btnPrimes.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnPrimes.Size = new System.Drawing.Size(324, 65);
@@ -675,6 +676,7 @@ namespace BasicMathBase
             // panelMutiplyAlgorithmsSubMenu
             // 
             this.panelMutiplyAlgorithmsSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(38)))));
+            this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnCongruenceMap);
             this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMmcMdc);
             this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMultiplyEgyptianAlgorithm);
             this.panelMutiplyAlgorithmsSubMenu.Controls.Add(this.btnMultiplyRussianAlgorithm);
@@ -683,7 +685,7 @@ namespace BasicMathBase
             this.panelMutiplyAlgorithmsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMutiplyAlgorithmsSubMenu.Location = new System.Drawing.Point(0, 192);
             this.panelMutiplyAlgorithmsSubMenu.Name = "panelMutiplyAlgorithmsSubMenu";
-            this.panelMutiplyAlgorithmsSubMenu.Size = new System.Drawing.Size(324, 315);
+            this.panelMutiplyAlgorithmsSubMenu.Size = new System.Drawing.Size(324, 374);
             this.panelMutiplyAlgorithmsSubMenu.TabIndex = 2;
             // 
             // btnMmcMdc
@@ -949,6 +951,27 @@ namespace BasicMathBase
             this.txtboxDenominator.Size = new System.Drawing.Size(122, 31);
             this.txtboxDenominator.TabIndex = 4199;
             // 
+            // btnCongruenceMap
+            // 
+            this.btnCongruenceMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnCongruenceMap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCongruenceMap.FlatAppearance.BorderSize = 0;
+            this.btnCongruenceMap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnCongruenceMap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnCongruenceMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCongruenceMap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCongruenceMap.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCongruenceMap.Location = new System.Drawing.Point(0, 300);
+            this.btnCongruenceMap.Name = "btnCongruenceMap";
+            this.btnCongruenceMap.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCongruenceMap.Size = new System.Drawing.Size(324, 60);
+            this.btnCongruenceMap.TabIndex = 30;
+            this.btnCongruenceMap.Text = "Mapa de Congruencia";
+            this.btnCongruenceMap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCongruenceMap.UseVisualStyleBackColor = false;
+            this.btnCongruenceMap.Click += new System.EventHandler(this.btnCongruenceMap_Click);
+            this.btnCongruenceMap.Leave += new System.EventHandler(this.btnCongruenceMap_Leave);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -1027,6 +1050,7 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnPowerBase10AddSubtraction;
         private System.Windows.Forms.Button btnScientificNotation;
         private System.Windows.Forms.Button btnBase10Operations;
+        private System.Windows.Forms.Button btnCongruenceMap;
     }
 }
 

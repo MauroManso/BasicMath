@@ -744,6 +744,52 @@ namespace BasicMathBase.CalcMethods
             return (outputNumerator, outputDenominator);
         }
 
+
+        static int gcd(int a, int b)
+        {
+            //find the gcd using the Euclid’s algorithm
+            while (a != b)
+                if (a < b) b = b - a;
+                else a = a - b;
+            //since at this point a=b, the gcd can be either of them
+            //it is necessary to pass the gcd to the main function
+            return (a);
+        }
+
+        static int division(int a, int b)
+        {
+            int remainder = a, quotient = 0;
+            while (remainder >= b)
+            {
+                remainder = remainder - b;
+                quotient++;
+            }
+            return (quotient);
+        }
+
+        public static (string reductions, int numerator, int denominator)FractionReduction(int numerator, int denominator)
+        {
+            string output = "";
+            int reducedNumerator = 0;
+            int reducedDenominator = 0;
+
+            int divisor = gcd(numerator, denominator);
+
+            //if the divisor (gcd) = 1, the fraction can not be reduced any further
+            //as there is no number to divide the numerator and denominator by
+            if (divisor != 1)
+            {
+                //in order to reduce the fraction, it needs to be divided by its gcd
+                //in the program gcd = divisor
+                reducedNumerator = division(numerator, divisor);
+                reducedDenominator = division(denominator, divisor);
+                output += $"{reducedNumerator}/{reducedDenominator}";
+            }
+
+
+            return (output, reducedNumerator, reducedDenominator);
+        }
+
         public static string ScientficNotation(double num)
         {
             string scientficDoubleNotation;

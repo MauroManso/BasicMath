@@ -53,7 +53,6 @@ namespace BasicMathBase
             {
                 string sistemAnswer = MathMethods.AddScientficNotation(num1, num2, expoent1, expoent2);
 
-
                 bool isCorrect = MathMethods.Correction(userAnswer, sistemAnswer);
 
                 FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);

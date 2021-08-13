@@ -64,9 +64,13 @@ namespace BasicMathBase
                 bool isCorrect = false;
                 string answer = "";
                 var systemAnswer = MathMethods.FractionAdd(numerator, denominator, numerator2, denominator2);
-                answer+= $"{systemAnswer.numerator}/{systemAnswer.denominator}";
 
-                if (userAnswerNumerator == systemAnswer.numerator && userAnswerDenominator == systemAnswer.denominator) isCorrect = true;
+                var reductionFraction = MathMethods.FractionReduction(systemAnswer.numerator, systemAnswer.denominator);
+
+                answer += $"{systemAnswer.numerator}/{systemAnswer.denominator}";
+                if(reductionFraction.numerator != 0 && reductionFraction.denominator != 0) answer += " ou " + reductionFraction.reductions;
+
+                if ((userAnswerNumerator == reductionFraction.numerator && userAnswerDenominator == reductionFraction.denominator) || (userAnswerNumerator == systemAnswer.numerator && userAnswerDenominator == systemAnswer.denominator)) isCorrect = true;
 
                 FormAnswerTxtBox openForm = new FormAnswerTxtBox(isCorrect, answer);
                 openForm.Show();

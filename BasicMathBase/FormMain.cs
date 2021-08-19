@@ -278,6 +278,13 @@ namespace BasicMathBase
             openChildForm(new FormPowerBase10Multiply());
         }
 
+        private void btnPrimeFatoration_Click(object sender, EventArgs e)
+        {
+            btnPrimeFatoration.BackColor = Color.FromArgb(0, 77, 123);
+            openChildForm(new FormPrimesFatorationTest());
+        }
+
+
 
 
 
@@ -420,6 +427,11 @@ namespace BasicMathBase
         private void btnCongruenceMap_Leave(object sender, EventArgs e)
         {
             btnCongruenceMap.BackColor = Color.FromArgb(37, 35, 43);
+        }
+
+        private void btnPrimeFatoration_Leave(object sender, EventArgs e)
+        {
+            btnPrimeFatoration.BackColor = Color.FromArgb(37, 35, 43);
         }
     }
 }

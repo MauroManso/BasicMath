@@ -305,5 +305,10 @@ namespace BasicMathBase
             lblNumberOfPrimes.Visible = false;
             lblPercentage.Visible = false;
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

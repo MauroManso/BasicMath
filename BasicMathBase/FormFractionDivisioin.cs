@@ -82,5 +82,10 @@ namespace BasicMathBase
             txtboxAnswerDenominator.Text = "";
             txtboxAnswerNumerator.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

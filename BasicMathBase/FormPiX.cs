@@ -70,5 +70,10 @@ namespace BasicMathBase
             lblRealPiXAnswer.Visible = false;
             lblAcuratePiXAnswer.Visible = false;
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

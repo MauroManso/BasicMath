@@ -60,6 +60,7 @@ namespace BasicMathBase
             this.btnIsPrime = new System.Windows.Forms.Button();
             this.btnPrimes = new System.Windows.Forms.Button();
             this.panelMutiplyAlgorithmsSubMenu = new System.Windows.Forms.Panel();
+            this.btnCongruenceMap = new System.Windows.Forms.Button();
             this.btnMmcMdc = new System.Windows.Forms.Button();
             this.btnMultiplyEgyptianAlgorithm = new System.Windows.Forms.Button();
             this.btnMultiplyRussianAlgorithm = new System.Windows.Forms.Button();
@@ -80,7 +81,6 @@ namespace BasicMathBase
             this.txtboxDenominator2 = new System.Windows.Forms.TextBox();
             this.txtboxNumerator = new System.Windows.Forms.TextBox();
             this.txtboxDenominator = new System.Windows.Forms.TextBox();
-            this.btnCongruenceMap = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelPowerBase10SubMenu.SuspendLayout();
             this.panelFractionsSubmenu.SuspendLayout();
@@ -688,6 +688,27 @@ namespace BasicMathBase
             this.panelMutiplyAlgorithmsSubMenu.Size = new System.Drawing.Size(324, 374);
             this.panelMutiplyAlgorithmsSubMenu.TabIndex = 2;
             // 
+            // btnCongruenceMap
+            // 
+            this.btnCongruenceMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
+            this.btnCongruenceMap.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCongruenceMap.FlatAppearance.BorderSize = 0;
+            this.btnCongruenceMap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
+            this.btnCongruenceMap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
+            this.btnCongruenceMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCongruenceMap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCongruenceMap.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCongruenceMap.Location = new System.Drawing.Point(0, 300);
+            this.btnCongruenceMap.Name = "btnCongruenceMap";
+            this.btnCongruenceMap.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnCongruenceMap.Size = new System.Drawing.Size(324, 60);
+            this.btnCongruenceMap.TabIndex = 30;
+            this.btnCongruenceMap.Text = "Mapa de Congruencia";
+            this.btnCongruenceMap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCongruenceMap.UseVisualStyleBackColor = false;
+            this.btnCongruenceMap.Click += new System.EventHandler(this.btnCongruenceMap_Click);
+            this.btnCongruenceMap.Leave += new System.EventHandler(this.btnCongruenceMap_Leave);
+            // 
             // btnMmcMdc
             // 
             this.btnMmcMdc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
@@ -951,27 +972,6 @@ namespace BasicMathBase
             this.txtboxDenominator.Size = new System.Drawing.Size(122, 31);
             this.txtboxDenominator.TabIndex = 4199;
             // 
-            // btnCongruenceMap
-            // 
-            this.btnCongruenceMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(35)))), ((int)(((byte)(43)))));
-            this.btnCongruenceMap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCongruenceMap.FlatAppearance.BorderSize = 0;
-            this.btnCongruenceMap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(57)))), ((int)(((byte)(65)))));
-            this.btnCongruenceMap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(47)))), ((int)(((byte)(53)))));
-            this.btnCongruenceMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCongruenceMap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCongruenceMap.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCongruenceMap.Location = new System.Drawing.Point(0, 300);
-            this.btnCongruenceMap.Name = "btnCongruenceMap";
-            this.btnCongruenceMap.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnCongruenceMap.Size = new System.Drawing.Size(324, 60);
-            this.btnCongruenceMap.TabIndex = 30;
-            this.btnCongruenceMap.Text = "Mapa de Congruencia";
-            this.btnCongruenceMap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCongruenceMap.UseVisualStyleBackColor = false;
-            this.btnCongruenceMap.Click += new System.EventHandler(this.btnCongruenceMap_Click);
-            this.btnCongruenceMap.Leave += new System.EventHandler(this.btnCongruenceMap_Leave);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -980,8 +980,8 @@ namespace BasicMathBase
             this.ClientSize = new System.Drawing.Size(1478, 894);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormMain";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Basic Math";
             this.panelMenu.ResumeLayout(false);

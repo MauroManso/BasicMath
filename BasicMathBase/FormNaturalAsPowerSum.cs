@@ -235,5 +235,16 @@ namespace BasicMathBase
                 tbResposta.Visible = true;
             }
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            string info = "\t NATURAL COMO SOMA DE POTÊNCIAS DE BASE 10\n\n\n";
+            info += "\t i₁ UTILIZAR O FORMATO : \n";
+            info += "\t\t a₀.10^0+a₁.10^1 + ... aₖ.10^k\n\n";
+            info += "\t i₂ EXEMPLO:\n";
+            info += "\t\t n = 8439    :    9.10^0 + 3.10^1 + 4.10^2 + 8.10^3\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
+        }
     }
 }

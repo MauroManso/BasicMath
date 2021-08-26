@@ -69,5 +69,10 @@ namespace BasicMathBase
             txtboxN2.Text = "";
             txtboxN2x10ToPowerOf.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

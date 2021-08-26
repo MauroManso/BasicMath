@@ -56,5 +56,10 @@ namespace BasicMathBase
             richTextBoxMap.Text = "";
 
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

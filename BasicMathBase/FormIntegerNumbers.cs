@@ -67,5 +67,10 @@ namespace BasicMathBase
             txtboxInteger.Text = "";
             txtboxAnwser.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

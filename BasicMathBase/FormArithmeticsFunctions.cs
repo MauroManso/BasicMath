@@ -120,5 +120,10 @@ namespace BasicMathBase
             txtboxPhiN.Text = "";
             txtboxAnswerPhiN.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -267,5 +267,10 @@ namespace BasicMathBase
 
             }
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

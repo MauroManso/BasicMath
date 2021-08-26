@@ -61,5 +61,10 @@ namespace BasicMathBase
             txtboxFactor1.Text = "";
             txtboxFactor2.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

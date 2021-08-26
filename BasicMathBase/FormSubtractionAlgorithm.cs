@@ -64,5 +64,10 @@ namespace BasicMathBase
             txtboxMinuend.Text = "";
             txtboxSubtrahend.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

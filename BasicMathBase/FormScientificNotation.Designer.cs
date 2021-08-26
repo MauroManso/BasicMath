@@ -37,6 +37,7 @@ namespace BasicMathBase
             this.btnClear = new System.Windows.Forms.Button();
             this.txtboxN = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,12 +129,30 @@ namespace BasicMathBase
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 101);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 4172;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormScientificNotation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 944);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.txtboxAnwser);
             this.Controls.Add(this.lblNEqual);
             this.Controls.Add(this.lblAnwser);
@@ -143,7 +162,6 @@ namespace BasicMathBase
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormScientificNotation";
-            this.Text = "FormScientificNotation";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -161,5 +179,6 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtboxN;
         private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

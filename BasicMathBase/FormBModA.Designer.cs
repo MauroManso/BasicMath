@@ -38,6 +38,7 @@ namespace BasicMathBase
             this.txtboxB = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,12 +140,30 @@ namespace BasicMathBase
             this.label1.TabIndex = 4187;
             this.label1.Text = "Resposta";
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 101);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 4188;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormBModA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 894);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.lblB);
             this.Controls.Add(this.lblModA);
             this.Controls.Add(this.label1);
@@ -175,5 +194,6 @@ namespace BasicMathBase
         private System.Windows.Forms.TextBox txtboxB;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

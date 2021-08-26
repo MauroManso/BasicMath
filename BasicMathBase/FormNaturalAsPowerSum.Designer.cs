@@ -66,6 +66,7 @@ namespace BasicMathBase
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panelTable.SuspendLayout();
             this.tlbOrdemClase.SuspendLayout();
@@ -398,7 +399,7 @@ namespace BasicMathBase
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tlbOrdemClase.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
             this.tlbOrdemClase.Controls.Add(this.label3, 9, 0);
             this.tlbOrdemClase.Controls.Add(this.label4, 8, 0);
             this.tlbOrdemClase.Controls.Add(this.label5, 6, 0);
@@ -515,6 +516,23 @@ namespace BasicMathBase
             this.label1.Text = "u";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 101);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 45;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormNaturalAsPowerSum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -528,6 +546,7 @@ namespace BasicMathBase
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.checkboxOrdemClasse);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.btnCorrigir);
             this.Controls.Add(this.tbNum);
             this.Controls.Add(this.tbResposta);
@@ -588,5 +607,6 @@ namespace BasicMathBase
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

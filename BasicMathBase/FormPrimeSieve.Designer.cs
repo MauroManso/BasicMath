@@ -41,6 +41,7 @@ namespace BasicMathBase
             this.btnListPrime = new System.Windows.Forms.Button();
             this.lbl_Lista = new System.Windows.Forms.Label();
             this.richTextBoxLista = new System.Windows.Forms.RichTextBox();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +70,7 @@ namespace BasicMathBase
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnInfo);
             this.panel1.Controls.Add(this.lblPercentage);
             this.panel1.Controls.Add(this.lblTimeElapsed);
             this.panel1.Controls.Add(this.lblNumberOfPrimes);
@@ -190,6 +192,23 @@ namespace BasicMathBase
             this.richTextBoxLista.TabIndex = 25;
             this.richTextBoxLista.Text = "";
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 4146;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormPrimeSieve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -224,5 +243,6 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnListPrime;
         private System.Windows.Forms.Label lbl_Lista;
         private System.Windows.Forms.RichTextBox richTextBoxLista;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

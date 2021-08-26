@@ -129,5 +129,10 @@ namespace BasicMathBase
             txtboxMdcB.Text = "";
             txtboxAnwserMdc.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

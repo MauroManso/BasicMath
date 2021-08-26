@@ -65,5 +65,10 @@ namespace BasicMathBase
             txtboxExpoent1.Text = "";
             txtboxExpoent2.Text = "";
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

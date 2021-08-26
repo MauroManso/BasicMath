@@ -41,6 +41,7 @@ namespace BasicMathBase
             this.btnCalculate = new System.Windows.Forms.Button();
             this.lblExpoent2 = new System.Windows.Forms.Label();
             this.txtboxExpoent2 = new System.Windows.Forms.TextBox();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,12 +167,30 @@ namespace BasicMathBase
             this.txtboxExpoent2.Size = new System.Drawing.Size(122, 31);
             this.txtboxExpoent2.TabIndex = 1010;
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 101);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 4174;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormMultiplyPowerSameBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 894);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.lblExpoent2);
             this.Controls.Add(this.txtboxExpoent2);
             this.Controls.Add(this.txtboxAnwser);
@@ -186,7 +205,6 @@ namespace BasicMathBase
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMultiplyPowerSameBase";
-            this.Text = "FormMutiplyPowerSameBase";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -208,5 +226,6 @@ namespace BasicMathBase
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label lblExpoent2;
         private System.Windows.Forms.TextBox txtboxExpoent2;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

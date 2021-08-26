@@ -74,5 +74,10 @@ namespace BasicMathBase
         {
             txtboxVerifyPrime.Text = "";  
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

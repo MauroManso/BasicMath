@@ -49,6 +49,7 @@ namespace BasicMathBase
             this.txtboxPhiN = new System.Windows.Forms.TextBox();
             this.lblPhiN = new System.Windows.Forms.Label();
             this.btnCalculatePhiN = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -275,12 +276,30 @@ namespace BasicMathBase
             this.btnCalculatePhiN.UseVisualStyleBackColor = true;
             this.btnCalculatePhiN.Click += new System.EventHandler(this.btnCalculatePhiN_Click);
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 101);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 4171;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // FormArithmeticsFunctions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1128, 894);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.txtboxAnswerPhiN);
             this.Controls.Add(this.lblAnswerPhiN);
             this.Controls.Add(this.btnClearPhiN);
@@ -332,5 +351,6 @@ namespace BasicMathBase
         private System.Windows.Forms.TextBox txtboxPhiN;
         private System.Windows.Forms.Label lblPhiN;
         private System.Windows.Forms.Button btnCalculatePhiN;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

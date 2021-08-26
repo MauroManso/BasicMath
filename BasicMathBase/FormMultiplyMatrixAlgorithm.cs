@@ -74,5 +74,10 @@ namespace BasicMathBase
             txtboxFactor1.Clear();
             txtboxFactor2.Clear();
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

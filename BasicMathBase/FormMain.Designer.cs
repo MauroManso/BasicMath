@@ -527,7 +527,7 @@ namespace BasicMathBase
             this.btnArithmeticsFunction.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnArithmeticsFunction.Size = new System.Drawing.Size(324, 65);
             this.btnArithmeticsFunction.TabIndex = 5;
-            this.btnArithmeticsFunction.Text = "Funções Aritiméticas";
+            this.btnArithmeticsFunction.Text = "Funções Aritméticas";
             this.btnArithmeticsFunction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnArithmeticsFunction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnArithmeticsFunction.UseVisualStyleBackColor = false;
@@ -703,7 +703,7 @@ namespace BasicMathBase
             this.btnCongruenceMap.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnCongruenceMap.Size = new System.Drawing.Size(324, 60);
             this.btnCongruenceMap.TabIndex = 30;
-            this.btnCongruenceMap.Text = "Mapa de Congruencia";
+            this.btnCongruenceMap.Text = "Mapa de Congruência";
             this.btnCongruenceMap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCongruenceMap.UseVisualStyleBackColor = false;
             this.btnCongruenceMap.Click += new System.EventHandler(this.btnCongruenceMap_Click);

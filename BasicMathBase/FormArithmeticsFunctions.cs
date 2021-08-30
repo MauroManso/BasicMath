@@ -123,7 +123,12 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t FUNÇÕES ARITMÉTICAS\n\n\n";
+            info += "\t i₁ 𝛕(n) Calcula o número de divisores positivos de n.\n\n";
+            info += "\t i₂ σ(n) Calcula a soma dos divisores positivos de n.\n\n";
+            info += "\t i₃ φ(n) Calcula a quantidade de naturais menores que n que são coprimos com n. \n\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

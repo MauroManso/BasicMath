@@ -677,6 +677,8 @@ namespace BasicMathBase.CalcMethods
         }
 
         public static string resultStringEuclides { get; set; }
+        public static string AlgorithmEuclidesK { get; set; }
+        public static string AlgorithmEuclidesA { get; set; }
         public static int counter { get; set; }
         public static long euclides_r(long m, long n)
         {
@@ -685,7 +687,10 @@ namespace BasicMathBase.CalcMethods
             resultStringEuclides += $" k{counter} = {m % n}";
             resultStringEuclides += $"\t a{counter} = {m / n}";
             resultStringEuclides += Environment.NewLine;
-            
+
+            AlgorithmEuclidesK += $"{m % n}\t";
+            AlgorithmEuclidesA += $"{m / n}\t";
+
             counter++;
             return euclides_r(n, m % n);
         }
@@ -700,7 +705,12 @@ namespace BasicMathBase.CalcMethods
             }
             counter = 0;
             resultStringEuclides = "";
-            string result = " Mdc = " + Convert.ToString(euclides_r(num1, num2)) + Environment.NewLine + " Processo: " + Environment.NewLine + resultStringEuclides;
+            string result = " Mdc = " + Convert.ToString(euclides_r(num1, num2)) + Environment.NewLine + " Processo: \n" + resultStringEuclides;
+            result += $"\n\n\t\t";
+            result += AlgorithmEuclidesA + "\n";
+
+            result += $"\n{num1},\t{num2}\t";
+            result += AlgorithmEuclidesK;
 
             return result;
         }

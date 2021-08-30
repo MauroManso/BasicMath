@@ -72,7 +72,11 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t b⁻¹ mod a\n\n\n";
+            info += "\t i₁ b⁻¹ mod a calcula o inverso multiplicativo de b mod a ou seja: encontra b⁻¹ de modo que b⁻¹.b ≡ 1 (mod a) condição necessária e suficiente para a existência de b⁻¹ mod a: mdc(a,b) = 1 a,b ∈ N, a > b. \n\n";
+            info += "\t i₂ EXEMPLO:  7⁻¹ mod 10 = 3.\n\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

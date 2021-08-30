@@ -61,9 +61,9 @@ namespace BasicMathBase
             this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblTitle.Location = new System.Drawing.Point(394, 31);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(344, 37);
+            this.lblTitle.Size = new System.Drawing.Size(334, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Funções Aritiméticas";
+            this.lblTitle.Text = "Funções Aritméticas";
             // 
             // panel3
             // 

@@ -32,12 +32,12 @@ namespace BasicMathBase
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.lblN = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.txtboxNum = new System.Windows.Forms.TextBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.richTextBoxMap = new System.Windows.Forms.RichTextBox();
-            this.btnInfo = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@ namespace BasicMathBase
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(351, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Mapa de Congruencia";
+            this.lblTitle.Text = "Mapa de Congruência";
             // 
             // panel3
             // 
@@ -77,15 +77,32 @@ namespace BasicMathBase
             this.panel1.Size = new System.Drawing.Size(1128, 240);
             this.panel1.TabIndex = 25;
             // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.FlatAppearance.BorderSize = 2;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.Location = new System.Drawing.Point(1066, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(50, 50);
+            this.btnInfo.TabIndex = 4196;
+            this.btnInfo.Text = "i";
+            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // lblN
             // 
             this.lblN.AutoSize = true;
             this.lblN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblN.Location = new System.Drawing.Point(293, 106);
+            this.lblN.Location = new System.Drawing.Point(270, 109);
             this.lblN.Name = "lblN";
-            this.lblN.Size = new System.Drawing.Size(44, 25);
+            this.lblN.Size = new System.Drawing.Size(67, 25);
             this.lblN.TabIndex = 4195;
-            this.lblN.Text = "n = ";
+            this.lblN.Text = "mod =";
             // 
             // btnClear
             // 
@@ -136,23 +153,6 @@ namespace BasicMathBase
             this.richTextBoxMap.Size = new System.Drawing.Size(873, 441);
             this.richTextBoxMap.TabIndex = 26;
             this.richTextBoxMap.Text = "";
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInfo.FlatAppearance.BorderSize = 2;
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(1066, 6);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(50, 50);
-            this.btnInfo.TabIndex = 4196;
-            this.btnInfo.Text = "i";
-            this.btnInfo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInfo.UseVisualStyleBackColor = true;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // FormCongruenceMap
             // 

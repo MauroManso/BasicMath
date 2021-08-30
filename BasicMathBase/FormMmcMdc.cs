@@ -132,7 +132,32 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            string info = "\t MMC E MDC\n\n\n";
+            info += "\t i₁ mmc: menor múltiplo comum entre a e b. a,b ∈ N.\n";
+            info += "\t mdc: maior divisor comum entre a e b. a,b ∈ N.\n";
+            info += "\t mmc = P₁^α.P₂^β...Pₙ^λ  que aparecem na fatoração simultânea de a e b.\n";
+            info += "\t mdc = P₁^α.P₂^β...Pₙ^λ  Pₙ fator primo que divide simultaneamente a e b.\n";
+            info += "\t mmc.mds = a.b\n\n";
+            info += "\t i₂ EXEMPLO:\n\n";
+            info += "\t\t 60, 32 \t| 2\n";
+            info += "\t\t 30, 16 \t| 2\n";
+            info += "\t\t 15,   8 \t| 2\n";
+            info += "\t\t 15,   4 \t| 2\n";
+            info += "\t\t 15,   2 \t| 2\n";
+            info += "\t\t 15,   1 \t| 3\n";
+            info += "\t\t   5,   1 \t| 5\n";
+            info += "\t\t   1     \t| \n\n";
+            info += "\t\tmmc = 2⁵.3.5 = 480\n";
+            info += "\t\tmdc = 2²= 4\n\n\n";
 
+            info += "\t i₃ ALGORITMO DE EUCLIDES: DIVISÕES SUCESSIVAS\n\n";
+            info += "\t\t\t a₀\ta₁ ...\taₙ \t Linha dos quocientes \n";
+            info += "\ta,\tb\tk₀\tk₁ ...\t0 \t Linha dos restos \n\n";
+            info += "\t i₄ EXEMPLO:\n\n";
+            info += "\t\t\t 1\t1\t7  \n";
+            info += "\t60,\t32\t28\t4\t0 \t mdcc = 4 \n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

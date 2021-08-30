@@ -58,7 +58,12 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t POTÊNCIA\n\n\n";
+            info += "\t i₁ bᵉ = b.b.b...b \tb:base\n";
+            info += "\t \te vezes \te:expoente\n\n";
+            info += "\t i₂ EXEMPLO:  2⁴ = 2.2.2.2 = 16\n\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

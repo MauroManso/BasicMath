@@ -62,7 +62,21 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t ALGORITIMO DE MULTIPLICAÇÃO RUSSO\n\n\n";
+            info += "\t i₁:  CONSTRUA UMA COLUNA À ESQUERDA PARA O MENOR FATOR - FAÇA DIVISÕES SUCESSIVAS POPR 2, EXPRESSANDO SOMENTE O VALOR INTEIRO DA DIVISÃO ATÉ QUE SE OBTENHA O 1.\n";
+            info += "\t CONSTRUA UMA COLUNA À DIREITA PARA O MAIOR FATOR - FAÇA MULTIPLICAÇÕES SUCESSIVAS POPR 2.\n";
+            info += "\t ELIMINE AS LINHAS COM VALORES PARES DA COLUNA DO MENOR FATOR. O RESULTADO DE F₁.F₂ SERÁ A SOMA DOS VALORES DA COLUNA DO MAIOR FATOR DAS LINHAS NN ELIMINADAS\n\n";
+            info += "\t i₂ EXEMPLO:\n";
+            info += "\t\t 34 \t 123    --\n";
+            info += "\t\t 17 \t 246\n";
+            info += "\t\t  8 \t 492    --\n";
+            info += "\t\t  4 \t 984    --\n";
+            info += "\t\t  2 \t 1968  --\n";
+            info += "\t\t  1 \t 3936\n";
+            info += "\t\t _________________\n";
+            info += "\t\t        4182\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

@@ -59,7 +59,16 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t MAPA DE CONGRUÊNCIA\n\n\n";
+            info += "\t Faz as congruências das potências de base, iniciando por 10⁰. Cada linha do mapa é construida multiplicando a linha anterior por 10.\n";
+            info += "\t mmc.mds = a.b\n\n";
+            info += "\t i₂ EXEMPLO:\n\n";
+            info += "\t\t mod = 7\n\n";
+            info += "\t\t 10⁰   =   1    ≡   1   ≡   (-6) (mod 7)\n";
+            info += "\t\t 10¹   =  10   ≡   3   ≡   (-4) (mod 7)\n";
+            info += "\t\t 10²   =  30   ≡   2   ≡   (-5) (mod 7)\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

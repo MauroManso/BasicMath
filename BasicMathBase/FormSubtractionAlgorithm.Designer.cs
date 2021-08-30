@@ -51,9 +51,9 @@ namespace BasicMathBase
             this.lblTitle.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblTitle.Location = new System.Drawing.Point(391, 25);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(364, 37);
+            this.lblTitle.Size = new System.Drawing.Size(384, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Algotimo de Subtração";
+            this.lblTitle.Text = "Algoritimo de Subtração";
             // 
             // panel3
             // 

@@ -53,7 +53,7 @@ namespace BasicMathBase
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(589, 37);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Algoritimo de Multiplicação por Matriz";
+            this.lblTitle.Text = "Algorítimo de Multiplicação por Matriz";
             // 
             // panel3
             // 

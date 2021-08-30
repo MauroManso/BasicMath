@@ -77,7 +77,22 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t ALGORITIMO DE MULTIPLICAÇÃO POR MATRIZ\n\n\n";
+            info += "\t i₁ OS FATORES PRECISAM TER O MESMO NÚMERO DE DÍGITOS. CASO NECESSÁRIO COMPLEMENTAR COM ZEROS À ESQUERDA. \n\n";
+            info += "\t i₂ EXEMPLO:\n";
+            info += "\t\t     0     3     4\n";
+            info += "\t\t 1  00  03  04\n";
+            info += "\t\t 2  00  06  08\n";
+            info += "\t\t 3  00  09  12\n\n\n";
+            info += "\t\t     000612\n";
+            info += "\t\t       0009\n";
+            info += "\t\t       0308\n";
+            info += "\t\t         04\n";
+            info += "\t\t         00\n";
+            info += "\t\t   ___________\n";
+            info += "\t\t        4182\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }

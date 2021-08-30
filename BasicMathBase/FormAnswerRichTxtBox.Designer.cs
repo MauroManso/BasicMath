@@ -84,6 +84,7 @@ namespace BasicMathBase
             this.Controls.Add(this.btnGetAnswer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormAnswerRichTxtBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAnswerRichTxtBox";
             this.ResumeLayout(false);
             this.PerformLayout();

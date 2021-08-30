@@ -248,9 +248,9 @@ namespace BasicMathBase
             this.checkboxAlgoritmoEuclides.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkboxAlgoritmoEuclides.Location = new System.Drawing.Point(105, 422);
             this.checkboxAlgoritmoEuclides.Name = "checkboxAlgoritmoEuclides";
-            this.checkboxAlgoritmoEuclides.Size = new System.Drawing.Size(216, 29);
+            this.checkboxAlgoritmoEuclides.Size = new System.Drawing.Size(212, 29);
             this.checkboxAlgoritmoEuclides.TabIndex = 4146;
-            this.checkboxAlgoritmoEuclides.Text = "Algoritimo de euclides";
+            this.checkboxAlgoritmoEuclides.Text = "Algoritmo de euclides";
             this.checkboxAlgoritmoEuclides.UseVisualStyleBackColor = true;
             // 
             // lblmmc

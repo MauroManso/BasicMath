@@ -51,7 +51,10 @@ namespace BasicMathBase
             {
                 string sistemAnswer = $"{powerBase} ^ {(expoent1 + expoent2)} = " + MathMethods.ToPower(powerBase, (expoent1 + expoent2));
 
-                bool isCorrect = MathMethods.Correction(userAnswer, MathMethods.ToPower(powerBase, (expoent1 + expoent2)));
+                bool isCorrect1 = MathMethods.Correction(userAnswer, MathMethods.ToPower(powerBase, (expoent1 + expoent2)));
+                bool isCorrect2 = MathMethods.Correction(userAnswer, $"{ powerBase}^{ (expoent1 + expoent2)}");
+                bool isCorrect = false;
+                if (isCorrect1 || isCorrect2) isCorrect = true;
 
                 FormAnswers openForm = new FormAnswers(isCorrect, sistemAnswer);
                 openForm.Show();
@@ -68,7 +71,11 @@ namespace BasicMathBase
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-
+            string info = "\t MULTIPLICAÇÃO DE POTÊNCIAS DE MESMA BASE\n\n\n";
+            info += "\t i₁ bᵉ¹.bᵉ² = bᵉ¹⁺ᵉ²  Multiplicação de potências de mesma base. Converva-se a base e somam-se os expoentes.\n\n";
+            info += "\t i₂ EXEMPLO:  2⁵.2³ = 2⁵⁺³ = 2⁸ = 256\n\n";
+            FormInfo openForm = new FormInfo(info);
+            openForm.Show();
         }
     }
 }
